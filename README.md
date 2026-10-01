@@ -1,6 +1,6 @@
-# D4 Help — d4cute helper 다운로드
+# D4 Help — d4cute helper 다운로드 · 디아블로 4 문서
 
-디아블로 4 매크로 도우미 **d4cute helper** 의 최신 버전을 여기서 받을 수 있습니다.
+디아블로 4 매크로 도우미 **d4cute helper** 의 최신 버전과, 클랜에서 정리한 디아블로 4 문서를 여기서 볼 수 있습니다.
 
 ## 다운로드
 
@@ -10,6 +10,14 @@
 | [d4cute_helper.exe](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper.exe) | 설치 없이 바로 실행하는 포터블 버전. |
 
 위 두 링크는 항상 **가장 최신 릴리스**의 파일로 연결됩니다. 버전별 파일과 변경 내용은 [릴리스 목록](https://github.com/nimto/d4help/releases)에서 볼 수 있습니다.
+
+## 디아블로 4 문서
+
+| 폴더 | 내용 |
+|---|---|
+| **[시즌15/](./시즌15/README.md)** | 지옥의 유산 시즌(2026-09-16 ~) — [기본 정보](./시즌15/시즌15-기본정보.md), [대악마 가시(공포 · 파괴 · 증오) 파밍](./시즌15/대악마-가시-파밍.md) |
+
+시즌이 바뀌면 새 폴더가 추가됩니다. 틀린 내용은 [GitHub Issues](https://github.com/nimto/d4cute/issues) 로 알려 주세요.
 
 ## 설치 · 실행
 
