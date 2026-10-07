@@ -4,6 +4,14 @@
 
 **짧은 주소: https://da.gd/d4help** (이 페이지로 바로 옵니다 — 클랜원에게 이 주소를 알려 주세요)
 
+## 🎬 헬퍼 사용방법 영상
+
+설치부터 매크로 · 대기 키 · 알람 · 음성 알림 · 오버레이까지 한 번에 보는 영상입니다. 썸네일을 누르면 YouTube 로 이동합니다.
+
+[![헬퍼 사용방법 — d4cute helper](https://img.youtube.com/vi/Ff7MBqD4WaI/maxresdefault.jpg)](https://youtu.be/Ff7MBqD4WaI)
+
+▶ **https://youtu.be/Ff7MBqD4WaI** · 글로 보려면 아래 [기능 설명](#기능-설명) 으로.
+
 ## 🙋 버그 · 질문 · 사용 팁은 여기로
 
 | 무엇을 올리나 | 바로가기 | 모아 보기 |
