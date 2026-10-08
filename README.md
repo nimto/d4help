@@ -20,6 +20,7 @@
 | ❓ 사용법 · 설정이 궁금하다 | **[질문하기](https://github.com/nimto/d4help/issues/new?template=question.yml)** | [답변 완료된 질문](https://github.com/nimto/d4help/issues?q=label%3A%22답변+완료%22) |
 | 💡 좋은 설정 · 플레이 팁을 나누고 싶다 | **[사용 팁 올리기](https://github.com/nimto/d4help/issues/new?template=tip.yml)** | [사용 팁 목록](https://github.com/nimto/d4help/issues?q=label%3A%22사용+팁%22) |
 | 📦 내 매크로 프로필을 공유한다 | **[프로필 공유](https://github.com/nimto/d4help/issues/new?template=profile-share.yml)** | [프로필 목록](https://github.com/nimto/d4help/issues?q=label%3A%22프로필+공유%22) · [프로필/](./프로필/README.md) |
+| 🖥️ 혼자 설정하기 어렵다 (원격 지원) | **[원격 지원 안내](ANYDESK_GUIDE.md)** | [애니데스크 가이드](ANYDESK_GUIDE.md) |
 
 GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 달리면 **답변 완료** 라벨이 붙습니다. 전체 목록은 [Issues](https://github.com/nimto/d4help/issues).
 
@@ -38,6 +39,7 @@ GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 �
 2. Windows SmartScreen 경고가 뜨면 **추가 정보 → 실행** 을 누릅니다(서명되지 않은 개인 배포 파일이라 뜨는 경고입니다).
 3. 설치가 끝나면 시작 메뉴의 **d4cute helper** 로 실행합니다. 새 버전이 나오면 앱이 알려 주고 바로 업데이트할 수 있습니다.
 4. 요구 사항: Windows 10 / 11. 디아블로 4 는 **창 모드 또는 테두리 없는 창**으로 두면 오버레이와 화면 알림이 보입니다(배타 전체화면에서는 보이지 않음).
+5. 설치나 초기 설정이 잘 안 풀리면 **[애니데스크 원격 지원](ANYDESK_GUIDE.md)** 을 통해 도움을 받으실 수 있습니다.
 
 ## 기능 설명
 
@@ -179,9 +181,20 @@ GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 �
 
 | 폴더 | 내용 |
 |---|---|
-| **[시즌15/](./시즌15/README.md)** | 지옥의 유산 시즌(2026-09-16 ~) — [기본 정보](./시즌15/시즌15-기본정보.md), [신규 아이템 & 제작 공식](./시즌15/시즌15-아이템-제작공식.md), [대악마 가시(공포 · 파괴 · 증오) 파밍](./시즌15/대악마-가시-파밍.md) |
+| **[시즌15/](./시즌15/README.md)** | 지옥의 유산 시즌(2026-09-16 ~) — [기본 정보](./시즌15/시즌15-기본정보.md), [신규 아이템 & 제작 공식](./시즌15/시즌15-아이템-제작공식.md), [대악마 가시(공포 · 파괴 · 증오) 파밍](./시즌15/대악마-가시-파밍.md), **[선조 & 신화 고유 아이템 대도감](./시즌15/선조-고유-아이템.md) ([HTML 웹 도감](./시즌15/선조-고유-아이템.html))** |
 
 시즌이 바뀌면 새 폴더가 추가됩니다. 틀린 내용은 [질문하기](https://github.com/nimto/d4help/issues/new?template=question.yml) 또는 [사용 팁](https://github.com/nimto/d4help/issues/new?template=tip.yml) 으로 알려 주세요.
+
+## 🖥️ 원격 지원 (AnyDesk)
+
+매크로 설정이 어렵거나 프로그램이 제대로 동작하지 않을 때, 클랜 운영진이나 지원자가 **원격으로 화면을 함께 보며 세팅을 도와드립니다.**
+
+- **사용 프로그램**: **AnyDesk (애니데스크)** — 설치 없이 1회 실행만으로 가능한 안전한 무료 원격 지원 도구
+- **간단 순서**:
+  1. [공식 다운로드(anydesk.com)](https://anydesk.com/ko/downloads/windows) 에서 다운로드 후 실행
+  2. 메인 화면에 뜨는 **내 9자리 숫자**를 도와줄 분에게 전달
+  3. 접속 요청 창이 뜨면 **[승인]** 클릭 (작업 완료 후 창을 닫으면 즉시 종료)
+- 👉 **초보자 가이드**: 더 자세한 화면별 설명과 보안 안내는 **[초보자를 위한 애니데스크 원격 지원 가이드](ANYDESK_GUIDE.md)** 문서를 확인해 주세요.
 
 ## 문의
 
