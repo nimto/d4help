@@ -14,7 +14,11 @@
 
 ## 🎯 전리품 필터 — 바로 복사해서 쓰기
 
-파밍 중 바닥이 아이템으로 덮이지 않게, **3 옵두 · 신화 · 위상 · 영물만 색으로 띄우고 나머지는 숨기는** 필터입니다. 아래 코드 블록 오른쪽 위 **복사 아이콘**을 누르면 전체가 복사됩니다.
+파밍 중 바닥이 아이템으로 덮이지 않게, **3 옵두 · 신화 · 위상 · 영물만 색으로 띄우고 나머지는 숨기는** 필터입니다. 가져오면 아래와 같이 규칙 5 개가 들어옵니다.
+
+![전리품 필터 — 3 옵두 · 신화 · 위상 · 영물 색상 변경 + 모두 숨기기 (5/25 규칙)](images/loot-filter.webp)
+
+아래 코드 블록 오른쪽 위 **복사 아이콘**을 누르면 전체가 복사됩니다.
 
 ```
 ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQHKAEKIQoQ7JyE7IOBIOyVhOydtO2FnBACHSIi6P8iBAgDMAEoAQovChDsmIHrrLwg7JWE7J207YWcEAIdGebp/yIMCAUVBe0iABWAfiMAIgQIASBYKAEKDxADHQAA//8iBAgBIF8oARIP7KCE66as7ZKI7ZWE7YSwGAcgCQ==
