@@ -12,6 +12,18 @@
 
 ▶ **https://youtu.be/Ff7MBqD4WaI** · 글로 보려면 아래 [기능 설명](#기능-설명) 으로.
 
+## 🎯 전리품 필터 — 바로 복사해서 쓰기
+
+파밍 중 바닥이 아이템으로 덮이지 않게, **3 옵두 · 신화 · 위상 · 영물만 색으로 띄우고 나머지는 숨기는** 필터입니다. 아래 코드 블록 오른쪽 위 **복사 아이콘**을 누르면 전체가 복사됩니다.
+
+```
+ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQHKAEKIQoQ7JyE7IOBIOyVhOydtO2FnBACHSIi6P8iBAgDMAEoAQovChDsmIHrrLwg7JWE7J207YWcEAIdGebp/yIMCAUVBe0iABWAfiMAIgQIASBYKAEKDxADHQAA//8iBAgBIF8oARIP7KCE66as7ZKI7ZWE7YSwGAcgCQ==
+```
+
+게임에서 **전리품 필터** 창 → 필터 이름 칸 오른쪽 **`⋯`** → **가져오기** 에 붙여 넣고, `모두 사용` 으로 켜면 됩니다(규칙 5 / 25).
+
+📂 **더보기 — [전리품 필터 모음 · 서로 공유하기](./전리품필터/README.md)** · 내 필터를 올리려면 [전리품 필터 공유](https://github.com/nimto/d4help/issues/new?template=loot-filter-share.yml) 로, 남들이 올린 것은 [필터 목록](https://github.com/nimto/d4help/issues?q=label%3A%22전리품+필터%22) 에서.
+
 ## 🙋 버그 · 질문 · 사용 팁은 여기로
 
 | 무엇을 올리나 | 바로가기 | 모아 보기 |
@@ -20,6 +32,7 @@
 | ❓ 사용법 · 설정이 궁금하다 | **[질문하기](https://github.com/nimto/d4help/issues/new?template=question.yml)** | [답변 완료된 질문](https://github.com/nimto/d4help/issues?q=label%3A%22답변+완료%22) |
 | 💡 좋은 설정 · 플레이 팁을 나누고 싶다 | **[사용 팁 올리기](https://github.com/nimto/d4help/issues/new?template=tip.yml)** | [사용 팁 목록](https://github.com/nimto/d4help/issues?q=label%3A%22사용+팁%22) |
 | 📦 내 매크로 프로필을 공유한다 | **[프로필 공유](https://github.com/nimto/d4help/issues/new?template=profile-share.yml)** | [프로필 목록](https://github.com/nimto/d4help/issues?q=label%3A%22프로필+공유%22) · [프로필/](./프로필/README.md) |
+| 🎯 내 전리품 필터를 공유한다 | **[전리품 필터 공유](https://github.com/nimto/d4help/issues/new?template=loot-filter-share.yml)** | [필터 목록](https://github.com/nimto/d4help/issues?q=label%3A%22전리품+필터%22) · [전리품필터/](./전리품필터/README.md) |
 | 🖥️ 혼자 설정하기 어렵다 (원격 지원) | **[원격 지원 안내](ANYDESK_GUIDE.md)** | [애니데스크 가이드](ANYDESK_GUIDE.md) |
 
 GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 달리면 **답변 완료** 라벨이 붙습니다. 전체 목록은 [Issues](https://github.com/nimto/d4help/issues).
@@ -183,6 +196,10 @@ GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 �
 ## 클랜 프로필 공유
 
 내가 만든 매크로 프로필(.d4cute)을 올리고 남의 프로필을 받아 쓰는 공간 → **[프로필/](./프로필/README.md)**. 올리기는 [프로필 공유 이슈](https://github.com/nimto/d4help/issues/new?template=profile-share.yml) 로, 모아 둔 목록은 [프로필 공유 이슈 목록](https://github.com/nimto/d4help/issues?q=label%3A%22프로필+공유%22) 과 `프로필/` 폴더에서.
+
+## 전리품 필터 공유
+
+게임의 전리품 필터 코드를 올리고 받아 쓰는 공간 → **[전리품필터/](./전리품필터/README.md)**. 코드 한 줄이라 파일 없이 복사·붙여넣기로 주고받습니다. 올리기는 [전리품 필터 공유 이슈](https://github.com/nimto/d4help/issues/new?template=loot-filter-share.yml) 로, 모아 둔 목록은 [전리품 필터 이슈 목록](https://github.com/nimto/d4help/issues?q=label%3A%22전리품+필터%22) 과 `전리품필터/` 폴더에서. 바로 쓸 수 있는 필터는 맨 위 [전리품 필터](#-전리품-필터--바로-복사해서-쓰기) 절에 있습니다.
 
 ## 디아블로 4 문서
 
