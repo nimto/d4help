@@ -172,6 +172,7 @@ ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQH
 | **설치 버전 (권장)** | [d4cute_helper_setup.exe (원클릭 자동 업데이트 지원)](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper_setup.exe) |
 | **무설치 포터블 버전** | [d4cute_helper.exe (다운로드 후 바로 실행)](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper.exe) |
 | **상세 사용법 영상** | [https://youtu.be/Ff7MBqD4WaI (유튜브 3분 가이드)](https://youtu.be/Ff7MBqD4WaI) |
+| **삼촌안잔다잉 유튜브 채널** | [https://www.youtube.com/@삼촌안잔다잉 (디아4 라이브 & 공략 영상)](https://www.youtube.com/@삼촌안잔다잉) |
 | **공식 문서 & 깃허브** | [https://da.gd/d4help (전체 변경 내역 및 Q&A)](https://da.gd/d4help) |
 
 > ⚠️ **처음 실행 시 SmartScreen 안내**  
@@ -183,5 +184,11 @@ ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQH
 
 제가 직접 플레이하면서 답답했던 부분들을 긁어모아 만든 프로그램이라, 다른 직업이나 다른 빌드를 하시는 분들께는 또 어떤 기능이 필요할지 궁금합니다.  
 직접 써보시고 **"이런 키 조합이나 세팅이 있으면 좋겠다", "이 부분은 조금 버벅인다", "이 기능 추가되면 더 편하겠다"** 하는 의견이 있으시면 댓글로 가감 없이 편하게 피드백 남겨주세요! 확인하고 계속해서 업데이트하겠습니다.  
+
+> 🎬 **개발자 삼촌의 쪼꼬만 부탁... (ฅ^•ﻌ•^ฅ) 💖**  
+> 디아블로4 라이브 방송이랑 알짜 공략 영상들을 올리고 있는 유튜브 **[삼촌안잔다잉]** 채널도 함께 운영하고 있습니다!  
+> 밤새도록 헬퍼 코딩하고 나락 파밍하느라 삼촌은 오늘도 잠을 안 잡니다... 🌙✨  
+> 영상 보시고 **구독과 좋아요, 알림 설정** 한 번씩 꾹꾹 눌러주시면 다음 업데이트 개발에 어마어마한 비타민과 호랑이 힘이 됩니다! 🐯🍀  
+> ▶ **[유튜브 삼촌안잔다잉 구경 가기 (라이브 소통 환영!)](https://www.youtube.com/@삼촌안잔다잉)**  
 
 읽어주셔서 감사드리고, 다들 득템하시고 손목 편안한 성역 생활 되시길 바랍니다. 🍀
