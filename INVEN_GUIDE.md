@@ -222,6 +222,8 @@ ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQH
 
 ![편의기능 인벤 선변성 설정 화면](images/inven/12_inven_transfig.png)
 
+[![인벤 선변성 도구 사용법 영상](https://img.youtube.com/vi/O2mSUAEX-xM/maxresdefault.jpg)](https://youtu.be/O2mSUAEX-xM)
+
 시즌15 파밍의 핵심인 호라드림의 함 선변성 작업을 클릭 한 번으로 끝내주는 강력한 편의기능입니다.  
 게임에서 인벤토리와 호라드림의 함을 열어두면, 칸마다 **① 우클릭 등록 → ② 아이템 변성 → ③ 변환 → ④ 수락 → ⑤ 초기화** 과정을 33칸 동안 사람 대신 순차적으로 자동 반복 실행합니다.
 
@@ -234,6 +236,7 @@ ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQH
   - **시작 전 대기 시간 (ms)**: 시작 버튼을 누르고 게임 창으로 전환할 여유 시간(기본 500ms ~ 2000ms 권장)을 제공합니다.
   - **시작 단축키 (기본 9번 키)**: 게임 화면에서 `9`번 키만 누르면 즉시 선변성이 시작되며, 진행률(%)이 실시간 표시됩니다.
   - **안전 중지 (Esc)**: 도중에 멈추고 싶을 때는 언제든 `Esc` 키를 누르면 즉시 모든 동작이 멈추고 마우스/키 입력이 깨끗하게 해제됩니다.
+  - 🎬 **실제 사용법 영상 (YouTube)**: [https://youtu.be/O2mSUAEX-xM](https://youtu.be/O2mSUAEX-xM) (인벤 선변성 설정 및 동작 화면 가이드)
 
 ---
 
@@ -265,6 +268,7 @@ ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQH
 | **설치 버전 (권장)** | [d4cute_helper_setup.exe](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper_setup.exe) (원클릭 자동 업데이트 지원) |
 | **무설치 포터블 버전** | [d4cute_helper.exe](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper.exe) (다운로드 후 바로 실행) |
 | **상세 사용법 영상** | [https://youtu.be/Ff7MBqD4WaI](https://youtu.be/Ff7MBqD4WaI) (유튜브 가이드 영상) |
+| **선변성 도구 사용법 영상** | [https://youtu.be/O2mSUAEX-xM](https://youtu.be/O2mSUAEX-xM) (호라드림 선변성 도구 사용법) |
 | **텔레그램 공지 채널** | [https://t.me/d4_notice](https://t.me/d4_notice) (업데이트 및 패치 공지) |
 | **텔레그램 이용자 그룹방** | [https://t.me/+o207f2gV8lE2ODk1](https://t.me/+o207f2gV8lE2ODk1) (실시간 Q&amp;A 및 오류 로그 제보) |
 | **삼촌안잔다잉 유튜브 채널** | [https://www.youtube.com/@삼촌안잔다잉](https://www.youtube.com/@삼촌안잔다잉) (디아4 라이브 &amp; 실전 공략 영상) |

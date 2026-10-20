@@ -43,13 +43,14 @@
 ▶ **[유튜브 '삼촌안잔다잉' 채널 구독하러 가기](https://www.youtube.com/@삼촌안잔다잉)** (라이브 소통 환영!)  
 ⚔️ 창작 후원 (투네이션): [https://toon.at/donate/37ns](https://toon.at/donate/37ns)
 
-## 🎬 헬퍼 사용방법 영상
+## 🎬 헬퍼 & 선변성 사용방법 영상
 
-설치부터 매크로 · 대기 키 · 알람 · 음성 알림 · 오버레이까지 한 번에 보는 영상입니다. 썸네일을 누르면 YouTube 로 이동합니다.
+설치부터 매크로 기본 사용법, 그리고 신규 기능인 **인벤 33칸 스마트 선변성 도구** 실제 사용 영상입니다. 썸네일을 누르면 YouTube로 이동합니다.
 
-[![헬퍼 사용방법 — d4cute helper](https://img.youtube.com/vi/Ff7MBqD4WaI/maxresdefault.jpg)](https://youtu.be/Ff7MBqD4WaI)
-
-▶ **https://youtu.be/Ff7MBqD4WaI** · 글로 보려면 아래 [기능 설명](#기능-설명) 또는 [인벤 상세 가이드](INVEN_GUIDE.md) 로.
+| 헬퍼 기본 사용방법 (매크로·알람·오버레이) | ⚡ 인벤 선변성 도구 실제 사용법 |
+|:---:|:---:|
+| [![헬퍼 사용방법 — d4cute helper](https://img.youtube.com/vi/Ff7MBqD4WaI/hqdefault.jpg)](https://youtu.be/Ff7MBqD4WaI) | [![인벤 선변성 도구 사용법](https://img.youtube.com/vi/O2mSUAEX-xM/hqdefault.jpg)](https://youtu.be/O2mSUAEX-xM) |
+| ▶ **[기본 가이드 영상 보기](https://youtu.be/Ff7MBqD4WaI)** | ▶ **[선변성 도구 영상 보기](https://youtu.be/O2mSUAEX-xM)** |
 
 ## 🎯 전리품 필터 — 바로 복사해서 쓰기
 
@@ -136,6 +137,7 @@ GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 �
 #### 3. 간편 실행 및 안전 중지
 - 게임에서 인벤토리와 호라드림의 함을 열어두고, 지정한 **시작 단축키**(기본 `9`번 키)를 누르거나 [시작] 버튼을 누르면 바로 시작됩니다.
 - 도중에 멈추고 싶을 때는 언제든 **`Esc`** 키를 누르면 즉시 중지되며, 누르고 있던 마우스/키는 전원 안전하게 해제됩니다.
+- 🎬 **실제 사용법 영상 (YouTube)**: [https://youtu.be/O2mSUAEX-xM](https://youtu.be/O2mSUAEX-xM) (인벤 선변성 설정 및 동작 화면 가이드)
 
 ---
 
