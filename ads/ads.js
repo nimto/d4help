@@ -37,6 +37,7 @@ window.D4CUTE_ADS = [
       url: "https://starlink.com?referral=RC-DF-5813441-39413-44"
     },
     code: "RC-DF-5813441-39413-44",
+    disclosureShort: "추천 링크 · 제작자에게 보상이 갈 수 있고, 가입자 추가 비용은 없습니다.",
     disclosure:
       "이 링크는 제작자의 추천 링크입니다. 이 링크로 가입하면 제작자에게 스타링크 추천 보상이 " +
       "갈 수 있고, 가입자가 더 내는 비용은 없습니다. 요금·가입 조건은 스타링크가 정합니다.",
@@ -45,5 +46,18 @@ window.D4CUTE_ADS = [
       { label: "디지털데일리 2025-12-03 · 무제한 요금", url: "https://www.ddaily.co.kr/page/view/2025120316581962434" },
       { label: "뉴시스 2026-04-07 · KISDI 분석", url: "https://www.newsis.com/view/NISX20260407_0003581677" }
     ]
+  },
+  {
+    // 파트너 모집 슬라이드 - 광고가 늘면 자연스럽게 뒤로 밀린다. 빼고 싶으면 active:false
+    id: "recruit",
+    kind: "recruit",
+    active: true,
+    partner: "",
+    category: "",
+    accent: "#eab308",
+    title: "다음 파트너 자리입니다",
+    lead: "디아블로 4 를 즐기는 분들께 닿는 자리입니다. 헬퍼 이용자에게 도움이 되는 서비스라면 제안해 주세요. 배너 한 장으로 들어갑니다.",
+    cta: { label: "텔레그램 그룹에서 제안하기", url: "https://t.me/d4cute_helper" },
+    disclosureShort: "광고는 가입자에게 추가 비용이 없는 추천 링크만 받습니다."
   }
 ];

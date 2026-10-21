@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
   <style>
-    /* ── 토큰: d4help 사이트와 같은 어두운 바탕 + 금색. 파트너 색은 카드 상단 띠에만 ── */
+    /* ── 토큰: d4help 사이트와 같은 어두운 바탕 + 금색. 파트너 색은 배너 띠·배지에만 ── */
     :root {
       --bg: #0d0c11;
       --surface: #16131d;
@@ -26,136 +26,171 @@
       --display: "Noto Serif KR", "Malgun Gothic", serif;
       --body: "Noto Sans KR", "Malgun Gothic", -apple-system, "Segoe UI", sans-serif;
       --mono: ui-monospace, Consolas, "Cascadia Mono", monospace;
+      /* 창을 따라 커지는 치수 - 작은 창에선 하한, 전체 화면에선 상한 */
+      --pad: clamp(14px, 2.2vw, 36px);
+      --fs-h1: clamp(22px, 2.6vw, 44px);
+      --fs-lead: clamp(13.5px, 1.15vw, 19px);
+      --fs-chip: clamp(12px, .85vw, 14px);
+      --fs-cta: clamp(14px, 1.05vw, 18px);
     }
 
     /* 스크롤은 되지만 스크롤바는 숨긴다 - 헬퍼 창 안에서 한 몸처럼 보이게 */
     html { scrollbar-width: none; -ms-overflow-style: none; }
-    html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
+    html::-webkit-scrollbar, body::-webkit-scrollbar, .detail-body::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
     * { box-sizing: border-box; }
     html, body { margin: 0; background: var(--bg); color: var(--text); }
-    body { font-family: var(--body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; }
-    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+    button { font: inherit; cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
 
-    .page { max-width: 880px; margin: 0 auto; padding: 44px 24px 72px; }
+    /* ── 첫 화면: 머리 / 무대 / 조작. 상세를 열기 전엔 딱 한 화면 ── */
+    .screen { height: 100vh; display: flex; flex-direction: column; padding: calc(var(--pad) * .7) var(--pad); gap: calc(var(--pad) * .5); }
+    .head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: calc(var(--pad) * .35); }
+    .eyebrow { font-size: 12px; letter-spacing: .22em; color: var(--gold); font-weight: 700; }
+    .head h1 { font-family: var(--display); font-weight: 900; font-size: clamp(16px, 1.4vw, 22px); margin: 0; letter-spacing: -.01em; }
+    .head p { margin: 0; color: var(--mute); font-size: clamp(12px, .9vw, 14px); }
+    .head .promise { margin-left: auto; }
 
-    /* ── 머리: 명제 한 줄 + 고지 ── */
-    .head { padding-bottom: 28px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
-    .eyebrow { font-size: 12px; letter-spacing: .22em; color: var(--gold); font-weight: 700; margin: 0 0 14px; }
-    .head h1 { font-family: var(--display); font-weight: 900; font-size: 34px; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 14px; }
-    .head p { margin: 0; color: var(--dim); max-width: 60ch; }
-    .head .promise { margin-top: 12px; font-size: 13px; color: var(--mute); }
-
-    /* ── 광고 카드 ── */
-    .ad {
-      position: relative;
-      background: var(--surface);
-      border: 1px solid var(--line-soft);
-      border-radius: 18px;
-      padding: 28px 28px 24px;
-      margin: 0 0 28px;
-      overflow: hidden;
+    .stage { flex: 1; min-height: 0; position: relative; display: flex; align-items: stretch; gap: 10px; }
+    .arrow {
+      flex: none; align-self: center; width: clamp(34px, 2.6vw, 48px); height: clamp(34px, 2.6vw, 48px); border-radius: 50%;
+      background: var(--surface-2); border: 1px solid var(--line-soft); color: var(--dim); font-size: 18px;
+      transition: color .15s, border-color .15s;
     }
-    .ad::before { /* 파트너 색 띠 - 카드가 누구 것인지 */
-      content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--accent);
-    }
-    .ad-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
-    .badge { font-size: 12px; font-weight: 700; letter-spacing: .06em; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 999px; padding: 3px 10px; }
-    .cat { font-size: 12px; color: var(--mute); }
-    .ad h2 { font-family: var(--display); font-weight: 900; font-size: 26px; line-height: 1.3; letter-spacing: -.01em; margin: 0 0 10px; }
-    .ad .lead { margin: 0 0 20px; color: var(--dim); }
+    .arrow:hover { color: var(--gold); border-color: var(--line); }
+    .arrow[hidden] { display: none; }
+    .viewport { flex: 1; min-width: 0; overflow: hidden; border-radius: 18px; }
+    .track { display: flex; height: 100%; transition: transform .45s cubic-bezier(.22, .61, .36, 1); }
 
-    /* 플레이어 하나 + 칩으로 영상 전환 */
+    /* ── 배너 슬라이드 ── */
+    .slide { flex: 0 0 100%; min-width: 0; height: 100%; display: grid; grid-template-columns: 1.35fr 1fr; gap: var(--pad);
+             background: var(--surface); border: 1px solid var(--line-soft); border-radius: 18px; padding: var(--pad); position: relative; overflow: hidden; cursor: pointer; }
+    .slide::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--accent); }
+    .slide:hover { border-color: rgba(255,255,255,.14); }
+    .copy { display: flex; flex-direction: column; min-width: 0; min-height: 0; justify-content: center; gap: clamp(8px, 1vw, 16px); }
+    .badge-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .badge { font-size: var(--fs-chip); font-weight: 700; letter-spacing: .06em; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 999px; padding: 3px 10px; }
+    .cat { font-size: var(--fs-chip); color: var(--mute); }
+    .slide h2 { font-family: var(--display); font-weight: 900; font-size: var(--fs-h1); line-height: 1.22; letter-spacing: -.01em; margin: 0; }
+    .lead { margin: 0; color: var(--dim); font-size: var(--fs-lead); line-height: 1.6;
+            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { font-size: var(--fs-chip); color: var(--text); background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 999px; padding: 5px 12px; }
+    .chip b { color: var(--gold); margin-right: 4px; }
+    .actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .cta { display: inline-block; text-decoration: none; background: var(--gold); color: var(--gold-ink); font-weight: 800; font-size: var(--fs-cta);
+           border-radius: 12px; padding: .7em 1.3em; border: 1px solid #d4a206; transition: filter .12s, transform .12s; }
+    .cta:hover { filter: brightness(1.06); transform: translateY(-1px); }
+    .more { background: transparent; color: var(--dim); border: 1px solid var(--line-soft); border-radius: 12px; padding: .7em 1.1em; font-size: var(--fs-cta); }
+    .more:hover { color: var(--text); border-color: rgba(255,255,255,.2); }
+    .fine { font-size: clamp(11px, .8vw, 13px); color: var(--mute); margin: 0; }
+
+    .media { min-width: 0; min-height: 0; display: flex; align-items: center; }
+    .thumb { position: relative; width: 100%; aspect-ratio: 16 / 9; max-height: 100%; border-radius: 14px; overflow: hidden; background: #000; border: 1px solid var(--line-soft); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .9; }
+    .thumb .play { position: absolute; inset: 0; display: grid; place-items: center; }
+    .thumb .play span { width: clamp(48px, 4.5vw, 76px); height: clamp(48px, 4.5vw, 76px); border-radius: 50%; background: rgba(234,179,8,.92); display: grid; place-items: center; color: var(--gold-ink); font-size: clamp(20px, 1.8vw, 30px); padding-left: 4px; }
+    .thumb .label { position: absolute; left: 0; right: 0; bottom: 0; padding: 8px 12px; font-size: var(--fs-chip); color: var(--text); background: linear-gradient(transparent, rgba(0,0,0,.75)); }
+
+    /* 모집 슬라이드 - 파트너 배지 대신 빈 자리 */
+    .slide.recruit { grid-template-columns: 1fr; text-align: center; }
+    .slide.recruit .copy { align-items: center; }
+    .slide.recruit .lead { -webkit-line-clamp: 4; }
+
+    .controls { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 18px; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--line-soft); border: 0; padding: 0; transition: background .15s, transform .15s; }
+    .dot[aria-current="true"] { background: var(--gold); transform: scale(1.25); }
+    .controls .count { font-size: 12px; color: var(--mute); margin-left: 8px; font-family: var(--mono); }
+
+    /* ── 상세: 배너를 누르면 아래에 펼쳐진다 ── */
+    .detail { display: none; padding: 0 var(--pad) var(--pad); }
+    .detail.open { display: block; }
+    .detail-card { position: relative; background: var(--surface); border: 1px solid var(--line-soft); border-radius: 18px; padding: var(--pad); overflow: hidden; }
+    .detail-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--accent); }
+    .detail-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .detail-head h3 { font-family: var(--display); font-weight: 900; font-size: clamp(18px, 1.6vw, 26px); margin: 0; flex: 1; }
+    .close { background: transparent; color: var(--dim); border: 1px solid var(--line-soft); border-radius: 10px; padding: 6px 12px; }
+    .close:hover { color: var(--text); }
+    .detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--pad); align-items: start; }
     .player { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-soft); }
     .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 22px; }
-    .chip {
-      font: inherit; font-size: 13px; cursor: pointer; color: var(--dim);
-      background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 999px; padding: 6px 12px;
-      transition: border-color .15s, color .15s;
-    }
-    .chip small { color: var(--mute); margin-left: 6px; }
-    .chip:hover { color: var(--text); border-color: rgba(255,255,255,.18); }
-    .chip[aria-pressed="true"] { color: var(--gold-ink); background: var(--gold); border-color: var(--gold); font-weight: 700; }
-    .chip[aria-pressed="true"] small { color: var(--gold-ink); opacity: .75; }
-
-    /* 쓰임새 격자 */
-    .points { list-style: none; margin: 0 0 22px; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
-    .points li { background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 12px; padding: 14px 16px; }
-    .points b { display: block; font-size: 14px; margin-bottom: 4px; color: var(--text); }
-    .points span { font-size: 13.5px; color: var(--dim); line-height: 1.6; }
-
-    /* 요금 표 */
-    .facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 12px; font-size: 14px; }
+    .vchips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .vchip { font-size: 13px; color: var(--dim); background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 999px; padding: 6px 12px; transition: border-color .15s, color .15s; }
+    .vchip small { color: var(--mute); margin-left: 6px; }
+    .vchip:hover { color: var(--text); border-color: rgba(255,255,255,.18); }
+    .vchip[aria-pressed="true"] { color: var(--gold-ink); background: var(--gold); border-color: var(--gold); font-weight: 700; }
+    .vchip[aria-pressed="true"] small { color: var(--gold-ink); opacity: .75; }
+    .points { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }
+    .points li { background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 12px; padding: 10px 14px; }
+    .points b { display: block; font-size: 14px; margin-bottom: 2px; }
+    .points span { font-size: 13.5px; color: var(--dim); line-height: 1.55; }
+    .facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 0; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 12px; font-size: 14px; }
     .facts dt { color: var(--dim); }
-    .facts dd { margin: 0; font-family: var(--mono); font-size: 13.5px; color: var(--text); }
-    .facts-note { font-size: 12.5px; color: var(--mute); margin: 8px 0 22px; }
+    .facts dd { margin: 0; font-family: var(--mono); font-size: 13.5px; }
+    .facts-note { font-size: 12.5px; color: var(--mute); margin: 8px 0 14px; }
+    .affix { margin: 10px 0 0; width: fit-content; max-width: 100%; font-family: var(--mono); font-size: 12.5px; color: var(--gold);
+             border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; background: rgba(234,179,8,.05); word-break: break-all; }
+    .detail-foot { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line-soft); font-size: 12.5px; color: var(--mute); }
+    .detail-foot p { margin: 0 0 6px; }
+    .detail-foot a { color: var(--dim); }
+    .empty { color: var(--dim); padding: 32px; text-align: center; border: 1px dashed var(--line-soft); border-radius: 14px; flex: 1; display: grid; place-items: center; }
 
-    /* CTA + 시그니처(아이템 속성 줄처럼 보이는 추천 코드) */
-    .cta {
-      display: block; text-align: center; text-decoration: none;
-      background: var(--gold); color: var(--gold-ink); font-weight: 800; font-size: 16px;
-      border-radius: 12px; padding: 15px 20px; border: 1px solid #d4a206;
-      transition: transform .12s, filter .12s;
-    }
-    .cta:hover { filter: brightness(1.06); transform: translateY(-1px); }
-    .affix {
-      margin: 12px auto 0; width: fit-content; max-width: 100%;
-      font-family: var(--mono); font-size: 12.5px; color: var(--gold);
-      border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; background: rgba(234,179,8,.05);
-      word-break: break-all; text-align: center;
-    }
-    .affix code { font: inherit; letter-spacing: .04em; }
-
-    .ad-foot { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line-soft); font-size: 12.5px; color: var(--mute); }
-    .ad-foot p { margin: 0 0 6px; }
-    .ad-foot a { color: var(--dim); }
-
-    .empty { color: var(--dim); padding: 32px; text-align: center; border: 1px dashed var(--line-soft); border-radius: 14px; }
-    .foot { margin-top: 40px; font-size: 13px; color: var(--mute); text-align: center; }
-    .foot a { color: var(--dim); }
-
-    @media (max-width: 560px) {
-      .page { padding: 28px 16px 56px; }
-      .head h1 { font-size: 27px; }
-      .ad { padding: 20px 16px 18px; }
-      .ad h2 { font-size: 21px; }
-      .facts { grid-template-columns: 1fr; gap: 2px; }
-      .facts dd { margin-bottom: 8px; }
+    @media (max-width: 720px) {
+      .slide { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+      .media { order: -1; max-height: 38%; }
+      .thumb { height: 100%; aspect-ratio: auto; }
+      .lead { -webkit-line-clamp: 2; }
+      .detail-grid { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: 1fr; }
+      .head .promise { margin-left: 0; }
+      .arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; }
+      .arrow.prev { left: 6px; } .arrow.next { right: 6px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .chip, .cta { transition: none; }
+      .track, .cta, .dot, .arrow, .vchip { transition: none; }
       .cta:hover { transform: none; }
     }
   </style>
 </head>
 <body>
-  <main class="page">
+  <section class="screen" aria-label="후원 배너">
     <header class="head">
-      <p class="eyebrow">후원</p>
+      <span class="eyebrow">후원</span>
       <h1>헬퍼는 무료입니다.</h1>
-      <p>아래 파트너 추천 링크로 가입하면 제작자에게 소정의 보상이 가고, 그게 다음 업데이트를 만듭니다. 가입자가 더 내는 비용은 없습니다.</p>
-      <p class="promise">헬퍼는 이 페이지를 보여 줄 뿐, 자동으로 아무것도 보내지 않습니다. 가입 여부도 헬퍼는 알지 못합니다.</p>
+      <p>파트너 추천 링크 한 번이 다음 업데이트를 만듭니다. 가입자가 더 내는 비용은 없습니다.</p>
+      <p class="promise">헬퍼는 자동으로 아무것도 보내지 않고, 가입 여부도 알지 못합니다.</p>
     </header>
 
-    <section id="ads" aria-live="polite">
-      <noscript>
-        <div class="empty">스크립트가 꺼져 있어 목록을 그릴 수 없습니다.
-          <a href="https://starlink.com?referral=RC-DF-5813441-39413-44" target="_blank" rel="noopener">스타링크 추천 링크</a></div>
-      </noscript>
-    </section>
+    <div class="stage">
+      <button class="arrow prev" type="button" aria-label="이전 배너" hidden>‹</button>
+      <div class="viewport" id="viewport">
+        <div class="track" id="track"></div>
+      </div>
+      <button class="arrow next" type="button" aria-label="다음 배너" hidden>›</button>
+    </div>
+    <div class="controls" id="controls" role="tablist" aria-label="배너 고르기"></div>
+  </section>
 
-    <footer class="foot">
-      파트너 제안·문의는 텔레그램 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener">@d4cute_helper</a>
-    </footer>
-  </main>
+  <section class="detail" id="detail" aria-live="polite"></section>
+
+  <noscript>
+    <div class="empty">스크립트가 꺼져 있어 배너를 그릴 수 없습니다.
+      <a href="https://starlink.com?referral=RC-DF-5813441-39413-44" target="_blank" rel="noopener">스타링크 추천 링크</a></div>
+  </noscript>
 
   <script src="./ads.js"></script>
   <script>
     (function () {
-      var root = document.getElementById("ads");
       var ads = (window.D4CUTE_ADS || []).filter(function (a) { return a && a.active !== false; });
+      var track = document.getElementById("track");
+      var controls = document.getElementById("controls");
+      var detail = document.getElementById("detail");
+      var prevBtn = document.querySelector(".arrow.prev");
+      var nextBtn = document.querySelector(".arrow.next");
+      var index = 0, timer = null, userTouched = false;
+      var AUTO_MS = 9000;
 
       function el(tag, cls, text) {
         var n = document.createElement(tag);
@@ -163,114 +198,208 @@
         if (text != null) n.textContent = text;
         return n;
       }
-      function embedUrl(id) {
-        return "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?rel=0&modestbranding=1";
+      function embedUrl(id) { return "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?rel=0&modestbranding=1&autoplay=1"; }
+      function thumbUrl(id) { return "https://i.ytimg.com/vi/" + encodeURIComponent(id) + "/hqdefault.jpg"; }
+      function link(label, url, cls) {
+        var a = el("a", cls, label); a.href = url; a.target = "_blank"; a.rel = "noopener";   // 헬퍼 안에서는 기본 브라우저로
+        a.addEventListener("click", function (e) { e.stopPropagation(); });
+        return a;
       }
 
       if (!ads.length) {
-        root.appendChild(el("div", "empty", "아직 등록된 파트너가 없습니다."));
+        document.getElementById("viewport").appendChild(el("div", "empty", "아직 등록된 파트너가 없습니다."));
         return;
       }
 
-      ads.forEach(function (ad) {
-        var card = el("article", "ad");
-        card.id = "ad-" + ad.id;
+      // ── 배너 ──
+      ads.forEach(function (ad, i) {
+        var slide = el("article", "slide" + (ad.kind === "recruit" ? " recruit" : ""));
+        slide.setAttribute("role", "group");
+        slide.setAttribute("aria-roledescription", "배너");
+        slide.setAttribute("aria-label", (i + 1) + " / " + ads.length + " · " + (ad.partner || ad.title));
+        if (ad.accent) slide.style.setProperty("--accent", ad.accent);
+
+        var copy = el("div", "copy");
+        var badges = el("div", "badge-row");
+        badges.appendChild(el("span", "badge", ad.kind === "recruit" ? "파트너 모집" : "파트너 · " + ad.partner));
+        if (ad.category) badges.appendChild(el("span", "cat", ad.category));
+        copy.appendChild(badges);
+        copy.appendChild(el("h2", null, ad.title));
+        if (ad.lead) copy.appendChild(el("p", "lead", ad.lead));
+        if (ad.points && ad.points.length) {
+          var chips = el("div", "chips");
+          ad.points.slice(0, 3).forEach(function (p) {
+            var c = el("span", "chip"); c.appendChild(el("b", null, "✓")); c.appendChild(document.createTextNode(p.h)); chips.appendChild(c);
+          });
+          copy.appendChild(chips);
+        }
+        var actions = el("div", "actions");
+        if (ad.cta && ad.cta.url) actions.appendChild(link(ad.cta.label || "자세히 보기", ad.cta.url, "cta"));
+        if (ad.kind !== "recruit") {
+          var more = el("button", "more", "자세히 · 영상 보기");
+          more.type = "button";
+          more.addEventListener("click", function (e) { e.stopPropagation(); openDetail(i); });
+          actions.appendChild(more);
+        }
+        copy.appendChild(actions);
+        if (ad.disclosureShort || ad.disclosure) copy.appendChild(el("p", "fine", ad.disclosureShort || ad.disclosure));
+        slide.appendChild(copy);
+
+        if (ad.kind !== "recruit") {
+          var media = el("div", "media");
+          var v0 = (ad.videos || [])[0];
+          if (v0) {
+            var th = el("div", "thumb");
+            var img = document.createElement("img");
+            img.src = ad.thumb || thumbUrl(v0.id); img.alt = v0.label || ""; img.loading = "lazy";
+            th.appendChild(img);
+            var play = el("div", "play"); play.appendChild(el("span", null, "▶")); th.appendChild(play);
+            th.appendChild(el("div", "label", v0.label + (v0.meta ? "  ·  " + v0.meta : "")));
+            media.appendChild(th);
+          }
+          slide.appendChild(media);
+          slide.addEventListener("click", function () { openDetail(i); });
+          slide.tabIndex = 0;
+          slide.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(i); } });
+        } else {
+          slide.style.cursor = "default";
+        }
+        track.appendChild(slide);
+
+        var dot = el("button", "dot"); dot.type = "button"; dot.setAttribute("role", "tab");
+        dot.setAttribute("aria-label", (i + 1) + "번째 배너");
+        dot.addEventListener("click", function () { userTouched = true; go(i); });
+        controls.appendChild(dot);
+      });
+      var count = el("span", "count", ""); controls.appendChild(count);
+
+      function go(i) {
+        index = (i + ads.length) % ads.length;
+        track.style.transform = "translateX(" + (-100 * index) + "%)";
+        var dots = controls.querySelectorAll(".dot");
+        dots.forEach(function (d, k) { d.setAttribute("aria-current", k === index ? "true" : "false"); });
+        count.textContent = (index + 1) + " / " + ads.length;
+      }
+      function next() { go(index + 1); }
+      function prev() { go(index - 1); }
+
+      if (ads.length > 1) {
+        prevBtn.hidden = false; nextBtn.hidden = false;
+        prevBtn.addEventListener("click", function () { userTouched = true; prev(); });
+        nextBtn.addEventListener("click", function () { userTouched = true; next(); });
+        document.addEventListener("keydown", function (e) {
+          if (e.target && /input|textarea/i.test(e.target.tagName)) return;
+          if (e.key === "ArrowRight") { userTouched = true; next(); }
+          if (e.key === "ArrowLeft") { userTouched = true; prev(); }
+        });
+        // 스와이프
+        var sx = null;
+        track.addEventListener("pointerdown", function (e) { sx = e.clientX; });
+        track.addEventListener("pointerup", function (e) {
+          if (sx == null) return;
+          var dx = e.clientX - sx; sx = null;
+          if (Math.abs(dx) > 48) { userTouched = true; dx < 0 ? next() : prev(); }
+        });
+        // 자동 넘김 - 마우스를 올리면 쉬고, 한 번 손대면 끝
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce) {
+          timer = setInterval(function () { if (!userTouched && !document.hidden) next(); }, AUTO_MS);
+          var stage = document.querySelector(".stage");
+          stage.addEventListener("mouseenter", function () { clearInterval(timer); timer = null; });
+          stage.addEventListener("mouseleave", function () { if (!timer && !userTouched) timer = setInterval(function () { if (!userTouched && !document.hidden) next(); }, AUTO_MS); });
+        }
+      } else {
+        controls.style.display = "none";
+      }
+      go(0);
+
+      // ── 상세 ──
+      function openDetail(i) {
+        userTouched = true;
+        var ad = ads[i];
+        detail.innerHTML = "";
+        var card = el("div", "detail-card");
         if (ad.accent) card.style.setProperty("--accent", ad.accent);
 
-        var head = el("header", "ad-head");
+        var head = el("div", "detail-head");
         head.appendChild(el("span", "badge", "파트너 · " + ad.partner));
-        if (ad.category) head.appendChild(el("span", "cat", ad.category));
+        head.appendChild(el("h3", null, ad.title));
+        var close = el("button", "close", "닫기"); close.type = "button";
+        close.addEventListener("click", function () { detail.classList.remove("open"); detail.innerHTML = ""; window.scrollTo({ top: 0, behavior: "smooth" }); });
+        head.appendChild(close);
         card.appendChild(head);
 
-        card.appendChild(el("h2", null, ad.title));
-        if (ad.lead) card.appendChild(el("p", "lead", ad.lead));
+        var grid = el("div", "detail-grid");
+        var left = el("div"), right = el("div");
 
         var videos = ad.videos || [];
         if (videos.length) {
           var player = el("div", "player");
           var frame = document.createElement("iframe");
-          frame.src = embedUrl(videos[0].id);
+          frame.src = embedUrl(videos[0].id);           // 열 때만 - 배너에는 iframe 이 없다
           frame.title = videos[0].label;
           frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
           frame.setAttribute("allowfullscreen", "");
-          frame.setAttribute("loading", "lazy");
           frame.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
           player.appendChild(frame);
-          card.appendChild(player);
-
+          left.appendChild(player);
           if (videos.length > 1) {
-            var chips = el("div", "chips");
-            chips.setAttribute("role", "group");
-            chips.setAttribute("aria-label", "영상 고르기");
-            videos.forEach(function (v, i) {
-              var chip = el("button", "chip", v.label);
-              chip.type = "button";
-              chip.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+            var vchips = el("div", "vchips"); vchips.setAttribute("role", "group"); vchips.setAttribute("aria-label", "영상 고르기");
+            videos.forEach(function (v, k) {
+              var chip = el("button", "vchip", v.label); chip.type = "button";
+              chip.setAttribute("aria-pressed", k === 0 ? "true" : "false");
               if (v.meta) chip.appendChild(el("small", null, v.meta));
               chip.addEventListener("click", function () {
                 if (chip.getAttribute("aria-pressed") === "true") return;
-                chips.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
+                vchips.querySelectorAll(".vchip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
                 chip.setAttribute("aria-pressed", "true");
-                frame.src = embedUrl(v.id);
-                frame.title = v.label;
+                frame.src = embedUrl(v.id); frame.title = v.label;
               });
-              chips.appendChild(chip);
+              vchips.appendChild(chip);
             });
-            card.appendChild(chips);
+            left.appendChild(vchips);
           }
         }
+        if (ad.lead) { var lead = el("p", "lead", ad.lead); lead.style.webkitLineClamp = "unset"; lead.style.marginTop = "14px"; left.appendChild(lead); }
 
         if (ad.points && ad.points.length) {
           var ul = el("ul", "points");
-          ad.points.forEach(function (pt) {
-            var li = el("li");
-            li.appendChild(el("b", null, pt.h));
-            li.appendChild(el("span", null, pt.p));
-            ul.appendChild(li);
-          });
-          card.appendChild(ul);
+          ad.points.forEach(function (pt) { var li = el("li"); li.appendChild(el("b", null, pt.h)); li.appendChild(el("span", null, pt.p)); ul.appendChild(li); });
+          right.appendChild(ul);
         }
-
         if (ad.facts && ad.facts.length) {
           var dl = el("dl", "facts");
-          ad.facts.forEach(function (f) {
-            dl.appendChild(el("dt", null, f.k));
-            dl.appendChild(el("dd", null, f.v));
-          });
-          card.appendChild(dl);
-          if (ad.factsNote) card.appendChild(el("p", "facts-note", ad.factsNote));
+          ad.facts.forEach(function (f) { dl.appendChild(el("dt", null, f.k)); dl.appendChild(el("dd", null, f.v)); });
+          right.appendChild(dl);
+          if (ad.factsNote) right.appendChild(el("p", "facts-note", ad.factsNote));
         }
-
         if (ad.cta && ad.cta.url) {
-          var cta = el("a", "cta", ad.cta.label || "자세히 보기");
-          cta.href = ad.cta.url;
-          cta.target = "_blank";          // 헬퍼 안에서는 기본 브라우저로 넘어간다
-          cta.rel = "noopener";
-          card.appendChild(cta);
+          var cta = link(ad.cta.label || "자세히 보기", ad.cta.url, "cta"); cta.style.display = "block"; cta.style.textAlign = "center";
+          right.appendChild(cta);
           if (ad.code) {
             var affix = el("p", "affix");
             affix.appendChild(document.createTextNode("추천 코드 "));
             affix.appendChild(el("code", null, ad.code));
             affix.appendChild(document.createTextNode(" · 링크에 자동 적용"));
-            card.appendChild(affix);
+            right.appendChild(affix);
           }
         }
+        grid.appendChild(left); grid.appendChild(right);
+        card.appendChild(grid);
 
-        var foot = el("footer", "ad-foot");
+        var foot = el("div", "detail-foot");
         if (ad.disclosure) foot.appendChild(el("p", null, ad.disclosure));
         if (ad.sources && ad.sources.length) {
           var p = el("p", null, "출처: ");
-          ad.sources.forEach(function (s, i) {
-            if (i) p.appendChild(document.createTextNode(" · "));
-            var a = el("a", null, s.label);
-            a.href = s.url; a.target = "_blank"; a.rel = "noopener";
-            p.appendChild(a);
-          });
+          ad.sources.forEach(function (s, k) { if (k) p.appendChild(document.createTextNode(" · ")); p.appendChild(link(s.label, s.url, null)); });
           foot.appendChild(p);
         }
         card.appendChild(foot);
-        root.appendChild(card);
-      });
+        detail.appendChild(card);
+        detail.classList.add("open");
+        // 상세는 첫 화면 아래 - 거기로 내려간다 (스크롤바는 없지만 휠·키로 움직인다)
+        requestAnimationFrame(function () { detail.scrollIntoView({ behavior: "smooth", block: "start" }); });
+      }
     })();
   </script>
 </body>
