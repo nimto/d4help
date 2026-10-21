@@ -316,7 +316,9 @@
       } else {
         controls.style.display = "none";
       }
-      go(0);
+      // 처음 들어올 때와 캐러셀 메인으로 돌아올 때는 아무 배너나 - 1번만 늘 보이지 않게 (2026-10-22)
+      function goRandom() { go(ads.length > 1 ? Math.floor(Math.random() * ads.length) : 0); }
+      goRandom();
 
       // ── 상세 ──
       function closeDetail() {
@@ -324,6 +326,7 @@
         detail.innerHTML = "";                       // 플레이어도 함께 내려간다
         document.getElementById("tothetop").classList.remove("show");
         window.scrollTo({ top: 0, behavior: "smooth" });
+        goRandom();
       }
       document.getElementById("tothetop").addEventListener("click", closeDetail);
       document.addEventListener("keydown", function (e) { if (e.key === "Escape" && detail.classList.contains("open")) closeDetail(); });
