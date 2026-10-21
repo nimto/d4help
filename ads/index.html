@@ -112,8 +112,11 @@
     .detail-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--accent); }
     .detail-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
     .detail-head h3 { font-family: var(--display); font-weight: 900; font-size: clamp(18px, 1.6vw, 26px); margin: 0; flex: 1; }
-    .close { background: transparent; color: var(--dim); border: 1px solid var(--line-soft); border-radius: 10px; padding: 6px 12px; }
-    .close:hover { color: var(--text); }
+    .close { background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 7px 14px; font-weight: 700; white-space: nowrap; }
+    .close:hover { color: var(--gold); border-color: var(--gold); }
+    .tothetop { position: fixed; right: var(--pad); bottom: var(--pad); z-index: 3; display: none; background: var(--gold); color: var(--gold-ink); font-weight: 800;
+                border: 1px solid #d4a206; border-radius: 999px; padding: 10px 16px; box-shadow: 0 8px 24px rgba(0,0,0,.45); }
+    .tothetop.show { display: inline-block; }
     .detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--pad); align-items: start; }
     .player { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-soft); }
     .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -175,6 +178,7 @@
   </section>
 
   <section class="detail" id="detail" aria-live="polite"></section>
+  <button class="tothetop" id="tothetop" type="button">↑ 캐러셀 메인</button>
 
   <noscript>
     <div class="empty">스크립트가 꺼져 있어 배너를 그릴 수 없습니다.
@@ -315,6 +319,15 @@
       go(0);
 
       // ── 상세 ──
+      function closeDetail() {
+        detail.classList.remove("open");
+        detail.innerHTML = "";                       // 플레이어도 함께 내려간다
+        document.getElementById("tothetop").classList.remove("show");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      document.getElementById("tothetop").addEventListener("click", closeDetail);
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && detail.classList.contains("open")) closeDetail(); });
+
       function openDetail(i) {
         userTouched = true;
         var ad = ads[i];
@@ -325,8 +338,8 @@
         var head = el("div", "detail-head");
         head.appendChild(el("span", "badge", "파트너 · " + ad.partner));
         head.appendChild(el("h3", null, ad.title));
-        var close = el("button", "close", "닫기"); close.type = "button";
-        close.addEventListener("click", function () { detail.classList.remove("open"); detail.innerHTML = ""; window.scrollTo({ top: 0, behavior: "smooth" }); });
+        var close = el("button", "close", "← 캐러셀 메인으로"); close.type = "button";
+        close.addEventListener("click", closeDetail);
         head.appendChild(close);
         card.appendChild(head);
 
@@ -398,6 +411,7 @@
         card.appendChild(foot);
         detail.appendChild(card);
         detail.classList.add("open");
+        document.getElementById("tothetop").classList.add("show");
         // 상세는 첫 화면 아래 - 거기로 내려간다 (스크롤바는 없지만 휠·키로 움직인다)
         requestAnimationFrame(function () { detail.scrollIntoView({ behavior: "smooth", block: "start" }); });
       }
