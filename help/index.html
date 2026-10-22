@@ -1314,7 +1314,7 @@
               <a href="#screen-ui" class="toc-link">🖥️ 2. 최신 화면 구성 (1.30)</a>
               <ul class="toc-sub-tree">
                 <li><a href="#screen-topbar" class="toc-link">상단 바 & 프로필 조작</a></li>
-                <li><a href="#screen-slots" class="toc-link">슬롯 바 (A~D, 후원, 편의, 알람)</a></li>
+                <li><a href="#screen-slots" class="toc-link">슬롯 바 (A~G 7개 슬롯, 후원, 편의, 알람)</a></li>
               </ul>
             </li>
             <li>
@@ -1354,7 +1354,13 @@
             </li>
             <li><a href="#safety-features" class="toc-link">🛡️ 8. 안전장치 (대기 키 & 포커스)</a></li>
             <li><a href="#profile-sync" class="toc-link">💾 9. 프로필 관리 & 공유</a></li>
-            <li><a href="#telegram-support" class="toc-link">✈️ 10. 텔레그램 연동 & 디버그 로그</a></li>
+            <li>
+              <a href="#telegram-support" class="toc-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2AABEE" style="vertical-align:-2px; margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 10. 텔레그램 지원 & 디버그 로그</a>
+              <ul class="toc-sub-tree">
+                <li><a href="#telegram-install" class="toc-link">텔레그램 설치 & 그룹 가입</a></li>
+                <li><a href="#log-viewer-guide" class="toc-link">로그 복사 및 오류 해결 제보</a></li>
+              </ul>
+            </li>
             <li><a href="#community" class="toc-link">👑 11. 클랜 & 삼촌안잔다잉 채널</a></li>
             <li><a href="#faq" class="toc-link">❓ 12. 자주 묻는 질문 (FAQ)</a></li>
           </ul>
@@ -1384,7 +1390,7 @@
             <span class="community-title">⚔️ &lt;앙증맞은&gt; 무지개날개</span>
             <span class="community-tag">클랜</span>
           </div>
-          <div class="community-desc">디아4 인게임 클랜 · 클랜장 <strong>대한민국</strong> · 가입은 인게임 검색 → 신청 → 양쪽 승인</div>
+          <div class="community-desc">디아4 인게임 클랜 · 클랜장 <strong>대한민국</strong> · 가입: 인게임 검색(앙증맞은) → 채널에 알림 → 승인 → 최종 수락 (디스코드 없음)</div>
           <div class="community-links">
             <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="comm-btn" style="background:#2AABEE; color:#fff;">텔레그램 그룹</a>
             <a href="#community" class="comm-btn" style="background:var(--card-subtle); color:var(--gold);">클랜 소개 · 가입</a>
@@ -1425,7 +1431,7 @@
         <div class="hero-banner-overlay">
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
           <h1 class="hero-title">d4cute helper 사용 설명서</h1>
-          <p class="hero-desc">1.30 최신 버전 기준 — 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
+          <p class="hero-desc">1.30 최신 버전 기준 — A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
         </div>
       </div>
 
@@ -1480,33 +1486,46 @@
         <p>1.30 판에서는 상단 바와 슬롯 탭 바가 한층 더 직관적이고 미려하게 업그레이드되었습니다.</p>
 
         <!-- 메인 매크로 화면 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="d4cute helper 메인 화면 — 프로필 전환 바, 매크로 슬롯(A~D), 후원 탭, 편의기능, 알람 탭이 한눈에 배치된 최신 UI">
+        <div class="image-card is-thumbnail" data-caption="d4cute helper 메인 화면 — 프로필 전환 바, 매크로 슬롯(A~G 총 7개 슬롯으로 확장), 매크로 이름 직접 입력, 후원 탭, 편의기능, 알람 탭이 한눈에 배치된 최신 UI">
           <div class="thumb-container">
             <img src="../images/helper_main_macro.png" alt="헬퍼 메인 화면 매크로 탭">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>d4cute helper 1.30 메인 화면 (매크로 슬롯 A 탭)</span>
+            <span>📷</span> <span>d4cute helper 1.30 메인 화면 (A~G 7개 매크로 슬롯 확장 지원)</span>
           </div>
         </div>
 
         <h3 id="screen-topbar">1) 상단 바 & 프로필 컨트롤</h3>
         <ul>
-          <li><strong>실행 상태 표시기</strong> — 대기 / 실행 중 / 일시정지 상태를 실시간 색상으로 표시합니다.</li>
-          <li><strong>상단 기능 버튼</strong> — <span class="chip">업데이트</span>(새 패치 감지 시 점멸), <span class="chip">설정(⚙)</span>, <span class="chip">테스트</span>(입력 전송 검증), 미니창 전환, 항상 위(핀).</li>
+          <li><strong>실행 상태 표시기</strong> — <span style="color:var(--green); font-weight:700;">● 중지됨</span> / <span style="color:var(--green); font-weight:700;">● 실행 중</span> / <span style="color:var(--ruby); font-weight:700;">● 일시정지</span> 상태를 실시간 색상 점으로 표시합니다.</li>
+          <li><strong>상단 기능 버튼</strong> — <span class="chip">업데이트</span>(새 패치 감지 시 점멸), <span class="chip">설정(⚙)</span>, <span class="chip">테스트(⌨)</span>(입력 전송 검증), 미니창 전환, 항상 위(핀), <span class="chip">···</span>(추가 도구 메뉴).</li>
           <li><strong>프로필 줄 (Profile Bar)</strong> — 
-            <span class="chip">‹ ›</span> 버튼으로 빠르게 프로필을 전환할 수 있으며, <strong>콤보박스를 더블클릭하면 즉시 이름을 변경</strong>할 수 있습니다. <span class="chip green">＋</span>(새 프로필), <span class="chip ruby">🗑</span>(삭제), <span class="chip">✎</span>(이름 변경), <span class="chip blue">텔레그램</span>(종이비행기), <span class="chip">문서</span>(시즌 문서), <span class="chip gold">?</span>(도움말) 버튼이 제공됩니다. 창은 켤 때마다 가장 작은 기본 크기로 뜨고(하한 900×700, 글꼴 배율에 따라 커짐), 전체창(최대화)은 없습니다.
+            <span class="chip">‹ ›</span> 버튼으로 빠르게 프로필을 전환할 수 있으며, <strong>콤보박스를 더블클릭하면 즉시 이름을 변경</strong>할 수 있습니다. <span class="chip green">＋</span>(새 프로필), <span class="chip">✎</span>(이름 변경), <span class="chip ruby">🗑</span>(삭제), <span class="chip blue" style="display:inline-flex; align-items:center; gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span>, <span class="chip">문서</span>(시즌 문서), <span class="chip gold">?</span>(도움말) 버튼이 제공됩니다. 창은 켤 때마다 가장 작은 기본 크기로 뜨고(하한 900×700, 글꼴 배율에 따라 커짐), 전체창(최대화)은 없습니다.
           </li>
         </ul>
 
-        <h3 id="screen-slots">2) 슬롯 줄 (Slot Navigation)</h3>
+        <h3 id="screen-slots">2) 슬롯 줄 (Slot Navigation) — 7개 슬롯(A~G) 대폭 확장</h3>
         <ul>
-          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> — 4개의 독립 매크로 슬롯. 켜진 슬롯은 초록 테두리, 발동 중이면 붉은 바탕에 흰 글씨로 점등됩니다. 매크로 이름은 버튼이 아니라 <strong>마우스를 올리면 뜨는 툴팁 맨 위</strong>에 크게 보입니다(버튼 폭 유지).</li>
+          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> <span class="chip ruby">E</span> <span class="chip ruby">F</span> <span class="chip ruby">G</span> — <strong style="color:var(--gold);">최신 패치를 통해 매크로 슬롯이 기존 4개(A~D)에서 총 7개(A~G)로 대폭 확장</strong>되었습니다! 복잡한 딜 사이클, 기동기, 보호막/버프 유지, 특정 상황 전용 스킬을 슬롯 부족 없이 넉넉하게 분리하여 등록할 수 있습니다. 켜진 슬롯은 테두리가 강조되고, 발동 중이면 붉은 바탕에 흰 글씨로 점등됩니다.</li>
+          <li><strong>매크로 이름 직접 지정</strong> — 각 슬롯의 매크로 설정 화면에서 <span class="chip">이름: [ 메인 매크로 ]</span> 입력 필드를 통해 슬롯마다 직관적인 고유 명칭을 입력할 수 있습니다. 슬롯 버튼에 마우스를 올렸을 때 뜨는 툴팁 맨 위에도 이 이름이 크게 표시됩니다.</li>
           <li><span class="chip">♡ 후원</span> — "헬퍼는 무료입니다" 고지와 파트너 추천 링크(스타링크 등)·클랜장님 채널 소개가 배너 캐러셀로 나옵니다. 헬퍼가 자동으로 보내는 것은 없습니다.</li>
-          <li><span class="chip">🔧 편의기능</span> — 호라드림의 함 인벤 선변성 자동화 전용 한 페이지 UI.</li>
-          <li><span class="chip">🔔 알람</span> — 군단, 세계 보스, 지옥물결 및 개인 타이머 알람 설정.</li>
-          <li><strong>슬롯 우측 요약 칩</strong> — 현재 선택된 슬롯의 실행 방식(순차/독립), 발동 방식(홀드/토글/1회), 발동키가 늘 실시간으로 요약 표시됩니다.</li>
+          <li><span class="chip">🔧 편의</span> — 호라드림의 함 인벤 선변성 자동화 전용 한 페이지 UI.</li>
+          <li><span class="chip">⏱ ▶ 4 (알람)</span> — 군단, 세계 보스, 지옥물결 및 개인 타이머 알람 설정. 우측에 현재 동작 중인 알람 수가 배지로 표시됩니다.</li>
+          <li><strong>슬롯 우측 요약 칩</strong> — 현재 선택된 슬롯의 실행 방식(순차/독립), 발동 방식(홀드/토글/한 번), 발동키가 늘 실시간으로 요약 표시됩니다.</li>
         </ul>
+
+        <h3 id="screen-bottombar">3) 하단 통합 제어 바</h3>
+        <ul>
+          <li><span class="chip green">▶ 시작</span> / <span class="chip ruby">■ 중지</span>: 헬퍼의 모든 매크로 감지 및 실행을 시작하거나 정지합니다 (기본 단축키 <kbd>F9</kbd>).</li>
+          <li><span class="chip blue">저장</span>: 현재 수정한 프로필 및 매크로 세팅을 디스크에 즉시 영구 저장합니다.</li>
+          <li><span class="chip">📁 불러오기</span>: 실수로 세팅을 잘못 건드렸을 때 마지막 저장된 상태로 프로필을 복원합니다.</li>
+          <li><span class="chip ruby" style="background:#cc0000; color:#fff; font-weight:700;">▶ 삼촌안잔다잉</span>: 클랜장님의 게임 방송 채널로 한 번에 이동합니다.</li>
+          <li><span class="chip">📤 내보내기</span>: 현재 프로필 세팅을 <code>.d4cute</code> 백업 파일로 저장합니다.</li>
+          <li><span class="chip blue">📥 가져오기</span>: 다른 사용자나 클랜원이 공유한 <code>.d4cute</code> 프로필을 불러와 즉시 적용합니다.</li>
+          <li><span class="chip">최소화</span>: 헬퍼 창을 작업 표시줄로 최소화합니다.</li>
+        </ul>
+
         <div class="image-card is-small" data-caption="후원 탭 — 헬퍼는 무료 고지, 파트너 추천 링크·클랜장님 채널 배너 캐러셀">
           <div class="thumb-container">
             <img src="../images/helper_sponsor_tab.png" alt="후원 탭 배너 캐러셀">
@@ -1710,41 +1729,89 @@
       <!-- ─── 6. 스마트 알람 시스템 ─── -->
       <section class="doc-section" id="alarm">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">6</span> 스마트 알람 시스템 — 이벤트 · 음성(TTS) · 배너</h2>
+          <h2 class="section-title"><span class="section-num">6</span> 스마트 알람 시스템 — 이벤트 · 개인 · 화면 알림 · 음성(TTS)</h2>
         </div>
 
-        <p>디아블로4의 주요 시간제 컨텐츠(군단 침공, 세계 보스, 지옥물결 등)를 놓치지 않도록 알려주는 지능형 알람 엔진입니다.</p>
+        <p>디아블로4의 주요 시간제 컨텐츠(군단 침공, 야외 우두머리, 지옥물결 등)와 사용자의 개인 타이머를 놓치지 않도록 알려주는 고성능 백그라운드 알람 엔진입니다.</p>
 
-        <!-- 알람 탭 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="스마트 알람 탭 — 군단, 월드보스, 지옥물결 이벤트 알람 및 개인 타이머, 한국어 TTS 음성 설정">
+        <h3 id="alarm-events">1) 이벤트 알림 (야외 우두머리 · 지옥물결 · 군단)</h3>
+        <p>게임 외부 웹사이트(diablo4.life)와 실시간 연동되어 최신 보스 및 지옥물결 출현 시간을 자동으로 계산합니다.</p>
+        
+        <!-- 이벤트 알림 화면 스크린샷 -->
+        <div class="image-card is-thumbnail" data-caption="이벤트 알림 탭 — 야외 우두머리, 지옥물결, 군단 출현 시간 안내, 5분/3분/1분/시작 사전 알림 토글, 겹칠 때 우선순위 순서(▲/▼) 조절">
           <div class="thumb-container">
-            <img src="../images/helper_alarm_tab.png" alt="스마트 알람 탭 화면">
+            <img src="../images/alarm_event_schedule_list.png" alt="이벤트 알림 목록 및 우선순위">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>스마트 알람 설정 탭 (이벤트 알람 및 개인 타이머)</span>
+            <span>📷</span> <span>이벤트 알림 (야외 우두머리, 지옥물결, 군단 시간표 및 알림 시점)</span>
           </div>
         </div>
 
-        <h3 id="alarm-events">1) 백그라운드 상시 감시 및 우선순위</h3>
         <ul>
-          <li><strong>상시 가동</strong>: 매크로 시작 버튼을 누르지 않아도, <strong>헬퍼 프로그램이 켜져 있는 동안 알람이 켜져 있다면 백그라운드에서 실시간으로 시간을 체크하여 알림을 보냅니다.</strong></li>
-          <li><strong>이벤트 알람</strong>: 세계 보스·군단·지옥물결 시작 전 사전 알림 — 5·3·1분 전과 시작 시각 중에서 고릅니다(기본: 세계 보스 5·3분 전 켜짐, 지옥물결·군단은 꺼짐).</li>
-          <li><strong>개인 알람</strong>: 지정 시각·간격·타이머 세 종류(예: 비약 30분 만료 타이머). 알람마다 음성·소리·배너를 따로 둘 수 있고, 겹치면 우선순위가 높은 것이 먼저 울립니다.</li>
+          <li><strong>알림 시점 선택</strong>: 각 이벤트마다 <span class="chip blue">5분</span>, <span class="chip blue">3분</span>, <span class="chip blue">1분</span> 전 및 <span class="chip blue">시작</span> 시각을 독립적으로 켜고 끌 수 있습니다.</li>
+          <li><strong>겹칠 때 우선순위 순서</strong>: <kbd>▲</kbd> <kbd>▼</kbd> 버튼을 눌러 이벤트 간의 순서를 변경할 수 있습니다. 동일한 시각에 여러 알림이 겹치면 위쪽에 있는 이벤트부터 먼저 소리를 내고 화면에 함께 표시합니다.</li>
+          <li><strong>군단 기준점 설정</strong>: 군단 출현 시간을 내 화면 상황에 맞게 0분 전 기준점으로 수동 보정할 수도 있습니다.</li>
         </ul>
 
-        <h3 id="alarm-outputs">2) 인게임 화면 배너 & 한국어 TTS 음성</h3>
-        <ul>
-          <li><strong>인게임 화면 배너</strong>: 게임 화면 상단이나 모서리에 고급스러운 반투명 알림 배너를 띄웁니다. 배너의 폰트 크기, 위치, 노출 지속 시간을 자유롭게 조절할 수 있습니다.</li>
-          <li><strong>한국어 TTS 음성</strong>: "5분 후 세계 보스가 출현합니다"와 같이 자연스러운 한국어 음성으로 직접 읽어줍니다. 볼륨(기본 80)과 말 속도를 조절할 수 있습니다.</li>
-        </ul>
+        <h3 id="alarm-personal">2) 개인 알람 (맞춤 타이머 & 반복 주기)</h3>
+        <p>비약 30분 만료 알람, 던전 쿨다운, 휴식 안내 등 나만의 커스텀 타이머를 무제한으로 등록할 수 있습니다.</p>
 
-        <div class="image-card is-small" data-caption="인게임 알람 배너 예시 — 게임 화면에 방해되지 않도록 부드럽게 표시">
+        <!-- 개인 알람 화면 스크린샷 -->
+        <div class="image-card is-thumbnail" data-caption="개인 알람 탭 — + 알람 추가 버튼, 주기적 반복(예: 10분마다 뱃살 운동 무제한 타이머), 실시간 상태 토글 및 편집/삭제">
           <div class="thumb-container">
-            <img src="../images/banner-ingame.png" alt="게임 내 알람 배너">
+            <img src="../images/alarm_personal_timer_list.png" alt="개인 알람 타이머 목록">
+            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
-          <div class="image-caption"><span>📷</span> <span>게임 화면 내 알람 배너 표시</span></div>
+          <div class="image-caption">
+            <span>📷</span> <span>개인 알람 설정 (맞춤 반복 타이머 목록)</span>
+          </div>
         </div>
+
+        <ul>
+          <li><span class="chip blue">＋ 알람 추가</span>: 원하는 이름과 주기(분 단위 또는 지정 시각), 시작 기준을 정해 등록합니다.</li>
+          <li><strong>스위치 On/Off</strong>: 필요한 타이머만 스위치로 즉시 켜고 끌 수 있으며, 다음 알림까지 남은 시간이 실시간으로 표시됩니다.</li>
+        </ul>
+
+        <h3 id="alarm-display">3) 화면 알림 (인게임 글자 오버레이 배너)</h3>
+        <p>게임 도중 시야를 방해하지 않으면서 중요한 알림을 직관적으로 확인할 수 있도록 화면 상에 텍스트를 띄웁니다.</p>
+
+        <!-- 화면 알림 설정 스크린샷 -->
+        <div class="image-card is-thumbnail" data-caption="화면 알림 설정 — 위치(캐릭터 머리 위, 세로 오프셋 -59px), 글자 크기(35px), 색상(#FFD700), 굵게/외곽선 효과, 배경 투명도(24), 표시 시간(15초) 및 미리보기">
+          <div class="thumb-container">
+            <img src="../images/alarm_banner_display_settings.png" alt="화면 알림 배너 설정">
+            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+          </div>
+          <div class="image-caption">
+            <span>📷</span> <span>화면 알림 설정 (위치, 글자 크기, 색상, 외곽선 및 표시 시간)</span>
+          </div>
+        </div>
+
+        <ul>
+          <li><strong>알람 위치 & 세로 오프셋</strong>: <span class="chip">캐릭터 머리 위</span> 등 원하는 위치를 고르고 세로 픽셀 오프셋(예: -59 px)을 미세 조정할 수 있습니다.</li>
+          <li><strong>가독성 옵션</strong>: 글자 크기(px), 색상 팔레트(골드 #FFD700 등), <strong>굵게</strong> 및 <strong>외곽선</strong> 스위치를 켜면 어두운 던전이나 화려한 스킬 이펙트 속에서도 글자가 뚜렷하게 보입니다.</li>
+          <li><span class="chip">미리보기</span> 버튼을 눌러 인게임에서 어떻게 표시되는지 즉시 테스트할 수 있습니다.</li>
+        </ul>
+
+        <h3 id="alarm-sound">4) 기본 사운드 · 음성 (TTS & 효과음)</h3>
+        <p>알람음 효과음과 Supertonic 3 인공지능 음성 엔진을 통해 자연스러운 한국어 음성 안내를 제공합니다.</p>
+
+        <!-- 기본 사운드 음성 설정 스크린샷 -->
+        <div class="image-card is-thumbnail" data-caption="기본 사운드 · 음성 설정 — 사운드 파일(Ring01), 알림 방식(알람음만 / 알람음+음성 / 음성만), Supertonic 3 한국어 음성 엔진(F1 여성, 속도 0.90x, 볼륨 조절) 및 실시간 테스트">
+          <div class="thumb-container">
+            <img src="../images/alarm_sound_voice_settings.png" alt="기본 사운드 및 음성 설정">
+            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+          </div>
+          <div class="image-caption">
+            <span>📷</span> <span>기본 사운드 · 음성 (Supertonic 3 한국어 음성 및 효과음)</span>
+          </div>
+        </div>
+
+        <ul>
+          <li><strong>알림 방식</strong>: <span class="chip">알람음만</span>, <span class="chip gold">알람음 ＋ 음성</span>, <span class="chip">음성만</span> 3가지 모드 지원.</li>
+          <li><strong>음성 엔진</strong>: 내장 <strong>Supertonic 3</strong> 음성 엔진 탑재 — 'F1 여성' 등 선명한 한국어 발음으로 읽어주며, 말 속도(0.90x 등)와 볼륨(0~100)을 자유롭게 조절할 수 있습니다.</li>
+          <li><span class="chip">▶ 테스트</span> 버튼으로 실제 음성 출력 품질을 즉시 확인 가능합니다.</li>
+        </ul>
       </section>
 
       <!-- ─── 7. 창 모드, 핀, 오버레이 ─── -->
@@ -1757,7 +1824,7 @@
         <p>게임 화면 모니터 한구석에 작게 띄워두고 쓸 수 있는 초소형 한 줄 바 형태의 모드입니다.</p>
 
         <!-- 미니바 스크린샷 카드 -->
-        <div class="image-card is-small" data-caption="미니창 모드 — 슬롯 A~D 작동 상태, 시작/중지, 선변성 바로가기, 기본창 복귀 버튼">
+        <div class="image-card is-small" data-caption="미니창 모드 — 슬롯 A~G 작동 상태, 시작/중지, 편의기능 바로가기, 기본창 복귀 버튼">
           <div class="thumb-container">
             <img src="../images/helper_mini_bar.png" alt="미니바 모드 화면">
           </div>
@@ -1765,24 +1832,60 @@
         </div>
 
         <ul>
-          <li>슬롯 A, B, C, D의 현재 작동 상태가 점등되어 실시간 확인 가능.</li>
+          <li>슬롯 A~G 7개의 현재 작동 상태가 점등되어 실시간 확인 가능.</li>
           <li><span class="chip green">시작</span> / <span class="chip">중지</span> 버튼, 편의기능(렌치) 버튼 — 누르면 기본창으로 돌아와 편의기능 탭을 엽니다(선변성 시작은 단축키나 그 탭의 시작 버튼으로), 항상 위(핀) 버튼 내장.</li>
           <li>복귀(네모) 버튼을 누르면 즉시 원래 크기의 기본 창으로 되돌아옵니다.</li>
         </ul>
 
         <h3 id="window-overlay">2) 인게임 HUD 오버레이</h3>
+        <p>게임 화면 위에 반투명으로 띄워 매크로 동작 상황을 실시간으로 확인하는 필수 HUD 도구입니다. 작동 중인 매크로 슬롯, 유지 키, 현재 타격 중인 키 목록이 투명하게 표시됩니다.</p>
+
+        <!-- 1. 인게임 오버레이 실화면 스크린샷 -->
+        <div class="image-card is-thumbnail" data-caption="인게임 HUD 오버레이 실화면 — 작동 중인 매크로 슬롯(•A, •B 빨간색 점등), 유지 키(유지 RClick), 실시간 눌림 키 목록(눌림 2 F F F F 4) 실시간 표시">
+          <div class="thumb-container">
+            <img src="../images/overlay_ingame_live_display.png" alt="인게임 HUD 오버레이 실화면">
+            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+          </div>
+          <div class="image-caption">
+            <span>📷</span> <span>인게임 HUD 오버레이 (작동 슬롯, 유지 키, 실시간 타격 키 목록)</span>
+          </div>
+        </div>
+
         <ul>
-          <li>게임 화면 위에 반투명으로 띄워 매크로 동작 상황을 보여주는 오버레이입니다.</li>
-          <li>어떤 슬롯이 돌고 있는지, 대기 키로 인해 일시정지 상태인지, 선변성 진행률이 몇 %인지 실시간 HUD로 보여줍니다.</li>
-          <li>설정(⚙)에서 오버레이의 화면 위치(좌상단/우상단 등), 크기, 불투명도(알파값)를 슬라이더로 조절할 수 있습니다.</li>
+          <li><strong>작동 매크로 슬롯 상태</strong>:
+            <span class="chip ruby">•A</span> <span class="chip ruby">•B</span> 처럼 현재 발동되어 돌고 있는 슬롯은 붉은색 테두리와 점(•)으로 점등되며, 비활성 슬롯(<span class="chip">C</span>)과 토글 대기 슬롯(<span class="chip green">○D</span>)이 한눈에 구분됩니다.
+          </li>
+          <li><strong>유지 키 (Hold / Companion) 출력</strong>:
+            현재 지속적으로 눌려 있는 키(예: <code>유지 RClick</code>, <code>유지 Shift</code> 등)가 우측 상단에 실시간으로 표시됩니다.
+          </li>
+          <li><strong>실시간 눌림 키 목록 (Key Log)</strong>:
+            하단에 현재 시퀀스에서 실시간으로 타격 중인 스킬 키(예: <code>눌림 2 F F F F 4</code>)가 연속 출력되어 스킬 로테이션이 정확히 맞물려 도는지 게임 중에 바로 확인 가능합니다.
+          </li>
+          <li><strong>선변성 진행도</strong>: 호라드림의 함 선변성 동작 시에는 현재 칸 번호와 진행률이 오버레이에 뜹니다.</li>
         </ul>
 
-        <div class="image-card is-small" data-caption="인게임 오버레이 — 게임 중 슬롯 상태를 실시간 HUD로 표시">
+        <!-- 2. 오버레이 설정 화면 스크린샷 -->
+        <div class="image-card is-thumbnail" data-caption="전역 설정 — 오버레이 상세 커스텀 (모니터 선택, 위치 우측 하단, X/Y 픽셀 오프셋, 투명도 40%, 크기 118%, 가로 폭 409px 및 실시간 미리보기)">
           <div class="thumb-container">
-            <img src="../images/overlay-running.png" alt="인게임 오버레이 작동 화면">
+            <img src="../images/overlay_configuration_settings.png" alt="오버레이 상세 설정 화면">
+            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
-          <div class="image-caption"><span>📷</span> <span>인게임 오버레이 상태 표시</span></div>
+          <div class="image-caption">
+            <span>📷</span> <span>오버레이 상세 설정 (모니터, 위치, X/Y 오프셋, 투명도, 크기, 폭 조절)</span>
+          </div>
         </div>
+
+        <ul>
+          <li><strong>게임 오버레이 표시</strong>: 오버레이를 켜고 끄는 마스터 스위치입니다.</li>
+          <li><strong>모니터 선택</strong>: 듀얼 및 다중 모니터 환경에서 디아블로4가 켜진 모니터(예: <code>2: LG HDR 4K (2560×1440)</code>)를 드롭다운으로 직접 지정할 수 있습니다.</li>
+          <li><strong>화면 위치 & 정밀 픽셀 오프셋</strong>:
+            화면의 9개 구역(예: <code>우측</code> <code>하단</code>)을 고른 뒤, <span class="chip">X 오프셋</span>(-13 px)과 <span class="chip">Y 오프셋</span>(-3 px)으로 미니맵이나 게임 UI를 가리지 않게 픽셀 단위로 위치를 미세 조정합니다.
+          </li>
+          <li><strong>투명도 & 크기 & 가로 폭</strong>:
+            슬라이더를 통해 <span class="chip">투명도</span>(기본 40% 반투명), <span class="chip">크기</span>(118% 등 배율), <span class="chip">가로 폭</span>(409 px)을 내 시야에 맞춰 최적화합니다.
+          </li>
+          <li><span class="chip blue">👁 미리보기</span>: 매크로를 직접 실행하지 않아도 버튼을 누르면 설정된 위치와 크기로 오버레이가 화면에 즉시 나타나 확인하기 편리합니다.</li>
+        </ul>
       </section>
 
       <!-- ─── 8. 안전장치 ─── -->
@@ -1828,7 +1931,7 @@
         </div>
 
         <ul>
-          <li>프로필 하나에는 슬롯 A~D의 모든 시퀀스와 딜레이, 발동키 설정이 통째로 묶여 저장됩니다.</li>
+          <li>프로필 하나에는 슬롯 A~G(총 7개)의 모든 시퀀스와 딜레이, 발동키 설정이 통째로 묶여 저장됩니다.</li>
           <li>원소술사, 야만용사, 드루이드, 강령술사, 도적, 혼령사 등 직업별 및 빌드별로 프로필을 분리해두면 클릭 한 번으로 모든 세팅이 교체됩니다.</li>
           <li><span class="chip">내보내기</span>: 현재 세팅을 <code>.d4cute</code> 파일로 내보내어 안전하게 백업하거나 클랜원에게 공유할 수 있습니다.</li>
           <li><span class="chip blue">가져오기</span>: 다른 사용자가 공유한 <code>.d4cute</code> 프로필 파일을 불러와 내 헬퍼에 즉시 적용합니다.</li>
@@ -1839,32 +1942,153 @@
       <!-- ─── 10. 텔레그램 연동 & 디버그 로그 ─── -->
       <section class="doc-section" id="telegram-support">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">10</span> 텔레그램 & 로그 뷰어</h2>
+          <h2 class="section-title"><span class="section-num">10</span> 텔레그램 지원 & 디버그 로그 뷰어</h2>
         </div>
 
-        <p>프로필 줄의 파란색 종이비행기 아이콘을 클릭하면 텔레그램 지원 다이얼로그가 열립니다.</p>
+        <p>
+          헬퍼 상단 프로필 줄의 파란색 <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span> 아이콘을 클릭하면 텔레그램 연동 다이얼로그가 열립니다.
+          새 버전 소식을 빠르게 확인하고, <strong style="color:var(--gold);">@d4cute_helper</strong> 이용자 그룹에서 질문 및 버그 제보를 진행하며, 오류 발생 시 <strong style="color:var(--ruby);">디버그 로그를 원클릭으로 추출</strong>하여 해결을 지원받을 수 있습니다.
+        </p>
 
-        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <div class="image-card is-small" data-caption="텔레그램 다이얼로그 — 공지 채널(@d4_notice), 유저 소통 그룹(@d4cute_helper) 및 모바일 접속 QR">
+        <!-- 텔레그램 및 로그 뷰어 스크린샷 2종 갤러리 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0;">
+          <div class="image-card is-thumbnail" data-caption="텔레그램 다이얼로그 — 공지 채널(@d4_notice), 이용자 소통 그룹(@d4cute_helper), 스마트폰 즉시 입장 QR 코드, 로그 보기 및 텔레그램 설치 버튼">
             <div class="thumb-container">
-              <img src="../images/helper_telegram_dialog.png" alt="텔레그램 다이얼로그">
+              <img src="../images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
+              <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
             </div>
-            <div class="image-caption"><span>📷</span> <span>텔레그램 공지/소통 그룹 및 QR</span></div>
+            <div class="image-caption">
+              <span>📷</span> <span>텔레그램 연동 팝업 (공지/이용자 그룹/QR 코드/설치)</span>
+            </div>
           </div>
-          <div class="image-card is-small" data-caption="로그 뷰어 다이얼로그 — 문제 발생 시 최근 디버그 로그를 원클릭으로 복사">
+          
+          <div class="image-card is-thumbnail" data-caption="로그 뷰어 다이얼로그 — 날짜별 로그 조회, 경고·오류만 필터링 토글, 최근 200줄 복사, 오류만 복사, 로컬 로그 폴더 열기">
             <div class="thumb-container">
-              <img src="../images/helper_log_viewer.png" alt="로그 뷰어 다이얼로그">
+              <img src="../images/log_viewer_error_copy.png" alt="디버그 로그 뷰어 다이얼로그">
+              <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
             </div>
-            <div class="image-caption"><span>📷</span> <span>원클릭 디버그 로그 뷰어</span></div>
+            <div class="image-caption">
+              <span>📷</span> <span>원클릭 디버그 로그 뷰어 (오류만 복사/최근 200줄 복사)</span>
+            </div>
           </div>
         </div>
 
+        <!-- 1) 텔레그램 설치 및 계정 준비 -->
+        <h3 id="telegram-install">1) 텔레그램 설치 및 사전 준비</h3>
+        <p>
+          텔레그램은 PC와 스마트폰에서 가볍고 안전하게 구동되는 글로벌 메신저입니다. PC나 모바일에 텔레그램이 아직 설치되어 있지 않다면 아래 방법으로 간편하게 준비할 수 있습니다.
+        </p>
+        <div class="alert-box info" style="margin: 12px 0 18px;">
+          <span class="alert-icon">💡</span>
+          <div>
+            <strong>안전한 공식 설치 안내</strong><br>
+            헬퍼 텔레그램 창 하단의 <span class="chip blue">텔레그램 설치</span> 버튼을 누르면 텔레그램 공식 웹사이트(<a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">telegram.org</a>)로 브라우저가 열립니다. 
+            <span style="color:var(--green); font-weight:600;">헬퍼가 임의로 실행 파일을 내려받거나 설치하지 않으므로 안심하고 이용하세요.</span>
+          </div>
+        </div>
         <ul>
-          <li><strong>공지 채널</strong>: <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer"><code>@d4_notice</code></a> — 새 버전 소식과 안내.</li>
-          <li><strong>이용자 그룹</strong>: <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer"><code>@d4cute_helper</code></a> — 헬퍼 설정 팁·문의·버그 제보는 <strong>여기서만</strong> 받습니다. 스마트폰으로 화면의 QR 코드를 찍으면 바로 들어갑니다.</li>
-          <li><strong>텔레그램 설치</strong>: 아직 없으면 창의 설치 버튼이 공식 앱 안내 페이지를 엽니다. 헬퍼가 설치 파일을 받거나 실행하지는 않습니다.</li>
-          <li><strong>로그 보기 (Log Viewer)</strong>: 오류나 이상 현상이 발생했을 때 날짜별 로그 파일(7일 보관, 경로의 사용자명은 가림)을 보고 <span class="chip">최근 200줄 복사</span>·<span class="chip">오류만 복사</span>로 클립보드에 담아 그룹 방에 붙여 넣습니다. 복사본 첫 줄에 버전·OS·배율·날짜가 붙어 바로 분석할 수 있습니다. 헬퍼는 외부로 아무것도 자동 전송하지 않습니다.</li>
+          <li><strong>스마트폰 (모바일)</strong>: <span style="color:var(--gold); font-weight:600;">구글 플레이스토어</span> 또는 <span style="color:var(--gold); font-weight:600;">애플 앱스토어</span>에서 <code>Telegram</code>을 검색하여 무료 다운로드합니다. 전화번호 인증만 거치면 1분 만에 가입이 완료됩니다.</li>
+          <li><strong>PC (데스크톱)</strong>: <a href="https://desktop.telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">Telegram Desktop ↗</a> 공식 페이지에서 Windows용 설치 버전을 내려받아 설치한 뒤, 모바일 텔레그램 앱의 <span class="chip">설정 → 기기 → 데스크톱 연결</span>을 통해 QR 코드를 스캔하면 비밀번호 없이 즉시 로그인됩니다.</li>
         </ul>
+
+        <!-- 2) 채널 및 그룹방 가입 방법 -->
+        <h3 id="telegram-channels">2) 채널 & 이용자 그룹방 가입 방법</h3>
+        <p>
+          d4cute helper는 목적에 따라 두 개의 공식 텔레그램 방을 운영합니다.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 14px 0 20px;">
+          <div class="clan-card" style="padding: 16px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+              <span style="font-size:20px;">📢</span>
+              <strong style="color:var(--gold); font-size:16px;">공지 전용 채널</strong>
+            </div>
+            <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
+              새 버전 업데이트 소식, 시즌 패치 대응 현황, 긴급 안내를 전달하는 단방향 알림 채널입니다.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700;">@d4_notice ↗</a>
+              <span class="chip">공지 구독</span>
+            </div>
+          </div>
+
+          <div class="clan-card" style="padding: 16px; border-color: rgba(59, 130, 246, 0.4);">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+              <span style="font-size:20px;">💬</span>
+              <strong style="color:var(--blue); font-size:16px;">이용자 소통 그룹방</strong>
+            </div>
+            <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
+              <strong>헬퍼 설정 팁 공유, 질문, 기능 건의, 오류 제보는 오직 여기서만 받습니다!</strong>
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper ↗</a>
+              <span class="chip blue">문의/제보</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert-box gold" style="margin: 12px 0 18px;">
+          <span class="alert-icon">⚠️</span>
+          <div>
+            <strong>문의 채널 주의사항</strong><br>
+            삼촌안잔다잉 유튜브 채널은 디아블로4 게임 플레이와 소통을 즐기는 개인 방송 공간입니다. <span style="color:var(--ruby); font-weight:700;">유튜브 방송 채팅이나 댓글로는 헬퍼 문의를 일절 받지 않으니</span>, 반드시 텔레그램 공식 그룹방(<span style="color:var(--blue); font-weight:700;">@d4cute_helper</span>)으로 방문해 주세요.
+          </div>
+        </div>
+
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">📱 그룹방 간편 입장 방법 2가지</h4>
+        <ul>
+          <li><strong>방법 A (스마트폰 카메라 QR 스캔 — 가장 추천!)</strong>: 스마트폰의 기본 카메라 앱을 켜고 화면 오른쪽의 <strong style="color:var(--gold);">대형 QR 코드</strong>를 비추면 상단에 노란색 텔레그램 링크 배너가 나타납니다. 터치 한 번으로 <span class="chip blue">@d4cute_helper</span> 그룹방에 즉시 들어오실 수 있습니다.</li>
+          <li><strong>방법 B (PC 텔레그램 바로 열기)</strong>: 창에서 <span class="chip">열기</span> 버튼을 누르거나 웹 링크(<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">https://t.me/d4cute_helper</a>)를 클릭하면 PC 텔레그램 클라이언트로 직행합니다.</li>
+        </ul>
+
+        <!-- 3) 로그 뷰어를 통한 오류 복사 & 문제 해결 -->
+        <h3 id="log-viewer-guide">3) 로그 보기를 통한 오류 복사 & 문제 해결 방법</h3>
+        <p>
+          매크로가 갑자기 멈추거나, 선변성 도중 오류가 발생하거나, 예상치 못한 동작이 나타났을 때 제작자에게 상황을 설명하려면 <strong style="color:var(--gold);">로그 데이터</strong>가 가장 확실한 열쇠가 됩니다.
+        </p>
+
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">🔍 로그 뷰어 화면 구성 & 버튼 기능</h4>
+        <ul>
+          <li><strong><span style="color:var(--gold); font-weight:700;">로그 일자 드롭다운</span></strong>: 오류가 발생한 날짜(기본: 오늘 날짜)를 선택합니다. 로그는 최근 <span class="chip">7일간 자동 보관</span>된 후 오래된 파일부터 순차 삭제됩니다.</li>
+          <li><strong><span class="chip">경고·오류만</span> 토글 스위치</strong>: 수천 줄의 일반적인 <code>INFO</code> 로그를 숨기고, 시스템 경고(<span style="color:#f59e0b; font-weight:700;">WARN</span>) 및 오류(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 항목만 쏙 뽑아서 볼 수 있습니다.</li>
+          <li><strong><span class="chip">새로 고침</span></strong>: 헬퍼를 켜둔 상태에서 실시간으로 쌓이는 최신 로그를 즉시 화면에 다시 로드합니다.</li>
+          <li><strong><span class="chip">폴더 열기</span></strong>: 로그 원본 텍스트 파일들이 저장된 윈도우 탐색기 폴더(<code>%APPDATA%\d4cute_helper\logs</code>)를 직접 엽니다.</li>
+          <li><strong><span class="chip gold">최근 200줄 복사</span></strong>: 오류 직전까지 어떤 키가 눌렸고 어떤 이벤트가 일어났는지 맥락을 파악할 수 있도록 최근 200행의 로그를 클립보드로 복사합니다.</li>
+          <li><strong><span class="chip ruby">오류만 복사</span></strong>: 로그 전체 중에서 오류(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 및 예외 스택트레이스 구문만 정밀 추출하여 클립보드에 담습니다.</li>
+          <li><strong><span class="chip">선택 복사</span></strong>: 텍스트 창에서 마우스로 원하는 부분을 드래그한 뒤 해당 구간만 복사합니다.</li>
+        </ul>
+
+        <div class="alert-box info" style="margin: 14px 0 18px;">
+          <span class="alert-icon">🛡️</span>
+          <div>
+            <strong>개인정보 안심 보호 & 자동 전송 차단</strong><br>
+            <ul style="margin: 6px 0 0 18px; padding: 0;">
+              <li><strong>사용자명 자동 마스킹</strong>: 로그 안의 파일 경로(예: <code>C:\Users\홍길동\...</code>)에서 사용자 계정명은 자동으로 식별 불가능하게 숨겨져 복사되므로 사생활 노출 걱정이 없습니다.</li>
+              <li><strong>외부 자동 전송 차단</strong>: 하단 안내문("<em>복사한 내용을 텔레그램 그룹에 붙여넣어 보내 주세요 — 헬퍼가 자동으로 보내는 것은 없습니다.</em>")처럼, 헬퍼는 인터넷을 통해 사용자의 로그를 몰래 외부로 전송하지 않습니다. 오직 사용자가 직접 복사하여 붙여넣을 때만 안전하게 공유됩니다.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 style="color:var(--gold-bright); margin: 18px 0 10px;">🚀 오류 로그 전달 및 신속 해결 3단계 가이드</h4>
+        <ol style="line-height: 1.85;">
+          <li>
+            <strong style="color:var(--gold);">1단계: 로그 복사하기</strong><br>
+            문제가 발생한 즉시 텔레그램 다이얼로그에서 <span class="chip gold">📁 로그 보기</span> 버튼을 누르고, 창 하단에서 <span class="chip ruby">오류만 복사</span> 또는 <span class="chip gold">최근 200줄 복사</span> 버튼을 클릭합니다.<br>
+            <span style="font-size: 13px; color: var(--fg-dim);">※ 복사된 로그의 맨 첫 줄에는 헬퍼 버전, OS 환경, 해상도 배율 메타 정보가 자동으로 첨부되어 개발자가 환경을 단번에 파악할 수 있습니다.</span>
+          </li>
+          <li>
+            <strong style="color:var(--blue);">2단계: 텔레그램 그룹방에 붙여넣기</strong><br>
+            스마트폰 또는 PC에서 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a> 그룹방으로 이동한 후, 메시지 입력창을 클릭하고 <kbd>Ctrl</kbd> + <kbd>V</kbd>(모바일은 입력창 길게 누른 뒤 붙여넣기)를 실행합니다.
+          </li>
+          <li>
+            <strong style="color:var(--green);">3단계: 발생 상황 설명 덧붙이기</strong><br>
+            로그와 함께 <em>"어떤 상황에서 문제가 일어났는지"</em> 1~2줄을 함께 남겨주세요:<br>
+            <div style="background:var(--card-subtle); padding:10px 14px; border-radius:var(--radius-sm); border-left:3px solid var(--gold); margin:8px 0; font-size:13px; color:var(--fg-dim);">
+              예시 1: "인벤 선변성 시작 후 12번째 칸에서 큐브 비움 검증 단계에서 멈춥니다. 로그 남깁니다."<br>
+              예시 2: "전역 설정에서 오버레이 위치를 바꿨는데 화면에 오버레이가 나타나지 않습니다."
+            </div>
+            스크린샷이나 휴대폰 사진을 함께 첨부해 주시면 더욱 빠르고 정확한 진단과 패치가 이루어집니다.
+          </li>
+        </ol>
       </section>
 
       <!-- ─── 11. 클랜 & 방송 커뮤니티 ─── -->
@@ -1890,16 +2114,17 @@
             </p>
             <div class="alert-box info" style="margin:10px 0;">
               <span class="alert-icon">🎥</span>
-              <div><strong>가입 절차</strong> (디스코드 없음)
-                <ol style="margin:6px 0 0 18px; padding:0;">
-                  <li>게임에서 클랜 검색 → <strong>앙증맞은</strong> 찾기 → <strong>가입 신청</strong></li>
-                  <li>클랜장·관리자가 <strong>승인</strong> — 클랜장은 채널 라이브에서 확인한 뒤 누릅니다</li>
-                  <li>신청자가 게임에서 다시 <strong>승인(수락)</strong>을 눌러야 최종 가입</li>
+              <div><strong>가입 절차 4단계</strong> (디스코드 가입 없음!)
+                <ol style="margin:6px 0 0 18px; padding:0; line-height:1.8;">
+                  <li>인게임에서 클랜 검색 → <strong>앙증맞은</strong> 찾기 → <strong>가입 신청</strong></li>
+                  <li><strong>삼촌안잔다잉 채널</strong>(라이브 방송 등)에서 가입 사실을 알린다</li>
+                  <li><strong>클랜장 및 관리자</strong>가 신청 내역을 확인 후 <strong>승인</strong>한다</li>
+                  <li>신청자가 인게임에서 다시 <strong>최종 승인(수락)</strong>을 누르면 가입 완료</li>
                 </ol>
               </div>
             </div>
             <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="comm-btn youtube" style="padding:10px; font-size:13px;">
-              삼촌안잔다잉 채널 — 가입 확인은 라이브에서 ↗
+              삼촌안잔다잉 채널 — 가입 사실 알리기 ↗
             </a>
           </div>
 
