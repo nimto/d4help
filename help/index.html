@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d4cute helper 사용 도움말</title>
+  <meta name="description" content="d4cute helper 사용 도움말 — 헬퍼 안 [?] 버튼으로 열리는 매뉴얼. 계속 갱신됩니다.">
+  <style>
+    :root {
+      --bg: #0d0c11; --card: #15141b; --card2: #1c1b24; --line: #2a2933; --line2: #3a3946;
+      --fg: #e6e6ea; --dim: #9a9aa6; --gold: #ffd700; --blue: #2f6fed; --green: #22c55e; --red: #e5484d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 20px 80px; }
+    header { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-bottom: 1px solid var(--line2); padding-bottom: 14px; margin-bottom: 18px; }
+    header h1 { font-size: 26px; margin: 0; color: var(--gold); }
+    header .ver { color: var(--dim); font-size: 14px; }
+    .note { background: var(--card2); border-left: 4px solid var(--gold); padding: 10px 14px; border-radius: 8px; color: var(--dim); margin: 0 0 18px; }
+    nav.toc { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 26px; }
+    nav.toc ol { margin: 6px 0 0; padding-left: 22px; columns: 2; column-gap: 28px; }
+    nav.toc li { break-inside: avoid; margin: 2px 0; }
+    nav.toc a { color: var(--fg); text-decoration: none; }
+    nav.toc a:hover { color: var(--gold); }
+    section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin: 0 0 18px; }
+    section h2 { margin: 0 0 10px; font-size: 20px; color: var(--gold); }
+    section h3 { margin: 16px 0 6px; font-size: 16px; color: var(--fg); }
+    p { margin: 8px 0; }
+    ul { margin: 6px 0; padding-left: 22px; }
+    li { margin: 3px 0; }
+    kbd { background: #2a2933; border: 1px solid var(--line2); border-bottom-width: 2px; border-radius: 5px; padding: 1px 7px; font-weight: 700; font-size: 14px; }
+    .chip { display: inline-block; background: #23222c; border: 1px solid var(--line2); border-radius: 6px; padding: 1px 8px; font-weight: 700; font-size: 14px; }
+    .chip.blue { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .chip.red { background: var(--red); border-color: var(--red); color: #fff; }
+    .chip.green { background: #1b7f4b; border-color: #1b7f4b; color: #fff; }
+    img.shot { max-width: 100%; border-radius: 10px; border: 1px solid var(--line2); margin: 8px 0; display: block; }
+    .warn { border-left: 4px solid var(--red); background: #241517; padding: 10px 14px; border-radius: 8px; }
+    .tip { border-left: 4px solid var(--green); background: #12221a; padding: 10px 14px; border-radius: 8px; }
+    table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 15px; }
+    th, td { border: 1px solid var(--line2); padding: 6px 10px; text-align: left; vertical-align: top; }
+    th { background: var(--card2); }
+    footer { color: var(--dim); font-size: 14px; margin-top: 30px; }
+    a { color: #7fb3ff; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>d4cute helper 사용 도움말</h1>
+    <span class="ver">헬퍼 1.30 기준 · 2026-10-22 · 이 문서는 계속 갱신됩니다</span>
+  </header>
+  <p class="note">헬퍼 안 <span class="chip">?</span> 버튼으로 이 문서가 열립니다. 헬퍼는 이 페이지를 보여 줄 뿐 자동으로 아무것도 보내지 않습니다. 더 자세한 설명과 영상은 <a href="https://github.com/nimto/d4help">d4help 저장소</a>와 <a href="https://github.com/nimto/d4help/blob/main/INVEN_GUIDE.md">인벤 가이드</a>에 있습니다.</p>
+
+  <nav class="toc">
+    <strong>차례</strong>
+    <ol>
+      <li><a href="#start">처음 5분 — 설치부터 첫 매크로까지</a></li>
+      <li><a href="#screen">화면 구성</a></li>
+      <li><a href="#macro">매크로 설정 — 실행 방식 · 발동 방식 · 발동키</a></li>
+      <li><a href="#seq">시퀀스 · 녹화 · 마우스 좌표</a></li>
+      <li><a href="#alter">편의기능 — 인벤 선변성</a></li>
+      <li><a href="#alarm">알람 · 배너 · 음성</a></li>
+      <li><a href="#profile">프로필 · 내보내기 · 가져오기</a></li>
+      <li><a href="#window">창 모드 · 항상 위 · 오버레이</a></li>
+      <li><a href="#safety">안전 장치 — 대기 키 · 게임 창 감지</a></li>
+      <li><a href="#telegram">텔레그램 · 로그 보내기</a></li>
+      <li><a href="#faq">자주 묻는 문제</a></li>
+    </ol>
+  </nav>
+
+  <section id="start">
+    <h2>1. 처음 5분 — 설치부터 첫 매크로까지</h2>
+    <ol>
+      <li><a href="https://da.gd/d4help">설치 파일</a>을 받아 실행합니다. Windows 가 "알 수 없는 게시자" 경고를 띄우면 <em>추가 정보 → 실행</em>.</li>
+      <li>헬퍼를 켜면 가장 작은 기본창으로 뜹니다. 프로필 줄에서 직업 프로필을 고르거나 <span class="chip green">＋</span> 로 새로 만듭니다.</li>
+      <li>슬롯 <span class="chip">A</span> 를 누르고 <strong>매크로 설정</strong> 탭에서 발동키를 고릅니다(파란 발동키 버튼을 누르고 키를 누르면 됩니다).</li>
+      <li><strong>시퀀스</strong> 탭에서 <span class="chip">＋</span> 로 스킬 키를 추가하거나 <span class="chip">녹화</span> 로 게임에서 누르는 순서를 그대로 기록합니다.</li>
+      <li><span class="chip green">▶ 시작</span> 을 누르고 게임으로 가서 발동키를 누릅니다. 오버레이에 슬롯 상태가 뜹니다.</li>
+    </ol>
+    <p class="tip">게임 창이 앞에 있을 때만 매크로가 움직입니다. 헬퍼 창을 누르면 게임이 뒤로 가므로, 발동키는 게임을 보면서 누르세요.</p>
+  </section>
+
+  <section id="screen">
+    <h2>2. 화면 구성</h2>
+    <img class="shot" src="../images/main-macro.png" alt="메인 화면">
+    <ul>
+      <li><strong>상단바</strong> — 실행 상태, <span class="chip">업데이트</span>(새 버전이 있으면 깜빡임), <span class="chip">설정</span>, <span class="chip">테스트</span>(입력 테스트), 미니창 토글, 항상 위 핀.</li>
+      <li><strong>프로필 줄</strong> — <span class="chip">‹ ›</span> 로 프로필 넘기기, 콤보를 더블클릭하면 이름 변경, <span class="chip green">＋</span> 새 프로필, <span class="chip red">🗑</span> 삭제, 텔레그램, 시즌 문서, <span class="chip">?</span> 도움말.</li>
+      <li><strong>슬롯 줄</strong> — <span class="chip">A B C D</span> 매크로 슬롯(발동 중이면 빨간색), <span class="chip">♡ 후원</span>, <span class="chip">🔧 편의기능</span>, <span class="chip">알람</span>.</li>
+      <li><strong>탭 줄 오른쪽 칩</strong> — 지금 고른 실행 방식 · 발동 방식 · 발동키가 늘 보입니다(시퀀스 탭에서도).</li>
+      <li><strong>하단</strong> — <span class="chip green">▶ 시작</span> / <span class="chip">■ 중지</span>, 저장, 불러오기, 삼촌안잔다잉 채널, 내보내기, 가져오기, 최소화.</li>
+    </ul>
+  </section>
+
+  <section id="macro">
+    <h2>3. 매크로 설정 — 실행 방식 · 발동 방식 · 발동키</h2>
+    <table>
+      <tr><th>항목</th><th>뜻</th></tr>
+      <tr><td><strong>순차</strong></td><td>스텝을 위→아래로 한 번씩 실행한 뒤 반복합니다. 스킬 로테이션용.</td></tr>
+      <tr><td><strong>독립</strong></td><td>스텝마다 자기 대기 시간으로 따로 반복합니다. 순서는 무시됩니다. 버프 유지용.</td></tr>
+      <tr><td><strong>홀드</strong></td><td>발동키를 누르는 동안만 실행합니다.</td></tr>
+      <tr><td><strong>토글</strong></td><td>한 번 누르면 켜지고 다시 누르면 꺼집니다.</td></tr>
+      <tr><td><strong>한 번</strong></td><td>누르면 시퀀스를 처음부터 끝까지 한 바퀴 돌고 스스로 꺼집니다. 제작·구매 같은 일회성 작업용.</td></tr>
+    </table>
+    <h3>발동키 · 누름 인식 지연</h3>
+    <ul>
+      <li>발동키는 키보드 키, 마우스 버튼, <kbd>Ctrl</kbd>·<kbd>Shift</kbd>·<kbd>Alt</kbd> 조합 모두 됩니다. 슬롯끼리 같은 발동키를 써도 됩니다(동시에 발동).</li>
+      <li><strong>누름 인식 지연</strong>은 짧게 누른 건 무시하고 그 시간 이상 눌러야 발동하게 합니다. 오른쪽 마우스를 발동키로 쓸 때 인벤·창고에서 창이 닫히는 오동작을 막는 핵심 설정입니다.</li>
+      <li><strong>떼고 유지</strong>는 발동키를 뗀 뒤에도 그 시간만큼 계속 돌립니다(사냥을 끝내고 바닥 아이템을 줍는 사이).</li>
+      <li><strong>동반 키</strong>는 매크로가 켜진 동안 함께 눌러 두는 키입니다(홀드형 버프).</li>
+    </ul>
+    <p class="warn">선변성 시작 단축키와 같은 키는 발동키로 고를 수 없습니다 — 게임에서 누르면 둘 다 반응하기 때문입니다.</p>
+  </section>
+
+  <section id="seq">
+    <h2>4. 시퀀스 · 녹화 · 마우스 좌표</h2>
+    <ul>
+      <li>스텝 카드를 누르면 키·모드(<em>Single</em> 한 번 / <em>Burst</em> 연타 / <em>Hold</em> 꾹)·간격을 바꿉니다. <span class="chip">딜레이 일괄변경</span>, <span class="chip">전체 → Burst/Single</span> 로 한 번에 바꿉니다.</li>
+      <li><span class="chip">녹화</span> 를 누르고 게임에서 누르는 키와 클릭을 그대로 기록합니다. 마우스 클릭은 <strong>화면 좌표</strong>까지 기록되어 재생 때 그 자리를 누릅니다. 녹화를 끝내려고 헬퍼 창을 누른 클릭은 들어가지 않습니다.</li>
+      <li><strong>클릭 위치 ± px</strong> 만큼 매번 조금씩 다른 자리를 누르고, <strong>랜덤 변동 %</strong> 만큼 간격이 흔들립니다.</li>
+      <li>키를 꾹 눌러도 한 번만 기록됩니다 — 같은 키 세 번이면 세 번 따로 누르세요.</li>
+    </ul>
+    <p class="tip">좌표는 절대 좌표라 해상도·창 위치가 바뀌면 다시 녹화해야 합니다.</p>
+  </section>
+
+  <section id="alter">
+    <h2>5. 편의기능 — 인벤 선변성</h2>
+    <img class="shot" src="../images/alter-tool.png" alt="인벤 선변성 탭">
+    <ol>
+      <li>게임에서 <strong>인벤토리</strong>와 <strong>호라드림의 함</strong>을 열어 둡니다.</li>
+      <li><span class="chip">첫 칸</span>·<span class="chip">끝 칸</span> 찍기를 누르고 게임의 그 칸에 마우스를 올린 뒤 <kbd>Enter</kbd>(<kbd>Esc</kbd> 취소). 두 점만 찍으면 33칸을 계산합니다.</li>
+      <li>게임 화면에서 시작 단축키(기본 <kbd>F11</kbd>)를 누르거나 <span class="chip green">▶ 선변성 시작</span> 을 누르고 게임으로 갑니다. 편의기능 탭을 열어 두지 않아도, 매크로를 켜지 않아도 단축키가 듣습니다.</li>
+    </ol>
+    <p>칸마다 <em>우클릭 → 아이템 변성 → 변환 → 수락(<kbd>Enter</kbd>) → 초기화</em> 를 돌립니다. 변성 가능한 칸만 고르고, 초기화 뒤 큐브가 비었는지 확인한 다음 넘어갑니다. 진행 상황은 오버레이에 뜹니다. <kbd>Esc</kbd> 는 어디서 눌러도 멈춥니다.</p>
+    <ul>
+      <li><strong>계정 귀속 아이템 건너뛰기</strong> — 켜면 귀속 아이템은 건너뜁니다. 꺼 두면 귀속 아이템도 변성하고, 수락 창이 뜰 때만 <kbd>Enter</kbd> 를 칩니다.</li>
+      <li>버튼 자리는 화면 글자(OCR)로 찾습니다. 1080p 에서도 되지만, 안 되면 <code>%APPDATA%\d4cute_helper\debug\</code> 의 <code>alter_slots.txt</code>·<code>alter_miss_*.png</code> 를 그룹에 보내 주세요.</li>
+    </ul>
+  </section>
+
+  <section id="alarm">
+    <h2>6. 알람 · 배너 · 음성</h2>
+    <ul>
+      <li>알람 탭에서 이벤트 알림(군단·세계 보스·지옥물결 등)과 개인 알람(시각·타이머)을 켭니다. <strong>켜진 알람이 하나라도 있으면 헬퍼를 켜는 순간부터 울립니다</strong> — 매크로 시작과 무관합니다.</li>
+      <li>화면 배너 위치·크기, 소리 또는 한국어 음성(TTS)을 고를 수 있고, 겹치면 우선순위 순으로 울립니다.</li>
+    </ul>
+    <img class="shot" src="../images/main-alarm.png" alt="알람 탭">
+  </section>
+
+  <section id="profile">
+    <h2>7. 프로필 · 내보내기 · 가져오기</h2>
+    <ul>
+      <li>프로필 하나에 슬롯 A~D 와 설정이 들어 있습니다. 직업별로 나눠 쓰세요.</li>
+      <li><span class="chip">내보내기</span> 로 <code>.d4cute</code> 파일을 만들고 <span class="chip blue">가져오기</span> 로 불러옵니다. 클랜원과 세팅을 그대로 나눌 수 있습니다. 공유 프로필은 <a href="https://github.com/nimto/d4help/tree/main/%ED%94%84%EB%A1%9C%ED%95%84">저장소 프로필 폴더</a>에 있습니다.</li>
+      <li><span class="chip">저장</span> 을 눌러야 디스크에 적힙니다. <span class="chip">불러오기</span> 는 디스크의 마지막 저장본으로 되돌립니다.</li>
+    </ul>
+  </section>
+
+  <section id="window">
+    <h2>8. 창 모드 · 항상 위 · 오버레이</h2>
+    <ul>
+      <li><strong>미니창</strong> — 게임 옆에 두는 한 줄 창. 슬롯 상태·시작/중지·편의기능 아이콘이 있고, 복귀 버튼으로 기본창으로 돌아옵니다.</li>
+      <li><strong>항상 위(핀)</strong> — 미니창+핀은 모든 창 위, 기본창+핀은 활성 창이 위로 옵니다.</li>
+      <li><strong>오버레이</strong> — 게임 위에 슬롯 상태·알람·선변성 진행을 띄웁니다. 설정에서 위치·투명도·크기를 바꿉니다. 기본창은 켜면 늘 가장 작은 크기로 뜨고, 창 폭에 따라 버튼이 아이콘으로 접힙니다.</li>
+    </ul>
+  </section>
+
+  <section id="safety">
+    <h2>9. 안전 장치 — 대기 키 · 게임 창 감지</h2>
+    <ul>
+      <li><strong>대기 키</strong>(기본 <kbd>Enter</kbd> <kbd>Tab</kbd> <kbd>T</kbd> <kbd>I</kbd> <kbd>O</kbd>) — 채팅·지도·인벤을 여는 키를 누르면 매크로가 멈추고, 발동키를 다시 누르면 재개합니다.</li>
+      <li><strong>게임 창 감지</strong> — 디아블로4 가 앞에 있을 때만 키를 보냅니다. 설정에서 창 제목·프로세스를 직접 고를 수 있습니다.</li>
+      <li><strong>입력 테스트</strong> — 상단 <span class="chip">테스트</span> 로 키 전송이 되는지 게임 밖에서 먼저 확인합니다.</li>
+    </ul>
+  </section>
+
+  <section id="telegram">
+    <h2>10. 텔레그램 · 로그 보내기</h2>
+    <ul>
+      <li>프로필 줄의 파란 종이비행기 버튼 → 공지 채널 <code>@d4_notice</code>, 이용자 그룹 <code>@d4cute_helper</code>. QR 을 휴대폰으로 찍으면 바로 열립니다.</li>
+      <li><strong>로그 보기</strong> 에서 최근 로그를 복사해 그룹이나 제작자에게 붙여 넣으면 바로 봅니다. 헬퍼는 자동으로 아무것도 보내지 않습니다.</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>11. 자주 묻는 문제</h2>
+    <h3>발동키를 눌러도 아무 일이 없어요</h3>
+    <ul>
+      <li>상단이 <strong>실행 중</strong>인지(시작을 눌렀는지), 슬롯의 <strong>매크로 활성</strong> 스위치가 켜졌는지, 시퀀스에 스텝이 있는지 확인합니다.</li>
+      <li>게임 창이 앞에 있어야 합니다. 대기 키를 눌러 멈춘 상태면 발동키를 한 번 더 누릅니다.</li>
+      <li>그래도 안 되면 중지 → 시작을 한 번 하고, 계속되면 로그를 그룹에 보내 주세요.</li>
+    </ul>
+    <h3>오른쪽 마우스가 발동키인데 인벤에서 창이 닫혀요</h3>
+    <p>누름 인식 지연을 <em>길게(300 ms)</em> 로 두세요. 짧은 클릭은 그대로 게임에 가고 길게 누를 때만 매크로가 돕니다.</p>
+    <h3>선변성이 큐브에 아이템을 두 개 올려요 / 버튼을 못 찾아요</h3>
+    <p>1.22 이후엔 초기화 뒤 큐브가 비었는지 확인하고 넘어갑니다. 그래도 생기면 <code>%APPDATA%\d4cute_helper\debug\alter_slots.txt</code> 를 보내 주세요. 1080p 에서 글자가 흐려 못 읽는 경우가 있어 보강했지만 환경에 따라 다릅니다.</p>
+    <h3>창이 하얗게/까맣게 떠요</h3>
+    <p>1.30 에서 내장 브라우저 렌더링 방식을 바꿔 고쳤습니다. 여전히 그렇다면 헬퍼를 껐다 켜고 그룹에 알려 주세요.</p>
+  </section>
+
+  <footer>
+    d4cute helper — 제작 SPEED · 문의는 텔레그램 이용자 그룹 <a href="https://t.me/d4cute_helper">@d4cute_helper</a> · 이 문서 원본: <a href="https://github.com/nimto/d4help/blob/main/help/index.html">help/index.html</a>
+  </footer>
+</div>
+</body>
+</html>
