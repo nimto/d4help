@@ -823,6 +823,18 @@
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
       white-space: nowrap;
     }
+    /* 본문 링크 - 브라우저 기본 파랑은 어두운 배경에서 안 보인다 (사용자 지적 2026-10-22). 버튼류(class 있는 a)는 제외 */
+    .content-wrap a:not([class]),
+    .content-wrap a:not([class]):visited {
+      color: var(--gold-bright);
+      text-decoration: underline;
+      text-decoration-color: var(--gold-dim);
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+    .content-wrap a:not([class]):hover { color: #fff; text-decoration-color: var(--gold); }
+    .content-wrap a:not([class]) code { color: inherit; }
+    .content-wrap a.chip { color: var(--fg); text-decoration: none; }
     .chip {
       display: inline-flex;
       align-items: center;
