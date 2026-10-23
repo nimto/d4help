@@ -1614,6 +1614,36 @@
       }
     }
 
+
+    /* ─── 2026-10-24: 텔레그램 배너 - 채널 버튼을 위에 꽉 찬 너비로, 설명은 아래 ─── */
+    .tg-top .tg-top-row { flex-direction: column !important; align-items: stretch !important; gap: 14px !important; }
+    .tg-top .tg-top-btns { order: -1; display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px !important; }
+    .tg-top .tg-top-btns a { justify-content: center; padding: 13px 16px !important; font-size: 15px !important; }
+    .tg-top .tg-top-text { min-width: 0 !important; }
+    @media (max-width: 520px) {
+      .tg-top .tg-top-btns { grid-template-columns: 1fr; }
+    }
+
+    /* ─── 2026-10-24: 본문 이미지 - PC 는 적당한 크기로 가운데, 휴대폰은 꽉 차게. 클릭하면 라이트박스로 크게 ─── */
+    .image-card { max-width: 760px; margin: 18px auto; }
+    .image-card.is-small { display: block; max-width: 560px; }
+    .image-card.is-thumbnail .thumb-container { max-height: none; background: #08070c; padding: 10px; }
+    .image-card.is-thumbnail .thumb-container img,
+    .image-card.is-small img {
+      width: auto; max-width: 100%; max-height: 440px;
+      object-fit: contain; margin: 0 auto; border-radius: 6px;
+    }
+    .image-card.is-small .thumb-container { display: flex; justify-content: center; }
+    .image-caption { text-align: center; }
+    /* 두 장 이상 나란히 놓인 곳은 칸 너비를 그대로 쓴다 */
+    div[style*="display: flex"] > .image-card,
+    div[style*="display: grid"] > .image-card { max-width: none; margin: 0; flex: 1 1 280px; }
+    @media (max-width: 720px) {
+      .image-card, .image-card.is-small { max-width: 100%; }
+      .image-card.is-thumbnail .thumb-container, .image-card.is-small .thumb-container { padding: 0; }
+      .image-card.is-thumbnail .thumb-container img,
+      .image-card.is-small img { width: 100%; max-height: none; border-radius: 0; }
+    }
 </style>
 </head>
 <body>
@@ -1828,9 +1858,9 @@
       </div>
 
       <!-- 📢 상단 텔레그램 공식 채널 필수 가입 배너 -->
-      <div class="telegram-top-banner" style="background: linear-gradient(135deg, rgba(42, 171, 238, 0.16) 0%, rgba(20, 36, 69, 0.45) 100%); border: 1.5px solid rgba(42, 171, 238, 0.45); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);">
-        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 280px;">
+      <div class="telegram-top-banner tg-top" style="background: linear-gradient(135deg, rgba(42, 171, 238, 0.16) 0%, rgba(20, 36, 69, 0.45) 100%); border: 1.5px solid rgba(42, 171, 238, 0.45); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);">
+        <div class="tg-top-row" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+          <div class="tg-top-text" style="flex: 1; min-width: 280px;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
               <h3 style="margin: 0; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: 0.3px;">
@@ -1843,7 +1873,7 @@
               In particular, the newly added <strong style="color:var(--gold-bright);">🌀 finished 360-degree circular rotation pack (.d4seq) file</strong>and the <strong style="color:#2AABEE;">actual rotation demo video</strong>can be downloaded for free right from the channel!
             </p>
           </div>
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <div class="tg-top-btns" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
             <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #2AABEE; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13.5px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(42, 171, 238, 0.4);">
               <span>📢 Join the Announcement Channel ↗</span>
             </a>
