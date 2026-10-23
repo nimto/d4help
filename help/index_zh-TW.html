@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>d4cute 輔助 官方用戶指南 (v1.30 最新版)</title>
-  <meta name="description" content="暗黑破壞神4 d4cute 輔助 v1.30 完整手冊 — 巨集設定、物品淬鍊重鑄、即時提醒、影片教學及社群指南。">
+  <title>d4cute helper 官方使用說明書 (v1.30 最新版)</title>
+  <meta name="description" content="暗黑破壞神4 d4cute helper v1.30 完整手冊 — 巨集設定、背包預變性便利功能、即時警報、圖片/影片指南、앙증맞은 (Angjeungmajeun) 戰隊及 삼촌안잔다잉 頻道。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1390,287 +1390,6 @@
       gap: 12px;
     }
   
-    /* ─── 국기 언어 선택기 (오직 국기만 표시되는 고급 팝오버) ─── */
-    .flag-picker {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      margin-left: 8px;
-    }
-    .flag-picker-btn {
-      background: rgba(22, 21, 32, 0.85);
-      border: 1px solid rgba(229, 184, 92, 0.4);
-      border-radius: 8px;
-      padding: 4px 6px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-    .flag-picker-btn:hover {
-      background: rgba(229, 184, 92, 0.15);
-      border-color: var(--gold-bright);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px var(--gold-glow);
-    }
-    .flag-active-img {
-      width: 24px;
-      height: 16px;
-      object-fit: cover;
-      border-radius: 3px;
-      display: block;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    }
-    .flag-picker-dropdown {
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0;
-      background: rgba(18, 17, 26, 0.98);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(229, 184, 92, 0.35);
-      border-radius: 12px;
-      padding: 10px;
-      display: none;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(229, 184, 92, 0.15);
-      z-index: 2000;
-      min-width: 150px;
-    }
-    .flag-picker-dropdown.show {
-      display: grid;
-      animation: flagMenuPop 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    @keyframes flagMenuPop {
-      from { opacity: 0; transform: translateY(-6px) scale(0.96); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .flag-picker-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px;
-      border-radius: 6px;
-      border: 1px solid transparent;
-      background: rgba(255, 255, 255, 0.04);
-      transition: all 0.15s ease;
-      text-decoration: none;
-    }
-    .flag-picker-item:hover {
-      background: rgba(229, 184, 92, 0.22);
-      border-color: var(--gold);
-      transform: scale(1.1);
-    }
-    .flag-picker-item.active {
-      border-color: var(--gold);
-      background: rgba(229, 184, 92, 0.18);
-      box-shadow: 0 0 10px var(--gold-glow);
-    }
-    .flag-icon-img {
-      width: 26px;
-      height: 18px;
-      object-fit: cover;
-      border-radius: 3px;
-      display: block;
-    }
-
-
-    /* ─── 럭셔리 다크 판타지 텔레그램 상단 배너 ─── */
-    .telegram-banner-v3 {
-      position: relative;
-      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.2) 0%, rgba(18, 17, 24, 0.95) 60%),
-                  radial-gradient(ellipse at 90% 50%, rgba(229, 184, 92, 0.12) 0%, rgba(14, 13, 20, 0.98) 70%),
-                  #0e0d14;
-      border: 1px solid rgba(42, 171, 238, 0.35);
-      border-left: 5px solid #2AABEE;
-      border-radius: 14px;
-      padding: 22px 26px;
-      margin: 24px 0 32px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(42, 171, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-      overflow: hidden;
-    }
-    .telegram-banner-v3::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(42, 171, 238, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-      animation: bannerGlowPulse 6s ease-in-out infinite alternate;
-    }
-    @keyframes bannerGlowPulse {
-      0% { opacity: 0.5; transform: scale(0.98); }
-      100% { opacity: 1; transform: scale(1.02); }
-    }
-    .tg-v3-left {
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      position: relative;
-      z-index: 1;
-      flex: 1;
-    }
-    .tg-v3-icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .tg-v3-icon-box::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 16px;
-      border: 1px solid rgba(42, 171, 238, 0.5);
-      animation: pulseIconRing 2.5s infinite;
-    }
-    @keyframes pulseIconRing {
-      0% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.08); opacity: 0.3; }
-      100% { transform: scale(1); opacity: 0.8; }
-    }
-    .tg-v3-content {
-      flex: 1;
-    }
-    .tg-v3-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-    }
-    .tg-v3-title {
-      font-size: 19px;
-      font-weight: 800;
-      font-family: var(--font-title);
-      background: linear-gradient(135deg, #ffd778 0%, #e5b85c 60%, #b8860b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 0.4px;
-      margin: 0;
-    }
-    .tg-v3-badge {
-      background: rgba(229, 72, 77, 0.2);
-      border: 1px solid rgba(229, 72, 77, 0.5);
-      color: #ff6b6b;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .tg-v3-desc {
-      font-size: 14.5px;
-      color: #c9c7d8;
-      line-height: 1.65;
-      margin: 0 0 10px 0;
-    }
-    .tg-v3-highlight-box {
-      display: inline-block;
-      background: rgba(42, 171, 238, 0.08);
-      border: 1px solid rgba(42, 171, 238, 0.25);
-      border-radius: 8px;
-      padding: 7px 12px;
-      font-size: 13.5px;
-      color: #e2e8f0;
-      line-height: 1.5;
-    }
-    .tg-v3-highlight-box strong {
-      color: #38bdf8;
-    }
-    .tg-v3-highlight-box em {
-      color: #fbbf24;
-      font-style: normal;
-      font-weight: 700;
-    }
-    .tg-v3-right {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-      min-width: 170px;
-    }
-    .tg-v3-btn-channel {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 20px;
-      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 6px 18px rgba(0, 136, 204, 0.45);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-    .tg-v3-btn-channel:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 136, 204, 0.65);
-      filter: brightness(1.1);
-    }
-    .tg-v3-btn-group {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 20px;
-      background: rgba(255, 255, 255, 0.05);
-      color: #e6e5ee;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13.5px;
-      border-radius: 10px;
-      border: 1px solid rgba(229, 184, 92, 0.35);
-      transition: all 0.2s ease;
-    }
-    .tg-v3-btn-group:hover {
-      background: rgba(229, 184, 92, 0.15);
-      border-color: var(--gold);
-      color: var(--gold-bright);
-      transform: translateY(-1px);
-    }
-    @media (max-width: 860px) {
-      .telegram-banner-v3 {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 18px;
-        gap: 16px;
-      }
-      .tg-v3-right {
-        flex-direction: row;
-        width: 100%;
-      }
-      .tg-v3-btn-channel, .tg-v3-btn-group {
-        flex: 1;
-        padding: 10px 12px;
-        font-size: 13px;
-      }
-    }
-
-
     /* ─── 국기 언어 선택기 (자바스크립트 0% 순수 HTML5 details/summary) ─── */
     details.flag-picker {
       position: relative;
@@ -1756,32 +1475,153 @@
       display: block;
     }
 
-</style>
-  <script>
-    (function () {
-      try {
-        var params = new URLSearchParams(window.location.search);
-        var q = (params.get("lang") || "").toLowerCase();
-        var saved = (localStorage.getItem("d4help_lang") || "").toLowerCase();
-        var nav = (navigator.language || "").toLowerCase();
 
-        // en 페이지: 한국어 명시 시 상위(ko)로 이동
-        if (q.startsWith("ko")) {
-          localStorage.setItem("d4help_lang", "ko");
-          window.location.replace("../" + window.location.search + window.location.hash);
-          return;
-        }
-        localStorage.setItem("d4help_lang", "en");
-      } catch (e) {}
-    })();
-  </script>
+    /* ─── 럭셔리 다크 판타지 텔레그램 상단 배너 ─── */
+    .telegram-banner-v3 {
+      position: relative;
+      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.2) 0%, rgba(18, 17, 24, 0.95) 60%),
+                  radial-gradient(ellipse at 90% 50%, rgba(229, 184, 92, 0.12) 0%, rgba(14, 13, 20, 0.98) 70%),
+                  #0e0d14;
+      border: 1px solid rgba(42, 171, 238, 0.35);
+      border-left: 5px solid #2AABEE;
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 20px 0 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(42, 171, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+    .tg-v3-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      flex: 1;
+    }
+    .tg-v3-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .tg-v3-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .tg-v3-title {
+      font-size: 18px;
+      font-weight: 800;
+      font-family: var(--font-title);
+      color: #ffd778;
+      letter-spacing: 0.4px;
+      margin: 0;
+    }
+    .tg-v3-badge {
+      background: rgba(229, 72, 77, 0.2);
+      border: 1px solid rgba(229, 72, 77, 0.5);
+      color: #ff6b6b;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+    .tg-v3-desc {
+      font-size: 14px;
+      color: #c9c7d8;
+      line-height: 1.6;
+      margin: 0 0 8px 0;
+    }
+    .tg-v3-highlight-box {
+      display: inline-block;
+      background: rgba(42, 171, 238, 0.08);
+      border: 1px solid rgba(42, 171, 238, 0.25);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+    .tg-v3-highlight-box strong { color: #38bdf8; }
+    .tg-v3-highlight-box em { color: #fbbf24; font-style: normal; font-weight: 700; }
+    .tg-v3-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+      min-width: 165px;
+    }
+    .tg-v3-btn-channel {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13.5px;
+      border-radius: 9px;
+      box-shadow: 0 4px 14px rgba(0, 136, 204, 0.4);
+      transition: all 0.2s ease;
+    }
+    .tg-v3-btn-channel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+      filter: brightness(1.1);
+    }
+    .tg-v3-btn-group {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #e6e5ee;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      border-radius: 9px;
+      border: 1px solid rgba(229, 184, 92, 0.35);
+      transition: all 0.2s ease;
+    }
+    .tg-v3-btn-group:hover {
+      background: rgba(229, 184, 92, 0.15);
+      border-color: var(--gold);
+      color: var(--gold-bright);
+    }
+    @media (max-width: 860px) {
+      .telegram-banner-v3 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+      }
+      .tg-v3-right {
+        flex-direction: row;
+      }
+      .tg-v3-btn-channel, .tg-v3-btn-group {
+        flex: 1;
+      }
+    }
+
+</style>
 </head>
 <body>
 
   <!-- 상단 글로벌 바 -->
   <header class="top-nav">
     <div class="nav-left">
-      <button class="toggle-sidebar-btn" id="sidebarToggle" title="사이드바 접기/펼치기 (마우스 올리면 임시 표시)" aria-label="사이드바 토글">
+      <button class="toggle-sidebar-btn" id="sidebarToggle" title="收合/展開側邊欄 (滑鼠移上去會暫時顯示)" aria-label="切換側邊欄">
         ☰
       </button>
       <a href="#" class="brand">
@@ -1790,30 +1630,25 @@
       </a>
     </div>
     <div class="nav-right">
-      <a href="#quickstart" class="nav-link">Quick Start</a>
-      <a href="#tools-alter" class="nav-link">Transmute Tools</a>
-      <a href="#community" class="nav-link">Community</a>
-      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">Repository ↗</a>
-      
-    
-      
-    
-    
+      <a href="#quickstart" class="nav-link">開始使用</a>
+      <a href="#tools-alter" class="nav-link">預變性工具</a>
+      <a href="#community" class="nav-link">戰隊 & 頻道</a>
+      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">儲存庫 ↗</a>
       <details class="flag-picker">
-      <summary class="flag-picker-btn" title="Language: 繁體中文">
-        <img src="https://flagcdn.com/w40/tw.png" alt="zh-TW" class="flag-active-img">
-      </summary>
-      <div class="flag-picker-dropdown">
-        <a href="index.html" class="flag-picker-item" title="한국어 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
-        <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
-        <a href="index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
-        <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
-        <a href="index_zh-TW.html" class="flag-picker-item active" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
-        <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
-        <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
-        <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
-      </div>
-    </details>
+          <summary class="flag-picker-btn" title="Language: 繁體中文">
+            <img src="https://flagcdn.com/w40/tw.png" alt="zh-TW" class="flag-active-img">
+          </summary>
+          <div class="flag-picker-dropdown">
+            <a href="index.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
+            <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
+            <a href="index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
+            <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
+            <a href="index_zh-TW.html" class="flag-picker-item active" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
+            <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
+            <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
+            <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
+          </div>
+        </details>
     </div>
   </header>
 
@@ -1829,22 +1664,22 @@
       <div class="sidebar-tabs">
         <button class="sidebar-tab-btn active" data-tab="toc">
           <span class="tab-icon">📑</span>
-          <span>Table of Contents</span>
+          <span>目錄</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="images">
           <span class="tab-icon">🖼️</span>
-          <span>Images (<span id="imgCount">0</span>)</span>
+          <span>圖片 (<span id="imgCount">0</span>)</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="videos">
           <span class="tab-icon">🎬</span>
-          <span>Videos (<span id="vidCount">0</span>)</span>
+          <span>影片 (<span id="vidCount">0</span>)</span>
         </button>
       </div>
 
       <!-- 도움말 본문 전체 검색창 -->
       <div class="sidebar-search-box">
-        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="Search manual contents..." autocomplete="off">
-        <button class="search-clear-btn" id="searchClearBtn" title="검색어 지우기">✕</button>
+        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="搜尋整份說明內容..." autocomplete="off">
+        <button class="search-clear-btn" id="searchClearBtn" title="清除搜尋字詞">✕</button>
       </div>
 
       <!-- 사이드바 스크롤 컨테이너 -->
@@ -1853,8 +1688,8 @@
         <!-- 0. 실시간 검색 결과 패널 (검색 시 활성화) -->
         <div class="tab-panel" id="panel-search">
           <div style="font-size:12px; color:var(--fg-dim); margin-bottom:10px; display:flex; justify-content:space-between;">
-            <span>Search Results: <strong id="searchMatchCount" style="color:var(--gold);">0</strong>건</span>
-            <span style="font-size:11px; color:var(--fg-muted);">Click to jump to section</span>
+            <span>搜尋結果： <strong id="searchMatchCount" style="color:var(--gold);">0</strong>筆</span>
+            <span style="font-size:11px; color:var(--fg-muted);">點擊即可前往該位置</span>
           </div>
           <div class="search-results-list" id="searchResultsList">
             <!-- 자바스크립트로 본문 검색 결과 목록 생성 -->
@@ -1864,62 +1699,62 @@
         <!-- 1. 목차 패널 -->
         <div class="tab-panel active" id="panel-toc">
           <ul class="toc-tree">
-            <li><a href="#quickstart" class="toc-link">1. 快速入門指南</a></li>
+            <li><a href="#quickstart" class="toc-link">⚡ 1. 5 分鐘快速入門 & 安裝</a></li>
             <li>
-              <a href="#screen-ui" class="toc-link">2. 畫面佈局與UI元件</a>
+              <a href="#screen-ui" class="toc-link">🖥️ 2. 最新畫面配置 (1.30)</a>
               <ul class="toc-sub-tree">
-                <li><a href="#screen-topbar" class="toc-link">Top Bar & Profile Management</a></li>
-                <li><a href="#screen-slots" class="toc-link">Slot Bar (Macros, Sponsors, Tools, Alarms)</a></li>
+                <li><a href="#screen-topbar" class="toc-link">頂端列 & 設定檔操作</a></li>
+                <li><a href="#screen-slots" class="toc-link">欄位列 (A~G 共 7 個欄位、贊助、便利、警報)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#macro-engine" class="toc-link">3. 巨集引擎進階設定</a>
+              <a href="#macro-engine" class="toc-link">⚙️ 3. 巨集設定 & 啟動引擎</a>
               <ul class="toc-sub-tree">
-                <li><a href="#macro-modes" class="toc-link">Sequential, Independent, Hold, Toggle, Single</a></li>
-                <li><a href="#macro-keys" class="toc-link">Trigger Keys & Delay Filters</a></li>
+                <li><a href="#macro-modes" class="toc-link">順序 · 獨立 · 按住 · 切換 · 一次</a></li>
+                <li><a href="#macro-keys" class="toc-link">啟動鍵與按壓延遲過濾</a></li>
               </ul>
             </li>
             <li>
-              <a href="#sequence-builder" class="toc-link">4. 序列建構器精通</a>
+              <a href="#sequence-builder" class="toc-link">📋 4. 序列 & 滑鼠錄製</a>
               <ul class="toc-sub-tree">
-                <li><a href="#seq-cards" class="toc-link">스텝 카드 및 일괄 딜레이 변경</a></li>
-                <li><a href="#seq-recorder" class="toc-link">Live mouse-position recording &amp; randomness</a></li>
-                <li><a href="#seq-drag-path" class="toc-link">Drag-path recording (Whirlwind)</a></li>
-                <li><a href="#seq-rotation-pack" class="toc-link">🌀 360° Circular Drag Pack (9 Presets)</a></li>
+                <li><a href="#seq-cards" class="toc-link">步驟卡片與批次延遲變更</a></li>
+                <li><a href="#seq-recorder" class="toc-link">即時滑鼠座標錄製 & 隨機化</a></li>
+                <li><a href="#seq-drag-path" class="toc-link">拖曳軌跡錄製 (旋風斬 · 凝神)</a></li>
+                <li><a href="#seq-rotation-pack" class="toc-link">🌀 360 度圓形旋轉包 (9 種預設)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#tools-alter" class="toc-link">5. 裝備淬鍊重鑄工具使用方法</a>
+              <a href="#tools-alter" class="toc-link">🧪 5. 便利功能 — 背包預變性</a>
               <ul class="toc-sub-tree">
-                <li><a href="#alter-grid" class="toc-link">첫 칸/끝 칸 33칸 자동 계산</a></li>
-                <li><a href="#alter-safety" class="toc-link">귀속 건너뛰기 & 큐브 비움 검증</a></li>
+                <li><a href="#alter-grid" class="toc-link">自動計算第一格/最後一格共 33 格</a></li>
+                <li><a href="#alter-safety" class="toc-link">跳過綁定物品 & 方塊清空驗證</a></li>
               </ul>
             </li>
             <li>
-              <a href="#alarm" class="toc-link">6. 遊戲內智慧警報與計時器</a>
+              <a href="#alarm" class="toc-link">🔔 6. 智慧警報系統</a>
               <ul class="toc-sub-tree">
-                <li><a href="#alarm-events" class="toc-link">군단/보스 상시 백그라운드 감시</a></li>
-                <li><a href="#alarm-outputs" class="toc-link">인게임 배너 & 한국어 TTS 음성</a></li>
+                <li><a href="#alarm-events" class="toc-link">軍團/首領常駐背景監控</a></li>
+                <li><a href="#alarm-outputs" class="toc-link">遊戲內橫幅 & 語音 (TTS)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#window-modes" class="toc-link">7. 視窗模式與效能最佳化設定</a>
+              <a href="#window-modes" class="toc-link">🪟 7. 視窗模式、釘選、覆蓋層</a>
               <ul class="toc-sub-tree">
-                <li><a href="#window-mini" class="toc-link">미니창 모드 (초소형 바)</a></li>
-                <li><a href="#window-overlay" class="toc-link">인게임 HUD 오버레이</a></li>
+                <li><a href="#window-mini" class="toc-link">迷你視窗模式 (超小型列)</a></li>
+                <li><a href="#window-overlay" class="toc-link">遊戲內 HUD 覆蓋層</a></li>
               </ul>
             </li>
-            <li><a href="#safety-features" class="toc-link">8. 安全機制與防護設計</a></li>
-            <li><a href="#profile-sync" class="toc-link">9. 設定檔備份與遷移</a></li>
+            <li><a href="#safety-features" class="toc-link">🛡️ 8. 安全裝置 (待機鍵 & 焦點)</a></li>
+            <li><a href="#profile-sync" class="toc-link">💾 9. 設定檔管理 & 分享</a></li>
             <li>
-              <a href="#telegram-support" class="toc-link">10. Telegram 連動與遠端控制</a>
+              <a href="#telegram-support" class="toc-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2AABEE" style="vertical-align:-2px; margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 10. Telegram 支援 & 除錯記錄</a>
               <ul class="toc-sub-tree">
-                <li><a href="#telegram-install" class="toc-link">텔레그램 설치 & 그룹 가입</a></li>
-                <li><a href="#log-viewer-guide" class="toc-link">로그 복사 및 오류 해결 제보</a></li>
+                <li><a href="#telegram-install" class="toc-link">安裝 Telegram & 加入群組</a></li>
+                <li><a href="#log-viewer-guide" class="toc-link">複製記錄與回報錯誤</a></li>
               </ul>
             </li>
-            <li><a href="#community" class="toc-link">11. 戰隊公會與官方社群頻道</a></li>
-            <li><a href="#faq" class="toc-link">12. 常見問題解答 (FAQ)</a></li>
+            <li><a href="#community" class="toc-link">👑 11. 戰隊 & 삼촌안잔다잉 頻道</a></li>
+            <li><a href="#faq" class="toc-link">❓ 12. 常見問題 (FAQ)</a></li>
           </ul>
         </div>
 
@@ -1944,37 +1779,37 @@
         <!-- 앙증맞은 클랜 박스 -->
         <div class="community-box">
           <div class="community-head">
-            <span class="community-title">⚔️ &lt;앙증맞은&gt; 무지개날개</span>
-            <span class="community-tag">클랜</span>
+            <span class="community-title">⚔️ &lt;앙증맞은&gt; 彩虹之翼</span>
+            <span class="community-tag">戰隊</span>
           </div>
-          <div class="community-desc">디아4 인게임 클랜 · 클랜장 <strong>대한민국</strong> · 가입: 인게임 검색(앙증맞은) → 채널에 알림 → 승인 → 최종 수락 (디스코드 없음)</div>
+          <div class="community-desc">暗黑4 遊戲內戰隊 · 隊長 <strong>韓國</strong> · 加入：遊戲內搜尋(앙증맞은) → 在頻道通知 → 核准 → 最後接受 (沒有 Discord)</div>
           <div class="community-links">
-            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="comm-btn telegram">💬 텔레그램 그룹</a>
-            <a href="#community" class="comm-btn clan">📜 클랜 안내</a>
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="comm-btn telegram">💬 Telegram 群組</a>
+            <a href="#community" class="comm-btn clan">📜 戰隊介紹</a>
           </div>
         </div>
         <!-- 삼촌안잔다잉 채널 박스 -->
         <div class="community-box">
           <div class="community-head">
-            <span class="community-title">📺 삼촌안잔다잉 채널</span>
-            <span class="community-tag" style="color:var(--ruby); background:rgba(229,72,77,0.15);">클랜장</span>
+            <span class="community-title">📺 삼촌안잔다잉 頻道</span>
+            <span class="community-tag" style="color:var(--ruby); background:rgba(229,72,77,0.15);">隊長</span>
           </div>
-          <div class="community-desc">게임 방송 채널 · 헬퍼 질문은 텔레그램에서</div>
+          <div class="community-desc">遊戲直播頻道 · 助手相關問題請至 Telegram 詢問</div>
           <div class="community-links">
-            <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="comm-btn youtube">▶ YouTube 방송 ↗</a>
+            <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="comm-btn youtube">▶ YouTube 直播 ↗</a>
           </div>
         </div>
       </div>
 
       <!-- 접힘(미니) 모드용 아이콘 바 -->
       <div class="mini-icons-list">
-        <button class="mini-icon-btn" onclick="document.getElementById('quickstart').scrollIntoView({behavior:'smooth'})" title="시작하기">⚡</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('screen-ui').scrollIntoView({behavior:'smooth'})" title="화면 구성">🖥️</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('macro-engine').scrollIntoView({behavior:'smooth'})" title="매크로 설정">⚙️</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('tools-alter').scrollIntoView({behavior:'smooth'})" title="인벤 선변성">🧪</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('alarm').scrollIntoView({behavior:'smooth'})" title="스마트 알람">🔔</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})" title="클랜 & 방송">👑</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})" title="자주 묻는 질문">❓</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('quickstart').scrollIntoView({behavior:'smooth'})" title="開始使用">⚡</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('screen-ui').scrollIntoView({behavior:'smooth'})" title="畫面配置">🖥️</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('macro-engine').scrollIntoView({behavior:'smooth'})" title="巨集設定">⚙️</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('tools-alter').scrollIntoView({behavior:'smooth'})" title="背包預變性">🧪</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('alarm').scrollIntoView({behavior:'smooth'})" title="智慧警報">🔔</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})" title="戰隊 & 直播">👑</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})" title="常見問題">❓</button>
       </div>
 
     </aside>
@@ -1984,11 +1819,11 @@
       
       <!-- 히어로 배너 -->
       <div class="hero-banner-card">
-        <img src="images/hero_banner.jpg" alt="디아블로4 d4cute 헬퍼 배너" class="hero-banner-img">
+        <img src="../images/hero_banner.jpg" alt="暗黑破壞神4 d4cute 助手橫幅" class="hero-banner-img">
         <div class="hero-banner-overlay">
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
-          <h1 class="hero-title">d4cute helper 사용 설명서</h1>
-          <p class="hero-desc">1.30 최신 버전 기준 — A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
+          <h1 class="hero-title">d4cute helper 使用說明書</h1>
+          <p class="hero-desc">以 1.30 最新版本為準 — A~G 7 個欄位的順序/獨立巨集、背包預變性自動化、即時事件警報，並介紹 앙증맞은 戰隊與 삼촌안잔다잉 頻道</p>
         </div>
       </div>
 
@@ -1999,21 +1834,21 @@
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
               <h3 style="margin: 0; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: 0.3px;">
-                📢 텔레그램 공식 채널에 꼭 가입하세요!
+                📢 請務必加入 Telegram 官方頻道！
               </h3>
-              <span class="chip blue" style="font-weight: 700;">필독 권장</span>
+              <span class="chip blue" style="font-weight: 700;">建議必讀</span>
             </div>
             <p style="margin: 0 0 8px 0; font-size: 14px; color: var(--fg); line-height: 1.6;">
-              d4cute 헬퍼의 <strong>최신 업데이트 공지, 실시간 패치노트, 오류 제보 및 빠른 기술 지원</strong>은 텔레그램을 통해 가장 빠르게 전달됩니다.<br>
-              특히 이번에 추가된 <strong style="color:var(--gold-bright);">🌀 360도 원형 회전팩(.d4seq) 완성본 파일</strong>과 <strong style="color:#2AABEE;">실제 회전 시연 영상</strong>을 채널에서 무료로 바로 다운로드받으실 수 있습니다!
+              d4cute 助手的 <strong>最新更新公告、即時更新日誌、錯誤回報及快速技術支援</strong>會透過 Telegram 以最快速度傳達。<br>
+              特別是這次新增的 <strong style="color:var(--gold-bright);">🌀 360 度圓形旋轉包(.d4seq) 完成版檔案</strong>與 <strong style="color:#2AABEE;">實際旋轉示範影片</strong>，可以直接在頻道免費下載！
             </p>
           </div>
           <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
             <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #2AABEE; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13.5px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(42, 171, 238, 0.4);">
-              <span>📢 공지 채널 입장 ↗</span>
+              <span>📢 進入公告頻道 ↗</span>
             </a>
             <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid rgba(42, 171, 238, 0.4); color: var(--fg); text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 13.5px; transition: all 0.2s;">
-              <span>💬 이용자 그룹 입장 ↗</span>
+              <span>💬 進入使用者群組 ↗</span>
             </a>
           </div>
         </div>
@@ -2023,40 +1858,40 @@
       <div class="alert-box gold">
         <span class="alert-icon">💡</span>
         <div>
-          <strong>안내</strong>: 헬퍼 창의 <span class="chip gold">?</span> 버튼을 클릭하면 언제든지 이 최신 도움말 페이지가 열립니다. 사이드바 검색창으로 도움말 본문 내용을 실시간 검색할 수 있으며, 이미지를 클릭하면 <strong>마우스 휠 스크롤 확대/축소 및 이전/다음 탐색</strong>이 가능한 풀스크린 뷰어가 작동합니다.
+          <strong>提示</strong>：點擊助手視窗的 <span class="chip gold">?</span> 按鈕即可隨時開啟這份最新說明頁面。可以用側邊欄搜尋框即時搜尋說明內文，點擊圖片則會開啟全螢幕檢視器，支援 <strong>滑鼠滾輪縮放及上一張/下一張瀏覽</strong>。
         </div>
       </div>
 
       <!-- ─── 1. 시작하기 ─── -->
       <section class="doc-section" id="quickstart">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">1</span> 처음 5분 — 설치부터 첫 매크로 가동까지</h2>
+          <h2 class="section-title"><span class="section-num">1</span> 最初 5 分鐘 — 從安裝到第一個巨集啟動</h2>
         </div>
         
-        <p>d4cute helper는 디아블로4 플레이 시 반복 스킬 시전, 버프 유지, 복잡한 인벤토리 호라드림의 함 선변성 작업을 쾌적하고 안전하게 보조하는 고성능 도우미입니다.</p>
+        <p>d4cute helper 是在遊玩暗黑破壞神4時，舒適且安全地輔助重複施放技能、維持增益，以及繁瑣的背包赫拉迪姆方塊預變性作業的高效能小幫手。</p>
 
         <ol>
-          <li><a href="https://da.gd/d4help" target="_blank"><strong>최신 설치본 다운로드</strong></a> — 설치본(<code>d4cute_helper_setup.exe</code>)을 받아 설치하거나, 무설치 실행 파일(<code>d4cute_helper.exe</code>)을 바로 실행합니다. Windows가 "알 수 없는 게시자" 경고를 띄울 경우 <em>추가 정보 → 실행</em>을 누릅니다.</li>
-          <li>헬퍼를 켜면 창 크기가 자동으로 가장 작은 기본 크기로 시작되어 게임 화면을 가리지 않습니다.</li>
-          <li>프로필 줄에서 내 직업에 맞는 프로필을 선택하거나 <span class="chip green">＋</span> 버튼으로 새로 생성합니다.</li>
-          <li>슬롯 <span class="chip">A</span>를 누르고 <strong>매크로 설정</strong>에서 파란색 발동키 버튼을 누른 뒤, 사용할 마우스 또는 키보드 키를 지정합니다.</li>
-          <li><strong>시퀀스</strong> 탭에서 시전할 스킬 키와 딜레이를 추가하거나, <span class="chip">녹화</span> 버튼을 눌러 실제 게임 플레이 키 입력을 그대로 기록합니다.</li>
-          <li>하단의 <span class="chip green">▶ 시작</span> 버튼을 누르고 게임으로 돌아가 발동키를 누르면 매크로가 안전하게 동작합니다.</li>
+          <li><a href="https://da.gd/d4help" target="_blank"><strong>下載最新安裝檔</strong></a> — 下載安裝檔 (<code>d4cute_helper_setup.exe</code>) 進行安裝，或直接執行免安裝執行檔 (<code>d4cute_helper.exe</code>)。如果 Windows 跳出「不明發行者」警告，請按 <em>其他資訊 → 仍要執行</em>。</li>
+          <li>開啟助手後，視窗大小會自動以最小的預設尺寸啟動，不會遮住遊戲畫面。</li>
+          <li>在設定檔列中選擇符合自己職業的設定檔，或用 <span class="chip green">＋</span> 按鈕新建一個。</li>
+          <li>欄位 <span class="chip">A</span>，然後在 <strong>巨集設定</strong>中按下藍色的啟動鍵按鈕，指定要使用的滑鼠或鍵盤按鍵。</li>
+          <li><strong>序列</strong> 分頁中新增要施放的技能鍵與延遲，或按下 <span class="chip">錄製</span> 按鈕，把實際遊戲中的按鍵輸入原樣記錄下來。</li>
+          <li>按下底部的 <span class="chip green">▶ 開始</span> 按鈕後回到遊戲，按下啟動鍵，巨集就會安全運作。</li>
         </ol>
 
         <div class="alert-box info">
           <span class="alert-icon">🛡️</span>
-          <div><strong>게임 창 활성화 감지</strong>: 헬퍼는 디아블로4 창이 활성화되어 있을 때만 키보드/마우스 입력을 게임으로 전송합니다. 바탕화면이나 다른 창 작업 중에는 자동으로 입력이 정지됩니다.</div>
+          <div><strong>遊戲視窗啟用偵測</strong>：助手只有在暗黑破壞神4視窗處於啟用狀態時，才會把鍵盤/滑鼠輸入傳送到遊戲。在桌面或操作其他視窗時，輸入會自動停止。</div>
         </div>
         <div class="alert-box gold">
           <span class="alert-icon">🖥️</span>
-          <div><strong>게임 화면 모드</strong>: 디아블로4 화면 설정을 <strong>창 모드(전체 화면)</strong> 또는 창 모드로 두세요. 전체 화면(독점)에서는 오버레이가 보이지 않고 선변성의 화면 읽기가 실패할 수 있습니다.</div>
+          <div><strong>遊戲畫面模式</strong>：請將暗黑破壞神4的顯示設定調成 <strong>無邊框視窗(全螢幕)</strong> 或視窗模式。在全螢幕(獨佔)下覆蓋層不會顯示，預變性的畫面讀取也可能失敗。</div>
         </div>
-        <div class="video-card" data-video-title="[영상] d4cute helper 사용법">
-          <div class="video-embed"><iframe src="https://www.youtube.com/embed/Ff7MBqD4WaI" title="[영상] d4cute helper 사용법" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-card" data-video-title="[影片] d4cute helper 使用方法">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/Ff7MBqD4WaI" title="[影片] d4cute helper 使用方法" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           <div class="video-info">
-            <span><strong>영상으로 보는 헬퍼 사용법 (삼촌안잔다잉 채널)</strong></span>
-            <a href="https://youtu.be/Ff7MBqD4WaI" target="_blank" rel="noopener noreferrer" class="chip">유튜브에서 보기 ↗</a>
+            <span><strong>用影片學習助手使用方法 (삼촌안잔다잉 頻道)</strong></span>
+            <a href="https://youtu.be/Ff7MBqD4WaI" target="_blank" rel="noopener noreferrer" class="chip">在 YouTube 觀看 ↗</a>
           </div>
         </div>
       </section>
@@ -2064,124 +1899,121 @@
       <!-- ─── 2. 화면 구성 ─── -->
       <section class="doc-section" id="screen-ui">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">2</span> 최신 화면 구성 (v1.30)</h2>
+          <h2 class="section-title"><span class="section-num">2</span> 最新畫面配置 (v1.30)</h2>
         </div>
 
-        <p>1.30 판에서는 상단 바와 슬롯 탭 바가 한층 더 직관적이고 미려하게 업그레이드되었습니다.</p>
+        <p>1.30 版將頂端列與欄位分頁列升級得更直覺、更美觀。</p>
 
         <!-- 메인 매크로 화면 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="d4cute helper 메인 화면 — 프로필 전환 바, 매크로 슬롯(A~G 총 7개 슬롯으로 확장), 매크로 이름 직접 입력, 후원 탭, 편의기능, 알람 탭이 한눈에 배치된 최신 UI">
+        <div class="image-card is-thumbnail" data-caption="d4cute helper 主畫面 — 設定檔切換列、巨集欄位(擴充為 A~G 共 7 個欄位)、可直接輸入巨集名稱、贊助分頁、便利功能、警報分頁一覽無遺的最新介面">
           <div class="thumb-container">
-            <img src="images/helper_main_macro.png" alt="헬퍼 메인 화면 매크로 탭">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/helper_main_macro.png" alt="助手主畫面 巨集分頁">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>d4cute helper 1.30 메인 화면 (A~G 7개 매크로 슬롯 확장 지원)</span>
+            <span>📷</span> <span>d4cute helper 1.30 主畫面 (支援 A~G 7 個巨集欄位擴充)</span>
           </div>
         </div>
 
-        <h3 id="screen-topbar">1) 상단 바 & 프로필 컨트롤</h3>
+        <h3 id="screen-topbar">1) 頂端列 & 設定檔控制</h3>
         <ul>
-          <li><strong>실행 상태 표시기</strong> — <span style="color:var(--green); font-weight:700;">● 중지됨</span> / <span style="color:var(--green); font-weight:700;">● 실행 중</span> / <span style="color:var(--ruby); font-weight:700;">● 일시정지</span> 상태를 실시간 색상 점으로 표시합니다.</li>
-          <li><strong>상단 기능 버튼</strong> — <span class="chip">업데이트</span>(새 패치 감지 시 점멸), <span class="chip">설정(⚙)</span>, <span class="chip">테스트(⌨)</span>(입력 전송 검증), 미니창 전환, 항상 위(핀), <span class="chip">···</span>(추가 도구 메뉴).</li>
-          <li><strong>프로필 줄 (Profile Bar)</strong> — 
-            <span class="chip">‹ ›</span> 버튼으로 빠르게 프로필을 전환할 수 있으며, <strong>콤보박스를 더블클릭하면 즉시 이름을 변경</strong>할 수 있습니다. <span class="chip green">＋</span>(새 프로필), <span class="chip">✎</span>(이름 변경), <span class="chip ruby">🗑</span>(삭제), <span class="chip blue" style="display:inline-flex; align-items:center; gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span>, <span class="chip">문서</span>(시즌 문서), <span class="chip gold">?</span>(도움말) 버튼이 제공됩니다. 창은 켤 때마다 가장 작은 기본 크기로 뜨고(하한 900×700, 글꼴 배율에 따라 커짐), 전체창(최대화)은 없습니다.
+          <li><strong>執行狀態指示燈</strong> — <span style="color:var(--green); font-weight:700;">● 已停止</span> / <span style="color:var(--green); font-weight:700;">● 執行中</span> / <span style="color:var(--ruby); font-weight:700;">● 暫停</span> 以即時色點顯示狀態。</li>
+          <li><strong>頂端功能按鈕</strong> — <span class="chip">更新</span>(偵測到新修補時會閃爍)、 <span class="chip">設定(⚙)</span>, <span class="chip">測試(⌨)</span>(輸入傳送驗證)、迷你視窗切換、永遠置頂(釘選)、 <span class="chip">···</span>(額外工具選單)。</li>
+          <li><strong>設定檔列 (Profile Bar)</strong> — 
+            <span class="chip">‹ ›</span> 按鈕可以快速切換設定檔， <strong>在下拉選單上按兩下即可立刻變更名稱</strong>。 <span class="chip green">＋</span>(新設定檔)、 <span class="chip">✎</span>(重新命名)、 <span class="chip ruby">🗑</span>(刪除)、 <span class="chip blue" style="display:inline-flex; align-items:center; gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegram 標誌</span>, <span class="chip">文件</span>(賽季文件)、 <span class="chip gold">?</span>(說明) 按鈕。視窗每次開啟都會以最小的預設尺寸顯示(下限 900×700，會依字型比例變大)，沒有全視窗(最大化)。
           </li>
         </ul>
 
-        <h3 id="screen-slots">2) 슬롯 줄 (Slot Navigation) — 7개 슬롯(A~G) 대폭 확장</h3>
+        <h3 id="screen-slots">2) 欄位列 (Slot Navigation) — 大幅擴充為 7 個欄位 (A~G)</h3>
         <ul>
-          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> <span class="chip ruby">E</span> <span class="chip ruby">F</span> <span class="chip ruby">G</span> — <strong style="color:var(--gold);">최신 패치를 통해 매크로 슬롯이 기존 4개(A~D)에서 총 7개(A~G)로 대폭 확장</strong>되었습니다! 복잡한 딜 사이클, 기동기, 보호막/버프 유지, 특정 상황 전용 스킬을 슬롯 부족 없이 넉넉하게 분리하여 등록할 수 있습니다. 켜진 슬롯은 테두리가 강조되고, 발동 중이면 붉은 바탕에 흰 글씨로 점등됩니다.</li>
-          <li><strong>매크로 이름 직접 지정</strong> — 각 슬롯의 매크로 설정 화면에서 <span class="chip">이름: [ 메인 매크로 ]</span> 입력 필드를 통해 슬롯마다 직관적인 고유 명칭을 입력할 수 있습니다. 슬롯 버튼에 마우스를 올렸을 때 뜨는 툴팁 맨 위에도 이 이름이 크게 표시됩니다.</li>
-          <li><span class="chip">♡ 후원</span> — "헬퍼는 무료입니다" 고지와 파트너 추천 링크(스타링크 등)·클랜장님 채널 소개가 배너 캐러셀로 나옵니다. 헬퍼가 자동으로 보내는 것은 없습니다.</li>
-          <li><span class="chip">🔧 편의</span> — 호라드림의 함 인벤 선변성 자동화 전용 한 페이지 UI.</li>
-          <li><span class="chip">⏱ ▶ 4 (알람)</span> — 군단, 세계 보스, 지옥물결 및 개인 타이머 알람 설정. 우측에 현재 동작 중인 알람 수가 배지로 표시됩니다.</li>
-          <li><strong>슬롯 우측 요약 칩</strong> — 현재 선택된 슬롯의 실행 방식(순차/독립), 발동 방식(홀드/토글/한 번), 발동키가 늘 실시간으로 요약 표시됩니다.</li>
+          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> <span class="chip ruby">E</span> <span class="chip ruby">F</span> <span class="chip ruby">G</span> — <strong style="color:var(--gold);">透過最新修補，巨集欄位從原本的 4 個 (A~D) 大幅擴充為共 7 個 (A~G)</strong>！複雜的輸出循環、位移技能、護盾/增益維持，以及特定情況專用技能，都能寬裕地分開註冊，不用再擔心欄位不夠。已開啟的欄位邊框會強調顯示，發動中則以紅底白字亮起。</li>
+          <li><strong>直接指定巨集名稱</strong> — 在各欄位的巨集設定畫面中， <span class="chip">名稱：[ 主要巨集 ]</span> 輸入欄位讓你為每個欄位輸入直觀好記的專屬名稱。把滑鼠移到欄位按鈕上時，彈出提示的最上方也會以大字顯示這個名稱。</li>
+          <li><span class="chip">♡ 贊助</span> — 會以橫幅輪播顯示「助手免費」的聲明、合作夥伴推薦連結(Starlink 等)及隊長頻道介紹。助手不會自動傳送任何東西。</li>
+          <li><span class="chip">🔧 便利</span> — 赫拉迪姆方塊背包預變性自動化專用的單頁介面。</li>
+          <li><span class="chip">⏱ ▶ 4 (警報)</span> — 設定軍團、世界首領、地獄浪潮及個人計時器警報。右側會以徽章顯示目前運作中的警報數量。</li>
+          <li><strong>欄位右側摘要標籤</strong> — 隨時即時摘要顯示目前選取欄位的執行方式(順序/獨立)、發動方式(按住/切換/一次)及啟動鍵。</li>
         </ul>
 
-        <h3 id="screen-bottombar">3) 하단 통합 제어 바</h3>
+        <h3 id="screen-bottombar">3) 底部整合控制列</h3>
         <ul>
-          <li><span class="chip green">▶ 시작</span> / <span class="chip ruby">■ 중지</span>: 헬퍼의 모든 매크로 감지 및 실행을 시작하거나 정지합니다 (기본 단축키 <kbd>F9</kbd>).</li>
-          <li><span class="chip blue">저장</span>: 현재 수정한 프로필 및 매크로 세팅을 디스크에 즉시 영구 저장합니다.</li>
-          <li><span class="chip">📁 불러오기</span>: 실수로 세팅을 잘못 건드렸을 때 마지막 저장된 상태로 프로필을 복원합니다.</li>
-          <li><span class="chip ruby" style="background:#cc0000; color:#fff; font-weight:700;">▶ 삼촌안잔다잉</span>: 클랜장님의 게임 방송 채널로 한 번에 이동합니다.</li>
-          <li><span class="chip">📤 내보내기</span>: 현재 프로필 세팅을 <code>.d4cute</code> 백업 파일로 저장합니다.</li>
-          <li><span class="chip blue">📥 가져오기</span>: 다른 사용자나 클랜원이 공유한 <code>.d4cute</code> 프로필을 불러와 즉시 적용합니다.</li>
-          <li><span class="chip">최소화</span>: 헬퍼 창을 작업 표시줄로 최소화합니다.</li>
+          <li><span class="chip green">▶ 開始</span> / <span class="chip ruby">■ 停止</span>：開始或停止助手的所有巨集偵測與執行 (預設快速鍵 <kbd>F9</kbd>).</li>
+          <li><span class="chip blue">儲存</span>：把目前修改的設定檔及巨集設定立即永久儲存到磁碟。</li>
+          <li><span class="chip">📁 載入</span>：不小心改錯設定時，把設定檔還原成最後儲存的狀態。</li>
+          <li><span class="chip ruby" style="background:#cc0000; color:#fff; font-weight:700;">▶ 삼촌안잔다잉</span>：一鍵前往隊長的遊戲直播頻道。</li>
+          <li><span class="chip">📤 匯出</span>：把目前的設定檔設定儲存成 <code>.d4cute</code> 備份檔。</li>
+          <li><span class="chip blue">📥 匯入</span>：載入其他使用者或戰隊成員分享的 <code>.d4cute</code> 設定檔並立即套用。</li>
+          <li><span class="chip">最小化</span>：把助手視窗最小化到工作列。</li>
         </ul>
 
-        <div class="image-card is-small" data-caption="후원 탭 — 헬퍼는 무료 고지, 파트너 추천 링크·클랜장님 채널 배너 캐러셀">
+        <div class="image-card is-small" data-caption="贊助分頁 — 助手免費聲明、合作夥伴推薦連結、隊長頻道橫幅輪播">
           <div class="thumb-container">
-            <img src="images/helper_sponsor_tab.png" alt="후원 탭 배너 캐러셀">
+            <img src="../images/helper_sponsor_tab.png" alt="贊助分頁橫幅輪播">
           </div>
-          <div class="image-caption"><span>📷</span> <span>후원 탭 (배너 캐러셀)</span></div>
+          <div class="image-caption"><span>📷</span> <span>贊助分頁 (橫幅輪播)</span></div>
         </div>
       </section>
 
       <!-- ─── 3. 매크로 설정 ─── -->
       <section class="doc-section" id="macro-engine">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">3</span> 매크로 설정 — 실행 방식 · 발동 방식 · 발동키</h2>
+          <h2 class="section-title"><span class="section-num">3</span> 巨集設定 — 執行方式 · 發動方式 · 啟動鍵</h2>
         </div>
 
-        <h3 id="macro-modes">1) 실행 방식 및 발동 방식</h3>
+        <h3 id="macro-modes">1) 執行方式及發動方式</h3>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th style="width: 110px;">구분</th>
-                <th style="width: 100px;">모드명</th>
-                <th>설명 및 추천 사용처</th>
+                <th style="width: 110px;">類別</th>
+                <th style="width: 100px;">模式名稱</th>
+                <th>說明及建議用途</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td rowspan="2" style="font-weight: 700; color: var(--gold);">실행 방식</td>
-                <td><strong>순차</strong></td>
-                <td>스텝 1부터 마지막 스텝까지 순서대로 시전한 뒤 다시 처음부터 반복합니다. 정해진 스킬 콤보 및 딜 사이클 로테이션에 적합합니다.</td>
+                <td rowspan="2" style="font-weight: 700; color: var(--gold);">執行方式</td>
+                <td><strong>順序</strong></td>
+                <td>從步驟 1 依序施放到最後一個步驟後，再從頭重複。適合固定的技能連段及輸出循環輪替。</td>
               </tr>
               <tr>
-                <td><strong>독립</strong></td>
-                <td>스텝마다 각자 설정된 쿨다운(대기 시간)에 맞춰 독자적으로 반복 실행합니다. 쿨다운이 제각각인 보호막/버프 스킬 유지에 최적화되어 있습니다.</td>
+                <td><strong>獨立</strong></td>
+                <td>每個步驟依各自設定的冷卻(等待時間)獨立重複執行。最適合維持冷卻各不相同的護盾/增益技能。</td>
               </tr>
               <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--ruby);">발동 방식</td>
-                <td><strong>홀드</strong></td>
-                <td>발동키를 <strong>누르고 있는 동안만</strong> 매크로가 돌아가며, 키를 떼면 즉시 멈춥니다. 주력 딜링 스킬에 권장됩니다.</td>
+                <td rowspan="3" style="font-weight: 700; color: var(--ruby);">發動方式</td>
+                <td><strong>按住</strong></td>
+                <td>只有在 <strong>按住啟動鍵的期間</strong> 巨集才會運轉，放開按鍵就立即停止。建議用於主力輸出技能。</td>
               </tr>
               <tr>
-                <td><strong>토글</strong></td>
-                <td>발동키를 한 번 누르면 켜지고, 다시 누르면 꺼집니다. 장시간 파밍이나 던전 순회 시 손가락 피로도를 덜어줍니다.</td>
+                <td><strong>切換</strong></td>
+                <td>按一次啟動鍵開啟，再按一次關閉。長時間刷寶或巡迴地城時可減輕手指疲勞。</td>
               </tr>
               <tr>
-                <td><strong>한 번</strong></td>
-                <td>발동키를 누르면 시퀀스를 1회 처음부터 끝까지 수행하고 스스로 종료합니다. 물약 연속 제작, 장비 구매 등에 적합합니다.</td>
+                <td><strong>一次</strong></td>
+                <td>按下啟動鍵後，序列會從頭到尾執行 1 次並自行結束。適合連續製作藥水、購買裝備等。</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3 id="macro-keys">2) 발동키 선택 및 정밀 튜닝</h3>
+        <h3 id="macro-keys">2) 啟動鍵選擇及精細調整</h3>
         <ul>
-          <li><strong>유연한 발동키</strong>: 키보드 모든 키, 마우스 좌/우 클릭, 휠 위/아래, 사이드 버튼, <kbd>Ctrl</kbd> · <kbd>Shift</kbd> · <kbd>Alt</kbd> 조합 키를 모두 지원합니다. 여러 슬롯에 동일한 발동키를 지정하여 동시 연계 발동도 가능합니다. 단, 편의기능(선변성) 시작 단축키와는 겹칠 수 없습니다 — 겹치면 고를 때 거부됩니다.</li>
-          <li><strong>누름 인식 지연 (Press Delay)</strong>:
-            짧게 툭 친 클릭은 무시하고, 지정한 시간(예: 250~300ms) 이상 꾹 눌렀을 때만 매크로가 켜집니다. <strong>우클릭을 발동키로 쓸 때 인벤토리나 창고 창이 닫히는 현상을 방지하는 필수 설정</strong>입니다.
+          <li><strong>彈性的啟動鍵</strong>：支援鍵盤所有按鍵、滑鼠左/右鍵、滾輪上/下、側鍵，以及 <kbd>Ctrl</kbd> · <kbd>Shift</kbd> · <kbd>Alt</kbd> 組合鍵。也可以對多個欄位指定相同的啟動鍵，同時連動發動。但不能與便利功能(預變性)的開始快速鍵重複 — 重複時選擇時會被拒絕。</li>
+          <li><strong>按壓辨識延遲 (Press Delay)</strong>：輕輕點一下的按擊會被忽略，只有按住超過指定時間(例如 250~300ms)時巨集才會開啟。 <strong>這是用右鍵當啟動鍵時，防止背包或倉庫視窗被關閉的必要設定</strong>。
           </li>
-          <li><strong>떼고 유지 (Release Buffer)</strong>:
-            발동키를 손에서 뗀 후에도 지정한 시간 동안 매크로 동작을 연장 유지합니다. 사냥 직후 주변 바닥 아이템을 루팅하는 동안 공격이 끊기지 않도록 여유를 줍니다.
+          <li><strong>放開後維持 (Release Buffer)</strong>：即使放開啟動鍵，巨集仍會在指定時間內延長維持運作。讓你在戰鬥後撿拾周圍地上物品時，攻擊不會中斷。
           </li>
-          <li><strong>동반 키 (Companion Keys)</strong>:
-            매크로가 가동되는 동안 지속적으로 함께 눌러두는 키(예: 제자리 강제 정지 공격 <kbd>Shift</kbd>, 강제 이동 키 등)를 지정할 수 있습니다.
+          <li><strong>伴隨鍵 (Companion Keys)</strong>：可以指定巨集運作期間持續一起按住的按鍵 (例如原地強制攻擊 <kbd>Shift</kbd>、強制移動鍵等)。
           </li>
         </ul>
 
         <!-- 키 피커 캡처 -->
-        <div class="image-card is-small" data-caption="발동키 지정 팝업창 — 키보드 키, 마우스 버튼 및 조합키를 안전하고 직관적으로 선택할 수 있습니다.">
+        <div class="image-card is-small" data-caption="啟動鍵指定彈出視窗 — 可安全且直觀地選擇鍵盤按鍵、滑鼠按鈕及組合鍵。">
           <div class="thumb-container">
-            <img src="images/helper_key_picker.png" alt="발동키 선택 다이얼로그">
+            <img src="../images/helper_key_picker.png" alt="啟動鍵選擇對話框">
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>발동키 선택 팝업창</span>
+            <span>📷</span> <span>啟動鍵選擇彈出視窗</span>
           </div>
         </div>
       </section>
@@ -2189,291 +2021,227 @@
       <!-- ─── 4. 시퀀스 빌더 & 실시간 녹화 ─── -->
       <section class="doc-section" id="sequence-builder">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">4</span> 시퀀스 빌더 · 딜레이 일괄변경 · 마우스 녹화</h2>
+          <h2 class="section-title"><span class="section-num">4</span> 序列編輯器 · 批次變更延遲 · 滑鼠錄製</h2>
         </div>
 
-        <h3 id="seq-cards">1) 스텝 카드 및 일괄 조작</h3>
+        <h3 id="seq-cards">1) 步驟卡片及批次操作</h3>
         <ul>
-          <li>스텝 카드를 클릭하면 키, 동작 모드, 딜레이(대기 시간, ms)를 개별 변경할 수 있습니다.</li>
-          <li><strong>모드 옵션</strong>:
+          <li>點擊步驟卡片即可個別變更按鍵、動作模式、延遲(等待時間，ms)。</li>
+          <li><strong>模式選項</strong>:
             <ul>
-              <li><em>Single</em>: 키를 1회 단발 입력</li>
-              <li><em>Burst</em>: 지정된 간격으로 고속 연타</li>
-              <li><em>Hold</em>: 지정 시간 동안 키를 꾹 누르고 유지</li>
+              <li><em>Single</em>：按鍵輸入 1 次</li>
+              <li><em>Burst</em>：以指定間隔高速連點</li>
+              <li><em>Hold</em>：在指定時間內持續按住按鍵</li>
             </ul>
           </li>
-          <li><span class="chip">딜레이 일괄변경</span>: 모든 스텝의 대기 시간을 원하는 수치(ms)나 비율(%)로 한 번에 변경합니다.</li>
-          <li><span class="chip">전체 → Burst/Single</span>: 모든 등록 스텝의 동작 모드를 원클릭으로 일괄 전환합니다.</li>
+          <li><span class="chip">批次變更延遲</span>：一次把所有步驟的等待時間變更為想要的數值(ms)或比例(%)。</li>
+          <li><span class="chip">全部 → Burst/Single</span>：一鍵批次切換所有已註冊步驟的動作模式。</li>
         </ul>
 
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <div class="image-card is-small" data-caption="스텝 편집기 — 키, 모드(Single/Burst/Hold), 딜레이를 정밀하게 설정">
+          <div class="image-card is-small" data-caption="步驟編輯器 — 精確設定按鍵、模式(Single/Burst/Hold)、延遲">
             <div class="thumb-container">
-              <img src="images/helper_step_editor.png" alt="스텝 편집기">
+              <img src="../images/helper_step_editor.png" alt="步驟編輯器">
             </div>
-            <div class="image-caption"><span>📷</span> <span>개별 스텝 편집창</span></div>
+            <div class="image-caption"><span>📷</span> <span>單一步驟編輯視窗</span></div>
           </div>
-          <div class="image-card is-small" data-caption="딜레이 일괄변경 도구 — 전체 스텝 간격을 손쉽게 튜닝">
+          <div class="image-card is-small" data-caption="批次變更延遲工具 — 輕鬆調整全部步驟間隔">
             <div class="thumb-container">
-              <img src="images/helper_bulk_delay.png" alt="딜레이 일괄변경 다이얼로그">
+              <img src="../images/helper_bulk_delay.png" alt="批次變更延遲對話框">
             </div>
-            <div class="image-caption"><span>📷</span> <span>딜레이 일괄변경 팝업</span></div>
+            <div class="image-caption"><span>📷</span> <span>批次變更延遲彈出視窗</span></div>
           </div>
         </div>
 
-        <h3 id="seq-recorder">2) Live mouse-position recording &amp; humanized randomness</h3>
+        <h3 id="seq-recorder">2) 即時滑鼠座標錄製及擬人化隨機誤差</h3>
         <ul>
-          <li>Press <span class="chip">Record</span>, then play in the game window: every key and mouse button is captured in order with its timing.</li>
-          <li><strong>Screen coordinates</strong>: each mouse click stores the absolute screen position (X, Y) it was made at, and playback clicks that same spot.</li>
-          <li><strong>Humanized randomness</strong>:
+          <li><span class="chip">錄製</span> 按下按鈕後在遊戲畫面輸入按鍵與滑鼠，順序與時間間隔就會原樣被記錄。</li>
+          <li><strong>螢幕座標記錄</strong>：點擊滑鼠時，會記錄當時點擊的螢幕絕對座標 (X, Y)，巨集重播時會自動點擊該位置。</li>
+          <li><strong>擬人化隨機誤差</strong>:
             <ul>
-              <li><strong>Click offset ± px</strong>: every click is nudged randomly within the given pixel radius.</li>
-              <li><strong>Random variance %</strong>: every step interval gets a random delay within the given ratio.</li>
+              <li><strong>點擊位置 ± px</strong>：每次點擊都在指定的像素半徑內不規則地加入誤差，以防止被機械式偵測。</li>
+              <li><strong>隨機變動 %</strong>：在每個步驟間隔混入一定比例的隨機延遲，模仿自然的手部動作。</li>
             </ul>
           </li>
         </ul>
 
-        <h3 id="seq-drag-path">3) Drag-path recording — the whole path while the button is held (1.32.0)</h3>
+        <h3 id="seq-drag-path">3) 拖曳軌跡錄製 — 連按住後移動的路徑也能記錄 (1.32.0)</h3>
         <ul>
-          <li>Move the mouse <strong>while holding a button</strong> during recording and the path is captured too: a point is stored whenever the cursor moves more than <strong>8 px</strong> from the last point or <strong>16 ms</strong> pass, so fast spins stay dense and slow moves stay continuous.</li>
-          <li>On playback the helper presses at the start point, <strong>follows the same path on the recorded timing</strong>, then releases at the end point. Earlier versions kept only the press and release points and jumped between them.</li>
-          <li><strong>Channeled skills such as Whirlwind</strong>: bind the skill to the <span class="chip">right mouse button</span> in game, hold it and spin during recording, and the spin is recorded and replayed as is. Holding the left button while moving works the same way.</li>
-          <li><strong>Random variance %</strong> is applied once to the whole path's duration and <strong>click offset ± px</strong> once to the whole path, so the cursor does not jitter.</li>
-          <li>Editing the position by number or pressing <span class="chip">Clear drag</span> in the step editor discards the path and falls back to the old jump playback.</li>
-          <li>Up to 600 points per drag (about 10 s at 16 ms). Paths are absolute screen coordinates: re-record after changing resolution or window position.</li>
+          <li>錄製時 <strong>按住滑鼠按鈕移動</strong> ，該路徑也會一併記錄。從最後記錄點移動超過 <strong>8px</strong> ，或每經過 <strong>16ms</strong> 就記下座標，因此快速旋轉會記得很細密、緩慢移動也不會斷斷續續。</li>
+          <li>重播時會在按下的位置按住按鈕，然後 <strong>依記錄的時間點沿同一條路徑</strong> 移動游標，並在放開的位置放開。舊版只記住按下與放開兩個點，所以會瞬間移動。</li>
+          <li><strong>旋風斬 · 凝神 這類引導技能</strong>：在遊戲中將技能 <span class="chip">滑鼠右鍵</span>上，錄製時按住右鍵繞圈轉動，該旋轉就會原樣被錄製、重播。按住左鍵移動也是一樣。</li>
+          <li><strong>隨機變動 %</strong>只會套用於整條軌跡的總時間一次， <strong>點擊位置 ± px</strong>只會對整條軌跡套用一次，因此游標不會抖動。</li>
+          <li>可在步驟編輯器中用數值修改位置，或 <span class="chip">清除拖曳</span>，軌跡就會被捨棄，改回以前那樣的跳點重播。</li>
+          <li>單次拖曳最多儲存 600 個點 (以 16ms 間隔約為 10 秒)。軌跡是螢幕絕對座標，若更改過解析度或視窗位置，請重新錄製。</li>
         </ul>
 
         <!-- 비디오 플레이스홀더 (마우스 녹화) -->
-        <div class="video-card" data-video-title="[영상 가이드] 매크로 시퀀스 작성 및 실시간 녹화 팁">
+        <div class="video-card" data-video-title="[影片指南] 巨集序列製作及即時錄製技巧">
           <div class="placeholder-box" style="margin: 0; border: none; border-radius: 0;">
             <div class="placeholder-icon">🎬</div>
-            <div class="placeholder-title">매크로 시퀀스 녹화 튜토리얼 영상 (준비 중)</div>
-            <div class="placeholder-desc">유튜브 영상 주소를 전달해주시면 이곳에 바로 재생 가능한 임베드 영상으로 교체됩니다.</div>
+            <div class="placeholder-title">巨集序列錄製教學影片 (準備中)</div>
+            <div class="placeholder-desc">提供 YouTube 影片網址後，這裡會直接換成可播放的嵌入影片。</div>
             <span class="placeholder-path">YouTube Video Slot: seq-record-guide</span>
           </div>
           <div class="video-info">
-            <span><strong>영상 1</strong>: 매크로 녹화 및 딜레이 튜닝 실전 팁</span>
-            <span class="chip ruby">준비 중</span>
+            <span><strong>影片 1</strong>：巨集錄製及延遲調校實戰技巧</span>
+            <span class="chip ruby">準備中</span>
           </div>
         </div>
 
-        <!-- 🌀 4) 360° Circular Drag Pack (9 Presets) & Download Guide -->
-        <h3 id="seq-rotation-pack">4) 360度圓形旋轉拖曳預設包（9種預設）與下載</h3>
+        <!-- 🌀 4) 완성형 360도 원형 회전팩 (9종 프리셋) & 다운로드 안내 -->
+        <h3 id="seq-rotation-pack">4) 完成版 360 度圓形旋轉包 (9 種預設) & 下載</h3>
         <p>
-          手動錄製滑鼠拖曳極易出現圓形變形或首尾停頓卡頓的問題。<br>
-          為此，我們採用精確三角函數計算，為您提供<strong>360度無縫連續圓形旋轉序列（9種預設包）</strong>。
+          用手直接錄製拖曳時，容易發生圓形被壓扁、旋轉角度對不準，以及起點和終點處停頓的現象。<br>
+          為此我們提供經過精密數學計算的 <strong>完美 360 度封閉曲線圓形旋轉序列包 (9 種預設)</strong>。
         </p>
 
-        <!-- Telegram Download Banner -->
+        <!-- 텔레그램 다운로드 강조 배너 -->
         <div class="alert-box gold" style="margin: 16px 0; border-left: 4px solid var(--gold);">
-          <div style="font-weight: 700; font-size: 15px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
-            <span>📢 Telegram 官方頻道提供預設檔案及實機示範影片免費下載</span>
+          <span class="alert-icon">🎁</span>
+          <div>
+            <strong style="color:var(--gold-bright); font-size:15px;">實際示範影片及旋轉包下載說明</strong><br>
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">官方 Telegram 公告頻道(@d4_notice)</a> 以及 
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">使用者群組(@d4cute_helper)</a>中可以 
+            <strong>遊戲內實際 360 度旋轉示範影片</strong>與完成版 <strong><code>sequences.d4seq</code> 旋轉包檔案</strong>，直接免費下載！
           </div>
-          <p style="margin: 0; line-height: 1.6; color: var(--fg-dim);">
-            旋轉預設完成版檔案（<code>sequences.d4seq</code>）與遊戲內360度旋轉示範影片已發布於<br>
-            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color: var(--gold-bright); font-weight: 700; text-decoration: underline;">Telegram 官方公告頻道 (@d4_notice)</a>。下載後透過輔助的【匯入】按鈕一秒即可完成設定！
-          </p>
-        </div>
-
-        <div class="table-wrap" style="margin: 16px 0;">
-          <table class="manual-table">
-            <thead>
-              <tr>
-                <th style="width: 140px;">半徑 (大小)</th>
-                <th style="width: 140px;">速度 (週期)</th>
-                <th>預設名稱</th>
-                <th>推薦使用場景</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--gold);">小半徑 (300px)</td>
-                <td>超高速 (0.75秒)</td>
-                <td><code>작은 초고속</code></td>
-                <td>原地光速旋風斬，超近距離極限爆發</td>
-              </tr>
-              <tr>
-                <td>快速 (1.5秒)</td>
-                <td><code>작은 빠른회전</code></td>
-                <td>近戰技能連招，狹窄地形精準清怪</td>
-              </tr>
-              <tr>
-                <td>標準 (2.5秒)</td>
-                <td><code>작은 회전</code></td>
-                <td>精細近程微操，平穩引導技能維持</td>
-              </tr>
-              <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--gold);">中半徑 (570px)</td>
-                <td>超高速 (0.75秒)</td>
-                <td><code>중간 초고속</code></td>
-                <td>中距離群怪快速掃蕩，高效聚怪</td>
-              </tr>
-              <tr>
-                <td>快速 (1.5秒)</td>
-                <td><code>중간 빠른회전</code></td>
-                <td><strong>【官方推薦】</strong> 刷圖最自然、最平滑穩定的旋轉手感</td>
-              </tr>
-              <tr>
-                <td>標準 (2.5秒)</td>
-                <td><code>중간 회전</code></td>
-                <td>廣域持續地面技能覆蓋與保持</td>
-              </tr>
-              <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--gold);">大半徑 (800px)</td>
-                <td>超高速 (0.75秒)</td>
-                <td><code>큰 초고속</code></td>
-                <td>全螢幕拉怪聚怪，超大範圍技能傾瀉</td>
-              </tr>
-              <tr>
-                <td>快速 (1.5秒)</td>
-                <td><code>큰 빠른회전</code></td>
-                <td>大型怪堆清理，範圍覆蓋至螢幕邊緣</td>
-              </tr>
-              <tr>
-                <td>標準 (2.5秒)</td>
-                <td><code>큰 회전</code></td>
-                <td>極限視距外圈持續迴旋巡掃</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
 
         <div style="overflow-x: auto; margin: 18px 0;">
           <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--line);">
             <thead>
               <tr style="background: rgba(229, 184, 92, 0.12); color: var(--gold-bright); border-bottom: 1px solid var(--line-bright); text-align: left;">
-                <th style="padding: 10px 14px;">Preset Name</th>
-                <th style="padding: 10px 14px;">Radius</th>
-                <th style="padding: 10px 14px;">Duration (`press_ms`)</th>
-                <th style="padding: 10px 14px;">Characteristics & Recommended Use</th>
+                <th style="padding: 10px 14px;">序列名稱</th>
+                <th style="padding: 10px 14px;">旋轉半徑 (Radius)</th>
+                <th style="padding: 10px 14px;">單圈時間 (`press_ms`)</th>
+                <th style="padding: 10px 14px;">特色及建議用途</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. 작은 빠른회전 (Small Fast)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. 小型快速旋轉</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range around character, snappy circular targeting</td>
+                <td style="padding: 9px 14px;">1.5 秒 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">角色近身範圍，快速輕快的全方位鎖定</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line); background: rgba(229, 184, 92, 0.05);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. 중간 빠른회전 (Medium Fast)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. 中型快速旋轉</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ Standard Pick</strong> — Balanced radius for smooth, fast 360° spin</td>
+                <td style="padding: 9px 14px;">1.5 秒 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ 標準推薦</strong> — 以預設解析度最佳半徑進行的流暢快速旋轉</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. 큰 빠른회전 (Large Fast)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. 大型快速旋轉</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Wide area coverage reaching screen edges</td>
+                <td style="padding: 9px 14px;">1.5 秒 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">大範圍掃過螢幕外圍的廣域快速旋轉</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. 작은 회전 (Small Normal)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. 小型旋轉</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range steady channeling at moderate speed</td>
+                <td style="padding: 9px 14px;">2.5 秒 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">近身穩定的普通速度旋轉引導</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. 중간 회전 (Medium Normal)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. 中型旋轉</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Standard radius steady rotation</td>
+                <td style="padding: 9px 14px;">2.5 秒 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">預設半徑的穩定普通速度旋轉</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. 큰 회전 (Large Normal)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. 大型旋轉</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Wide range smooth and relaxed rotation</td>
+                <td style="padding: 9px 14px;">2.5 秒 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">平順且從容地旋轉廣大範圍</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. 작은 초고속 (Small Ultra)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. 小型超高速</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range instant 360° spin in 0.75 seconds</td>
+                <td style="padding: 9px 14px;">0.75 秒 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">近身即時旋轉鎖定 (0.75 秒就迅速轉一圈)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. 중간 초고속 (Medium Ultra)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. 中型超高速</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Lightning-fast all-around sweep at standard radius</td>
+                <td style="padding: 9px 14px;">0.75 秒 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">預設半徑、如閃電般的超高速全方位攻擊</td>
               </tr>
               <tr>
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. 큰 초고속 (Large Ultra)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. 大型超高速</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Screen-wide ultra-fast spin</td>
+                <td style="padding: 9px 14px;">0.75 秒 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">以超高速纏繞整個畫面的旋轉</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 How to Use & Pro Tips</h4>
+        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 旋轉包使用方法及設定小秘訣</h4>
         <ol style="margin-top: 6px; padding-left: 20px; line-height: 1.8;">
-          <li><strong>Import</strong>: Download <code>sequences.d4seq</code> from Telegram, click <span class="chip">Import</span> at the bottom of the helper window, and select the file. All 9 presets are registered at once.</li>
-          <li><strong>Assign to Slot</strong>: Select your preferred macro slot (A–G) and pick a preset from the <strong>Sequence Library</strong>.</li>
-          <li><strong>Spin Exactly Once?</strong>: Set the trigger mode to <strong style="color:var(--gold-bright);">[Once]</strong>. Each key press will execute <strong>exactly one clean 360° spin and automatically stop at the starting point</strong>.</li>
-          <li><strong>Continuous Spinning?</strong>: Keep trigger mode on <strong>[Hold]</strong> or <strong>[Toggle]</strong>. The delay between cycles (<code>interval_ms</code>) is optimized to <code>0ms</code>, allowing <strong>fluid, uninterrupted continuous spinning without any pause or stutter</strong>.</li>
+          <li><strong>匯入 (Import)</strong>：準備好從 Telegram 下載的 <code>sequences.d4seq</code> 檔案，按下助手視窗底部的 <span class="chip">匯入</span> 按鈕並選擇檔案，9 種序列就會一次註冊完成。</li>
+          <li><strong>欄位指派</strong>：按下想要的巨集欄位(A~G)，在 <strong>序列庫</strong>中從上述 9 種預設挑選喜歡的。</li>
+          <li><strong>想讓它只轉一圈就停止？</strong>：請將巨集發動方式設為 <strong style="color:var(--gold-bright);">[一次執行 (Once)]</strong>。每按一次鍵， <strong>就只會精準轉 1 圈，然後在原地自動乾淨地停止。</strong>
+          </li>
+          <li><strong>想在按住期間持續旋轉？</strong>：將發動方式設為 <strong>[按住期間 (Hold)]</strong> 或 <strong>[切換 (Toggle)]</strong>即可。步驟間延遲(<code>interval_ms</code>)已最佳化為 <code>0ms</code>，因此在起點與終點不會卡頓或停頓， <strong>如流水般連續旋轉</strong>。
+          </li>
         </ol>
       </section>
 
       <!-- ─── 5. 편의기능 — 인벤 선변성 ─── -->
       <section class="doc-section" id="tools-alter">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">5</span> 편의기능 — 인벤 선변성 (한 페이지 UI)</h2>
+          <h2 class="section-title"><span class="section-num">5</span> 便利功能 — 背包預變性 (單頁介面)</h2>
         </div>
 
-        <p>1.30 버전에서 새롭게 개편된 <strong>인벤 선변성 도구</strong>는 호라드림의 함을 이용한 전설·고유 장비 선변성 작업을 단 몇 번의 조작으로 자동화합니다.</p>
+        <p>1.30 版全新改版的 <strong>背包預變性工具</strong>只需幾個操作，就能把利用赫拉迪姆方塊進行的傳奇·獨特裝備預變性作業自動化。</p>
 
         <!-- 선변성 도구 탭 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="인벤 선변성 전용 탭 — 첫 칸/끝 칸 좌표 보정, 비귀속 건너뛰기 스위치, 시작/중지 단축키, 결과 대기 조절이 한 화면에 통합된 최신 레이아웃">
+        <div class="image-card is-thumbnail" data-caption="背包預變性專用分頁 — 第一格/最後一格座標校正、跳過非綁定開關、開始/停止快速鍵、結果等待調整全部整合在同一畫面的最新版面">
           <div class="thumb-container">
-            <img src="images/helper_alter_tool.png" alt="인벤 선변성 한 페이지 UI">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/helper_alter_tool.png" alt="背包預變性單頁介面">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>편의기능: 호라드림의 함 인벤 선변성 한 페이지 UI</span>
+            <span>📷</span> <span>便利功能：赫拉迪姆方塊背包預變性單頁介面</span>
           </div>
         </div>
 
-        <h3 id="alter-grid">1) 33칸 자동 그리드 계산 및 시작</h3>
+        <h3 id="alter-grid">1) 33 格自動網格計算及開始</h3>
         <ol>
-          <li>게임에서 <strong>인벤토리</strong>와 <strong>호라드림의 함</strong> 창을 열어 둡니다.</li>
-          <li><span class="chip gold">첫 칸 찍기</span>를 누른 뒤 게임 인벤토리의 맨 첫 번째 칸(좌상단)에 마우스를 올리고 <kbd>Enter</kbd>를 누릅니다.</li>
-          <li><span class="chip gold">끝 칸 찍기</span>를 누르고 인벤토리 맨 마지막 칸(우하단)에 마우스를 올린 뒤 <kbd>Enter</kbd>를 누릅니다. (취소는 언제든 <kbd>Esc</kbd>)</li>
-          <li>두 점의 위치만 지정하면 33개 인벤토리 칸의 중심 좌표가 자동으로 정확히 계산됩니다.</li>
-          <li>게임 화면에서 시작 단축키(기본 <kbd>F10</kbd>, 파란 키 버튼을 눌러 바꿀 수 있음)를 누르면 선변성이 전자동으로 시작됩니다. 편의기능 탭을 굳이 열어두지 않아도 단축키는 상시 작동합니다.</li>
+          <li>在遊戲中開啟 <strong>背包</strong>與 <strong>赫拉迪姆方塊</strong> 視窗。</li>
+          <li><span class="chip gold">選取第一格</span>，然後將滑鼠移到遊戲背包的第一格(左上角)，按下 <kbd>Enter</kbd>。</li>
+          <li><span class="chip gold">選取最後一格</span>，然後將滑鼠移到背包的最後一格(右下角)，按下 <kbd>Enter</kbd>。(隨時可按 <kbd>Esc</kbd>)</li>
+          <li>取消)只要指定這兩個點的位置，33 個背包格的中心座標就會自動精確計算出來。</li>
+          <li>在遊戲畫面按下開始快速鍵(預設 <kbd>F10</kbd>，可點藍色按鍵按鈕更改)，預變性就會全自動開始。即使沒有開著便利功能分頁，快速鍵也會常駐運作。</li>
         </ol>
 
-        <h3 id="alter-safety">2) 동작 메커니즘 및 지능형 안전장치</h3>
+        <h3 id="alter-safety">2) 運作機制及智慧安全裝置</h3>
         <ul>
-          <li><strong>지능형 반복 루프</strong>:
-            인벤토리 각 칸을 순회하며 <em>우클릭 → 호라드림 함에 올리기 → 아이템 변성 버튼 클릭 → 변환 → 수락(<kbd>Enter</kbd>) → 초기화</em>를 자동으로 진행합니다.
+          <li><strong>智慧重複迴圈</strong>：逐一巡視背包每一格，並 <em>自動進行右鍵 → 放上赫拉迪姆方塊 → 點擊物品變性按鈕 → 轉換 → 接受(<kbd>Enter</kbd>) → 重設</em>。
           </li>
-          <li><strong>계정 귀속 아이템 건너뛰기 스위치</strong>:
-            스위치를 켜면 귀속 아이템은 건너뛰고 비귀속 장비만 골라 변성합니다. 스위치를 끄면 귀속 장비도 변성하며 수락 팝업 창이 뜰 때만 안전하게 <kbd>Enter</kbd>를 전송합니다.
+          <li><strong>跳過帳號綁定物品開關</strong>：開啟開關時會跳過綁定物品，只挑選非綁定裝備進行變性。關閉開關時，綁定裝備也會變性，只在接受彈出視窗出現時才安全地傳送 <kbd>Enter</kbd>。
           </li>
-          <li><strong>큐브 비움 검증 (Cube Empty Check)</strong>:
-            초기화 뒤 큐브 첫 칸의 <strong>그림</strong>(첫 아이템을 올릴 때 빈 모습·찬 모습을 기억해 둠)으로 비었는지 보고, 그림을 못 잡은 환경에선 큐브 머리글 글자로 보조 판정합니다. 비지 않았으면 초기화를 다시 누르고, 끝내 안 비면 멈춥니다 — 아이템 두 개가 겹쳐 올라가는 일을 막기 위한 장치입니다.
+          <li><strong>方塊清空驗證 (Cube Empty Check)</strong>：重設後，以方塊第一格的 <strong>圖像</strong>(放上第一件物品時會記住空與滿的樣子)判斷是否已清空，在抓不到圖像的環境下，則以方塊標題文字輔助判定。若未清空就再按一次重設，最後仍沒清空就會停止 — 這是為了防止兩件物品重疊放上去的裝置。
           </li>
-          <li><strong>비상 정지</strong>: 작업 도중 키보드의 <kbd>Esc</kbd> 키를 누르면 어디서든 즉시 선변성이 멈춥니다.</li>
-          <li><strong>느린 PC 조절값</strong>: <span class="chip">시작 전 ms</span>(시작 버튼 뒤 게임 창으로 갈 여유), <span class="chip">결과 대기 ms</span>(기본 3000 — 변환·수락 뒤 변성이 끝나 변환 버튼이 꺼질 때까지 기다리는 상한, 신호가 오면 바로 넘어감), <span class="chip">초기화 뒤 ms</span>(기본 0 — 초기화 뒤 추가 대기). 연출이 느린 PC 에서 아이템이 겹치거나 변성 없이 넘어가면 결과 대기를 올리세요.</li>
-          <li><strong>실행 기록</strong>: 한 바퀴 돌 때마다 <code>%APPDATA%\d4cute_helper\debug\alter_slots.txt</code> 에 칸별 판정이 남습니다. 문제가 나면 이 파일을 텔레그램 그룹에 올려 주세요.</li>
+          <li><strong>緊急停止</strong>：作業進行中按下鍵盤的 <kbd>Esc</kbd> 鍵，無論在哪裡預變性都會立即停止。</li>
+          <li><strong>慢速電腦調整值</strong>: <span class="chip">開始前 ms</span>(按下開始按鈕後切換到遊戲視窗的緩衝時間)、 <span class="chip">結果等待 ms</span>(預設 3000 — 轉換·接受後等待變性結束、轉換按鈕熄滅的上限時間，收到訊號就立刻繼續)、 <span class="chip">重設後 ms</span>(預設 0 — 重設後額外等待)。在特效較慢的電腦上若物品重疊或未變性就跳過，請調高結果等待。</li>
+          <li><strong>執行記錄</strong>：每跑完一輪， <code>%APPDATA%\d4cute_helper\debug\alter_slots.txt</code> 中就會留下逐格判定。發生問題時請把這個檔案上傳到 Telegram 群組。</li>
         </ul>
 
         <!-- 인게임 실화면 플레이스홀더 -->
         <div class="placeholder-box">
           <div class="placeholder-icon">📸</div>
-          <div class="placeholder-title">[인게임 스크린샷 슬롯] 호라드림의 함 선변성 동작 화면</div>
-          <div class="placeholder-desc">게임 내에서 호라드림의 함과 인벤토리가 열려 있는 실제 캡처 이미지를 올려주시면 바로 연결됩니다.</div>
+          <div class="placeholder-title">[遊戲內截圖欄位] 赫拉迪姆方塊預變性運作畫面</div>
+          <div class="placeholder-desc">只要提供遊戲中開啟赫拉迪姆方塊與背包的實際擷取圖片，就能立刻連結。</div>
           <span class="placeholder-path">Image Slot: _work/d4help-repo/images/inven/alter_ingame_live.png</span>
         </div>
 
         <!-- 선변성 유튜브 비디오 슬롯 -->
-        <div class="video-card" data-video-title="[영상] 인벤 선변성 도구 사용법">
-          <div class="video-embed"><iframe src="https://www.youtube.com/embed/O2mSUAEX-xM" title="[영상] 인벤 선변성 도구 사용법" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-card" data-video-title="[影片] 背包預變性工具使用方法">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/O2mSUAEX-xM" title="[影片] 背包預變性工具使用方法" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           <div class="video-info">
-            <span><strong>선변성 도구 사용법 영상 (삼촌안잔다잉 채널)</strong></span>
-            <a href="https://youtu.be/O2mSUAEX-xM" target="_blank" rel="noopener noreferrer" class="chip">유튜브에서 보기 ↗</a>
+            <span><strong>預變性工具使用方法影片 (삼촌안잔다잉 頻道)</strong></span>
+            <a href="https://youtu.be/O2mSUAEX-xM" target="_blank" rel="noopener noreferrer" class="chip">在 YouTube 觀看 ↗</a>
           </div>
         </div>
       </section>
@@ -2481,299 +2249,291 @@
       <!-- ─── 6. 스마트 알람 시스템 ─── -->
       <section class="doc-section" id="alarm">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">6</span> 스마트 알람 시스템 — 이벤트 · 개인 · 화면 알림 · 음성(TTS)</h2>
+          <h2 class="section-title"><span class="section-num">6</span> 智慧警報系統 — 事件 · 個人 · 螢幕通知 · 語音(TTS)</h2>
         </div>
 
-        <p>디아블로4의 주요 시간제 컨텐츠(군단 침공, 야외 우두머리, 지옥물결 등)와 사용자의 개인 타이머를 놓치지 않도록 알려주는 고성능 백그라운드 알람 엔진입니다.</p>
+        <p>這是高效能的背景警報引擎，讓你不會錯過暗黑破壞神4的主要限時內容(軍團入侵、野外首領、地獄浪潮等)與使用者的個人計時器。</p>
 
-        <h3 id="alarm-events">1) 이벤트 알림 (야외 우두머리 · 지옥물결 · 군단)</h3>
-        <p>게임 외부 웹사이트(diablo4.life)와 실시간 연동되어 최신 보스 및 지옥물결 출현 시간을 자동으로 계산합니다.</p>
+        <h3 id="alarm-events">1) 事件通知 (世界首領 · 地獄浪潮 · 軍團)</h3>
+        <p>與遊戲外部網站(diablo4.life)即時連動，自動計算最新首領及地獄浪潮的出現時間。</p>
         
         <!-- 이벤트 알림 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="이벤트 알림 탭 — 야외 우두머리, 지옥물결, 군단 출현 시간 안내, 5분/3분/1분/시작 사전 알림 토글, 겹칠 때 우선순위 순서(▲/▼) 조절">
+        <div class="image-card is-thumbnail" data-caption="事件通知分頁 — 世界首領、地獄浪潮、軍團出現時間說明，5 分鐘/3 分鐘/1 分鐘/開始 預先通知開關，重疊時的優先順序(▲/▼)調整">
           <div class="thumb-container">
-            <img src="images/alarm_event_schedule_list.png" alt="이벤트 알림 목록 및 우선순위">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_event_schedule_list.png" alt="事件通知清單及優先順序">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>이벤트 알림 (야외 우두머리, 지옥물결, 군단 시간표 및 알림 시점)</span>
+            <span>📷</span> <span>事件通知 (世界首領、地獄浪潮、軍團時間表及通知時間點)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>알림 시점 선택</strong>: 각 이벤트마다 <span class="chip blue">5분</span>, <span class="chip blue">3분</span>, <span class="chip blue">1분</span> 전 및 <span class="chip blue">시작</span> 시각을 독립적으로 켜고 끌 수 있습니다.</li>
-          <li><strong>겹칠 때 우선순위 순서</strong>: <kbd>▲</kbd> <kbd>▼</kbd> 버튼을 눌러 이벤트 간의 순서를 변경할 수 있습니다. 동일한 시각에 여러 알림이 겹치면 위쪽에 있는 이벤트부터 먼저 소리를 내고 화면에 함께 표시합니다.</li>
-          <li><strong>군단 기준점 설정</strong>: 군단 출현 시간을 내 화면 상황에 맞게 0분 전 기준점으로 수동 보정할 수도 있습니다.</li>
+          <li><strong>選擇通知時間點</strong>：每個事件都可以獨立開關 <span class="chip blue">5 分鐘</span>, <span class="chip blue">3 分鐘</span>, <span class="chip blue">1 分鐘</span> 前以及 <span class="chip blue">開始</span> 時刻。</li>
+          <li><strong>重疊時的優先順序</strong>: <kbd>▲</kbd> <kbd>▼</kbd> 按鈕可變更事件之間的順序。當同一時刻有多個通知重疊時，會從位於上方的事件先發出聲音，並一起顯示在畫面上。</li>
+          <li><strong>軍團基準點設定</strong>：也可以配合自己的畫面狀況，手動把軍團出現時間校正為 0 分鐘前的基準點。</li>
         </ul>
 
-        <h3 id="alarm-personal">2) 개인 알람 (맞춤 타이머 & 반복 주기)</h3>
-        <p>비약 30분 만료 알람, 던전 쿨다운, 휴식 안내 등 나만의 커스텀 타이머를 무제한으로 등록할 수 있습니다.</p>
+        <h3 id="alarm-personal">2) 個人警報 (自訂計時器 & 重複週期)</h3>
+        <p>可以無限制地註冊藥劑 30 分鐘到期警報、地城冷卻、休息提醒等專屬自訂計時器。</p>
 
         <!-- 개인 알람 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="개인 알람 탭 — + 알람 추가 버튼, 주기적 반복(예: 10분마다 뱃살 운동 무제한 타이머), 실시간 상태 토글 및 편집/삭제">
+        <div class="image-card is-thumbnail" data-caption="個人警報分頁 — + 新增警報按鈕、週期性重複(例如每 10 分鐘的無限制運動計時器)、即時狀態開關及編輯/刪除">
           <div class="thumb-container">
-            <img src="images/alarm_personal_timer_list.png" alt="개인 알람 타이머 목록">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_personal_timer_list.png" alt="個人警報計時器清單">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>개인 알람 설정 (맞춤 반복 타이머 목록)</span>
+            <span>📷</span> <span>個人警報設定 (自訂重複計時器清單)</span>
           </div>
         </div>
 
         <ul>
-          <li><span class="chip blue">＋ 알람 추가</span>: 원하는 이름과 주기(분 단위 또는 지정 시각), 시작 기준을 정해 등록합니다.</li>
-          <li><strong>스위치 On/Off</strong>: 필요한 타이머만 스위치로 즉시 켜고 끌 수 있으며, 다음 알림까지 남은 시간이 실시간으로 표시됩니다.</li>
+          <li><span class="chip blue">＋ 新增警報</span>：決定想要的名稱、週期(以分鐘為單位或指定時刻)與起算基準後註冊。</li>
+          <li><strong>開關 On/Off</strong>：只需要的計時器可用開關立即開啟或關閉，距離下一次通知的剩餘時間會即時顯示。</li>
         </ul>
 
-        <h3 id="alarm-display">3) 화면 알림 (인게임 글자 오버레이 배너)</h3>
-        <p>게임 도중 시야를 방해하지 않으면서 중요한 알림을 직관적으로 확인할 수 있도록 화면 상에 텍스트를 띄웁니다.</p>
+        <h3 id="alarm-display">3) 螢幕通知 (遊戲內文字覆蓋橫幅)</h3>
+        <p>在畫面上顯示文字，讓你在遊戲中不被擋住視線，也能直觀確認重要通知。</p>
 
         <!-- 화면 알림 설정 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="화면 알림 설정 — 위치(캐릭터 머리 위, 세로 오프셋 -59px), 글자 크기(35px), 색상(#FFD700), 굵게/외곽선 효과, 배경 투명도(24), 표시 시간(15초) 및 미리보기">
+        <div class="image-card is-thumbnail" data-caption="螢幕通知設定 — 位置(角色頭頂，垂直偏移 -59px)、文字大小(35px)、顏色(#FFD700)、粗體/外框效果、背景透明度(24)、顯示時間(15 秒)及預覽">
           <div class="thumb-container">
-            <img src="images/alarm_banner_display_settings.png" alt="화면 알림 배너 설정">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_banner_display_settings.png" alt="螢幕通知橫幅設定">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>화면 알림 설정 (위치, 글자 크기, 색상, 외곽선 및 표시 시간)</span>
+            <span>📷</span> <span>螢幕通知設定 (位置、文字大小、顏色、外框及顯示時間)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>알람 위치 & 세로 오프셋</strong>: <span class="chip">캐릭터 머리 위</span> 등 원하는 위치를 고르고 세로 픽셀 오프셋(예: -59 px)을 미세 조정할 수 있습니다.</li>
-          <li><strong>가독성 옵션</strong>: 글자 크기(px), 색상 팔레트(골드 #FFD700 등), <strong>굵게</strong> 및 <strong>외곽선</strong> 스위치를 켜면 어두운 던전이나 화려한 스킬 이펙트 속에서도 글자가 뚜렷하게 보입니다.</li>
-          <li><span class="chip">미리보기</span> 버튼을 눌러 인게임에서 어떻게 표시되는지 즉시 테스트할 수 있습니다.</li>
+          <li><strong>警報位置 & 垂直偏移</strong>: <span class="chip">角色頭頂</span> 等，選擇想要的位置，並可微調垂直像素偏移 (例如 -59 px)。</li>
+          <li><strong>易讀性選項</strong>：文字大小(px)、色盤(金色 #FFD700 等)、 <strong>粗體</strong> 以及 <strong>外框</strong> 開關開啟後，即使在昏暗的地城或華麗的技能特效中，文字也能清楚呈現。</li>
+          <li><span class="chip">預覽</span> 按鈕可立即測試在遊戲中會如何顯示。</li>
         </ul>
 
-        <h3 id="alarm-sound">4) 기본 사운드 · 음성 (TTS & 효과음)</h3>
-        <p>알람음 효과음과 Supertonic 3 인공지능 음성 엔진을 통해 자연스러운 한국어 음성 안내를 제공합니다.</p>
+        <h3 id="alarm-sound">4) 基本音效 · 語音 (TTS & 音效)</h3>
+        <p>透過警報音效與 Supertonic 3 人工智慧語音引擎，提供自然的韓語語音提示。</p>
 
         <!-- 기본 사운드 음성 설정 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="기본 사운드 · 음성 설정 — 사운드 파일(Ring01), 알림 방식(알람음만 / 알람음+음성 / 음성만), Supertonic 3 한국어 음성 엔진(F1 여성, 속도 0.90x, 볼륨 조절) 및 실시간 테스트">
+        <div class="image-card is-thumbnail" data-caption="基本音效 · 語音設定 — 音效檔案(Ring01)、通知方式(僅警報聲 / 警報聲+語音 / 僅語音)、Supertonic 3 韓語語音引擎(F1 女聲、速度 0.90x、音量調整)及即時測試">
           <div class="thumb-container">
-            <img src="images/alarm_sound_voice_settings.png" alt="기본 사운드 및 음성 설정">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_sound_voice_settings.png" alt="基本音效及語音設定">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>기본 사운드 · 음성 (Supertonic 3 한국어 음성 및 효과음)</span>
+            <span>📷</span> <span>基本音效 · 語音 (Supertonic 3 韓語語音及音效)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>알림 방식</strong>: <span class="chip">알람음만</span>, <span class="chip gold">알람음 ＋ 음성</span>, <span class="chip">음성만</span> 3가지 모드 지원.</li>
-          <li><strong>음성 엔진</strong>: 내장 <strong>Supertonic 3</strong> 음성 엔진 탑재 — 'F1 여성' 등 선명한 한국어 발음으로 읽어주며, 말 속도(0.90x 등)와 볼륨(0~100)을 자유롭게 조절할 수 있습니다.</li>
-          <li><span class="chip">▶ 테스트</span> 버튼으로 실제 음성 출력 품질을 즉시 확인 가능합니다.</li>
+          <li><strong>通知方式</strong>: <span class="chip">僅警報聲</span>, <span class="chip gold">警報聲 ＋ 語音</span>, <span class="chip">僅語音</span> 支援 3 種模式。</li>
+          <li><strong>語音引擎</strong>：內建 <strong>Supertonic 3</strong> 語音引擎 — 以「F1 女聲」等清晰的韓語發音朗讀，可自由調整語速(0.90x 等)與音量(0~100)。</li>
+          <li><span class="chip">▶ 測試</span> 按鈕可立即確認實際語音輸出品質。</li>
         </ul>
       </section>
 
       <!-- ─── 7. 창 모드, 핀, 오버레이 ─── -->
       <section class="doc-section" id="window-modes">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">7</span> 창 모드 · 항상 위(핀) · 인게임 오버레이</h2>
+          <h2 class="section-title"><span class="section-num">7</span> 視窗模式 · 永遠置頂(釘選) · 遊戲內覆蓋層</h2>
         </div>
 
-        <h3 id="window-mini">1) 미니창 모드 (Mini Bar)</h3>
-        <p>게임 화면 모니터 한구석에 작게 띄워두고 쓸 수 있는 초소형 한 줄 바 형태의 모드입니다.</p>
+        <h3 id="window-mini">1) 迷你視窗模式 (Mini Bar)</h3>
+        <p>這是可以小小地放在遊戲螢幕角落使用、超小型單行列的模式。</p>
 
         <!-- 미니바 스크린샷 카드 -->
-        <div class="image-card is-small" data-caption="미니창 모드 — 슬롯 A~G 작동 상태, 시작/중지, 편의기능 바로가기, 기본창 복귀 버튼">
+        <div class="image-card is-small" data-caption="迷你視窗模式 — 欄位 A~G 運作狀態、開始/停止、便利功能捷徑、返回基本視窗按鈕">
           <div class="thumb-container">
-            <img src="images/helper_mini_bar.png" alt="미니바 모드 화면">
+            <img src="../images/helper_mini_bar.png" alt="迷你列模式畫面">
           </div>
-          <div class="image-caption"><span>📷</span> <span>초소형 미니바 모드</span></div>
+          <div class="image-caption"><span>📷</span> <span>超小型迷你列模式</span></div>
         </div>
 
         <ul>
-          <li>슬롯 A~G 7개의 현재 작동 상태가 점등되어 실시간 확인 가능.</li>
-          <li><span class="chip green">시작</span> / <span class="chip">중지</span> 버튼, 편의기능(렌치) 버튼 — 누르면 기본창으로 돌아와 편의기능 탭을 엽니다(선변성 시작은 단축키나 그 탭의 시작 버튼으로), 항상 위(핀) 버튼 내장.</li>
-          <li>복귀(네모) 버튼을 누르면 즉시 원래 크기의 기본 창으로 되돌아옵니다.</li>
+          <li>欄位 A~G 共 7 個的目前運作狀態會亮燈，可即時確認。</li>
+          <li><span class="chip green">開始</span> / <span class="chip">停止</span> 按鈕、便利功能(扳手)按鈕 — 按下後會回到基本視窗並開啟便利功能分頁(預變性開始請用快速鍵或該分頁的開始按鈕)，並內建永遠置頂(釘選)按鈕。</li>
+          <li>按下返回(方框)按鈕，會立刻回到原本大小的基本視窗。</li>
         </ul>
 
-        <h3 id="window-overlay">2) 인게임 HUD 오버레이</h3>
-        <p>게임 화면 위에 반투명으로 띄워 매크로 동작 상황을 실시간으로 확인하는 필수 HUD 도구입니다. 작동 중인 매크로 슬롯, 유지 키, 현재 타격 중인 키 목록이 투명하게 표시됩니다.</p>
+        <h3 id="window-overlay">2) 遊戲內 HUD 覆蓋層</h3>
+        <p>這是以半透明方式浮在遊戲畫面上，即時確認巨集運作狀況的必備 HUD 工具。運作中的巨集欄位、維持按鍵、目前正在打出的按鍵清單都會透明顯示。</p>
 
         <!-- 1. 인게임 오버레이 실화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="인게임 HUD 오버레이 실화면 — 작동 중인 매크로 슬롯(•A, •B 빨간색 점등), 유지 키(유지 RClick), 실시간 눌림 키 목록(눌림 2 F F F F 4) 실시간 표시">
+        <div class="image-card is-thumbnail" data-caption="遊戲內 HUD 覆蓋層實際畫面 — 運作中的巨集欄位(•A、•B 紅色亮燈)、維持按鍵(維持 RClick)、即時按下按鍵清單(按下 2 F F F F 4)即時顯示">
           <div class="thumb-container">
-            <img src="images/overlay_ingame_live_display.png" alt="인게임 HUD 오버레이 실화면">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/overlay_ingame_live_display.png" alt="遊戲內 HUD 覆蓋層實際畫面">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>인게임 HUD 오버레이 (작동 슬롯, 유지 키, 실시간 타격 키 목록)</span>
+            <span>📷</span> <span>遊戲內 HUD 覆蓋層 (運作欄位、維持按鍵、即時打出按鍵清單)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>작동 매크로 슬롯 상태</strong>:
-            <span class="chip ruby">•A</span> <span class="chip ruby">•B</span> 처럼 현재 발동되어 돌고 있는 슬롯은 붉은색 테두리와 점(•)으로 점등되며, 비활성 슬롯(<span class="chip">C</span>)과 토글 대기 슬롯(<span class="chip green">○D</span>)이 한눈에 구분됩니다.
+          <li><strong>運作中巨集欄位狀態</strong>:
+            <span class="chip ruby">•A</span> <span class="chip ruby">•B</span> ，目前已發動、正在運轉的欄位會以紅色邊框與圓點(•)亮起，並能一眼分辨停用欄位(<span class="chip">C</span>)與切換待機欄位(<span class="chip green">○D</span>)。
           </li>
-          <li><strong>유지 키 (Hold / Companion) 출력</strong>:
-            현재 지속적으로 눌려 있는 키(예: <code>유지 RClick</code>, <code>유지 Shift</code> 등)가 우측 상단에 실시간으로 표시됩니다.
+          <li><strong>維持按鍵 (Hold / Companion) 輸出</strong>：目前持續被按住的按鍵(例如： <code>維持 RClick</code>, <code>維持 Shift</code> 等)會即時顯示在右上角。
           </li>
-          <li><strong>실시간 눌림 키 목록 (Key Log)</strong>:
-            하단에 현재 시퀀스에서 실시간으로 타격 중인 스킬 키(예: <code>눌림 2 F F F F 4</code>)가 연속 출력되어 스킬 로테이션이 정확히 맞물려 도는지 게임 중에 바로 확인 가능합니다.
+          <li><strong>即時按下按鍵清單 (Key Log)</strong>：底部會連續輸出目前序列中即時打出的技能鍵(例如： <code>按下 2 F F F F 4</code>)，讓你在遊戲中就能立即確認技能循環是否正確銜接運轉。
           </li>
-          <li><strong>선변성 진행도</strong>: 호라드림의 함 선변성 동작 시에는 현재 칸 번호와 진행률이 오버레이에 뜹니다.</li>
+          <li><strong>預變性進度</strong>：進行赫拉迪姆方塊預變性時，覆蓋層上會顯示目前格數與進度。</li>
         </ul>
 
         <!-- 2. 오버레이 설정 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="전역 설정 — 오버레이 상세 커스텀 (모니터 선택, 위치 우측 하단, X/Y 픽셀 오프셋, 투명도 40%, 크기 118%, 가로 폭 409px 및 실시간 미리보기)">
+        <div class="image-card is-thumbnail" data-caption="全域設定 — 覆蓋層詳細自訂 (選擇螢幕、位置右下角、X/Y 像素偏移、透明度 40%、大小 118%、橫向寬度 409px 及即時預覽)">
           <div class="thumb-container">
-            <img src="images/overlay_configuration_settings.png" alt="오버레이 상세 설정 화면">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/overlay_configuration_settings.png" alt="覆蓋層詳細設定畫面">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>오버레이 상세 설정 (모니터, 위치, X/Y 오프셋, 투명도, 크기, 폭 조절)</span>
+            <span>📷</span> <span>覆蓋層詳細設定 (螢幕、位置、X/Y 偏移、透明度、大小、寬度調整)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>게임 오버레이 표시</strong>: 오버레이를 켜고 끄는 마스터 스위치입니다.</li>
-          <li><strong>모니터 선택</strong>: 듀얼 및 다중 모니터 환경에서 디아블로4가 켜진 모니터(예: <code>2: LG HDR 4K (2560×1440)</code>)를 드롭다운으로 직접 지정할 수 있습니다.</li>
-          <li><strong>화면 위치 & 정밀 픽셀 오프셋</strong>:
-            화면의 9개 구역(예: <code>우측</code> <code>하단</code>)을 고른 뒤, <span class="chip">X 오프셋</span>(-13 px)과 <span class="chip">Y 오프셋</span>(-3 px)으로 미니맵이나 게임 UI를 가리지 않게 픽셀 단위로 위치를 미세 조정합니다.
+          <li><strong>顯示遊戲覆蓋層</strong>：開啟與關閉覆蓋層的總開關。</li>
+          <li><strong>選擇螢幕</strong>：在雙螢幕及多螢幕環境下，可用下拉選單直接指定開著暗黑破壞神4的螢幕 (例如： <code>2: LG HDR 4K (2560×1440)</code>)。</li>
+          <li><strong>畫面位置 & 精細像素偏移</strong>：從畫面的 9 個區域(例如： <code>右側</code> <code>下方</code>)中選好後， <span class="chip">X 偏移</span>(-13 px)與 <span class="chip">Y 偏移</span>(-3 px)可以逐像素微調位置，避免擋住小地圖或遊戲 UI。
           </li>
-          <li><strong>투명도 & 크기 & 가로 폭</strong>:
-            슬라이더를 통해 <span class="chip">투명도</span>(기본 40% 반투명), <span class="chip">크기</span>(118% 등 배율), <span class="chip">가로 폭</span>(409 px)을 내 시야에 맞춰 최적화합니다.
+          <li><strong>透明度 & 大小 & 橫向寬度</strong>：透過滑桿將 <span class="chip">透明度</span>(預設 40% 半透明)、 <span class="chip">大小</span>(118% 等倍率)、 <span class="chip">橫向寬度</span>(409 px)調整到最適合自己的視野。
           </li>
-          <li><span class="chip blue">👁 미리보기</span>: 매크로를 직접 실행하지 않아도 버튼을 누르면 설정된 위치와 크기로 오버레이가 화면에 즉시 나타나 확인하기 편리합니다.</li>
+          <li><span class="chip blue">👁 預覽</span>：即使不實際執行巨集，只要按下按鈕，覆蓋層就會以設定的位置與大小立即出現在畫面上，方便確認。</li>
         </ul>
       </section>
 
       <!-- ─── 8. 안전장치 ─── -->
       <section class="doc-section" id="safety-features">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">8</span> 안전 장치 — 대기 키(Stop Keys) · 게임 창 감지</h2>
+          <h2 class="section-title"><span class="section-num">8</span> 安全裝置 — 待機鍵(Stop Keys) · 遊戲視窗偵測</h2>
         </div>
 
         <ul>
-          <li><strong>대기 키 (Stop Keys, 기본값: <kbd>Enter</kbd> <kbd>Tab</kbd> <kbd>T</kbd> <kbd>I</kbd>)</strong>:
-            채팅 창 열기(<kbd>Enter</kbd>), 지도 열기(<kbd>Tab</kbd>), 차원문(<kbd>T</kbd>), 인벤토리 열기(<kbd>I</kbd>) 등 게임 인터페이스를 열었을 때 매크로가 엉뚱하게 스킬을 난사하지 않도록 <strong>즉시 입력을 일시정지</strong>합니다. 대화를 마치고 다시 발동키를 누르면 매크로가 재개됩니다.
+          <li><strong>待機鍵 (Stop Keys，預設值： <kbd>Enter</kbd> <kbd>Tab</kbd> <kbd>T</kbd> <kbd>I</kbd>)</strong>：開啟聊天視窗(<kbd>Enter</kbd>)、開啟地圖(<kbd>Tab</kbd>)、傳送門(<kbd>T</kbd>)、開啟背包(<kbd>I</kbd>)等開啟遊戲介面時，為避免巨集亂放技能，會 <strong>立即暫停輸入</strong>。對話結束後再按一次啟動鍵，巨集就會恢復。
           </li>
-          <li><strong>게임 창 감지</strong>:
-            디아블로4 프로세스가 활성 윈도우 창일 때만 작동합니다. 설정에서 특정 창 제목이나 프로세스명을 사용자가 직접 커스텀 매칭할 수도 있습니다.
+          <li><strong>遊戲視窗偵測</strong>：只有在暗黑破壞神4的處理程序為作用中視窗時才會運作。也可以在設定中由使用者自行自訂比對特定的視窗標題或處理程序名稱。
           </li>
-          <li><strong>입력 전송 검증 도구</strong>:
-            상단 바의 <span class="chip">테스트</span> 버튼을 누르면 게임 밖에서도 가상 키 입력이 정상적으로 시스템에 주입되는지 사전에 점검할 수 있습니다.
+          <li><strong>輸入傳送驗證工具</strong>：按下頂端列的 <span class="chip">測試</span> 按鈕，就能預先檢查即使在遊戲之外，虛擬按鍵輸入是否能正確注入系統。
           </li>
         </ul>
 
-        <h3 id="input-test">3) 입력 테스트 창</h3>
-        <p>상단 바의 <span class="chip">테스트</span> 버튼을 누르면 작은 창이 뜨고, 매크로가 보내는 키·마우스 입력이 그대로 들어오는지 눈으로 확인할 수 있습니다. 발동키를 눌러도 아무 일이 없을 때 "헬퍼가 입력을 못 보내는지, 게임이 안 받는지" 를 가르는 첫 점검 도구입니다.</p>
-        <div class="image-card is-small" data-caption="입력 테스트 창 — 매크로가 보내는 키·마우스 입력이 실제로 들어오는지 확인">
+        <h3 id="input-test">3) 輸入測試視窗</h3>
+        <p>按下頂端列的 <span class="chip">測試</span> 按鈕會跳出一個小視窗，可以用眼睛確認巨集送出的鍵盤·滑鼠輸入是否原樣進來。按啟動鍵卻毫無反應時，這是用來分辨「助手送不出輸入，還是遊戲沒有接收」的第一個檢查工具。</p>
+        <div class="image-card is-small" data-caption="輸入測試視窗 — 確認巨集送出的鍵盤·滑鼠輸入是否真的進來">
           <div class="thumb-container">
-            <img src="images/helper_input_test.png" alt="입력 테스트 창">
+            <img src="../images/helper_input_test.png" alt="輸入測試視窗">
           </div>
-          <div class="image-caption"><span>📷</span> <span>입력 테스트 창</span></div>
+          <div class="image-caption"><span>📷</span> <span>輸入測試視窗</span></div>
         </div>
         <!-- 설정창 캡처 -->
-        <div class="image-card is-thumbnail" data-caption="전역 설정 창 — 안전 대기 키 커스텀, 게임 창 감지 프로세스 지정, 오버레이 위치/투명도 조정">
+        <div class="image-card is-thumbnail" data-caption="全域設定視窗 — 自訂安全待機鍵、指定遊戲視窗偵測的處理程序、調整覆蓋層位置/透明度">
           <div class="thumb-container">
-            <img src="images/helper_settings_dialog.png" alt="전역 설정 다이얼로그">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/helper_settings_dialog.png" alt="全域設定對話框">
+            <span class="zoom-hint-badge">🔍 點擊放大</span>
           </div>
-          <div class="image-caption"><span>📷</span> <span>헬퍼 전역 설정(⚙) 다이얼로그</span></div>
+          <div class="image-caption"><span>📷</span> <span>助手全域設定(⚙)對話框</span></div>
         </div>
       </section>
 
       <!-- ─── 9. 프로필 관리 & 공유 ─── -->
       <section class="doc-section" id="profile-sync">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">9</span> 프로필 관리 · 백업 · 클랜원 공유</h2>
+          <h2 class="section-title"><span class="section-num">9</span> 設定檔管理 · 備份 · 戰隊成員分享</h2>
         </div>
 
         <ul>
-          <li>프로필 하나에는 슬롯 A~G(총 7개)의 모든 시퀀스와 딜레이, 발동키 설정이 통째로 묶여 저장됩니다.</li>
-          <li>원소술사, 야만용사, 드루이드, 강령술사, 도적, 혼령사 등 직업별 및 빌드별로 프로필을 분리해두면 클릭 한 번으로 모든 세팅이 교체됩니다.</li>
-          <li><span class="chip">내보내기</span>: 현재 세팅을 <code>.d4cute</code> 파일로 내보내어 안전하게 백업하거나 클랜원에게 공유할 수 있습니다.</li>
-          <li><span class="chip blue">가져오기</span>: 다른 사용자가 공유한 <code>.d4cute</code> 프로필 파일을 불러와 내 헬퍼에 즉시 적용합니다.</li>
-          <li><span class="chip">저장</span> 버튼을 눌러야 디스크에 안전하게 반영되며, 잘못 건드렸을 때는 <span class="chip">불러오기</span>를 눌러 마지막 저장 시점으로 되돌릴 수 있습니다.</li>
+          <li>一個設定檔會把欄位 A~G(共 7 個)的所有序列、延遲及啟動鍵設定整包儲存起來。</li>
+          <li>若依職業與流派分開術士、野蠻人、德魯伊、死靈法師、盜賊、靈魂使者等設定檔，只要點一下就能替換所有設定。</li>
+          <li><span class="chip">匯出</span>：把目前的設定 <code>.d4cute</code> 檔案匯出，可以安全備份或分享給戰隊成員。</li>
+          <li><span class="chip blue">匯入</span>：載入其他使用者分享的 <code>.d4cute</code> 設定檔並立即套用到我的助手。</li>
+          <li><span class="chip">儲存</span> 按鈕才會安全地寫入磁碟，不小心改錯時可以按 <span class="chip">載入</span>，還原到最後儲存的時間點。</li>
         </ul>
       </section>
 
       <!-- ─── 10. 텔레그램 연동 & 디버그 로그 ─── -->
       <section class="doc-section" id="telegram-support">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">10</span> 텔레그램 지원 & 디버그 로그 뷰어</h2>
+          <h2 class="section-title"><span class="section-num">10</span> Telegram 支援 & 除錯記錄檢視器</h2>
         </div>
 
         <p>
-          헬퍼 상단 프로필 줄의 파란색 <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span> 아이콘을 클릭하면 텔레그램 연동 다이얼로그가 열립니다.
-          새 버전 소식을 빠르게 확인하고, <strong style="color:var(--gold);">@d4cute_helper</strong> 이용자 그룹에서 질문 및 버그 제보를 진행하며, 오류 발생 시 <strong style="color:var(--ruby);">디버그 로그를 원클릭으로 추출</strong>하여 해결을 지원받을 수 있습니다.
+          點擊助手頂端設定檔列上的藍色 <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegram 標誌</span> 圖示會開啟 Telegram 連動對話框。可以快速確認新版本消息， <strong style="color:var(--gold);">@d4cute_helper</strong> 在使用者群組提問及回報錯誤，發生錯誤時 <strong style="color:var(--ruby);">一鍵匯出除錯記錄</strong>就能獲得問題解決的協助。
         </p>
 
         <!-- 텔레그램 및 로그 뷰어 스크린샷 2종 갤러리 -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0;">
-          <div class="image-card is-thumbnail" data-caption="텔레그램 다이얼로그 — 공지 채널(@d4_notice), 이용자 소통 그룹(@d4cute_helper), 스마트폰 즉시 입장 QR 코드, 로그 보기 및 텔레그램 설치 버튼">
+          <div class="image-card is-thumbnail" data-caption="Telegram 對話框 — 公告頻道(@d4_notice)、使用者交流群組(@d4cute_helper)、手機即時加入 QR Code、檢視記錄及安裝 Telegram 按鈕">
             <div class="thumb-container">
-              <img src="images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
-              <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+              <img src="../images/telegram_qr_dialog.png" alt="Telegram 連動對話框及 QR Code">
+              <span class="zoom-hint-badge">🔍 點擊放大</span>
             </div>
             <div class="image-caption">
-              <span>📷</span> <span>텔레그램 연동 팝업 (공지/이용자 그룹/QR 코드/설치)</span>
+              <span>📷</span> <span>Telegram 連動彈出視窗 (公告/使用者群組/QR Code/安裝)</span>
             </div>
           </div>
           
-          <div class="image-card is-thumbnail" data-caption="로그 뷰어 다이얼로그 — 날짜별 로그 조회, 경고·오류만 필터링 토글, 최근 200줄 복사, 오류만 복사, 로컬 로그 폴더 열기">
+          <div class="image-card is-thumbnail" data-caption="記錄檢視器對話框 — 依日期查看記錄、僅過濾警告·錯誤切換、複製最近 200 行、僅複製錯誤、開啟本機記錄資料夾">
             <div class="thumb-container">
-              <img src="images/log_viewer_error_copy.png" alt="디버그 로그 뷰어 다이얼로그">
-              <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+              <img src="../images/log_viewer_error_copy.png" alt="除錯記錄檢視器對話框">
+              <span class="zoom-hint-badge">🔍 點擊放大</span>
             </div>
             <div class="image-caption">
-              <span>📷</span> <span>원클릭 디버그 로그 뷰어 (오류만 복사/최근 200줄 복사)</span>
+              <span>📷</span> <span>一鍵除錯記錄檢視器 (僅複製錯誤/複製最近 200 行)</span>
             </div>
           </div>
         </div>
 
         <!-- 1) 텔레그램 설치 및 계정 준비 -->
-        <h3 id="telegram-install">1) 텔레그램 설치 및 사전 준비</h3>
+        <h3 id="telegram-install">1) 安裝 Telegram 及事前準備</h3>
         <p>
-          텔레그램은 PC와 스마트폰에서 가볍고 안전하게 구동되는 글로벌 메신저입니다. PC나 모바일에 텔레그램이 아직 설치되어 있지 않다면 아래 방법으로 간편하게 준비할 수 있습니다.
+          Telegram 是在電腦與手機上輕量又安全運作的全球通訊軟體。如果電腦或手機還沒有安裝 Telegram，可以用下列方法輕鬆準備。
         </p>
         <div class="alert-box info" style="margin: 12px 0 18px;">
           <span class="alert-icon">💡</span>
           <div>
-            <strong>안전한 공식 설치 안내</strong><br>
-            헬퍼 텔레그램 창 하단의 <span class="chip blue">텔레그램 설치</span> 버튼을 누르면 텔레그램 공식 웹사이트(<a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">telegram.org</a>)로 브라우저가 열립니다. 
-            <span style="color:var(--green); font-weight:600;">헬퍼가 임의로 실행 파일을 내려받거나 설치하지 않으므로 안심하고 이용하세요.</span>
+            <strong>安全的官方安裝說明</strong><br>
+            按下助手 Telegram 視窗底部的 <span class="chip blue">安裝 Telegram</span> 按鈕，瀏覽器會開啟 Telegram 官方網站 (<a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">telegram.org</a>)。 
+            <span style="color:var(--green); font-weight:600;">助手不會擅自下載或安裝執行檔，請放心使用。</span>
           </div>
         </div>
         <ul>
-          <li><strong>스마트폰 (모바일)</strong>: <span style="color:var(--gold); font-weight:600;">구글 플레이스토어</span> 또는 <span style="color:var(--gold); font-weight:600;">애플 앱스토어</span>에서 <code>Telegram</code>을 검색하여 무료 다운로드합니다. 전화번호 인증만 거치면 1분 만에 가입이 완료됩니다.</li>
-          <li><strong>PC (데스크톱)</strong>: <a href="https://desktop.telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">Telegram Desktop ↗</a> 공식 페이지에서 Windows용 설치 버전을 내려받아 설치한 뒤, 모바일 텔레그램 앱의 <span class="chip">설정 → 기기 → 데스크톱 연결</span>을 통해 QR 코드를 스캔하면 비밀번호 없이 즉시 로그인됩니다.</li>
+          <li><strong>手機 (行動裝置)</strong>: <span style="color:var(--gold); font-weight:600;">Google Play 商店</span> 或 <span style="color:var(--gold); font-weight:600;">Apple App Store</span>中可以 <code>Telegram</code>搜尋後免費下載。只要通過電話號碼驗證，1 分鐘內就能完成註冊。</li>
+          <li><strong>電腦 (桌面版)</strong>: <a href="https://desktop.telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">Telegram Desktop ↗</a> 從官方頁面下載並安裝 Windows 版安裝檔後，用手機 Telegram App 的 <span class="chip">設定 → 裝置 → 連結桌面裝置</span>掃描 QR Code，就能不用密碼立即登入。</li>
         </ul>
 
         <!-- 2) 채널 및 그룹방 가입 방법 -->
-        <h3 id="telegram-channels">2) 채널 & 이용자 그룹방 가입 방법</h3>
+        <h3 id="telegram-channels">2) 加入頻道 & 使用者群組的方法</h3>
         <p>
-          d4cute helper는 목적에 따라 두 개의 공식 텔레그램 방을 운영합니다.
+          d4cute helper 依用途經營兩個官方 Telegram 聊天室。
         </p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 14px 0 20px;">
           <div class="clan-card" style="padding: 16px;">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
               <span style="font-size:20px;">📢</span>
-              <strong style="color:var(--gold); font-size:16px;">공지 전용 채널</strong>
+              <strong style="color:var(--gold); font-size:16px;">公告專用頻道</strong>
             </div>
             <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
-              새 버전 업데이트 소식, 시즌 패치 대응 현황, 긴급 안내를 전달하는 단방향 알림 채널입니다.
+              這是傳達新版本更新消息、賽季修補因應狀況與緊急公告的單向通知頻道。
             </p>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700;">@d4_notice ↗</a>
-              <span class="chip">공지 구독</span>
+              <span class="chip">訂閱公告</span>
             </div>
           </div>
 
           <div class="clan-card" style="padding: 16px; border-color: rgba(59, 130, 246, 0.4);">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
               <span style="font-size:20px;">💬</span>
-              <strong style="color:var(--blue); font-size:16px;">이용자 소통 그룹방</strong>
+              <strong style="color:var(--blue); font-size:16px;">使用者交流群組</strong>
             </div>
             <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
-              <strong>헬퍼 설정 팁 공유, 질문, 기능 건의, 오류 제보는 오직 여기서만 받습니다!</strong>
+              <strong>助手設定技巧分享、提問、功能建議、錯誤回報只在這裡受理！</strong>
             </p>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper ↗</a>
-              <span class="chip blue">문의/제보</span>
+              <span class="chip blue">諮詢/回報</span>
             </div>
           </div>
         </div>
@@ -2781,64 +2541,64 @@
         <div class="alert-box gold" style="margin: 12px 0 18px;">
           <span class="alert-icon">⚠️</span>
           <div>
-            <strong>문의 채널 주의사항</strong><br>
-            삼촌안잔다잉 유튜브 채널은 디아블로4 게임 플레이와 소통을 즐기는 개인 방송 공간입니다. <span style="color:var(--ruby); font-weight:700;">유튜브 방송 채팅이나 댓글로는 헬퍼 문의를 일절 받지 않으니</span>, 반드시 텔레그램 공식 그룹방(<span style="color:var(--blue); font-weight:700;">@d4cute_helper</span>)으로 방문해 주세요.
+            <strong>諮詢頻道注意事項</strong><br>
+            삼촌안잔다잉 YouTube 頻道是享受暗黑破壞神4遊玩與交流的個人直播空間。 <span style="color:var(--ruby); font-weight:700;">YouTube 直播聊天室或留言完全不受理助手相關諮詢，</span>，請務必前往 Telegram 官方群組 (<span style="color:var(--blue); font-weight:700;">@d4cute_helper</span>)。
           </div>
         </div>
 
-        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">📱 그룹방 간편 입장 방법 2가지</h4>
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">📱 群組簡單加入方法 2 種</h4>
         <ul>
-          <li><strong>방법 A (스마트폰 카메라 QR 스캔 — 가장 추천!)</strong>: 스마트폰의 기본 카메라 앱을 켜고 화면 오른쪽의 <strong style="color:var(--gold);">대형 QR 코드</strong>를 비추면 상단에 노란색 텔레그램 링크 배너가 나타납니다. 터치 한 번으로 <span class="chip blue">@d4cute_helper</span> 그룹방에 즉시 들어오실 수 있습니다.</li>
-          <li><strong>방법 B (PC 텔레그램 바로 열기)</strong>: 창에서 <span class="chip">열기</span> 버튼을 누르거나 웹 링크(<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">https://t.me/d4cute_helper</a>)를 클릭하면 PC 텔레그램 클라이언트로 직행합니다.</li>
+          <li><strong>方法 A (用手機相機掃描 QR Code — 最推薦！)</strong>：開啟手機的預設相機 App，對準畫面右側的 <strong style="color:var(--gold);">大型 QR Code</strong>，上方就會出現黃色的 Telegram 連結橫幅。只要輕觸一下， <span class="chip blue">@d4cute_helper</span> 就能立刻進入群組。</li>
+          <li><strong>方法 B (直接開啟電腦版 Telegram)</strong>：在視窗中按下 <span class="chip">開啟</span> 按鈕，或點擊網頁連結 (<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">https://t.me/d4cute_helper</a>)，就會直接進入電腦版 Telegram 用戶端。</li>
         </ul>
 
         <!-- 3) 로그 뷰어를 통한 오류 복사 & 문제 해결 -->
-        <h3 id="log-viewer-guide">3) 로그 보기를 통한 오류 복사 & 문제 해결 방법</h3>
+        <h3 id="log-viewer-guide">3) 透過檢視記錄複製錯誤 & 問題解決方法</h3>
         <p>
-          매크로가 갑자기 멈추거나, 선변성 도중 오류가 발생하거나, 예상치 못한 동작이 나타났을 때 제작자에게 상황을 설명하려면 <strong style="color:var(--gold);">로그 데이터</strong>가 가장 확실한 열쇠가 됩니다.
+          當巨集突然停止、預變性途中發生錯誤，或出現意料之外的動作時，要向作者說明狀況， <strong style="color:var(--gold);">記錄資料</strong>是最可靠的關鍵。
         </p>
 
-        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">🔍 로그 뷰어 화면 구성 & 버튼 기능</h4>
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">🔍 記錄檢視器畫面配置 & 按鈕功能</h4>
         <ul>
-          <li><strong><span style="color:var(--gold); font-weight:700;">로그 일자 드롭다운</span></strong>: 오류가 발생한 날짜(기본: 오늘 날짜)를 선택합니다. 로그는 최근 <span class="chip">7일간 자동 보관</span>된 후 오래된 파일부터 순차 삭제됩니다.</li>
-          <li><strong><span class="chip">경고·오류만</span> 토글 스위치</strong>: 수천 줄의 일반적인 <code>INFO</code> 로그를 숨기고, 시스템 경고(<span style="color:#f59e0b; font-weight:700;">WARN</span>) 및 오류(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 항목만 쏙 뽑아서 볼 수 있습니다.</li>
-          <li><strong><span class="chip">새로 고침</span></strong>: 헬퍼를 켜둔 상태에서 실시간으로 쌓이는 최신 로그를 즉시 화면에 다시 로드합니다.</li>
-          <li><strong><span class="chip">폴더 열기</span></strong>: 로그 원본 텍스트 파일들이 저장된 윈도우 탐색기 폴더(<code>%APPDATA%\d4cute_helper\logs</code>)를 직접 엽니다.</li>
-          <li><strong><span class="chip gold">최근 200줄 복사</span></strong>: 오류 직전까지 어떤 키가 눌렸고 어떤 이벤트가 일어났는지 맥락을 파악할 수 있도록 최근 200행의 로그를 클립보드로 복사합니다.</li>
-          <li><strong><span class="chip ruby">오류만 복사</span></strong>: 로그 전체 중에서 오류(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 및 예외 스택트레이스 구문만 정밀 추출하여 클립보드에 담습니다.</li>
-          <li><strong><span class="chip">선택 복사</span></strong>: 텍스트 창에서 마우스로 원하는 부분을 드래그한 뒤 해당 구간만 복사합니다.</li>
+          <li><strong><span style="color:var(--gold); font-weight:700;">記錄日期下拉選單</span></strong>：選擇發生錯誤的日期(預設：今天日期)。記錄會 <span class="chip">自動保留最近 7 天</span>，之後從舊檔案開始依序刪除。</li>
+          <li><strong><span class="chip">僅警告·錯誤</span> 切換開關</strong>：隱藏數千行一般的 <code>INFO</code> 記錄，只挑出系統警告(<span style="color:#f59e0b; font-weight:700;">WARN</span>) 及錯誤(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 項目來檢視。</li>
+          <li><strong><span class="chip">重新整理</span></strong>：在助手開著的狀態下，立即把即時累積的最新記錄重新載入畫面。</li>
+          <li><strong><span class="chip">開啟資料夾</span></strong>：直接開啟存放記錄原始文字檔的 Windows 檔案總管資料夾 (<code>%APPDATA%\d4cute_helper\logs</code>)。</li>
+          <li><strong><span class="chip gold">複製最近 200 行</span></strong>：為了掌握錯誤發生前按過哪些按鍵、發生過哪些事件的脈絡，把最近 200 行記錄複製到剪貼簿。</li>
+          <li><strong><span class="chip ruby">僅複製錯誤</span></strong>：從整份記錄中精準擷取錯誤(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 及例外堆疊追蹤語句，放進剪貼簿。</li>
+          <li><strong><span class="chip">複製選取內容</span></strong>：在文字視窗中用滑鼠拖曳選取想要的部分後，只複製該區段。</li>
         </ul>
 
         <div class="alert-box info" style="margin: 14px 0 18px;">
           <span class="alert-icon">🛡️</span>
           <div>
-            <strong>개인정보 안심 보호 & 자동 전송 차단</strong><br>
+            <strong>個資安心保護 & 阻擋自動傳送</strong><br>
             <ul style="margin: 6px 0 0 18px; padding: 0;">
-              <li><strong>사용자명 자동 마스킹</strong>: 로그 안의 파일 경로(예: <code>C:\Users\홍길동\...</code>)에서 사용자 계정명은 자동으로 식별 불가능하게 숨겨져 복사되므로 사생활 노출 걱정이 없습니다.</li>
-              <li><strong>외부 자동 전송 차단</strong>: 하단 안내문("<em>복사한 내용을 텔레그램 그룹에 붙여넣어 보내 주세요 — 헬퍼가 자동으로 보내는 것은 없습니다.</em>")처럼, 헬퍼는 인터넷을 통해 사용자의 로그를 몰래 외부로 전송하지 않습니다. 오직 사용자가 직접 복사하여 붙여넣을 때만 안전하게 공유됩니다.</li>
+              <li><strong>自動遮蔽使用者名稱</strong>：記錄中的檔案路徑 (例如： <code>C:\Users\使用者\...</code>)裡，使用者帳號名稱會被自動隱藏到無法辨識後才複製，因此不用擔心隱私外洩。</li>
+              <li><strong>阻擋對外自動傳送</strong>：如同底部說明文字(「<em>請把複製的內容貼到 Telegram 群組送出 — 助手不會自動傳送任何東西。</em>」)所示，助手不會透過網路偷偷把使用者的記錄傳送到外部。只有使用者親自複製貼上時才會安全地分享。</li>
             </ul>
           </div>
         </div>
 
-        <h4 style="color:var(--gold-bright); margin: 18px 0 10px;">🚀 오류 로그 전달 및 신속 해결 3단계 가이드</h4>
+        <h4 style="color:var(--gold-bright); margin: 18px 0 10px;">🚀 錯誤記錄傳達及快速解決 3 步驟指南</h4>
         <ol style="line-height: 1.85;">
           <li>
-            <strong style="color:var(--gold);">1단계: 로그 복사하기</strong><br>
-            문제가 발생한 즉시 텔레그램 다이얼로그에서 <span class="chip gold">📁 로그 보기</span> 버튼을 누르고, 창 하단에서 <span class="chip ruby">오류만 복사</span> 또는 <span class="chip gold">최근 200줄 복사</span> 버튼을 클릭합니다.<br>
-            <span style="font-size: 13px; color: var(--fg-dim);">※ 복사된 로그의 맨 첫 줄에는 헬퍼 버전, OS 환경, 해상도 배율 메타 정보가 자동으로 첨부되어 개발자가 환경을 단번에 파악할 수 있습니다.</span>
+            <strong style="color:var(--gold);">步驟 1：複製記錄</strong><br>
+            問題發生後立即在 Telegram 對話框按下 <span class="chip gold">📁 檢視記錄</span> 按鈕，然後在視窗底部點擊 <span class="chip ruby">僅複製錯誤</span> 或 <span class="chip gold">複製最近 200 行</span> 按鈕。<br>
+            <span style="font-size: 13px; color: var(--fg-dim);">※ 複製的記錄第一行會自動附上助手版本、作業系統環境、解析度倍率等中繼資訊，讓開發者一眼掌握環境。</span>
           </li>
           <li>
-            <strong style="color:var(--blue);">2단계: 텔레그램 그룹방에 붙여넣기</strong><br>
-            스마트폰 또는 PC에서 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a> 그룹방으로 이동한 후, 메시지 입력창을 클릭하고 <kbd>Ctrl</kbd> + <kbd>V</kbd>(모바일은 입력창 길게 누른 뒤 붙여넣기)를 실행합니다.
+            <strong style="color:var(--blue);">步驟 2：貼到 Telegram 群組</strong><br>
+            在手機或電腦上前往 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a> 群組後，點擊訊息輸入框並執行 <kbd>Ctrl</kbd> + <kbd>V</kbd>(手機請長按輸入框後選擇貼上)。
           </li>
           <li>
-            <strong style="color:var(--green);">3단계: 발생 상황 설명 덧붙이기</strong><br>
-            로그와 함께 <em>"어떤 상황에서 문제가 일어났는지"</em> 1~2줄을 함께 남겨주세요:<br>
+            <strong style="color:var(--green);">步驟 3：補充發生狀況說明</strong><br>
+            請在記錄之外，另外留下 <em>「在什麼情況下發生問題」</em> 1~2 行說明：<br>
             <div style="background:var(--card-subtle); padding:10px 14px; border-radius:var(--radius-sm); border-left:3px solid var(--gold); margin:8px 0; font-size:13px; color:var(--fg-dim);">
-              예시 1: "인벤 선변성 시작 후 12번째 칸에서 큐브 비움 검증 단계에서 멈춥니다. 로그 남깁니다."<br>
-              예시 2: "전역 설정에서 오버레이 위치를 바꿨는데 화면에 오버레이가 나타나지 않습니다."
+              範例 1：「開始背包預變性後，在第 12 格的方塊清空驗證階段停住。附上記錄。」<br>
+              範例 2：「在全域設定中更改了覆蓋層位置，但畫面上沒有出現覆蓋層。」
             </div>
-            스크린샷이나 휴대폰 사진을 함께 첨부해 주시면 더욱 빠르고 정확한 진단과 패치가 이루어집니다.
+            若能一併附上截圖或手機照片，就能更快速、更精準地診斷並修補。
           </li>
         </ol>
       </section>
@@ -2846,10 +2606,10 @@
       <!-- ─── 11. 클랜 & 방송 커뮤니티 ─── -->
       <section class="doc-section" id="community">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">11</span> 앙증맞은 클랜 & 삼촌안잔다잉 채널</h2>
+          <h2 class="section-title"><span class="section-num">11</span> 앙증맞은 戰隊 & 삼촌안잔다잉 頻道</h2>
         </div>
 
-        <p>제작자가 활동하는 클랜과, 그 클랜장님의 게임 방송 채널입니다. 둘 다 헬퍼와는 별개의 곳입니다.</p>
+        <p>這是作者活動的戰隊，以及該戰隊隊長的遊戲直播頻道。兩者都與助手本身無關。</p>
 
         <!-- 상단 2열: 클랜 개요 카드 & 삼촌안잔다잉 방송 채널 카드 (높이 균형 & 럭셔리 디자인) -->
         <div class="clan-showcase-grid">
@@ -2859,21 +2619,21 @@
               <div class="clan-card-header">
                 <div class="clan-card-crest">⚔️</div>
                 <div>
-                  <h3 class="clan-card-title">&lt;앙증맞은&gt; 무지개날개</h3>
-                  <p class="clan-card-sub">디아블로4 인게임 클랜 · 클랜장 대한민국(삼촌안잔다잉)</p>
+                  <h3 class="clan-card-title">&lt;앙증맞은&gt; 彩虹之翼</h3>
+                  <p class="clan-card-sub">暗黑破壞神4遊戲內戰隊 · 隊長 韓國(삼촌안잔다잉)</p>
                 </div>
               </div>
               <p style="font-size:13.5px; color:var(--fg-dim); margin:0 0 14px; line-height: 1.75;">
-                제작자가 함께 활동하는 인게임 친목 클랜입니다. 모토는 <strong>"도움은 품앗이"</strong> — 일방적인 버스보다 서로 챙기는 기브 앤 테이크, 검색 생활화.
+                這是作者一起活動的遊戲內交流戰隊。座右銘是 <strong>「幫忙是互相換工」</strong> — 比起單方面帶打，更重視互相照顧的互惠，養成多搜尋的習慣。
               </p>
               <ul style="font-size:13px; color:var(--fg-dim); margin:0 0 16px 18px; padding:0; line-height:1.75;">
-                <li>시즌마다 나락 고단 등반, 횃불 무한런, 우두머리 파티 함께 진행</li>
-                <li>신화 고유 장비 파밍 및 시즌 여정 함께 달성</li>
-                <li>디스코드는 운영하지 않으며, 인게임 신청 후 유튜브 채널에서 확인</li>
+                <li>每個賽季一起攀登深淵高階、火炬無限刷、首領組隊</li>
+                <li>一起刷神話獨特裝備並達成賽季旅程</li>
+                <li>不經營 Discord，在遊戲內申請後於 YouTube 頻道確認</li>
               </ul>
             </div>
             <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="clan-btn gold">
-              <span>삼촌안잔다잉 채널 — 가입 사실 알리기 ↗</span>
+              <span>삼촌안잔다잉 頻道 — 告知已申請加入 ↗</span>
             </a>
           </div>
 
@@ -2884,23 +2644,23 @@
                 <div class="clan-card-crest" style="border-color: rgba(229, 72, 77, 0.45); background: rgba(229, 72, 77, 0.1);">📺</div>
                 <div>
                   <h3 class="clan-card-title" style="color: #ff999c;">삼촌안잔다잉</h3>
-                  <p class="clan-card-sub">🌙 다들 잘 때, 삼촌은 게임 중! · 유튜브·치지직 동시 방송</p>
+                  <p class="clan-card-sub">🌙 大家睡覺時，大叔還在玩遊戲！ · YouTube·CHZZK 同步直播</p>
                 </div>
               </div>
               <p style="font-size:13.5px; color:var(--fg-dim); margin:0 0 10px; line-height: 1.75;">
-                클랜장님이 운영하는 <strong>게임 방송 채널</strong>입니다(제작자 채널이 아닙니다). 디아블로4를 중심으로 직접 플레이한 생생한 경험과 공략을 나눕니다.
+                這是隊長經營的 <strong>遊戲直播頻道</strong>(不是作者的頻道)。以暗黑破壞神4為主，分享親自遊玩的真實經驗與攻略。
               </p>
               <ul style="font-size:13px; margin:0 0 12px 18px; padding:0; color:var(--fg-dim); line-height:1.75;">
-                <li>시즌별 캐릭터 육성·빌드·스킬·정복자 가이드 & 장비 세팅 팁</li>
-                <li>공개 테스트 서버(PTR) 체험, 패치 변경점 및 멈춰 보는 쇼츠 '손안의 공략집'</li>
+                <li>各賽季角色培育·流派·技能·征服者指南 & 裝備配置技巧</li>
+                <li>公開測試伺服器(PTR)體驗、更新變更點，以及暫停細看的短片「掌上攻略集」</li>
               </ul>
               <div class="alert-box gold" style="margin: 0 0 16px; padding: 10px 14px; font-size: 12.5px;">
                 <span class="alert-icon">⚠️</span>
-                <div><strong>헬퍼·매크로 질문은 이 채널에서 받지 않습니다.</strong> 채널은 순수하게 게임을 즐기는 방송이며, 헬퍼 문의·버그 제보는 텔레그램 공식 그룹(<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a>)에서만 받습니다.</div>
+                <div><strong>本頻道不受理助手·巨集相關提問。</strong> 本頻道純粹是享受遊戲的直播，助手諮詢·錯誤回報只在 Telegram 官方群組 (<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a>) 受理。</div>
               </div>
             </div>
             <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="clan-btn ruby">
-              <span>삼촌안잔다잉 유튜브 바로가기 ↗</span>
+              <span>前往 삼촌안잔다잉 YouTube ↗</span>
             </a>
           </div>
         </div>
@@ -2910,8 +2670,8 @@
           <div class="clan-guide-header">
             <span style="font-size:24px;">🛡️</span>
             <div>
-              <h3 class="clan-guide-title">&lt;앙증맞은&gt; 무지개날개 클랜 가입 및 기본 생활 가이드</h3>
-              <p style="margin:2px 0 0; font-size:12.5px; color:var(--fg-dim);">서로 배려하고 즐겁게 함께하는 디아블로4 클랜 문화를 만들어갑니다.</p>
+              <h3 class="clan-guide-title">&lt;앙증맞은&gt; 彩虹之翼戰隊 加入及基本生活指南</h3>
+              <p style="margin:2px 0 0; font-size:12.5px; color:var(--fg-dim);">打造彼此體諒、愉快相處的暗黑破壞神4戰隊文化。</p>
             </div>
           </div>
 
@@ -2919,29 +2679,29 @@
             <!-- 1. 가입 절차 4단계 패널 -->
             <div class="clan-sub-panel blue-border">
               <h4 class="clan-sub-panel-title" style="color:var(--blue);">
-                <span>🎥</span> <strong>가입 절차 4단계</strong> <span class="chip" style="font-size:11px; margin-left:auto;">디스코드 가입 없음!</span>
+                <span>🎥</span> <strong>加入程序 4 步驟</strong> <span class="chip" style="font-size:11px; margin-left:auto;">不用加入 Discord！</span>
               </h4>
               <ol style="margin:0 0 0 18px; padding:0; line-height:1.9; font-size:13.5px; color:var(--fg);">
-                <li>인게임에서 클랜 검색 → <strong>앙증맞은</strong> 찾기 → <strong>가입 신청</strong></li>
-                <li><strong>삼촌안잔다잉 채널</strong>(라이브 방송 등)에서 가입 사실을 알린다</li>
-                <li><strong>클랜장 및 관리자</strong>가 신청 내역을 확인 후 <strong>승인</strong>한다</li>
-                <li>신청자가 인게임에서 다시 <strong>최종 승인(수락)</strong>을 누르면 가입 완료</li>
+                <li>在遊戲內搜尋戰隊 → <strong>앙증맞은</strong> 搜尋 → <strong>申請加入</strong></li>
+                <li><strong>삼촌안잔다잉 頻道</strong>(直播等)告知已申請加入</li>
+                <li><strong>隊長及管理員</strong>確認申請紀錄後 <strong>核准</strong>。</li>
+                <li>申請者在遊戲內再按一次 <strong>最後核准(接受)</strong>，即完成加入</li>
               </ol>
               <div style="margin-top:auto; padding-top:14px; font-size:12px; color:var(--fg-muted);">
-                ※ 디스코드는 운영하지 않으며, 클랜 승인은 삼촌안잔다잉 방송 라이브 확인을 거칩니다.
+                ※ 不經營 Discord，戰隊核准會經過 삼촌안잔다잉 直播現場確認。
               </div>
             </div>
 
             <!-- 2. 가입 후 활동 가이드 & 생활 수칙 패널 -->
             <div class="clan-sub-panel gold-border">
               <h4 class="clan-sub-panel-title" style="color:var(--gold-bright);">
-                <span>🤝</span> <strong>가입 후 활동 & 클랜 기본 생활 수칙</strong>
+                <span>🤝</span> <strong>加入後活動 & 戰隊基本生活守則</strong>
               </h4>
               <ul style="margin:0 0 0 18px; padding:0; line-height:1.85; font-size:13px; color:var(--fg-dim);">
-                <li><strong style="color:var(--fg);">반가운 첫인사 & 친밀감 쌓기</strong>: 가입 승인 후 인게임 길드 채팅창에 첫인사를 남겨주세요. 서로 닉네임을 부르며 인사하다 보면 금방 친해집니다.</li>
-                <li><strong style="color:var(--fg);">도움 요청 & 품앗이 문화</strong>: 육성, 나락 고단, 우두머리 소환 파티 등 도움이 필요할 때는 <strong>길드 채팅창이나 유튜브 라이브 방송</strong>에 편하게 요청하세요. <em>"도움은 품앗이(기브 앤 테이크)"</em> 마음으로 나중에 다른 식구를 함께 도와주시면 됩니다.</li>
-                <li><strong style="color:var(--fg);">기본 예의와 상호 존중</strong>: 다양한 유저가 함께하는 친목 공간이므로 배려하는 언어(비하·욕설 금지)를 사용해 주세요. 질문 전 가벼운 검색 생활화도 권장합니다.</li>
-                <li><strong style="color:var(--fg);">시즌오프 및 새 시즌 복귀</strong>: 시즌오프 뒤 10일 이상 미접속 시 인원 정리가 될 수 있으나, 새 시즌이 시작되면 언제든 다시 편하게 가입 신청하시면 됩니다.</li>
+                <li><strong style="color:var(--fg);">熱情的第一次問候 & 拉近距離</strong>：加入核准後請在遊戲內公會聊天視窗留下第一次問候。互相稱呼暱稱打招呼，很快就會變熟。</li>
+                <li><strong style="color:var(--fg);">請求幫忙 & 互相換工文化</strong>：培育、深淵高階、首領召喚組隊等需要幫忙時，請 <strong>在公會聊天視窗或 YouTube 直播</strong>輕鬆提出請求。 <em>「幫忙是互相換工(互惠)」</em> 的心態，之後也幫助其他家人就可以了。</li>
+                <li><strong style="color:var(--fg);">基本禮儀與互相尊重</strong>：這是各式玩家齊聚的交流空間，請使用體諒他人的言詞(禁止貶低·辱罵)。也建議提問前先簡單搜尋。</li>
+                <li><strong style="color:var(--fg);">賽季結束與新賽季回歸</strong>：賽季結束後若超過 10 天未登入，可能會被清理人員，但新賽季開始後隨時都可以輕鬆重新申請加入。</li>
               </ul>
             </div>
           </div>
@@ -2951,36 +2711,36 @@
       <!-- ─── 12. FAQ ─── -->
       <section class="doc-section" id="faq">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">12</span> 자주 묻는 질문 (FAQ) & 문제 해결</h2>
+          <h2 class="section-title"><span class="section-num">12</span> 常見問題 (FAQ) & 問題解決</h2>
         </div>
 
-        <h3>Q. 발동키를 눌러도 스킬이 나가지 않아요.</h3>
+        <h3>Q. 按了啟動鍵但技能沒有施放。</h3>
         <ul>
-          <li>상단 바의 상태가 <strong>실행 중</strong>인지 확인하세요 (<span class="chip green">▶ 시작</span> 버튼 클릭 여부).</li>
-          <li>선택한 슬롯의 <strong>매크로 활성 스위치</strong>가 켜져 있는지, 시퀀스 탭에 스텝이 1개 이상 들어있는지 확인하세요.</li>
-          <li>디아블로4 게임 창이 화면 맨 앞에 포커스되어 있어야 합니다.</li>
-          <li>채팅이나 인벤토리를 열어 <strong>대기 키</strong>로 인해 일시정지된 상태라면, 발동키를 한 번 더 누르면 풀립니다.</li>
+          <li>請確認頂端列的狀態是否為 <strong>執行中</strong>(是否有按<span class="chip green">▶ 開始</span> 按鈕)。</li>
+          <li>請確認所選欄位的 <strong>巨集啟用開關</strong>是否開啟，以及序列分頁中是否至少有 1 個步驟。</li>
+          <li>暗黑破壞神4遊戲視窗必須位於畫面最前方並取得焦點。</li>
+          <li>若因開啟聊天或背包而被 <strong>待機鍵</strong>暫停，再按一次啟動鍵即可解除。</li>
         </ul>
 
-        <h3>Q. 오른쪽 마우스를 발동키로 쓰는데 인벤토리나 창고에서 자꾸 창이 닫혀요.</h3>
-        <p>매크로 설정의 <strong>누름 인식 지연(Press Delay)</strong>을 <code>250ms ~ 300ms</code>로 설정하세요. 이렇게 하면 아이템을 우클릭해서 옮길 때의 '짧은 클릭'은 게임에 그대로 전달되고, 꾹 누를 때만 매크로가 켜져 창 닫힘 오동작이 완전히 사라집니다.</p>
+        <h3>Q. 我用滑鼠右鍵當啟動鍵，但在背包或倉庫裡視窗一直被關掉。</h3>
+        <p>請將巨集設定的 <strong>按壓辨識延遲(Press Delay)</strong>設為 <code>250ms ~ 300ms</code>。這樣右鍵移動物品時的「短暫點擊」會原樣傳給遊戲，只有在長按時才會開啟巨集，視窗被關閉的誤動作就會完全消失。</p>
 
-        <h3>Q. 호라드림의 함 선변성이 버튼을 못 찾거나 멈춰요.</h3>
-        <p>1.30 버전에서 OCR 글자 인식 로직과 큐브 비움 검증이 대폭 강화되었습니다. 게임 내 그래픽 설정에서 글자가 너무 흐리거나 UI 배율이 극단적인 경우 인식이 어려울 수 있으니, 문제가 지속되면 <code>%APPDATA%\d4cute_helper\debug\</code> 폴더의 <code>alter_slots.txt</code> 파일을 복사하여 텔레그램 그룹에 문의해 주세요.</p>
+        <h3>Q. 赫拉迪姆方塊預變性找不到按鈕或停住。</h3>
+        <p>1.30 版大幅強化了 OCR 文字辨識邏輯與方塊清空驗證。若遊戲內圖形設定導致文字太模糊，或 UI 縮放比例極端，辨識可能會有困難，若問題持續發生， <code>%APPDATA%\d4cute_helper\debug\</code> 資料夾的 <code>alter_slots.txt</code> 檔案複製後，到 Telegram 群組詢問。</p>
 
-        <h3>Q. 선변성에서 아이템 두 개가 겹치거나, 변성 없이 다음 칸으로 넘어가요.</h3>
-        <p>변성 연출이 느린 PC 에서 생기는 증상입니다. 편의기능 탭의 <strong>결과 대기 ms</strong>를 올리고(예: 3000 → 5000), 그래도 반복되면 <code>debug\alter_slots.txt</code> 를 그룹에 올려 주세요. 1.30.1 부터는 큐브 첫 칸 그림으로 비었는지 확인하고 수락창이 늦게 떠도 Enter 를 칩니다.</p>
+        <h3>Q. 預變性時兩件物品重疊，或沒有變性就跳到下一格。</h3>
+        <p>這是變性特效較慢的電腦上會出現的症狀。請調高便利功能分頁的 <strong>結果等待 ms</strong>(例如 3000 → 5000)，若仍然重複發生，請把 <code>debug\alter_slots.txt</code> 上傳到群組。從 1.30.1 起，會以方塊第一格的圖像確認是否清空，即使接受視窗較晚出現也會按下 Enter。</p>
 
-        <h3>Q. 헬퍼·매크로 질문은 어디서 하나요?</h3>
-        <p>텔레그램 이용자 그룹 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer"><code>@d4cute_helper</code></a> 에서만 받습니다. 삼촌안잔다잉 유튜브 채널은 게임을 즐기는 방송이라 헬퍼·매크로 문의를 받지 않습니다.</p>
+        <h3>Q. 助手·巨集的問題要去哪裡問？</h3>
+        <p>Telegram 使用者群組 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer"><code>@d4cute_helper</code></a> 受理。삼촌안잔다잉 YouTube 頻道是享受遊戲的直播，不受理助手·巨集諮詢。</p>
 
-        <h3>Q. 창이 하얗게 뜨거나 깜빡여요 (백화 현상).</h3>
-        <p>1.30 에서 내장 브라우저의 렌더러를 바꿔 백화를 고쳤습니다. 그래도 다시 보이면 로그 뷰어의 <span class="chip">오류만 복사</span> 결과와 화면 캡처를 텔레그램 그룹에 올려 주세요.</p>
+        <h3>Q. 視窗變成白色或閃爍 (白屏現象)。</h3>
+        <p>1.30 已更換內建瀏覽器的渲染器，修正了白屏。若仍然看到，請把記錄檢視器的 <span class="chip">僅複製錯誤</span> 結果與螢幕截圖上傳到 Telegram 群組。</p>
       </section>
 
       <footer>
         <div>d4cute helper v1.30.0 Documentation · Crafted with Care</div>
-        <div><a href="#quickstart" style="color: var(--gold);">맨 위로 이동 ↑</a></div>
+        <div><a href="#quickstart" style="color: var(--gold);">回到頂端 ↑</a></div>
       </footer>
 
     </main>
@@ -2991,23 +2751,23 @@
     <div class="lightbox-topbar">
       <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
       <div class="lightbox-controls">
-        <button class="lightbox-btn" id="zoomOutBtn" title="축소 (마우스 휠 아래)">－</button>
+        <button class="lightbox-btn" id="zoomOutBtn" title="縮小 (滑鼠滾輪向下)">－</button>
         <span class="lightbox-zoom-indicator" id="zoomLevel">100%</span>
-        <button class="lightbox-btn" id="zoomInBtn" title="확대 (마우스 휠 위)">＋</button>
-        <button class="lightbox-btn" id="zoomResetBtn" title="원본 크기">리셋</button>
-        <button class="lightbox-btn lightbox-close-btn" id="lightboxCloseBtn" title="닫기 (ESC)">✕ 닫기</button>
+        <button class="lightbox-btn" id="zoomInBtn" title="放大 (滑鼠滾輪向上)">＋</button>
+        <button class="lightbox-btn" id="zoomResetBtn" title="原始大小">重設</button>
+        <button class="lightbox-btn lightbox-close-btn" id="lightboxCloseBtn" title="關閉 (ESC)">✕ 關閉</button>
       </div>
     </div>
     
     <div class="lightbox-stage" id="lightboxStage">
-      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" title="이전 이미지 (←)">❮</button>
+      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" title="上一張圖片 (←)">❮</button>
       <img src="" alt="" class="lightbox-img" id="lightboxImg">
-      <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" title="다음 이미지 (→)">❯</button>
+      <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" title="下一張圖片 (→)">❯</button>
     </div>
 
     <div class="lightbox-bottombar">
-      <div class="lightbox-caption-text" id="lightboxCaption">이미지 설명</div>
-      <div style="font-size: 12px; color: var(--fg-muted);">마우스 휠로 확대/축소 가능 · 좌우 방향키로 탐색</div>
+      <div class="lightbox-caption-text" id="lightboxCaption">圖片說明</div>
+      <div style="font-size: 12px; color: var(--fg-muted);">可用滑鼠滾輪縮放 · 以左右方向鍵瀏覽</div>
     </div>
   </div>
 
@@ -3157,7 +2917,7 @@
 
       // 영상 목록 사이드바 생성
       videoCards.forEach((vcard, vidx) => {
-        const title = vcard.dataset.videoTitle || `영상 가이드 ${vidx + 1}`;
+        const title = vcard.dataset.videoTitle || `影片指南 ${vidx + 1}`;
         vcard.id = `vid-item-${vidx}`;
 
         const navCard = document.createElement('a');
@@ -3167,7 +2927,7 @@
           <div class="media-nav-thumb" style="display:flex;align-items:center;justify-content:center;background:#181622;color:var(--ruby);font-size:18px;">▶</div>
           <div class="media-nav-meta">
             <div class="media-nav-title"><span class="video-badge">VIDEO</span>${title}</div>
-            <div class="media-nav-desc">클릭하여 해당 영상 위치로 이동</div>
+            <div class="media-nav-desc">點擊即可前往該影片位置</div>
           </div>
         `;
         navCard.addEventListener('click', (e) => {
@@ -3280,7 +3040,7 @@
 
           searchMatchCount.innerText = matchCount;
           if (matchCount === 0) {
-            searchResultsList.innerHTML = `<div style="font-size:12.5px; color:var(--fg-muted); padding:16px 0; text-align:center;">검색 결과가 없습니다.</div>`;
+            searchResultsList.innerHTML = `<div style="font-size:12.5px; color:var(--fg-muted); padding:16px 0; text-align:center;">找不到搜尋結果。</div>`;
           }
         } else {
           searchClearBtn.classList.remove('visible');

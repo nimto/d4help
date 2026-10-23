@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>d4cute helper Official User Guide (v1.30 Latest Edition)</title>
-  <meta name="description" content="Diablo 4 d4cute helper v1.30 Complete Manual — Macro setup, Item transmutation, real-time alarms, video guides, and community info.">
+  <title>d4cute helper Official User Guide (v1.30 Latest)</title>
+  <meta name="description" content="Diablo IV d4cute helper v1.30 complete manual — macro setup, inventory Stat Alteration tools, real-time alarms, image/video guides, the 앙증맞은 (Adorable) clan and the 삼촌안잔다잉 channel.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1391,517 +1390,6 @@
       gap: 12px;
     }
   
-    /* ─── 프리미엄 텔레그램 상단 배너 V2 ─── */
-    .telegram-banner-v2 {
-      position: relative;
-      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.22) 0%, rgba(18, 17, 24, 0.9) 65%),
-                  linear-gradient(135deg, rgba(20, 36, 69, 0.5) 0%, rgba(14, 13, 20, 0.98) 100%);
-      border: 1px solid rgba(42, 171, 238, 0.45);
-      border-left: 4px solid #2AABEE;
-      border-radius: var(--radius-md);
-      padding: 18px 22px;
-      margin-bottom: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      overflow: hidden;
-    }
-    @media (max-width: 860px) {
-      .telegram-banner-v2 {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-      }
-      .tg-v2-buttons {
-        justify-content: flex-start;
-      }
-    }
-    .tg-v2-left {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      flex: 1;
-      min-width: 260px;
-    }
-    .tg-v2-icon-box {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #2AABEE 0%, #167ebc 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      box-shadow: 0 4px 18px rgba(42, 171, 238, 0.45);
-    }
-    .tg-v2-title-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 6px;
-    }
-    .tg-v2-title {
-      margin: 0;
-      font-size: 17.5px;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: -0.2px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }
-    .tg-v2-badge {
-      display: inline-flex;
-      align-items: center;
-      background: rgba(42, 171, 238, 0.18);
-      border: 1px solid rgba(42, 171, 238, 0.55);
-      color: #64cbff;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 20px;
-      letter-spacing: 0.3px;
-    }
-    .tg-v2-desc {
-      margin: 0;
-      font-size: 13.8px;
-      color: #cfd2dc;
-      line-height: 1.62;
-    }
-    .tg-v2-desc strong {
-      color: #ffffff;
-    }
-    .tg-v2-desc .highlight-gold {
-      color: #ffd778;
-      font-weight: 700;
-    }
-    .tg-v2-desc .highlight-blue {
-      color: #5ec7ff;
-      font-weight: 700;
-    }
-    .tg-v2-buttons {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-      flex-wrap: wrap;
-    }
-    .tg-v2-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, #2AABEE 0%, #1a8cc7 100%);
-      color: #ffffff;
-      font-size: 13.5px;
-      font-weight: 700;
-      padding: 10px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 16px rgba(42, 171, 238, 0.35);
-    }
-    .tg-v2-btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(42, 171, 238, 0.55);
-      background: linear-gradient(135deg, #3bb5f5 0%, #2099d8 100%);
-      color: #ffffff;
-    }
-    .tg-v2-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(23, 22, 34, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #e6e5ee;
-      font-size: 13.5px;
-      font-weight: 600;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .tg-v2-btn-secondary:hover {
-      background: rgba(42, 171, 238, 0.15);
-      border-color: rgba(42, 171, 238, 0.45);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    /* ─── 국기 언어 선택기 ─── */
-    .flag-lang-picker {
-      position: relative;
-      display: inline-block;
-    }
-    .flag-trigger-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(23, 22, 34, 0.92);
-      border: 1.5px solid var(--line-bright);
-      border-radius: 20px;
-      padding: 4px 10px 4px 6px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      outline: none;
-    }
-    .flag-trigger-btn:hover,
-    .flag-trigger-btn.active {
-      border-color: var(--gold);
-      background: rgba(30, 29, 44, 1);
-      box-shadow: 0 0 14px var(--gold-glow);
-    }
-    .flag-current-img {
-      width: 24px;
-      height: 17px;
-      border-radius: 3px;
-      object-fit: cover;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.5);
-      display: block;
-    }
-    .flag-arrow {
-      font-size: 10px;
-      color: var(--fg-dim);
-      transition: transform 0.2s ease;
-    }
-    .flag-trigger-btn.active .flag-arrow {
-      transform: rotate(180deg);
-      color: var(--gold);
-    }
-    .flag-dropdown {
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0;
-      background: #14131d;
-      border: 1px solid var(--line-bright);
-      border-radius: 12px;
-      padding: 6px;
-      min-width: 170px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255,255,255,0.06);
-      display: none;
-      z-index: 2000;
-      animation: flagFadeIn 0.16s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    @keyframes flagFadeIn {
-      from { opacity: 0; transform: translateY(-6px) scale(0.97); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .flag-dropdown.show {
-      display: block;
-    }
-    .flag-option {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 10px;
-      border-radius: 6px;
-      color: var(--fg);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.15s ease;
-    }
-    .flag-option:hover {
-      background: rgba(229, 184, 92, 0.12);
-      color: var(--gold-bright);
-    }
-    .flag-option.active {
-      background: rgba(42, 171, 238, 0.16);
-      color: #64cbff;
-      font-weight: 700;
-    }
-    .flag-option-img {
-      width: 22px;
-      height: 15px;
-      border-radius: 2px;
-      object-fit: cover;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-    }
-
-  
-    /* ─── 국기 언어 선택기 (오직 국기만 표시되는 고급 팝오버) ─── */
-    .flag-picker {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      margin-left: 8px;
-    }
-    .flag-picker-btn {
-      background: rgba(22, 21, 32, 0.85);
-      border: 1px solid rgba(229, 184, 92, 0.4);
-      border-radius: 8px;
-      padding: 4px 6px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-    .flag-picker-btn:hover {
-      background: rgba(229, 184, 92, 0.15);
-      border-color: var(--gold-bright);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px var(--gold-glow);
-    }
-    .flag-active-img {
-      width: 24px;
-      height: 16px;
-      object-fit: cover;
-      border-radius: 3px;
-      display: block;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    }
-    .flag-picker-dropdown {
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0;
-      background: rgba(18, 17, 26, 0.98);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(229, 184, 92, 0.35);
-      border-radius: 12px;
-      padding: 10px;
-      display: none;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(229, 184, 92, 0.15);
-      z-index: 2000;
-      min-width: 150px;
-    }
-    .flag-picker-dropdown.show {
-      display: grid;
-      animation: flagMenuPop 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    @keyframes flagMenuPop {
-      from { opacity: 0; transform: translateY(-6px) scale(0.96); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .flag-picker-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px;
-      border-radius: 6px;
-      border: 1px solid transparent;
-      background: rgba(255, 255, 255, 0.04);
-      transition: all 0.15s ease;
-      text-decoration: none;
-    }
-    .flag-picker-item:hover {
-      background: rgba(229, 184, 92, 0.22);
-      border-color: var(--gold);
-      transform: scale(1.1);
-    }
-    .flag-picker-item.active {
-      border-color: var(--gold);
-      background: rgba(229, 184, 92, 0.18);
-      box-shadow: 0 0 10px var(--gold-glow);
-    }
-    .flag-icon-img {
-      width: 26px;
-      height: 18px;
-      object-fit: cover;
-      border-radius: 3px;
-      display: block;
-    }
-
-
-    /* ─── 럭셔리 다크 판타지 텔레그램 상단 배너 ─── */
-    .telegram-banner-v3 {
-      position: relative;
-      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.2) 0%, rgba(18, 17, 24, 0.95) 60%),
-                  radial-gradient(ellipse at 90% 50%, rgba(229, 184, 92, 0.12) 0%, rgba(14, 13, 20, 0.98) 70%),
-                  #0e0d14;
-      border: 1px solid rgba(42, 171, 238, 0.35);
-      border-left: 5px solid #2AABEE;
-      border-radius: 14px;
-      padding: 22px 26px;
-      margin: 24px 0 32px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(42, 171, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-      overflow: hidden;
-    }
-    .telegram-banner-v3::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(42, 171, 238, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-      animation: bannerGlowPulse 6s ease-in-out infinite alternate;
-    }
-    @keyframes bannerGlowPulse {
-      0% { opacity: 0.5; transform: scale(0.98); }
-      100% { opacity: 1; transform: scale(1.02); }
-    }
-    .tg-v3-left {
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      position: relative;
-      z-index: 1;
-      flex: 1;
-    }
-    .tg-v3-icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .tg-v3-icon-box::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 16px;
-      border: 1px solid rgba(42, 171, 238, 0.5);
-      animation: pulseIconRing 2.5s infinite;
-    }
-    @keyframes pulseIconRing {
-      0% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.08); opacity: 0.3; }
-      100% { transform: scale(1); opacity: 0.8; }
-    }
-    .tg-v3-content {
-      flex: 1;
-    }
-    .tg-v3-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-    }
-    .tg-v3-title {
-      font-size: 19px;
-      font-weight: 800;
-      font-family: var(--font-title);
-      background: linear-gradient(135deg, #ffd778 0%, #e5b85c 60%, #b8860b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 0.4px;
-      margin: 0;
-    }
-    .tg-v3-badge {
-      background: rgba(229, 72, 77, 0.2);
-      border: 1px solid rgba(229, 72, 77, 0.5);
-      color: #ff6b6b;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .tg-v3-desc {
-      font-size: 14.5px;
-      color: #c9c7d8;
-      line-height: 1.65;
-      margin: 0 0 10px 0;
-    }
-    .tg-v3-highlight-box {
-      display: inline-block;
-      background: rgba(42, 171, 238, 0.08);
-      border: 1px solid rgba(42, 171, 238, 0.25);
-      border-radius: 8px;
-      padding: 7px 12px;
-      font-size: 13.5px;
-      color: #e2e8f0;
-      line-height: 1.5;
-    }
-    .tg-v3-highlight-box strong {
-      color: #38bdf8;
-    }
-    .tg-v3-highlight-box em {
-      color: #fbbf24;
-      font-style: normal;
-      font-weight: 700;
-    }
-    .tg-v3-right {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-      min-width: 170px;
-    }
-    .tg-v3-btn-channel {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 20px;
-      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 6px 18px rgba(0, 136, 204, 0.45);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-    .tg-v3-btn-channel:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 136, 204, 0.65);
-      filter: brightness(1.1);
-    }
-    .tg-v3-btn-group {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 20px;
-      background: rgba(255, 255, 255, 0.05);
-      color: #e6e5ee;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13.5px;
-      border-radius: 10px;
-      border: 1px solid rgba(229, 184, 92, 0.35);
-      transition: all 0.2s ease;
-    }
-    .tg-v3-btn-group:hover {
-      background: rgba(229, 184, 92, 0.15);
-      border-color: var(--gold);
-      color: var(--gold-bright);
-      transform: translateY(-1px);
-    }
-    @media (max-width: 860px) {
-      .telegram-banner-v3 {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 18px;
-        gap: 16px;
-      }
-      .tg-v3-right {
-        flex-direction: row;
-        width: 100%;
-      }
-      .tg-v3-btn-channel, .tg-v3-btn-group {
-        flex: 1;
-        padding: 10px 12px;
-        font-size: 13px;
-      }
-    }
-
-
     /* ─── 국기 언어 선택기 (자바스크립트 0% 순수 HTML5 details/summary) ─── */
     details.flag-picker {
       position: relative;
@@ -1987,19 +1475,153 @@
       display: block;
     }
 
+
+    /* ─── 럭셔리 다크 판타지 텔레그램 상단 배너 ─── */
+    .telegram-banner-v3 {
+      position: relative;
+      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.2) 0%, rgba(18, 17, 24, 0.95) 60%),
+                  radial-gradient(ellipse at 90% 50%, rgba(229, 184, 92, 0.12) 0%, rgba(14, 13, 20, 0.98) 70%),
+                  #0e0d14;
+      border: 1px solid rgba(42, 171, 238, 0.35);
+      border-left: 5px solid #2AABEE;
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 20px 0 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(42, 171, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+    .tg-v3-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      flex: 1;
+    }
+    .tg-v3-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .tg-v3-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .tg-v3-title {
+      font-size: 18px;
+      font-weight: 800;
+      font-family: var(--font-title);
+      color: #ffd778;
+      letter-spacing: 0.4px;
+      margin: 0;
+    }
+    .tg-v3-badge {
+      background: rgba(229, 72, 77, 0.2);
+      border: 1px solid rgba(229, 72, 77, 0.5);
+      color: #ff6b6b;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+    .tg-v3-desc {
+      font-size: 14px;
+      color: #c9c7d8;
+      line-height: 1.6;
+      margin: 0 0 8px 0;
+    }
+    .tg-v3-highlight-box {
+      display: inline-block;
+      background: rgba(42, 171, 238, 0.08);
+      border: 1px solid rgba(42, 171, 238, 0.25);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+    .tg-v3-highlight-box strong { color: #38bdf8; }
+    .tg-v3-highlight-box em { color: #fbbf24; font-style: normal; font-weight: 700; }
+    .tg-v3-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+      min-width: 165px;
+    }
+    .tg-v3-btn-channel {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13.5px;
+      border-radius: 9px;
+      box-shadow: 0 4px 14px rgba(0, 136, 204, 0.4);
+      transition: all 0.2s ease;
+    }
+    .tg-v3-btn-channel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+      filter: brightness(1.1);
+    }
+    .tg-v3-btn-group {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #e6e5ee;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      border-radius: 9px;
+      border: 1px solid rgba(229, 184, 92, 0.35);
+      transition: all 0.2s ease;
+    }
+    .tg-v3-btn-group:hover {
+      background: rgba(229, 184, 92, 0.15);
+      border-color: var(--gold);
+      color: var(--gold-bright);
+    }
+    @media (max-width: 860px) {
+      .telegram-banner-v3 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+      }
+      .tg-v3-right {
+        flex-direction: row;
+      }
+      .tg-v3-btn-channel, .tg-v3-btn-group {
+        flex: 1;
+      }
+    }
+
 </style>
-  
-  
-
-
-  
 </head>
 <body>
 
   <!-- 상단 글로벌 바 -->
   <header class="top-nav">
     <div class="nav-left">
-      <button class="toggle-sidebar-btn" id="sidebarToggle" title="사이드바 접기/펼치기 (마우스 올리면 임시 표시)" aria-label="사이드바 토글">
+      <button class="toggle-sidebar-btn" id="sidebarToggle" title="Collapse/expand sidebar (hover with the mouse to show it temporarily)" aria-label="Toggle sidebar">
         ☰
       </button>
       <a href="#" class="brand">
@@ -2008,32 +1630,30 @@
       </a>
     </div>
     <div class="nav-right">
-      <a href="#quickstart" class="nav-link">시작하기</a>
-      <a href="#tools-alter" class="nav-link">선변성 도구</a>
-      <a href="#community" class="nav-link">클랜 & 채널</a>
-      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">저장소 ↗</a>
-      
-      
+      <a href="#quickstart" class="nav-link">Getting Started</a>
+      <a href="#tools-alter" class="nav-link">Stat Alteration Tool</a>
+      <a href="#community" class="nav-link">Clan & Channel</a>
+      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">Repository ↗</a>
+      <details class="flag-picker">
+          <summary class="flag-picker-btn" title="Language: English">
+            <img src="https://flagcdn.com/w40/us.png" alt="en" class="flag-active-img">
+          </summary>
+          <div class="flag-picker-dropdown">
+            <a href="index.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
+            <a href="index_en.html" class="flag-picker-item active" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
+            <a href="index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
+            <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
+            <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
+            <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
+            <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
+            <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
+          </div>
+        </details>
+    </div>
   </header>
 
   <!-- 모바일 사이드바 배경 오버레이 -->
-  <div class="sidebar-backdrop" id="sidebarBackdrop">
-      <details class="flag-picker">
-      <summary class="flag-picker-btn" title="Language: English">
-        <img src="https://flagcdn.com/w40/us.png" alt="en" class="flag-active-img">
-      </summary>
-      <div class="flag-picker-dropdown">
-        <a href="index.html" class="flag-picker-item" title="한국어 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
-        <a href="index_en.html" class="flag-picker-item active" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
-        <a href="index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
-        <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
-        <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
-        <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
-        <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
-        <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
-      </div>
-    </details>
-    </div>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
   <div class="layout-container">
 
@@ -2044,176 +1664,193 @@
       <div class="sidebar-tabs">
         <button class="sidebar-tab-btn active" data-tab="toc">
           <span class="tab-icon">📑</span>
-          <span>목차</span>
+          <span>Contents</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="images">
           <span class="tab-icon">🖼️</span>
-          <span>이미지 (<span id="imgCount">0</span>)</span>
+          <span>Images (<span id="imgCount">0</span>)</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="videos">
           <span class="tab-icon">🎬</span>
-          <span>영상 (<span id="vidCount">0</span>)</span>
+          <span>Videos (<span id="vidCount">0</span>)</span>
         </button>
       </div>
 
       <!-- 도움말 본문 전체 검색창 -->
       <div class="sidebar-search-box">
-        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="도움말 전체 내용 검색..." autocomplete="off">
-        <button class="search-clear-btn" id="searchClearBtn" title="검색어 지우기">✕</button>
+        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="Search the entire help..." autocomplete="off">
+        <button class="search-clear-btn" id="searchClearBtn" title="Clear search">✕</button>
       </div>
 
       <!-- 사이드바 스크롤 컨테이너 -->
-<div class="sidebar-scroll">
+      <div class="sidebar-scroll">
         
-        <!-- 0. Real-time Search Results Panel (Activated on Search) -->
+        <!-- 0. 실시간 검색 결과 패널 (검색 시 활성화) -->
         <div class="tab-panel" id="panel-search">
           <div style="font-size:12px; color:var(--fg-dim); margin-bottom:10px; display:flex; justify-content:space-between;">
-            <span>Search Results: <strong id="searchMatchCount" style="color:var(--gold);">0</strong> results</span>
-            <span style="font-size:11px; color:var(--fg-muted);">Click to go to that location</span>
+            <span>Search results: <strong id="searchMatchCount" style="color:var(--gold);">0</strong>hits</span>
+            <span style="font-size:11px; color:var(--fg-muted);">Click to jump to that location</span>
           </div>
           <div class="search-results-list" id="searchResultsList">
-            <!-- Search results list for the body generated by JavaScript -->
+            <!-- 자바스크립트로 본문 검색 결과 목록 생성 -->
           </div>
         </div>
 
-        <!-- 1. Table of Contents Panel -->
+        <!-- 1. 목차 패널 -->
         <div class="tab-panel active" id="panel-toc">
           <ul class="toc-tree">
-            <li><a href="#quickstart" class="toc-link">⚡ 1. 5-Minute Quickstart & Installation</a></li>
+            <li><a href="#quickstart" class="toc-link">⚡ 1. 5-Minute Quick Start & Installation</a></li>
             <li>
               <a href="#screen-ui" class="toc-link">🖥️ 2. Latest Screen Layout (1.30)</a>
               <ul class="toc-sub-tree">
-                <li><a href="#screen-topbar" class="toc-link">Top Bar & Profile Management</a></li>
-                <li><a href="#screen-slots" class="toc-link">Slot Bar (A~G 7 Slots, Support, Convenience, Alarm)</a></li>
+                <li><a href="#screen-topbar" class="toc-link">Top Bar & Profile Controls</a></li>
+                <li><a href="#screen-slots" class="toc-link">Slot Bar (7 slots A~G, Sponsor, Tools, Alarm)</a></li>
               </ul>
             </li>
             <li>
               <a href="#macro-engine" class="toc-link">⚙️ 3. Macro Settings & Trigger Engine</a>
               <ul class="toc-sub-tree">
-                <li><a href="#macro-modes" class="toc-link">Sequential · Independent · Hold · Toggle · One-Time</a></li>
-                <li><a href="#macro-keys" class="toc-link">Trigger Keys & Press Delay Filter</a></li>
+                <li><a href="#macro-modes" class="toc-link">Serial · Async · Hold · Toggle · Once</a></li>
+                <li><a href="#macro-keys" class="toc-link">Trigger Key & Press Delay Filter</a></li>
               </ul>
             </li>
             <li>
               <a href="#sequence-builder" class="toc-link">📋 4. Sequence & Mouse Recording</a>
               <ul class="toc-sub-tree">
-                <li><a href="#seq-cards" class="toc-link">Step Cards & Batch Delay Change</a></li>
-                <li><a href="#seq-recorder" class="toc-link">Real-time Mouse Coordinate Recording & Randomization</a></li>
+                <li><a href="#seq-cards" class="toc-link">Step Cards & Bulk Delay Editor</a></li>
+                <li><a href="#seq-recorder" class="toc-link">Real-Time Mouse Coordinate Recording & Randomization</a></li>
                 <li><a href="#seq-drag-path" class="toc-link">Drag Path Recording (Whirlwind · Concentration)</a></li>
                 <li><a href="#seq-rotation-pack" class="toc-link">🌀 360-Degree Circular Rotation Pack (9 Presets)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#tools-alter" class="toc-link">🧪 5. Convenience Features — Inventory Alteration</a>
+              <a href="#tools-alter" class="toc-link">🧪 5. Tools — Inventory Stat Alteration</a>
               <ul class="toc-sub-tree">
-                <li><a href="#alter-grid" class="toc-link">First/Last Slot 33-Slot Auto-Calculation</a></li>
-                <li><a href="#alter-safety" class="toc-link">Skip Bound Items & Cube Empty Verification</a></li>
+                <li><a href="#alter-grid" class="toc-link">First/Last Slot: Automatic 33-Slot Calculation</a></li>
+                <li><a href="#alter-safety" class="toc-link">Skip Bound Items & Cube Empty Check</a></li>
               </ul>
             </li>
             <li>
               <a href="#alarm" class="toc-link">🔔 6. Smart Alarm System</a>
               <ul class="toc-sub-tree">
-                <li><a href="#alarm-events" class="toc-link">Legion/Boss Constant Background Monitoring</a></li>
-                <li><a href="#alarm-outputs" class="toc-link">In-game Banner & Korean TTS Voice</a></li>
+                <li><a href="#alarm-events" class="toc-link">Always-On Background Monitoring of Legion/Bosses</a></li>
+                <li><a href="#alarm-outputs" class="toc-link">In-Game Banner & Korean TTS Voice</a></li>
               </ul>
             </li>
             <li>
-              <a href="#window-modes" class="toc-link">🪟 7. Window Modes, Pin, Overlay</a>
+              <a href="#window-modes" class="toc-link">🪟 7. Window Modes, Pin & Overlay</a>
               <ul class="toc-sub-tree">
-                <li><a href="#window-mini" class="toc-link">Mini Window Mode (Ultra-compact Bar)</a></li>
-                <li><a href="#window-overlay" class="toc-link">In-game HUD Overlay</a></li>
+                <li><a href="#window-mini" class="toc-link">Mini Mode (Compact Bar)</a></li>
+                <li><a href="#window-overlay" class="toc-link">In-Game HUD Overlay</a></li>
               </ul>
             </li>
-            <li><a href="#safety-features" class="toc-link">🛡️ 8. Safety Features (Standby Key & Focus)</a></li>
+            <li><a href="#safety-features" class="toc-link">🛡️ 8. Safety Features (Pause Keys & Focus)</a></li>
             <li><a href="#profile-sync" class="toc-link">💾 9. Profile Management & Sharing</a></li>
             <li>
               <a href="#telegram-support" class="toc-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2AABEE" style="vertical-align:-2px; margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 10. Telegram Support & Debug Log</a>
               <ul class="toc-sub-tree">
-                <li><a href="#telegram-install" class="toc-link">Telegram Installation & Group Join</a></li>
-                <li><a href="#log-viewer-guide" class="toc-link">Log Copying & Error Resolution Reporting</a></li>
+                <li><a href="#telegram-install" class="toc-link">Telegram Installation & Joining the Group</a></li>
+                <li><a href="#log-viewer-guide" class="toc-link">Copying Logs & Reporting Errors</a></li>
               </ul>
             </li>
-            <li><a href="#community" class="toc-link">👑 11. Clan & Samchon Anjandaing Channel</a></li>
+            <li><a href="#community" class="toc-link">👑 11. Clan & 삼촌안잔다잉 Channel</a></li>
             <li><a href="#faq" class="toc-link">❓ 12. Frequently Asked Questions (FAQ)</a></li>
           </ul>
         </div>
 
-        <!-- 2. Image Collection Panel -->
+        <!-- 2. 이미지 모아보기 패널 -->
         <div class="tab-panel" id="panel-images">
           <div class="media-nav-grid" id="sidebarImageGrid">
-            <!-- Body images are automatically collected and rendered by JavaScript -->
+            <!-- 자바스크립트로 본문 이미지들이 자동 수집되어 렌더링됩니다 -->
           </div>
         </div>
 
-        <!-- 3. Video Collection Panel -->
+        <!-- 3. 영상 모아보기 패널 -->
         <div class="tab-panel" id="panel-videos">
           <div class="media-nav-grid" id="sidebarVideoGrid">
-            <!-- Body videos/placeholders are automatically collected and rendered by JavaScript -->
+            <!-- 자바스크립트로 본문 비디오/플레이스홀더들이 자동 수집되어 렌더링됩니다 -->
           </div>
         </div>
 
       </div>
 
-      <!-- ⭐️ Request 4: Sidebar Bottom Adorable Clan & Samchon Anjandaing Channel Shortcuts -->
+      <!-- ⭐️ 요청사항 4: 사이드바 하단 앙증맞은 클랜 & 삼촌안잔다잉 채널 바로가기 -->
       <div class="sidebar-community-card">
-        <!-- Adorable Clan Box -->
+        <!-- 앙증맞은 클랜 박스 -->
         <div class="community-box">
           <div class="community-head">
-            <span class="community-title">⚔️ &lt;Adorable&gt; Rainbow Wing</span>
+            <span class="community-title">⚔️ &lt;앙증맞은&gt; Rainbow Wings</span>
             <span class="community-tag">Clan</span>
           </div>
-          <div class="community-desc">Diablo 4 In-game Clan · Clan Leader <strong>Republic of Korea</strong> · How to Join: In-game search (Adorable) → Notify in Channel → Approval → Final Acceptance (No Discord)</div>
+          <div class="community-desc">Diablo IV in-game clan · Clan leader <strong>South Korea</strong> · Joining: search in-game (앙증맞은) → notify on the channel → approval → final accept (no Discord)</div>
           <div class="community-links">
             <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="comm-btn telegram">💬 Telegram Group</a>
             <a href="#community" class="comm-btn clan">📜 Clan Guide</a>
           </div>
         </div>
-        <!-- Samchon Anjandaing Channel Box -->
+        <!-- 삼촌안잔다잉 채널 박스 -->
         <div class="community-box">
           <div class="community-head">
-            <span class="community-title">📺 Samchon Anjandaing Channel</span>
-            <span class="community-tag" style="color:var(--ruby); background:rgba(229,72,77,0.15);">Clan Leader</span>
+            <span class="community-title">📺 삼촌안잔다잉 Channel</span>
+            <span class="community-tag" style="color:var(--ruby); background:rgba(229,72,77,0.15);">Clan leader</span>
           </div>
-          <div class="community-desc">Game Broadcast Channel · Helper questions in Telegram</div>
+          <div class="community-desc">Game streaming channel · Helper questions go to Telegram</div>
           <div class="community-links">
-            <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A잉" target="_blank" rel="noopener noreferrer" class="comm-btn youtube">▶ YouTube Broadcast ↗</a>
+            <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="comm-btn youtube">▶ YouTube Stream ↗</a>
           </div>
         </div>
       </div>
 
-      <!-- Icon Bar for Collapsed (Mini) Mode -->
+      <!-- 접힘(미니) 모드용 아이콘 바 -->
       <div class="mini-icons-list">
-        <button class="mini-icon-btn" onclick="document.getElementById('quickstart').scrollIntoView({behavior:'smooth'})" title="Get Started">⚡</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('quickstart').scrollIntoView({behavior:'smooth'})" title="Getting Started">⚡</button>
         <button class="mini-icon-btn" onclick="document.getElementById('screen-ui').scrollIntoView({behavior:'smooth'})" title="Screen Layout">🖥️</button>
         <button class="mini-icon-btn" onclick="document.getElementById('macro-engine').scrollIntoView({behavior:'smooth'})" title="Macro Settings">⚙️</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('tools-alter').scrollIntoView({behavior:'smooth'})" title="Inventory Alteration">🧪</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('tools-alter').scrollIntoView({behavior:'smooth'})" title="Inventory Stat Alteration">🧪</button>
         <button class="mini-icon-btn" onclick="document.getElementById('alarm').scrollIntoView({behavior:'smooth'})" title="Smart Alarm">🔔</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})" title="Clan & Broadcast">👑</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})" title="FAQs">❓</button>
-      </div>    </aside>
+        <button class="mini-icon-btn" onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})" title="Clan & Stream">👑</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})" title="FAQ">❓</button>
+      </div>
+
+    </aside>
 
     <!-- 우측 본문 콘텐츠 -->
     <main class="content-wrap" id="mainContent">
       
       <!-- 히어로 배너 -->
       <div class="hero-banner-card">
-        <img src="images/hero_banner.jpg" alt="디아블로4 d4cute 헬퍼 배너" class="hero-banner-img">
+        <img src="../images/hero_banner.jpg" alt="Diablo IV d4cute helper banner" class="hero-banner-img">
         <div class="hero-banner-overlay">
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
-          <h1 class="hero-title">d4cute helper 사용 설명서</h1>
-          <p class="hero-desc">1.30 최신 버전 기준 — A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
+          <h1 class="hero-title">d4cute helper User Guide</h1>
+          <p class="hero-desc">Based on the latest 1.30 version — 7 slots (A~G) of serial/async macros, inventory Stat Alteration automation, real-time event alarms, and an introduction to the 앙증맞은 (Adorable) clan and the 삼촌안잔다잉 channel</p>
         </div>
       </div>
 
-      
-      
-        <div class="tg-v2-buttons">
-          <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" class="tg-v2-btn-primary">
-            <span>📢 공지 채널 입장 ↗</span>
-          </a>
-          <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="tg-v2-btn-secondary">
-            <span>💬 이용자 그룹 입장 ↗</span>
-          </a>
+      <!-- 📢 상단 텔레그램 공식 채널 필수 가입 배너 -->
+      <div class="telegram-top-banner" style="background: linear-gradient(135deg, rgba(42, 171, 238, 0.16) 0%, rgba(20, 36, 69, 0.45) 100%); border: 1.5px solid rgba(42, 171, 238, 0.45); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 280px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              <h3 style="margin: 0; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: 0.3px;">
+                📢 Be sure to join the official Telegram channel!
+              </h3>
+              <span class="chip blue" style="font-weight: 700;">Must read</span>
+            </div>
+            <p style="margin: 0 0 8px 0; font-size: 14px; color: var(--fg); line-height: 1.6;">
+              The d4cute helper's <strong>latest update notices, real-time patch notes, bug reports and fast technical support</strong>are delivered fastest through Telegram.<br>
+              In particular, the newly added <strong style="color:var(--gold-bright);">🌀 finished 360-degree circular rotation pack (.d4seq) file</strong>and the <strong style="color:#2AABEE;">actual rotation demo video</strong>can be downloaded for free right from the channel!
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #2AABEE; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13.5px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(42, 171, 238, 0.4);">
+              <span>📢 Join the Announcement Channel ↗</span>
+            </a>
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid rgba(42, 171, 238, 0.4); color: var(--fg); text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 13.5px; transition: all 0.2s;">
+              <span>💬 Join the User Group ↗</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -2221,39 +1858,39 @@
       <div class="alert-box gold">
         <span class="alert-icon">💡</span>
         <div>
-          <strong>안내</strong>: 헬퍼 창의 <span class="chip gold">?</span> 버튼을 클릭하면 언제든지 이 최신 도움말 페이지가 열립니다. 사이드바 검색창으로 도움말 본문 내용을 실시간 검색할 수 있으며, 이미지를 클릭하면 <strong>마우스 휠 스크롤 확대/축소 및 이전/다음 탐색</strong>이 가능한 풀스크린 뷰어가 작동합니다.
+          <strong>Note</strong>: In the helper window, click the <span class="chip gold">?</span> button to open this latest help page at any time. You can search the help text in real time with the sidebar search box, and when you click an image, a full-screen viewer opens that supports <strong>mouse-wheel zoom in/out and previous/next navigation</strong>.
         </div>
       </div>
 
       <!-- ─── 1. 시작하기 ─── -->
-<section class="doc-section" id="quickstart">
+      <section class="doc-section" id="quickstart">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">1</span> First 5 Minutes — From Installation to First Macro Activation</h2>
+          <h2 class="section-title"><span class="section-num">1</span> The First 5 Minutes — From Installation to Your First Macro</h2>
         </div>
         
-        <p>d4cute helper is a high-performance assistant that comfortably and safely helps with repetitive skill casting, buff maintenance, and complex inventory transmogrification of the Horadric Cache while playing Diablo 4.</p>
+        <p>d4cute helper is a high-performance assistant that comfortably and safely supports repetitive skill casting, buff upkeep, and complex Horadric Cube Stat Alteration work in Diablo IV.</p>
 
         <ol>
-          <li><a href="https://da.gd/d4help" target="_blank"><strong>Download Latest Installer</strong></a> — Download and install the installer (<code>d4cute_helper_setup.exe</code>), or run the portable executable (<code>d4cute_helper.exe</code>) directly. If Windows displays an "Unknown publisher" warning, click <em>More info → Run</em>.</li>
-          <li>When the helper is launched, the window automatically starts at its smallest default size, so it doesn't obstruct the game screen.</li>
-          <li>From the profile bar, select a profile appropriate for your class, or create a new one with the <span class="chip green">＋</span> button.</li>
-          <li>Press slot <span class="chip">A</span>, then in <strong>Macro Settings</strong>, click the blue activation key button, and assign the mouse or keyboard key you want to use.</li>
-          <li>In the <strong>Sequence</strong> tab, add skill keys and delays to cast, or press the <span class="chip">Record</span> button to record actual in-game key inputs.</li>
-          <li>Press the <span class="chip green">▶ Start</span> button at the bottom, return to the game, and press the activation key for the macro to operate safely.</li>
+          <li><a href="https://da.gd/d4help" target="_blank"><strong>Download the latest installer</strong></a> — get the installer (<code>d4cute_helper_setup.exe</code>) and install it, or run the portable executable (<code>d4cute_helper.exe</code>) directly. If Windows shows an "Unknown publisher" warning, click <em>More info → Run anyway</em>.</li>
+          <li>When you launch the helper, the window automatically starts at the smallest default size so it does not cover the game screen.</li>
+          <li>On the profile row, select the profile that matches your class, or create a new one with the <span class="chip green">＋</span> button.</li>
+          <li>Click Slot <span class="chip">A</span>, then under <strong>Macro Settings</strong>, press the blue trigger key button and assign the mouse or keyboard key you want to use.</li>
+          <li><strong>Sequence</strong> tab, add the skill keys and delays to cast, or press the <span class="chip">Record</span> button to record your actual in-game key inputs exactly as they are.</li>
+          <li>Press the <span class="chip green">▶ Start</span> button at the bottom, return to the game and press the trigger key — the macro runs safely.</li>
         </ol>
 
         <div class="alert-box info">
           <span class="alert-icon">🛡️</span>
-          <div><strong>Game Window Activation Detection</strong>: The helper only sends keyboard/mouse input to the game when the Diablo 4 window is active. Input automatically stops when you are on the desktop or working in other windows.</div>
+          <div><strong>Game window activation detection</strong>: The helper sends keyboard/mouse input to the game only while the Diablo IV window is active. Input stops automatically while you work on the desktop or another window.</div>
         </div>
         <div class="alert-box gold">
           <span class="alert-icon">🖥️</span>
-          <div><strong>Game Screen Mode</strong>: Set Diablo 4's display settings to <strong>Windowed Fullscreen</strong> or Windowed Mode. In Exclusive Fullscreen, overlays may not be visible and transmogrification screen reading may fail.</div>
+          <div><strong>Game display mode</strong>: Set the Diablo IV display setting to <strong>Borderless Window (Fullscreen)</strong> or Windowed mode. In exclusive full screen the overlay is not visible and Stat Alteration screen reading may fail.</div>
         </div>
-        <div class="video-card" data-video-title="[Video] How to Use d4cute helper">
-          <div class="video-embed"><iframe src="https://www.youtube.com/embed/Ff7MBqD4WaI" title="[Video] How to Use d4cute helper" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-card" data-video-title="[Video] How to use d4cute helper">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/Ff7MBqD4WaI" title="[Video] How to use d4cute helper" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           <div class="video-info">
-            <span><strong>How to Use the Helper in Video (Uncle Anjandaing Channel)</strong></span>
+            <span><strong>Helper usage video (삼촌안잔다잉 channel)</strong></span>
             <a href="https://youtu.be/Ff7MBqD4WaI" target="_blank" rel="noopener noreferrer" class="chip">Watch on YouTube ↗</a>
           </div>
         </div>
@@ -2265,210 +1902,208 @@
           <h2 class="section-title"><span class="section-num">2</span> Latest Screen Layout (v1.30)</h2>
         </div>
 
-        <p>In version 1.30, the top bar and slot tab bar have been upgraded to be even more intuitive and visually appealing.</p>
+        <p>In version 1.30 the top bar and the slot tab bar have been upgraded to be more intuitive and polished.</p>
 
         <!-- 메인 매크로 화면 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="d4cute helper Main Screen — Latest UI with profile switching bar, macro slots (expanded to 7 slots, A~G), direct macro name input, sponsor tab, convenience features, and alarm tab at a glance">
+        <div class="image-card is-thumbnail" data-caption="d4cute helper main screen — the latest UI with the profile switch bar, macro slots (expanded to 7 slots A~G), direct macro name input, Sponsor tab, Tools, and Alarm tabs all in one view">
           <div class="thumb-container">
-            <img src="images/helper_main_macro.png" alt="Helper Main Screen Macro Tab">
+            <img src="../images/helper_main_macro.png" alt="Helper main screen, macro tab">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>d4cute helper 1.30 Main Screen (Supports A~G 7 macro slots expansion)</span>
+            <span>📷</span> <span>d4cute helper 1.30 main screen (supports 7 expanded macro slots A~G)</span>
           </div>
         </div>
 
         <h3 id="screen-topbar">1) Top Bar & Profile Controls</h3>
         <ul>
-          <li><strong>Execution Status Indicator</strong> — Displays <span style="color:var(--green); font-weight:700;">● Stopped</span> / <span style="color:var(--green); font-weight:700;">● Running</span> / <span style="color:var(--ruby); font-weight:700;">● Paused</span> status with real-time colored dots.</li>
-          <li><strong>Top Function Buttons</strong> — <span class="chip">Update</span> (flashes when new patch detected), <span class="chip">Settings (⚙)</span>, <span class="chip">Test (⌨)</span> (input transmission verification), Mini Window toggle, Always On Top (pin), <span class="chip">···</span> (Additional Tools menu).</li>
+          <li><strong>Run status indicator</strong> — <span style="color:var(--green); font-weight:700;">● Stopped</span> / <span style="color:var(--green); font-weight:700;">● Running</span> / <span style="color:var(--ruby); font-weight:700;">● Paused</span> The status is shown with a real-time colored dot.</li>
+          <li><strong>Top function buttons</strong> — <span class="chip">Update</span>(blinks when a new patch is detected), <span class="chip">Settings (⚙),</span>, <span class="chip">Test (⌨)</span>(input delivery check), mini mode switch, always on top (pin), <span class="chip">···</span>(extra tools menu).</li>
           <li><strong>Profile Bar</strong> — 
-            You can quickly switch profiles with the <span class="chip">‹ ›</span> buttons, and you can **double-click the combobox to instantly change the name**. <span class="chip green">＋</span> (New Profile), <span class="chip">✎</span> (Rename), <span class="chip ruby">🗑</span> (Delete), <span class="chip blue" style="display:inline-flex; align-items:center; gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegram Logo</span>, <span class="chip">Docs</span> (Season Docs), <span class="chip gold">?</span> (Help) buttons are provided. The window always opens at its smallest default size (min 900×700, scales up with font size), and there is no fullscreen (maximize) option.
+            <span class="chip">‹ ›</span> buttons let you switch profiles quickly, and <strong>double-clicking the combo box renames the profile immediately</strong>. <span class="chip green">＋</span>(New profile), <span class="chip">✎</span>(Rename), <span class="chip ruby">🗑</span>(Delete), <span class="chip blue" style="display:inline-flex; align-items:center; gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegram logo</span>, <span class="chip">Docs</span>(Season Docs), and <span class="chip gold">?</span>(Help) buttons are provided. The window opens at the smallest default size each time (minimum 900×700, larger with the font scale), and there is no maximized window.
           </li>
         </ul>
 
-        <h3 id="screen-slots">2) Slot Navigation Bar — Greatly Expanded to 7 Slots (A~G)</h3>
+        <h3 id="screen-slots">2) Slot Row (Slot Navigation) — Greatly Expanded to 7 Slots (A~G)</h3>
         <ul>
-          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> <span class="chip ruby">E</span> <span class="chip ruby">F</span> <span class="chip ruby">G</span> — <strong style="color:var(--gold);">With the latest patch, macro slots have been significantly expanded from the previous 4 (A~D) to a total of 7 (A~G)</strong>! This allows you to comfortably separate and register complex damage rotations, mobility skills, shield/buff maintenance, and situation-specific skills without running out of slots. Active slots are highlighted with a border and illuminate with white text on a red background when in operation.</li>
-          <li><strong>Direct Macro Name Assignment</strong> — In the macro settings screen for each slot, you can enter intuitive, unique names for each slot via the <span class="chip">Name: [ Main Macro ]</span> input field. This name is also prominently displayed at the top of the tooltip when you hover over a slot button.</li>
-          <li><span class="chip">♡ Sponsor</span> — Displays a "Helper is free" notice and partner referral links (Starlink, etc.) / Clan Leader's channel introduction as a banner carousel. The helper does not send anything automatically.</li>
-          <li><span class="chip">🔧 Convenience</span> — A single-page UI dedicated to Horadric Cache inventory transmogrification automation.</li>
-          <li><span class="chip">⏱ ▶ 4 (Alarm)</span> — Legion, World Boss, Helltide, and personal timer alarm settings. The number of active alarms is displayed as a badge on the right.</li>
-          <li><strong>Slot Right Summary Chip</strong> — The execution method (Sequential/Independent), activation method (Hold/Toggle/Once), and activation key of the currently selected slot are always summarized in real-time.</li>
+          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> <span class="chip ruby">E</span> <span class="chip ruby">F</span> <span class="chip ruby">G</span> — <strong style="color:var(--gold);">With the latest patch, macro slots have been greatly expanded from 4 (A~D) to a total of 7 (A~G)</strong>! You can register complex damage cycles, mobility skills, shield/buff upkeep, and situation-specific skills in separate slots without running short. An enabled slot has a highlighted border, and while triggered it lights up with white text on a red background.</li>
+          <li><strong>Direct macro naming</strong> — On each slot's macro settings screen, use the <span class="chip">Name: [ Main Macro ]</span> input field to give each slot an intuitive unique name. The name is also displayed large at the top of the tooltip that appears when you hover over a slot button.</li>
+          <li><span class="chip">♡ Sponsor</span> — A banner carousel shows the "The helper is free" notice, partner referral links (Starlink, etc.) and an introduction to the clan leader's channel. The helper does not send anything automatically.</li>
+          <li><span class="chip">🔧 Tools</span> — A dedicated one-page UI for Horadric Cube inventory Stat Alteration automation.</li>
+          <li><span class="chip">⏱ ▶ 4 (Alarm)</span> — Set Legion, World Boss, Helltide and personal timer alarms. A badge on the right shows the number of alarms currently running.</li>
+          <li><strong>Summary chip on the right of the slots</strong> — Always shows a real-time summary of the selected slot's run mode (Serial/Async), trigger type (Hold/Toggle/Once) and trigger key.</li>
         </ul>
 
-        <h3 id="screen-bottombar">3) Bottom Integrated Control Bar</h3>
+        <h3 id="screen-bottombar">3) Bottom Control Bar</h3>
         <ul>
-          <li><span class="chip green">▶ Start</span> / <span class="chip ruby">■ Stop</span>: Starts or stops all macro detection and execution by the helper (default hotkey <kbd>F9</kbd>).</li>
-          <li><span class="chip blue">Save</span>: Instantly and permanently saves the currently modified profile and macro settings to disk.</li>
-          <li><span class="chip">📁 Load</span>: Restores the profile to the last saved state if settings were accidentally changed incorrectly.</li>
-          <li><span class="chip ruby" style="background:#cc0000; color:#fff; font-weight:700;">▶ Uncle Anjandaing</span>: Jumps directly to the Clan Leader's game streaming channel.</li>
+          <li><span class="chip green">▶ Start</span> / <span class="chip ruby">■ Stop</span>: Starts or stops detection and execution of all helper macros (default hotkey <kbd>F9</kbd>).</li>
+          <li><span class="chip blue">Save</span>: Immediately and permanently saves the profile and macro settings you have edited to disk.</li>
+          <li><span class="chip">📁 Reload</span>: If you changed settings by mistake, restores the profile to the last saved state.</li>
+          <li><span class="chip ruby" style="background:#cc0000; color:#fff; font-weight:700;">▶ 삼촌안잔다잉</span>: Jumps in one click to the clan leader's game streaming channel.</li>
           <li><span class="chip">📤 Export</span>: Saves the current profile settings as a <code>.d4cute</code> backup file.</li>
-          <li><span class="chip blue">📥 Import</span>: Imports a <code>.d4cute</code> profile shared by other users or clan members and applies it instantly.</li>
+          <li><span class="chip blue">📥 Import</span>: Loads a <code>.d4cute</code> profile shared by another user or clan member and applies it immediately.</li>
           <li><span class="chip">Minimize</span>: Minimizes the helper window to the taskbar.</li>
         </ul>
 
-        <div class="image-card is-small" data-caption="Sponsor Tab — Helper is free notice, partner referral links · Clan Leader's channel banner carousel">
+        <div class="image-card is-small" data-caption="Sponsor tab — notice that the helper is free, partner referral links, and the clan leader's channel banner carousel">
           <div class="thumb-container">
-            <img src="images/helper_sponsor_tab.png" alt="Sponsor Tab Banner Carousel">
+            <img src="../images/helper_sponsor_tab.png" alt="Sponsor tab banner carousel">
           </div>
-          <div class="image-caption"><span>📷</span> <span>Sponsor Tab (Banner Carousel)</span></div>
+          <div class="image-caption"><span>📷</span> <span>Sponsor tab (banner carousel)</span></div>
         </div>
       </section>
 
       <!-- ─── 3. 매크로 설정 ─── -->
       <section class="doc-section" id="macro-engine">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">3</span> Macro Settings — Execution Method · Activation Method · Activation Key</h2>
+          <h2 class="section-title"><span class="section-num">3</span> Macro Settings — Run Mode · Trigger Type · Trigger Key</h2>
         </div>
 
-        <h3 id="macro-modes">1) Execution Method and Activation Method</h3>
+        <h3 id="macro-modes">1) Run Mode and Trigger Type</h3>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
                 <th style="width: 110px;">Category</th>
-                <th style="width: 100px;">Mode Name</th>
-                <th>Description and Recommended Use</th>
+                <th style="width: 100px;">Mode</th>
+                <th>Description & recommended use</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td rowspan="2" style="font-weight: 700; color: var(--gold);">Execution Method</td>
-                <td><strong>Sequential</strong></td>
-                <td>Casts from Step 1 to the last step in order, then repeats from the beginning. Suitable for fixed skill combos and damage cycle rotations.</td>
+                <td rowspan="2" style="font-weight: 700; color: var(--gold);">Run Mode</td>
+                <td><strong>Serial</strong></td>
+                <td>Casts from step 1 to the last step in order, then repeats from the beginning. Suited to fixed skill combos and damage cycle rotations.</td>
               </tr>
               <tr>
-                <td><strong>Independent</strong></td>
-                <td>Each step independently repeats according to its own configured cooldown (wait time). Optimized for maintaining shield/buff skills with varying cooldowns.</td>
+                <td><strong>Async</strong></td>
+                <td>Each step repeats independently on its own cooldown (wait time). Optimized for keeping up shield/buff skills that all have different cooldowns.</td>
               </tr>
               <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--ruby);">Activation Method</td>
+                <td rowspan="3" style="font-weight: 700; color: var(--ruby);">Trigger Type</td>
                 <td><strong>Hold</strong></td>
-                <td>The macro runs <strong>only while the activation key is held down</strong>, and stops immediately when the key is released. Recommended for primary damaging skills.</td>
+                <td>The macro runs <strong>only while you hold</strong> the trigger key and stops immediately when you release it. Recommended for main damage skills.</td>
               </tr>
               <tr>
                 <td><strong>Toggle</strong></td>
-                <td>Pressing the activation key once turns it on, and pressing it again turns it off. Reduces finger fatigue during long farming sessions or dungeon runs.</td>
+                <td>Press the trigger key once to turn it on and again to turn it off. Reduces finger fatigue during long farming or dungeon runs.</td>
               </tr>
               <tr>
                 <td><strong>Once</strong></td>
-                <td>Pressing the activation key executes the sequence once from beginning to end and then stops automatically. Suitable for consecutive potion crafting, equipment purchasing, etc.</td>
+                <td>Pressing the trigger key runs the sequence once from start to finish and then ends by itself. Suited to continuous potion crafting, equipment purchases, and the like.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3 id="macro-keys">2) Activation Key Selection and Fine-Tuning</h3>
+        <h3 id="macro-keys">2) Choosing a Trigger Key & Fine Tuning</h3>
         <ul>
-          <li><strong>Flexible Activation Keys</strong>: Supports all keyboard keys, mouse left/right click, scroll up/down, side buttons, and <kbd>Ctrl</kbd> · <kbd>Shift</kbd> · <kbd>Alt</kbd> combination keys. You can assign the same activation key to multiple slots for simultaneous activation. However, it cannot overlap with convenience feature (transmogrification) start hotkeys — it will be rejected upon selection.</li>
-          <li><strong>Press Delay</strong>:
-            Ignores short, quick clicks, and only activates the macro when the key is held down for longer than the specified time (e.g., 250~300ms). This is an **essential setting to prevent inventory or stash windows from closing when using right-click as the activation key**.
+          <li><strong>Flexible trigger keys</strong>: Supports every keyboard key, left/right mouse click, wheel up/down, side buttons, and <kbd>Ctrl</kbd> · <kbd>Shift</kbd> · <kbd>Alt</kbd> combination keys. You can assign the same trigger key to several slots to trigger them together. However, it cannot overlap with the Tools (Stat Alteration) start hotkey — an overlap is rejected when you pick it.</li>
+          <li><strong>Press Delay</strong>: Quick taps are ignored, and the macro turns on only when the key is held for at least the specified time (e.g. 250~300ms). <strong>An essential setting to prevent the inventory or stash window from closing when you use right-click as the trigger key</strong>.
           </li>
-          <li><strong>Release Buffer</strong>:
-            Extends macro operation for a specified duration even after the activation key is released. Provides a buffer to ensure attacks don't stop while looting nearby floor items immediately after combat.
+          <li><strong>Release (keep running after release)</strong>: Keeps the macro running for the specified time even after you release the trigger key. This gives you leeway so attacks do not stop while you loot nearby items on the ground right after hunting.
           </li>
-          <li><strong>Companion Keys</strong>:
-            You can specify keys to be continuously held down together while the macro is active (e.g., <kbd>Shift</kbd> for forced stationary attack, forced movement keys, etc.).
+          <li><strong>Companion Keys</strong>: You can specify keys that are held down continuously while the macro runs (e.g. the stand-still attack key <kbd>Shift</kbd>, the force-move key, and so on).
           </li>
         </ul>
 
         <!-- 키 피커 캡처 -->
-        <div class="image-card is-small" data-caption="Activation Key Assignment Pop-up — Safely and intuitively select keyboard keys, mouse buttons, and combination keys.">
+        <div class="image-card is-small" data-caption="Trigger key selection popup — lets you pick keyboard keys, mouse buttons and combination keys safely and intuitively.">
           <div class="thumb-container">
-            <img src="images/helper_key_picker.png" alt="Activation Key Selection Dialog">
+            <img src="../images/helper_key_picker.png" alt="Trigger key selection dialog">
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>Activation Key Selection Pop-up</span>
+            <span>📷</span> <span>Trigger key selection popup</span>
           </div>
         </div>
       </section>
 
-      <!-- ─── 4. 시퀀스 빌더 & 실시간 녹화 ─── --><section class="doc-section" id="sequence-builder">
+      <!-- ─── 4. 시퀀스 빌더 & 실시간 녹화 ─── -->
+      <section class="doc-section" id="sequence-builder">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">4</span> Sequence Builder · Bulk Delay Change · Mouse Recording</h2>
+          <h2 class="section-title"><span class="section-num">4</span> Sequence Builder · Bulk Delay Editor · Mouse Recording</h2>
         </div>
 
-        <h3 id="seq-cards">1) Step Cards and Batch Operations</h3>
+        <h3 id="seq-cards">1) Step Cards & Bulk Operations</h3>
         <ul>
-          <li>Clicking a step card allows you to individually change the key, action mode, and delay (wait time, ms).</li>
-          <li><strong>Mode Options</strong>:
+          <li>Click a step card to change its key, action mode and delay (wait time, ms) individually.</li>
+          <li><strong>Mode options</strong>:
             <ul>
-              <li><em>Single</em>: Single key press</li>
-              <li><em>Burst</em>: Rapid successive presses at specified intervals</li>
-              <li><em>Hold</em>: Press and hold the key for a specified duration</li>
+              <li><em>Single</em>: Press the key once</li>
+              <li><em>Burst</em>: Rapid-fire at the specified interval</li>
+              <li><em>Hold</em>: Hold the key down for the specified time</li>
             </ul>
           </li>
-          <li><span class="chip">Bulk Delay Change</span>: Changes the wait time of all steps at once to a desired value (ms) or percentage (%).</li>
-          <li><span class="chip">All → Burst/Single</span>: Batch switches the action mode of all registered steps with one click.</li>
+          <li><span class="chip">Bulk Delay Editor</span>: Changes the wait time of every step at once to a value (ms) or ratio (%) you want.</li>
+          <li><span class="chip">All → Burst/Single</span>: Switches the action mode of all registered steps in one click.</li>
         </ul>
 
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <div class="image-card is-small" data-caption="Step Editor — Precisely set Key, Mode (Single/Burst/Hold), and Delay">
+          <div class="image-card is-small" data-caption="Step Editor — precisely set the key, mode (Single/Burst/Hold) and delay">
             <div class="thumb-container">
-              <img src="images/helper_step_editor.png" alt="Step Editor">
+              <img src="../images/helper_step_editor.png" alt="Step Editor">
             </div>
-            <div class="image-caption"><span>📷</span> <span>Individual Step Editor Window</span></div>
+            <div class="image-caption"><span>📷</span> <span>Individual step edit window</span></div>
           </div>
-          <div class="image-card is-small" data-caption="Bulk Delay Change Tool — Easily tune all step intervals">
+          <div class="image-card is-small" data-caption="Bulk Delay Editor tool — easily tune the intervals of all steps">
             <div class="thumb-container">
-              <img src="images/helper_bulk_delay.png" alt="Bulk Delay Change Dialog">
+              <img src="../images/helper_bulk_delay.png" alt="Bulk Delay Editor dialog">
             </div>
-            <div class="image-caption"><span>📷</span> <span>Bulk Delay Change Pop-up</span></div>
+            <div class="image-caption"><span>📷</span> <span>Bulk Delay Editor popup</span></div>
           </div>
         </div>
 
-        <h3 id="seq-recorder">2) Real-time Mouse Coordinate Recording and Humanized Random Error</h3>
+        <h3 id="seq-recorder">2) Real-Time Mouse Coordinate Recording & Humanizing Random Variance</h3>
         <ul>
-          <li>When you press the <span class="chip">Record</span> button and input keys and mouse movements on the game screen, the sequence and time intervals are recorded exactly as they are.</li>
-          <li><strong>Screen Coordinate Recording</strong>: When you click the mouse, the absolute coordinates (X, Y) of the clicked screen position are recorded, and the macro automatically clicks that position during playback.</li>
-          <li><strong>Humanized Random Error</strong>:
+          <li><span class="chip">Record</span> Press the button, then enter keys and mouse input in the game screen, and the order and time intervals are recorded exactly as they happen.</li>
+          <li><strong>Screen coordinate recording</strong>: When you click the mouse, the absolute screen coordinates (X, Y) of that click are recorded, and the macro automatically clicks that position on playback.</li>
+          <li><strong>Humanizing random variance</strong>:
             <ul>
-              <li><strong>Click Position ± px</strong>: Introduces irregular errors within a specified pixel radius for each click to prevent mechanical detection.</li>
-              <li><strong>Random Variation %</strong>: Incorporates a certain percentage of random delay for each step interval to mimic natural hand movements.</li>
+              <li><strong>Click position ± px</strong>: Adds an irregular offset within the specified pixel radius on every click to prevent mechanical detection.</li>
+              <li><strong>Random variance %</strong>: Mixes a random delay of a set percentage into each step interval to imitate natural hand movement.</li>
             </ul>
           </li>
         </ul>
 
-        <h3 id="seq-drag-path">3) Drag Path Recording — Including the Path Moved While Pressed (1.32.0)</h3>
+        <h3 id="seq-drag-path">3) Drag Path Recording — Including the Path You Move While Holding (1.32.0)</h3>
         <ul>
-          <li>During recording, if you <strong>move while holding down</strong> the mouse button, that path is also recorded. Coordinates are recorded whenever you move more than <strong>8px</strong> or <strong>16ms</strong> passes from the last recorded point, ensuring fast rotations are densely captured and slow movements are smoothly continuous.</li>
-          <li>During playback, the button is pressed at the initial click position, the cursor moves along <strong>the same path according to the recorded timing</strong>, and the button is released at the release position. Previous versions only remembered the press and release points, resulting in instant teleportation.</li>
-          <li><strong>Channeling Skills like Whirlwind · Concentrate</strong>: If you assign a skill to the <span class="chip">Right Mouse Button</span> in-game and spin while holding down the right button during recording, that rotation will be recorded and replayed exactly. The same applies to moving while holding down the left button.</li>
-          <li><strong>Random Variation %</strong> is applied once for the entire path duration, and <strong>Click Position ± px</strong> is applied once for the entire path, so the cursor does not shake.</li>
-          <li>If you edit the position by value in the step editor or press <span class="chip">Clear Drag</span>, the path is discarded, and playback jumps as in previous versions.</li>
-          <li>Up to 600 points are saved per drag (approximately 10 seconds at 16ms intervals). Since paths use absolute screen coordinates, re-record if you change the resolution or window position.</li>
+          <li>If you move the mouse while <strong>holding a button down</strong> during recording, that path is recorded too. A point is written each time you move <strong>8px</strong> or more from the last recorded point, or when <strong>16ms</strong> has passed, so fast rotations stay dense and slow movements stay unbroken.</li>
+          <li>On playback, the button is pressed at the pressed position, then the cursor moves <strong>along the same path at the recorded times</strong> , and the button is released at the release position. Previous versions remembered only two points (press and release) and jumped instantly.</li>
+          <li><strong>Channeling skills such as Whirlwind · Concentration</strong>: In the game, put the skill on the <span class="chip">right mouse button</span>, and while recording, hold the right button and circle around — that rotation is recorded and replayed exactly. Moving while holding the left button works the same way.</li>
+          <li><strong>Random variance %</strong> is applied once over the whole path duration, <strong>Click position ± px</strong> is applied only once over the whole path, so the cursor does not shake.</li>
+          <li>In the Step Editor, you can edit the positions numerically, or <span class="chip">Clear Drag</span>to discard the path and go back to jump playback as before.</li>
+          <li>Up to 600 points are stored per drag (about 10 seconds at 16ms intervals). The path uses absolute screen coordinates, so re-record it if you change the resolution or window position.</li>
         </ul>
 
         <!-- 비디오 플레이스홀더 (마우스 녹화) -->
-        <div class="video-card" data-video-title="[Video Guide] Macro Sequence Creation and Real-time Recording Tips">
+        <div class="video-card" data-video-title="[Video Guide] Tips for writing macro sequences and real-time recording">
           <div class="placeholder-box" style="margin: 0; border: none; border-radius: 0;">
             <div class="placeholder-icon">🎬</div>
-            <div class="placeholder-title">Macro Sequence Recording Tutorial Video (Coming Soon)</div>
-            <div class="placeholder-desc">If you provide the YouTube video URL, it will be replaced with an embedded video that can be played directly here.</div>
+            <div class="placeholder-title">Macro sequence recording tutorial video (coming soon)</div>
+            <div class="placeholder-desc">Send us the YouTube video URL and it will be replaced here with an embedded video that can be played right away.</div>
             <span class="placeholder-path">YouTube Video Slot: seq-record-guide</span>
           </div>
           <div class="video-info">
-            <span><strong>Video 1</strong>: Practical Tips for Macro Recording and Delay Tuning</span>
-            <span class="chip ruby">Coming Soon</span>
+            <span><strong>Video 1</strong>: Practical tips for macro recording and delay tuning</span>
+            <span class="chip ruby">Coming soon</span>
           </div>
         </div>
 
         <!-- 🌀 4) 완성형 360도 원형 회전팩 (9종 프리셋) & 다운로드 안내 -->
-        <h3 id="seq-rotation-pack">4) Complete 360-degree Circular Rotation Pack (9 Presets) & Download</h3>
+        <h3 id="seq-rotation-pack">4) Ready-Made 360-Degree Circular Rotation Pack (9 Presets) & Download</h3>
         <p>
-          When manually recording drag movements, it's common for circles to be distorted, rotation angles to be imprecise, and for movements to hesitate at the beginning and end.<br>
-          To address this, we provide a <strong>perfect 360-degree closed-curve circular rotation sequence pack (9 presets)</strong>, precisely calculated mathematically.
+          If you record a drag by hand, the circle tends to come out distorted, the rotation angle does not match exactly, and it hesitates at the start and end.<br>
+          To address this, we provide a mathematically precisely calculated <strong>perfect closed 360-degree circular rotation sequence pack (9 presets)</strong>.
         </p>
 
         <!-- 텔레그램 다운로드 강조 배너 -->
         <div class="alert-box gold" style="margin: 16px 0; border-left: 4px solid var(--gold);">
           <span class="alert-icon">🎁</span>
           <div>
-            <strong style="color:var(--gold-bright); font-size:15px;">Actual Demonstration Video and Rotation Pack Download Guide</strong><br>
-            You can get an <strong>actual in-game 360-degree rotation demonstration video</strong> and the complete <strong><code>sequences.d4seq</code> rotation pack file</strong> for free from the 
-            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">Official Telegram Announcement Channel (@d4_notice)</a> and 
-            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">User Group (@d4cute_helper)</a>!
+            <strong style="color:var(--gold-bright); font-size:15px;">Actual demo video & rotation pack download guide</strong><br>
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">From the official Telegram announcement channel (@d4_notice)</a> and 
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">the user group (@d4cute_helper)</a>, you can get the 
+            <strong>actual in-game 360-degree rotation demo video</strong>and the finished <strong><code>sequences.d4seq</code> rotation pack file</strong>right away, for free!
           </div>
         </div>
 
@@ -2477,139 +2112,135 @@
             <thead>
               <tr style="background: rgba(229, 184, 92, 0.12); color: var(--gold-bright); border-bottom: 1px solid var(--line-bright); text-align: left;">
                 <th style="padding: 10px 14px;">Sequence Name</th>
-                <th style="padding: 10px 14px;">Rotation Radius</th>
-                <th style="padding: 10px 14px;">Time per Rotation (`press_ms`)</th>
-                <th style="padding: 10px 14px;">Features and Recommended Use</th>
+                <th style="padding: 10px 14px;">Rotation Radius (Radius)</th>
+                <th style="padding: 10px 14px;">Time per Revolution (`press_ms`)</th>
+                <th style="padding: 10px 14px;">Features & Recommended Use</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid var(--line);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. Small Fast Rotation</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">1.5 sec (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Character's close range, fast and nimble omnidirectional targeting</td>
+                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range around the character, fast and brisk all-around targeting</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line); background: rgba(229, 184, 92, 0.05);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. Medium Fast Rotation</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">1.5 sec (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ Standard Recommendation</strong> — Smooth fast rotation with optimal radius for default resolution</td>
+                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ Standard recommendation</strong> — smooth fast rotation at the optimal radius for the default resolution</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. Large Fast Rotation</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">1.5 sec (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Wide-ranging fast rotation sweeping the outer edges of the screen</td>
+                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">A wide fast rotation that sweeps out to the edge of the screen</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. Small Rotation</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">2.5 sec (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Stable normal-speed rotation channeling for close range</td>
+                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Stable medium-speed rotation channeling at close range</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. Medium Rotation</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">2.5 sec (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Stable normal-speed rotation with default radius</td>
+                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Stable medium-speed rotation at the default radius</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. Large Rotation</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">2.5 sec (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Smooth and relaxed rotation across a wide area</td>
+                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">A smooth, relaxed rotation over a wide area</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. Small Ultra-Fast</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">0.75 sec (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Immediate close-range rotation targeting (a full turn in just 0.75 seconds)</td>
+                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Instant close-range rotation targeting (one full turn in 0.75 s)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. Medium Ultra-Fast</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">0.75 sec (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Lightning-fast omnidirectional attack with default radius</td>
+                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Lightning-fast all-around attack at the default radius</td>
               </tr>
               <tr>
                 <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. Large Ultra-Fast</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">0.75 sec (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Ultra-fast rotation encompassing the entire screen</td>
+                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">A rotation that wraps around the whole screen at ultra-high speed</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 How to Use the Rotation Pack & Pro Tips</h4>
+        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 Rotation Pack Usage & Setup Tips</h4>
         <ol style="margin-top: 6px; padding-left: 20px; line-height: 1.8;">
-          <li><strong>Import</strong>: Prepare the <code>sequences.d4seq</code> file downloaded from Telegram, and click the <span class="chip">Import</span> button at the bottom of the helper window to select the file, which will register all 9 sequence types at once.</li>
-          <li><strong>Slot Assignment</strong>: Click on your desired macro slot (A~G) and select your favorite preset from the 9 types in the <strong>Sequence Library</strong>.</li>
-          <li><strong>To make it rotate exactly once and stop?</strong>:
-            Set the macro activation method to <strong style="color:var(--gold-bright);">[Execute Once (Once)]</strong>. Each time you press the key, it will <strong>complete exactly one swift rotation and then automatically stop cleanly in place.</strong>
+          <li><strong>Import</strong>: Prepare the Telegram download <code>sequences.d4seq</code> file, and at the bottom of the helper window click <span class="chip">Import</span> and select the file — all 9 sequences are registered at once.</li>
+          <li><strong>Slot assignment</strong>: Click the macro slot you want (A~G), and in the <strong>Sequence Library</strong>choose the preset you like from the 9 above.</li>
+          <li><strong>Want it to stop after exactly one turn?</strong>: Set the macro trigger type to <strong style="color:var(--gold-bright);">[Once]</strong>. Each time you press the key, it <strong>makes exactly one turn and then stops neatly in place.</strong>
           </li>
-          <li><strong>To keep rotating while holding down the key?</strong>:
-            Set the activation method to <strong>[Hold Down (Hold)]</strong> or <strong>[Toggle]</strong>. The delay between steps (<code>interval_ms</code>) is optimized to <code>0ms</code>, ensuring <strong>continuous, fluid rotation without stuttering or hesitating at the beginning and end</strong>.
+          <li><strong>Want it to keep rotating while you hold?</strong>: Set the trigger type to <strong>[Hold]</strong> or <strong>[Toggle]</strong>. The delay between steps (<code>interval_ms</code>) is optimized to <code>0ms</code>, so it <strong>rotates continuously and smoothly, with no catching or hesitation at the start and end</strong>.
           </li>
         </ol>
       </section>
 
-      <!-- ─── 5. 편의기능 — 인벤 선변성 ─── --><section class="doc-section" id="tools-alter">
+      <!-- ─── 5. 편의기능 — 인벤 선변성 ─── -->
+      <section class="doc-section" id="tools-alter">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">5</span> Utility Features — Inventory Transmutation (Single-Page UI)</h2>
+          <h2 class="section-title"><span class="section-num">5</span> Tools — Inventory Stat Alteration (One-Page UI)</h2>
         </div>
 
-        <p>The **Inventory Transmutation tool**, newly revamped in version 1.30, automates the process of transmuting legendary and unique items using the Horadric Cube with just a few operations.</p>
+        <p>Newly redesigned in version 1.30, the <strong>Inventory Stat Alteration tool</strong>automates Stat Alteration of Legendary and Unique gear using the Horadric Cube in just a few steps.</p>
 
         <!-- 선변성 도구 탭 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="Inventory Transmutation dedicated tab — Latest layout integrating first/last slot coordinate calibration, skip unbound items switch, start/stop hotkeys, and result waiting adjustment all on one screen.">
+        <div class="image-card is-thumbnail" data-caption="Inventory Stat Alteration tab — the latest layout integrating first/last slot coordinate adjustment, the skip-bound-items switch, start/stop hotkeys, and result-wait adjustment on one screen">
           <div class="thumb-container">
-            <img src="images/helper_alter_tool.png" alt="Inventory Transmutation Single-Page UI">
+            <img src="../images/helper_alter_tool.png" alt="Inventory Stat Alteration one-page UI">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>Utility Feature: Horadric Cube Inventory Transmutation Single-Page UI</span>
+            <span>📷</span> <span>Tools: Horadric Cube inventory Stat Alteration one-page UI</span>
           </div>
         </div>
 
-        <h3 id="alter-grid">1) 33-Slot Automatic Grid Calculation and Start</h3>
+        <h3 id="alter-grid">1) Automatic 33-Slot Grid Calculation & Start</h3>
         <ol>
-          <li>In the game, open the **Inventory** and **Horadric Cube** windows.</li>
-          <li>Click <span class="chip gold">Select First Slot</span>, then hover your mouse over the very first slot (top-left) of your in-game inventory and press <kbd>Enter</kbd>.</li>
-          <li>Click <span class="chip gold">Select Last Slot</span>, hover your mouse over the very last slot (bottom-right) of your inventory, and press <kbd>Enter</kbd>. (Press <kbd>Esc</kbd> anytime to cancel)</li>
-          <li>By simply specifying the positions of these two points, the center coordinates for all 33 inventory slots will be automatically and accurately calculated.</li>
-          <li>Pressing the start hotkey (default <kbd>F10</kbd>, can be changed by clicking the blue key button) on the game screen will automatically begin the transmutation process. The hotkey operates continuously even if the utility features tab is not open.</li>
+          <li>In the game, open the <strong>Inventory</strong>and <strong>Horadric Cube</strong> windows and keep them open. Then press the</li>
+          <li><span class="chip gold">Pick First Slot</span>button, hover the mouse over the very first slot (top-left) of the game inventory, and press <kbd>Enter</kbd>. Next, press the</li>
+          <li><span class="chip gold">Pick Last Slot</span>button, hover the mouse over the very last slot (bottom-right) of the inventory, and press <kbd>Enter</kbd>. (Cancel at any time with <kbd>Esc</kbd>)</li>
+          <li>Once you specify just these two points, the center coordinates of all 33 inventory slots are calculated automatically and accurately.</li>
+          <li>On the game screen, press the start hotkey (default <kbd>F10</kbd>, changeable by clicking the blue key button) and Stat Alteration starts fully automatically. The hotkey works at all times, even if you do not keep the Tools tab open.</li>
         </ol>
 
-        <h3 id="alter-safety">2) Operation Mechanism and Intelligent Safety Features</h3>
+        <h3 id="alter-safety">2) Operating Mechanism & Smart Safety Features</h3>
         <ul>
-          <li><strong>Intelligent Loop Cycle</strong>:
-            Automatically cycles through each inventory slot, performing <em>Right-click → Place in Horadric Cube → Click Transmute Item button → Transform → Accept (<kbd>Enter</kbd>) → Reset</em>.
+          <li><strong>Smart repeat loop</strong>: Goes through each inventory slot and automatically proceeds through <em>right-click → place on the Horadric Cube → click the item Transmute button → Transmute → Accept (<kbd>Enter</kbd>) → Reset</em>.
           </li>
-          <li><strong>Skip Bound Items Switch</strong>:
-            When the switch is on, it skips bound items and only transmutes unbound equipment. When the switch is off, it also transmutes bound items and safely sends <kbd>Enter</kbd> only when the acceptance pop-up window appears.
+          <li><strong>Skip Account Bound Items switch</strong>: When the switch is on, bound items are skipped and only unbound gear is altered. When it is off, bound gear is altered as well, and it safely sends <kbd>Enter</kbd>only when the accept popup window appears.
           </li>
-          <li><strong>Cube Empty Check</strong>:
-            After resetting, it checks if the first slot of the cube is empty by its **image** (remembering empty/filled states when placing the first item). In environments where the image cannot be detected, it uses the cube header text for secondary verification. If it's not empty, it tries resetting again; if it still isn't empty, it stops — this mechanism prevents two items from stacking in the cube.
+          <li><strong>Cube Empty Check</strong>: After a reset, it checks whether the cube is empty using the cube's first-slot <strong>image</strong>(it remembers how the slot looks empty and filled when the first item is placed), and where the image cannot be captured it uses the cube header text as a fallback. If the cube is not empty, it presses Reset again, and stops if it never empties — a safeguard to prevent two items from being placed on top of each other.
           </li>
-          <li><strong>Emergency Stop</strong>: During operation, pressing the <kbd>Esc</kbd> key on the keyboard will immediately stop the transmutation process, no matter where you are.</li>
-          <li><strong>Slow PC Adjustment Values</strong>: <span class="chip">ms before start</span> (grace period to switch to the game window after clicking start), <span class="chip">ms for result wait</span> (default 3000 — upper limit to wait for transmutation to finish and the transmute button to become inactive after transform/accept; proceeds immediately if signal is received), <span class="chip">ms after reset</span> (default 0 — additional wait after reset). If items overlap or are skipped without transmuting on a slow PC, increase the result wait time.</li>
-          <li><strong>Execution Log</strong>: After each cycle, slot-by-slot judgments are logged in <code>%APPDATA%\d4cute_helper\debug\alter_slots.txt</code>. If you encounter any issues, please upload this file to the Telegram group.</li>
+          <li><strong>Emergency stop</strong>: While it is working, press the keyboard's <kbd>Esc</kbd> key to stop Stat Alteration immediately from anywhere.</li>
+          <li><strong>Slow-PC adjustment values</strong>: <span class="chip">Start Delay ms</span>(time to switch to the game window after pressing Start), <span class="chip">Result Wait ms</span>(default 3000 — the maximum time to wait after Transmute/Accept until the alteration finishes and the Transmute button turns off; it moves on immediately once the signal arrives), <span class="chip">Post-reset ms</span>(default 0 — extra wait after a reset). On a PC with slow animations, if items overlap or it moves on without altering, raise Result Wait.</li>
+          <li><strong>Run log</strong>: Every time it finishes one pass, <code>%APPDATA%\d4cute_helper\debug\alter_slots.txt</code> keeps the per-slot results. If a problem occurs, please post this file to the Telegram group.</li>
         </ul>
 
         <!-- 인게임 실화면 플레이스홀더 -->
         <div class="placeholder-box">
           <div class="placeholder-icon">📸</div>
-          <div class="placeholder-title">[In-Game Screenshot Slot] Horadric Cube Transmutation Operation Screen</div>
-          <div class="placeholder-desc">Upload a real captured image of the Horadric Cube and Inventory open in-game, and it will be linked directly.</div>
+          <div class="placeholder-title">[In-game screenshot slot] Horadric Cube Stat Alteration in action</div>
+          <div class="placeholder-desc">Once you upload a real capture showing the Horadric Cube and inventory open in the game, it will be linked right away.</div>
           <span class="placeholder-path">Image Slot: _work/d4help-repo/images/inven/alter_ingame_live.png</span>
         </div>
 
         <!-- 선변성 유튜브 비디오 슬롯 -->
-        <div class="video-card" data-video-title="[Video] How to Use the Inventory Transmutation Tool">
-          <div class="video-embed"><iframe src="https://www.youtube.com/embed/O2mSUAEX-xM" title="[Video] How to Use the Inventory Transmutation Tool" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-card" data-video-title="[Video] How to use the Inventory Stat Alteration tool">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/O2mSUAEX-xM" title="[Video] How to use the Inventory Stat Alteration tool" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           <div class="video-info">
-            <span><strong>Transmutation Tool Usage Video (Uncle Doesn't Sleep Channel)</strong></span>
+            <span><strong>Stat Alteration tool usage video (삼촌안잔다잉 channel)</strong></span>
             <a href="https://youtu.be/O2mSUAEX-xM" target="_blank" rel="noopener noreferrer" class="chip">Watch on YouTube ↗</a>
           </div>
         </div>
@@ -2618,297 +2249,291 @@
       <!-- ─── 6. 스마트 알람 시스템 ─── -->
       <section class="doc-section" id="alarm">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">6</span> Smart Alarm System — Event · Personal · Screen Notifications · Voice (TTS)</h2>
+          <h2 class="section-title"><span class="section-num">6</span> Smart Alarm System — Events · Personal · On-Screen Alerts · Voice (TTS)</h2>
         </div>
 
-        <p>This is a high-performance background alarm engine that ensures you don't miss major time-sensitive content in Diablo 4 (Legion Events, World Bosses, Helltides, etc.) and your personal timers.</p>
+        <p>A high-performance background alarm engine that makes sure you never miss Diablo IV's major timed content (Legion invasions, World Bosses, Helltide, etc.) or your own personal timers.</p>
 
-        <h3 id="alarm-events">1) Event Notifications (World Boss · Helltide · Legion)</h3>
-        <p>Real-time integration with external game websites (diablo4.life) automatically calculates the latest boss and Helltide spawn times.</p>
+        <h3 id="alarm-events">1) Event Alerts (World Boss · Helltide · Legion)</h3>
+        <p>Linked in real time with the external website (diablo4.life) to automatically calculate the latest boss and Helltide spawn times.</p>
         
         <!-- 이벤트 알림 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="Event Notification Tab — Displays World Boss, Helltide, Legion spawn times, toggles for 5-minute/3-minute/1-minute/start pre-notifications, adjusts priority order (▲/▼) for overlapping events.">
+        <div class="image-card is-thumbnail" data-caption="Event Alerts tab — World Boss, Helltide and Legion spawn time info, 5 min/3 min/1 min/start advance-alert toggles, and priority order (▲/▼) adjustment when alerts overlap">
           <div class="thumb-container">
-            <img src="images/alarm_event_schedule_list.png" alt="Event Notification List and Priority">
+            <img src="../images/alarm_event_schedule_list.png" alt="Event alert list and priority">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>Event Notifications (World Boss, Helltide, Legion Schedule, and Notification Timings)</span>
+            <span>📷</span> <span>Event alerts (World Boss, Helltide, Legion schedule and alert timing)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>Notification Timing Selection</strong>: For each event, you can independently toggle notifications for <span class="chip blue">5 minutes</span>, <span class="chip blue">3 minutes</span>, <span class="chip blue">1 minute</span> before, and at the <span class="chip blue">start</span> time.</li>
-          <li><strong>Priority Order for Overlapping Events</strong>: You can change the order of events by pressing the <kbd>▲</kbd> <kbd>▼</kbd> buttons. If multiple notifications overlap at the same time, the events higher in the list will sound first and be displayed together on the screen.</li>
-          <li><strong>Legion Baseline Setting</strong>: You can manually adjust the Legion event spawn time to a 0-minute baseline to match your current screen situation.</li>
+          <li><strong>Choosing alert timing</strong>: For each event, you can independently turn on or off the <span class="chip blue">5 min</span>, <span class="chip blue">3 min</span>, <span class="chip blue">1 min</span> before, and the <span class="chip blue">start</span> alerts.</li>
+          <li><strong>Priority order when alerts overlap</strong>: <kbd>▲</kbd> <kbd>▼</kbd> buttons change the order between events. If several alerts overlap at the same moment, the event higher in the list sounds first and is also shown on screen.</li>
+          <li><strong>Legion anchor setting</strong>: You can also manually calibrate the Legion spawn time to your own in-game situation, using the 0-minutes-ago anchor point.</li>
         </ul>
 
         <h3 id="alarm-personal">2) Personal Alarms (Custom Timers & Repeat Cycles)</h3>
-        <p>You can register an unlimited number of custom timers, such as 30-minute elixir expiration alarms, dungeon cooldowns, and rest notifications.</p>
+        <p>Register an unlimited number of your own custom timers, such as a 30-minute elixir expiry alarm, dungeon cooldowns, and break reminders.</p>
 
         <!-- 개인 알람 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="Personal Alarm Tab — + Add Alarm button, periodic repetition (e.g., unlimited 'belly fat exercise' timer every 10 minutes), real-time status toggle, and edit/delete.">
+        <div class="image-card is-thumbnail" data-caption="Personal Alarms tab — + Add Alarm button, periodic repeat (e.g. an unlimited timer for a belly-fat exercise reminder every 10 minutes), real-time status toggles, and edit/delete">
           <div class="thumb-container">
-            <img src="images/alarm_personal_timer_list.png" alt="Personal Alarm Timer List">
+            <img src="../images/alarm_personal_timer_list.png" alt="Personal alarm timer list">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>Personal Alarm Settings (Custom Repeat Timer List)</span>
+            <span>📷</span> <span>Personal alarm settings (custom repeat timer list)</span>
           </div>
         </div>
 
         <ul>
-          <li><span class="chip blue">＋ Add Alarm</span>: Register by setting the desired name, cycle (in minutes or specific time), and start reference.</li>
-          <li><strong>Switch On/Off</strong>: You can instantly toggle only the necessary timers with a switch, and the remaining time until the next notification is displayed in real-time.</li>
+          <li><span class="chip blue">＋ Add</span>: Register one by choosing a name, a cycle (in minutes or at a specific time), and a start reference.</li>
+          <li><strong>Switch On/Off</strong>: Turn only the timers you need on or off instantly with the switch; the time left until the next alert is shown in real time.</li>
         </ul>
 
-        <h3 id="alarm-display">3) Screen Notifications (In-game Text Overlay Banner)</h3>
-        <p>Displays text on the screen to intuitively show important notifications during gameplay without obstructing your view.</p>
+        <h3 id="alarm-display">3) On-Screen Alerts (In-Game Text Overlay Banner)</h3>
+        <p>Shows text on the screen so you can check important alerts at a glance without obstructing your view during the game.</p>
 
         <!-- 화면 알림 설정 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="Screen Notification Settings — Position (Above character's head, vertical offset -59px), Font Size (35px), Color (#FFD700), Bold/Outline effect, Background Transparency (24), Display Duration (15 seconds), and Preview.">
+        <div class="image-card is-thumbnail" data-caption="On-screen alert settings — position (above the character, vertical offset -59px), text size (35px), color (#FFD700), bold/outline effects, background opacity (24), display time (15 s) and preview">
           <div class="thumb-container">
-            <img src="images/alarm_banner_display_settings.png" alt="Screen Notification Banner Settings">
+            <img src="../images/alarm_banner_display_settings.png" alt="On-screen alert banner settings">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>Screen Notification Settings (Position, Font Size, Color, Outline, and Display Duration)</span>
+            <span>📷</span> <span>On-screen alert settings (position, text size, color, outline and display time)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>Alarm Position & Vertical Offset</strong>: Choose your desired position, such as <span class="chip">Above Character's Head</span>, and fine-tune the vertical pixel offset (e.g., -59 px).</li>
-          <li><strong>Readability Options</strong>: By turning on Font Size (px), Color Palette (Gold #FFD700, etc.), <strong>Bold</strong>, and <strong>Outline</strong> switches, text becomes clearly visible even in dark dungeons or amidst flashy skill effects.</li>
-          <li>Click the <span class="chip">Preview</span> button to instantly test how it appears in-game.</li>
+          <li><strong>Alert position & vertical offset</strong>: <span class="chip">Above character</span> etc. — pick the position you want and fine-tune the vertical pixel offset (e.g. -59 px).</li>
+          <li><strong>Readability options</strong>: Text size (px), color palette (Gold #FFD700, etc.), and if you turn on the <strong>Bold</strong> and <strong>Outline</strong> switches, the text stays clearly visible even in dark dungeons or amid flashy skill effects.</li>
+          <li><span class="chip">Preview</span> Press the button to instantly test how it will be displayed in the game.</li>
         </ul>
 
         <h3 id="alarm-sound">4) Default Sound · Voice (TTS & Sound Effects)</h3>
-        <p>Provides natural Korean voice guidance through alarm sound effects and the Supertonic 3 AI voice engine.</p>
+        <p>Provides natural Korean voice announcements through alarm sound effects and the Supertonic 3 AI voice engine.</p>
 
         <!-- 기본 사운드 음성 설정 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="Default Sound · Voice Settings — Sound File (Ring01), Notification Method (Alarm sound only / Alarm sound + Voice / Voice only), Supertonic 3 Korean Voice Engine (F1 Female, Speed 0.90x, Volume control), and Real-time Test.">
+        <div class="image-card is-thumbnail" data-caption="Default sound · voice settings — sound file (Ring01), notification method (Sound only / Sound + Voice / Voice only), Supertonic 3 Korean voice engine (F1 female, speed 0.90x, volume control) and live test">
           <div class="thumb-container">
-            <img src="images/alarm_sound_voice_settings.png" alt="Default Sound and Voice Settings">
+            <img src="../images/alarm_sound_voice_settings.png" alt="Default sound and voice settings">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>Default Sound · Voice (Supertonic 3 Korean Voice and Sound Effects)</span>
+            <span>📷</span> <span>Default sound · voice (Supertonic 3 Korean voice and sound effects)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>Notification Method</strong>: Supports 3 modes: <span class="chip">Alarm sound only</span>, <span class="chip gold">Alarm sound ＋ Voice</span>, <span class="chip">Voice only</span>.</li>
-          <li><strong>Voice Engine</strong>: Equipped with a built-in <strong>Supertonic 3</strong> voice engine — provides clear Korean pronunciation (e.g., 'F1 Female'), and allows free adjustment of speech speed (e.g., 0.90x) and volume (0-100).</li>
-          <li>Click the <span class="chip">▶ Test</span> button to instantly check the actual voice output quality.</li>
+          <li><strong>Notification method</strong>: <span class="chip">Sound only</span>, <span class="chip gold">Sound + Voice</span>, <span class="chip">Voice only</span> 3 modes supported.</li>
+          <li><strong>Voice engine</strong>: Built-in <strong>Supertonic 3</strong> voice engine included — it reads aloud in clear Korean pronunciation such as 'F1 female', and you can freely adjust the speech speed (0.90x, etc.) and volume (0~100).</li>
+          <li><span class="chip">▶ Test</span> button lets you check the actual voice output quality right away.</li>
         </ul>
       </section>
 
       <!-- ─── 7. 창 모드, 핀, 오버레이 ─── -->
       <section class="doc-section" id="window-modes">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">7</span> Window Modes · Always On Top (Pin) · In-Game Overlay</h2>
+          <h2 class="section-title"><span class="section-num">7</span> Window Mode · Always on Top (Pin) · In-Game Overlay</h2>
         </div>
 
-        <h3 id="window-mini">1) Mini Window Mode (Mini Bar)</h3>
-        <p>This is an ultra-compact, single-line bar mode that can be kept small in a corner of your game monitor.</p>
+        <h3 id="window-mini">1) Mini Mode (Mini Bar)</h3>
+        <p>A mode in the form of an ultra-compact one-line bar that you can leave small in a corner of the monitor along with the game screen.</p>
 
         <!-- 미니바 스크린샷 카드 -->
-        <div class="image-card is-small" data-caption="Mini Window Mode — Displays A~G slot operating status, Start/Stop, Utility Features shortcut, and Return to Main Window button.">
+        <div class="image-card is-small" data-caption="Mini mode — slots A~G run status, start/stop, Tools shortcut, return-to-main-window button">
           <div class="thumb-container">
-            <img src="images/helper_mini_bar.png" alt="Mini Bar Mode Screen">
+            <img src="../images/helper_mini_bar.png" alt="Mini bar mode screen">
           </div>
-          <div class="image-caption"><span>📷</span> <span>Ultra-Compact Mini Bar Mode</span></div>
+          <div class="image-caption"><span>📷</span> <span>Ultra-compact mini bar mode</span></div>
         </div>
 
         <ul>
-          <li>The current operating status of 7 slots, A~G, is illuminated for real-time checking.</li>
-          <li><span class="chip green">Start</span> / <span class="chip">Stop</span> buttons, Utility Features (wrench) button — clicking it returns to the main window and opens the Utility Features tab (transmutation starts with a hotkey or the start button on that tab), built-in Always On Top (pin) button.</li>
-          <li>Clicking the Return (square) button immediately restores the window to its original size.</li>
+          <li>The current running state of all 7 slots A~G lights up so you can check it in real time.</li>
+          <li><span class="chip green">start</span> / <span class="chip">Stop</span> button, Tools (wrench) button — pressing it returns to the main window and opens the Tools tab (start Stat Alteration with the hotkey or the Start button on that tab), and a built-in always-on-top (pin) button.</li>
+          <li>Pressing the return (square) button immediately restores the main window to its original size.</li>
         </ul>
 
         <h3 id="window-overlay">2) In-Game HUD Overlay</h3>
-        <p>This is an essential HUD tool that floats translucently over the game screen, allowing real-time monitoring of macro operations. It transparently displays active macro slots, held keys, and a list of currently pressed keys.</p>
+        <p>An essential HUD tool that floats semi-transparently over the game screen so you can check macro status in real time. The running macro slots, held keys, and the list of keys currently being hit are shown transparently.</p>
 
         <!-- 1. 인게임 오버레이 실화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="In-Game HUD Overlay Live Screen — Displays active macro slots (•A, •B illuminated in red), held keys (Hold RClick), and real-time pressed key list (Pressed 2 F F F F 4).">
+        <div class="image-card is-thumbnail" data-caption="In-game HUD overlay live screen — running macro slots (•A, •B lit in red), held key (Hold RClick), real-time pressed key list (Pressed 2 F F F F 4) shown in real time">
           <div class="thumb-container">
-            <img src="images/overlay_ingame_live_display.png" alt="In-Game HUD Overlay Live Screen">
+            <img src="../images/overlay_ingame_live_display.png" alt="In-game HUD overlay live screen">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>In-Game HUD Overlay (Active Slots, Held Keys, Real-time Pressed Key List)</span>
+            <span>📷</span> <span>In-game HUD overlay (running slots, held keys, real-time hit key list)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>Active Macro Slot Status</strong>:
-            Slots currently active and running, like <span class="chip ruby">•A</span> <span class="chip ruby">•B</span>, are illuminated with a red border and dot (•). Inactive slots (<span class="chip">C</span>) and toggle-waiting slots (<span class="chip green">○D</span>) are distinguished at a glance.
+          <li><strong>Running macro slot status</strong>:
+            <span class="chip ruby">•A</span> <span class="chip ruby">•B</span> — as shown, slots that are currently triggered and running light up with a red border and a dot (•), and you can tell inactive slots (<span class="chip">C</span>) and toggle-standby slots (<span class="chip green">○D</span>) apart at a glance.
           </li>
-          <li><strong>Held Key (Hold / Companion) Output</strong>:
-            Keys currently being held down (e.g., <code>Hold RClick</code>, <code>Hold Shift</code>, etc.) are displayed in real-time at the top right.
+          <li><strong>Held keys (Hold / Companion) output</strong>: Keys that are currently being held continuously (e.g. <code>Hold RClick</code>, <code>Hold Shift</code> , etc.) are shown in real time at the top right.
           </li>
-          <li><strong>Real-time Pressed Key List (Key Log)</strong>:
-            Skill keys currently being pressed in real-time within the current sequence (e.g., <code>Pressed 2 F F F F 4</code>) are continuously displayed at the bottom, allowing you to instantly check if your skill rotation is accurately executed during gameplay.
+          <li><strong>Real-time pressed key list (Key Log)</strong>: At the bottom, the skill keys being hit in the current sequence in real time (e.g. <code>Pressed 2 F F F F 4</code>) are output continuously, so you can check right in the game that the skill rotation is meshing correctly.
           </li>
-          <li><strong>Transmutation Progress</strong>: During Horadric Cube transmutation, the current slot number and progress percentage appear on the overlay.</li>
+          <li><strong>Stat Alteration progress</strong>: While Horadric Cube Stat Alteration is running, the current slot number and progress appear on the overlay.</li>
         </ul>
 
         <!-- 2. 오버레이 설정 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="Global Settings — Detailed Overlay Customization (Monitor selection, position bottom right, X/Y pixel offset, transparency 40%, size 118%, width 409px, and real-time preview).">
+        <div class="image-card is-thumbnail" data-caption="Global settings — detailed overlay customization (monitor selection, position bottom right, X/Y pixel offset, opacity 40%, size 118%, width 409px and live preview)">
           <div class="thumb-container">
-            <img src="images/overlay_configuration_settings.png" alt="Overlay Detailed Settings Screen">
+            <img src="../images/overlay_configuration_settings.png" alt="Detailed overlay settings screen">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>Overlay Detailed Settings (Monitor, Position, X/Y Offset, Transparency, Size, Width Adjustment)</span>
+            <span>📷</span> <span>Detailed overlay settings (monitor, position, X/Y offset, opacity, size, width)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>Display Game Overlay</strong>: This is the master switch to turn the overlay on and off.</li>
-          <li><strong>Monitor Selection</strong>: In dual and multi-monitor environments, you can directly specify the monitor where Diablo 4 is running (e.g., <code>2: LG HDR 4K (2560×1440)</code>) via a dropdown.</li>
-          <li><strong>Screen Position & Precise Pixel Offset</strong>:
-            After selecting one of the 9 screen areas (e.g., <code>Right</code> <code>Bottom</code>), you can fine-tune the position down to the pixel using <span class="chip">X Offset</span> (-13 px) and <span class="chip">Y Offset</span> (-3 px) to avoid covering the minimap or game UI.
+          <li><strong>Show Game Overlay</strong>: The master switch that turns the overlay on and off.</li>
+          <li><strong>Monitor selection</strong>: In dual and multi-monitor setups, you can pick the monitor Diablo IV is running on (e.g. <code>2: LG HDR 4K (2560×1440)</code>) directly from the dropdown.</li>
+          <li><strong>Screen position & precise pixel offset</strong>: After choosing one of the 9 screen zones (e.g. <code>Right</code> <code>Bottom</code>), fine-tune the position pixel by pixel with <span class="chip">X offset</span>(-13 px) and <span class="chip">Y offset</span>(-3 px) so it does not cover the minimap or the game UI.
           </li>
-          <li><strong>Transparency & Size & Width</strong>:
-            Optimize <span class="chip">Transparency</span> (default 40% translucent), <span class="chip">Size</span> (e.g., 118% scale), and <span class="chip">Width</span> (409 px) to your preference using sliders.
+          <li><strong>Opacity & size & width</strong>: Using the sliders, tune <span class="chip">opacity</span>(default 40% semi-transparent), <span class="chip">size</span>(scale such as 118%), and <span class="chip">width</span>(409 px) to suit your view.
           </li>
-          <li><span class="chip blue">👁 Preview</span>: You can instantly check the overlay's appearance at the configured position and size on the screen by pressing the button, even without directly running a macro.</li>
+          <li><span class="chip blue">👁 Preview</span>: Even without running a macro, pressing the button instantly shows the overlay on screen at the configured position and size, which is convenient for checking.</li>
         </ul>
       </section>
 
-      <!-- ─── 8. 안전장치 ─── --><section class="doc-section" id="safety-features">
+      <!-- ─── 8. 안전장치 ─── -->
+      <section class="doc-section" id="safety-features">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">8</span> Safety Features — Stop Keys · Game Window Detection</h2>
+          <h2 class="section-title"><span class="section-num">8</span> Safety Features — Pause Keys (Stop Keys) · Game Window Detection</h2>
         </div>
 
         <ul>
-          <li><strong>Stop Keys (Default: <kbd>Enter</kbd> <kbd>Tab</kbd> <kbd>T</kbd> <kbd>I</kbd>)</strong>:
-            **Immediately pauses input** when game interfaces like chat (<kbd>Enter</kbd>), map (<kbd>Tab</kbd>), portal (<kbd>T</kbd>), or inventory (<kbd>I</kbd>) are opened, preventing macros from casting skills unexpectedly. The macro resumes when you finish the interaction and press the trigger key again.
+          <li><strong>Pause Keys (Stop Keys, default: <kbd>Enter</kbd> <kbd>Tab</kbd> <kbd>T</kbd> <kbd>I</kbd>)</strong>: To keep the macro from spamming skills at random when you open a game interface such as chat (<kbd>Enter</kbd>), map (<kbd>Tab</kbd>), Town Portal (<kbd>T</kbd>), or inventory (<kbd>I</kbd>), <strong>input is paused immediately</strong>. When you finish and press the trigger key again, the macro resumes.
           </li>
-          <li><strong>Game Window Detection</strong>:
-            Operates only when the Diablo 4 process is the active window. You can also custom-match specific window titles or process names in the settings.
+          <li><strong>Game window detection</strong>: It runs only when the Diablo IV process is the active window. In settings you can also custom-match a specific window title or process name yourself.
           </li>
-          <li><strong>Input Transmission Verification Tool</strong>:
-            Clicking the <span class="chip">Test</span> button on the top bar allows you to pre-check if virtual key inputs are correctly injected into the system even outside the game.
+          <li><strong>Input delivery check tool</strong>: Pressing the top bar's <span class="chip">Test</span> button lets you check beforehand whether virtual key input is being injected into the system properly, even outside the game.
           </li>
         </ul>
 
         <h3 id="input-test">3) Input Test Window</h3>
-        <p>Clicking the <span class="chip">Test</span> button on the top bar opens a small window, allowing you to visually confirm if the key and mouse inputs sent by the macro are being received. This is the first diagnostic tool to determine whether "the helper isn't sending input, or the game isn't receiving it" when nothing happens after pressing the trigger key.</p>
-        <div class="image-card is-small" data-caption="Input Test Window — Verify if key and mouse inputs sent by the macro are actually received">
+        <p>When you press the top bar's <span class="chip">Test</span> button, a small window opens where you can visually check whether the key and mouse input sent by the macro comes through as it is. It is the first diagnostic tool for telling apart "the helper cannot send input" from "the game does not receive it" when nothing happens after you press the trigger key.</p>
+        <div class="image-card is-small" data-caption="Input Test window — check whether the key and mouse input sent by the macro actually arrives">
           <div class="thumb-container">
-            <img src="images/helper_input_test.png" alt="Input Test Window">
+            <img src="../images/helper_input_test.png" alt="Input Test window">
           </div>
-          <div class="image-caption"><span>📷</span> <span>Input Test Window</span></div>
+          <div class="image-caption"><span>📷</span> <span>Input Test window</span></div>
         </div>
         <!-- 설정창 캡처 -->
-        <div class="image-card is-thumbnail" data-caption="Global Settings Window — Customizing Stop Keys, Specifying Game Window Detection Process, Adjusting Overlay Position/Transparency">
+        <div class="image-card is-thumbnail" data-caption="Global Settings window — custom safety pause keys, game window detection process selection, overlay position/opacity adjustment">
           <div class="thumb-container">
-            <img src="images/helper_settings_dialog.png" alt="Global Settings Dialog">
+            <img src="../images/helper_settings_dialog.png" alt="Global Settings dialog">
             <span class="zoom-hint-badge">🔍 Click to enlarge</span>
           </div>
-          <div class="image-caption"><span>📷</span> <span>Helper Global Settings (⚙) Dialog</span></div>
+          <div class="image-caption"><span>📷</span> <span>Helper Global Settings (⚙) dialog</span></div>
         </div>
       </section>
 
       <!-- ─── 9. 프로필 관리 & 공유 ─── -->
       <section class="doc-section" id="profile-sync">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">9</span> Profile Management · Backup · Clan Member Sharing</h2>
+          <h2 class="section-title"><span class="section-num">9</span> Profile Management · Backup · Sharing with Clan Members</h2>
         </div>
 
         <ul>
-          <li>Each profile saves all sequences, delays, and trigger key settings for slots A-G (total 7 slots) as a complete package.</li>
-          <li>By separating profiles by class (Sorcerer, Barbarian, Druid, Necromancer, Rogue, Spirit Caller, etc.) and build, all settings can be swapped with a single click.</li>
-          <li><span class="chip">Export</span>: Export current settings to a <code>.d4cute</code> file for safe backup or sharing with clan members.</li>
-          <li><span class="chip blue">Import</span>: Load a <code>.d4cute</code> profile file shared by another user and apply it instantly to your helper.</li>
-          <li>Pressing the <span class="chip">Save</span> button safely applies changes to disk. If you make a mistake, you can revert to the last saved state by pressing <span class="chip">Load</span>.</li>
+          <li>A single profile bundles and saves all sequences, delays and trigger key settings for slots A~G (7 in total).</li>
+          <li>If you keep separate profiles for each class and build — Sorcerer, Barbarian, Druid, Necromancer, Rogue, Spiritborn — all your settings are swapped with a single click.</li>
+          <li><span class="chip">Export</span>: Export the current settings to a <code>.d4cute</code> file to back them up safely or share them with clan members.</li>
+          <li><span class="chip blue">Import</span>: Loads the <code>.d4cute</code> profile file shared by another user and applies it to your helper immediately.</li>
+          <li><span class="chip">Save</span> button must be pressed for changes to be safely written to disk, and if you changed something by mistake, you can press <span class="chip">Reload</span>to return to the last saved point.</li>
         </ul>
       </section>
 
       <!-- ─── 10. 텔레그램 연동 & 디버그 로그 ─── -->
       <section class="doc-section" id="telegram-support">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">10</span> Telegram Integration & Debug Log Viewer</h2>
+          <h2 class="section-title"><span class="section-num">10</span> Telegram Support & Debug Log Viewer</h2>
         </div>
 
         <p>
-          Clicking the blue <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegram Logo</span> icon on the helper's top profile bar opens the Telegram integration dialog. You can quickly check for new version announcements, ask questions and report bugs in the <strong style="color:var(--gold);">@d4cute_helper</strong> user group, and get support for troubleshooting errors by <strong style="color:var(--ruby);">extracting debug logs with one click</strong>.
+          The blue <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegram logo</span> icon on the helper's top profile row opens the Telegram dialog. Check news of new versions quickly, <strong style="color:var(--gold);">@d4cute_helper</strong> ask questions and report bugs in the user group, and when an error occurs, <strong style="color:var(--ruby);">extract the debug log in one click</strong>to get help solving it.
         </p>
 
         <!-- 텔레그램 및 로그 뷰어 스크린샷 2종 갤러리 -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0;">
-          <div class="image-card is-thumbnail" data-caption="Telegram Dialog — Announcement Channel (@d4_notice), User Communication Group (@d4cute_helper), Smartphone Instant Entry QR Code, View Logs and Telegram Install Button">
+          <div class="image-card is-thumbnail" data-caption="Telegram dialog — announcement channel (@d4_notice), user chat group (@d4cute_helper), a QR code for instant entry from a smartphone, and View Logs and Install Telegram buttons">
             <div class="thumb-container">
-              <img src="images/telegram_qr_dialog.png" alt="Telegram Integration Dialog and QR Code">
+              <img src="../images/telegram_qr_dialog.png" alt="Telegram dialog and QR code">
               <span class="zoom-hint-badge">🔍 Click to enlarge</span>
             </div>
             <div class="image-caption">
-              <span>📷</span> <span>Telegram Integration Pop-up (Announcements/User Group/QR Code/Install)</span>
+              <span>📷</span> <span>Telegram popup (announcement / user group / QR code / install)</span>
             </div>
           </div>
           
-          <div class="image-card is-thumbnail" data-caption="Log Viewer Dialog — View Logs by Date, Filter Warnings/Errors Only Toggle, Copy Last 200 Lines, Copy Errors Only, Open Local Log Folder">
+          <div class="image-card is-thumbnail" data-caption="Log viewer dialog — view logs by date, toggle to filter warnings and errors only, copy the last 200 lines, copy errors only, open the local log folder">
             <div class="thumb-container">
-              <img src="images/log_viewer_error_copy.png" alt="Debug Log Viewer Dialog">
+              <img src="../images/log_viewer_error_copy.png" alt="Debug log viewer dialog">
               <span class="zoom-hint-badge">🔍 Click to enlarge</span>
             </div>
             <div class="image-caption">
-              <span>📷</span> <span>One-Click Debug Log Viewer (Copy Errors Only/Copy Last 200 Lines)</span>
+              <span>📷</span> <span>One-click debug log viewer (copy errors only / copy last 200 lines)</span>
             </div>
           </div>
         </div>
 
         <!-- 1) 텔레그램 설치 및 계정 준비 -->
-        <h3 id="telegram-install">1) Telegram Installation and Preparation</h3>
+        <h3 id="telegram-install">1) Installing Telegram & Preparation</h3>
         <p>
-          Telegram is a global messenger that runs lightly and securely on PCs and smartphones. If Telegram is not yet installed on your PC or mobile, you can easily prepare it using the methods below.
+          Telegram is a global messenger that runs lightly and safely on PC and smartphone. If Telegram is not installed yet on your PC or mobile, you can easily get it ready as follows.
         </p>
         <div class="alert-box info" style="margin: 12px 0 18px;">
           <span class="alert-icon">💡</span>
           <div>
-            <strong>Safe Official Installation Guide</strong><br>
-            Clicking the <span class="chip blue">Install Telegram</span> button at the bottom of the helper's Telegram window will open your browser to the official Telegram website (<a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">telegram.org</a>). 
-            <span style="color:var(--green); font-weight:600;">The helper does not arbitrarily download or install executable files, so use it with confidence.</span>
+            <strong>Safe official installation guide</strong><br>
+            At the bottom of the helper's Telegram window, the <span class="chip blue">Install Telegram</span> button opens the official Telegram website (<a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">telegram.org</a>) in your browser. 
+            <span style="color:var(--green); font-weight:600;">The helper never downloads or installs any executable file on its own, so you can use it with peace of mind.</span>
           </div>
         </div>
         <ul>
-          <li><strong>Smartphone (Mobile)</strong>: Search for <code>Telegram</code> on <span style="color:var(--gold); font-weight:600;">Google Play Store</span> or <span style="color:var(--gold); font-weight:600;">Apple App Store</span> and download it for free. Registration is completed in just 1 minute with phone number verification.</li>
-          <li><strong>PC (Desktop)</strong>: Download and install the Windows version from the official <a href="https://desktop.telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">Telegram Desktop ↗</a> page. Then, scan the QR code via the mobile Telegram app's <span class="chip">Settings → Devices → Link Desktop</span> to log in instantly without a password.</li>
+          <li><strong>Smartphone (Mobile)</strong>: <span style="color:var(--gold); font-weight:600;">Google Play Store</span> or <span style="color:var(--gold); font-weight:600;">Apple App Store</span>, you can get the <code>Telegram</code>Search for Telegram there and download it for free. After phone number verification alone, sign-up is done in 1 minute.</li>
+          <li><strong>PC (Desktop)</strong>: <a href="https://desktop.telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">Telegram Desktop ↗</a> Download the Windows installer from the official page and install it, then scan the QR code through the mobile Telegram app's <span class="chip">Settings → Devices → Link Desktop Device</span>and you are logged in instantly without a password.</li>
         </ul>
 
         <!-- 2) 채널 및 그룹방 가입 방법 -->
-        <h3 id="telegram-channels">2) How to Join Channels & User Group Chats</h3>
+        <h3 id="telegram-channels">2) How to Join the Channel & User Group</h3>
         <p>
-          d4cute helper operates two official Telegram rooms, each for a specific purpose.
+          d4cute helper runs two official Telegram rooms for different purposes.
         </p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 14px 0 20px;">
           <div class="clan-card" style="padding: 16px;">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
               <span style="font-size:20px;">📢</span>
-              <strong style="color:var(--gold); font-size:16px;">Announcement-Only Channel</strong>
+              <strong style="color:var(--gold); font-size:16px;">Announcement-only channel</strong>
             </div>
             <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
-              This is a one-way notification channel for delivering new version update news, season patch response status, and urgent announcements.
+              A one-way notification channel that delivers new version update news, season patch response status, and urgent notices.
             </p>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700;">@d4_notice ↗</a>
-              <span class="chip">Subscribe to Announcements</span>
+              <span class="chip">Subscribe to announcements</span>
             </div>
           </div>
 
           <div class="clan-card" style="padding: 16px; border-color: rgba(59, 130, 246, 0.4);">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
               <span style="font-size:20px;">💬</span>
-              <strong style="color:var(--blue); font-size:16px;">User Communication Group Chat</strong>
+              <strong style="color:var(--blue); font-size:16px;">User chat group</strong>
             </div>
             <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
-              <strong>Helper setup tips, questions, feature suggestions, and bug reports are ONLY accepted here!</strong>
+              <strong>Helper setup tips, questions, feature suggestions and bug reports are received only here!</strong>
             </p>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper ↗</a>
-              <span class="chip blue">Inquiry/Report</span>
+              <span class="chip blue">Inquiries / Reports</span>
             </div>
           </div>
         </div>
@@ -2916,74 +2541,75 @@
         <div class="alert-box gold" style="margin: 12px 0 18px;">
           <span class="alert-icon">⚠️</span>
           <div>
-            <strong>Inquiry Channel Precautions</strong><br>
-            The Uncle Anjandaing YouTube channel is a personal broadcasting space for enjoying Diablo 4 gameplay and communication. <span style="color:var(--ruby); font-weight:700;">Helper inquiries are not accepted via YouTube broadcast chat or comments.</span> Please visit the official Telegram group chat (<span style="color:var(--blue); font-weight:700;">@d4cute_helper</span>) instead.
+            <strong>Notes on the inquiry channel</strong><br>
+            The 삼촌안잔다잉 YouTube channel is a personal streaming space where the host enjoys Diablo IV gameplay and chatting. <span style="color:var(--ruby); font-weight:700;">Helper inquiries are not accepted at all through YouTube stream chat or comments</span>, so please be sure to visit the official Telegram group (<span style="color:var(--blue); font-weight:700;">@d4cute_helper</span>).
           </div>
         </div>
 
-        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">📱 2 Easy Ways to Enter Group Chats</h4>
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">📱 2 Easy Ways to Join the Group</h4>
         <ul>
-          <li><strong>Method A (Smartphone Camera QR Scan — Highly Recommended!)</strong>: Open your smartphone's default camera app and point it at the <strong style="color:var(--gold);">large QR code</strong> on the right side of the screen. A yellow Telegram link banner will appear at the top. With a single tap, you can instantly join the <span class="chip blue">@d4cute_helper</span> group chat.</li>
-          <li><strong>Method B (Open PC Telegram Directly)</strong>: Click the <span class="chip">Open</span> button in the window or click the web link (<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">https://t.me/d4cute_helper</a>) to go directly to the PC Telegram client.</li>
+          <li><strong>Method A (Scan the QR with your smartphone camera — most recommended!)</strong>: Open your smartphone's default camera app and point it at the <strong style="color:var(--gold);">large QR code</strong>on the right side of the screen, and a yellow Telegram link banner appears at the top. With one tap, <span class="chip blue">@d4cute_helper</span> you can join the group right away.</li>
+          <li><strong>Method B (Open directly in PC Telegram)</strong>: In the window, press the <span class="chip">Open</span> button or click the web link (<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">https://t.me/d4cute_helper</a>) to go straight to the PC Telegram client.</li>
         </ul>
 
         <!-- 3) 로그 뷰어를 통한 오류 복사 & 문제 해결 -->
-        <h3 id="log-viewer-guide">3) How to Copy Errors & Troubleshoot Using the Log Viewer</h3>
+        <h3 id="log-viewer-guide">3) Copying Errors via View Logs & How to Solve Problems</h3>
         <p>
-          When a macro suddenly stops, an error occurs during pre-transformation, or unexpected behavior appears, <strong style="color:var(--gold);">log data</strong> is the most reliable key to explaining the situation to the developer.
+          When the macro suddenly stops, an error occurs during Stat Alteration, or unexpected behavior appears, to explain the situation to the developer, <strong style="color:var(--gold);">log data</strong>is the surest key.
         </p>
 
-        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">🔍 Log Viewer Screen Layout & Button Functions</h4>
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">🔍 Log Viewer Layout & Button Functions</h4>
         <ul>
-          <li><strong><span style="color:var(--gold); font-weight:700;">Log Date Dropdown</span></strong>: Select the date the error occurred (default: today's date). Logs are <span class="chip">automatically kept for the last 7 days</span>, after which older files are sequentially deleted.</li>
-          <li><strong><span class="chip">Warnings·Errors Only</span> Toggle Switch</strong>: Hides thousands of general <code>INFO</code> logs and allows you to view only system warnings (<span style="color:#f59e0b; font-weight:700;">WARN</span>) and error (<span style="color:var(--ruby); font-weight:700;">ERROR</span>) entries.</li>
-          <li><strong><span class="chip">Refresh</span></strong>: Instantly reloads the latest logs accumulated in real-time while the helper is running.</li>
+          <li><strong><span style="color:var(--gold); font-weight:700;">Log date dropdown</span></strong>: Choose the date the error occurred (default: today). Logs are <span class="chip">kept automatically for 7 days</span>, after which older files are deleted in order.</li>
+          <li><strong><span class="chip">Warnings & Errors Only</span> toggle switch</strong>: Hide thousands of lines of ordinary <code>INFO</code> logs, and view only the system warning (<span style="color:#f59e0b; font-weight:700;">WARN</span>) and error (<span style="color:var(--ruby); font-weight:700;">ERROR</span>) entries.</li>
+          <li><strong><span class="chip">Refresh</span></strong>: Reloads the latest log, which accumulates in real time while the helper is running, onto the screen right away.</li>
           <li><strong><span class="chip">Open Folder</span></strong>: Directly opens the Windows Explorer folder (<code>%APPDATA%\d4cute_helper\logs</code>) where the original log text files are stored.</li>
-          <li><strong><span class="chip gold">Copy Last 200 Lines</span></strong>: Copies the last 200 lines of logs to the clipboard to help understand the context of which keys were pressed and which events occurred right before an error.</li>
-          <li><strong><span class="chip ruby">Copy Errors Only</span></strong>: Precisely extracts only error (<span style="color:var(--ruby); font-weight:700;">ERROR</span>) and exception stack trace statements from the entire log and puts them into the clipboard.</li>
-          <li><strong><span class="chip">Copy Selection</span></strong>: Drag the desired part with the mouse in the text window and then copy only that selected segment.</li>
+          <li><strong><span class="chip gold">Copy Last 200 Lines</span></strong>: Copies the latest 200 lines of the log to the clipboard so you can grasp the context of which keys were pressed and which events happened right up to the error.</li>
+          <li><strong><span class="chip ruby">Copy Errors Only</span></strong>: From the whole log, precisely extracts only the error (<span style="color:var(--ruby); font-weight:700;">ERROR</span>) and exception stack trace passages and puts them on the clipboard.</li>
+          <li><strong><span class="chip">Copy Selection</span></strong>: Drag the part you want with the mouse in the text window and copy just that section.</li>
         </ul>
 
         <div class="alert-box info" style="margin: 14px 0 18px;">
           <span class="alert-icon">🛡️</span>
           <div>
-            <strong>Personal Information Protection & Automatic Transmission Block</strong><br>
+            <strong>Privacy Protection & Automatic Transmission Blocking</strong><br>
             <ul style="margin: 6px 0 0 18px; padding: 0;">
-              <li><strong>Automatic Username Masking</strong>: User account names in file paths (e.g., <code>C:\Users\HongGilDong\...</code>) within the logs are automatically masked to be unidentifiable when copied, so there's no concern about privacy exposure.</li>
-              <li><strong>External Automatic Transmission Block</strong>: As indicated in the notice below ("<em>Please paste and send the copied content to the Telegram group — the helper does not send anything automatically.</em>"), the helper does not secretly transmit user logs externally over the internet. They are only shared securely when the user directly copies and pastes them.</li>
+              <li><strong>Automatic username masking</strong>: In file paths inside the log (e.g. <code>C:\Users\JohnDoe\...</code>), the user account name is automatically hidden so it cannot be identified when copied, so there is no worry about exposing your privacy.</li>
+              <li><strong>Blocking external automatic transmission</strong>: As the notice at the bottom ("<em>Copy and paste into Telegram group — helper sends nothing automatically.</em>") says, the helper never secretly sends your logs outside over the internet. They are shared only when you copy and paste them yourself.</li>
             </ul>
           </div>
         </div>
 
-        <h4 style="color:var(--gold-bright); margin: 18px 0 10px;">🚀 3-Step Guide to Sending Error Logs and Rapid Resolution</h4>
+        <h4 style="color:var(--gold-bright); margin: 18px 0 10px;">🚀 3-Step Guide to Sending Error Logs and Getting Quick Help</h4>
         <ol style="line-height: 1.85;">
           <li>
-            <strong style="color:var(--gold);">Step 1: Copy Logs</strong><br>
-            Immediately after a problem occurs, click the <span class="chip gold">📁 View Logs</span> button in the Telegram dialog, then click either the <span class="chip ruby">Copy Errors Only</span> or <span class="chip gold">Copy Last 200 Lines</span> button at the bottom of the window.<br>
-            <span style="font-size: 13px; color: var(--fg-dim);">※ The very first line of the copied log automatically includes helper version, OS environment, and resolution scaling metadata, allowing the developer to quickly understand the environment.</span>
+            <strong style="color:var(--gold);">Step 1: Copy the log</strong><br>
+            As soon as a problem occurs, press the <span class="chip gold">📁 View Logs</span> button in the Telegram dialog, and at the bottom of the window click <span class="chip ruby">Copy Errors Only</span> or <span class="chip gold">Copy Last 200 Lines</span> button.<br>
+            <span style="font-size: 13px; color: var(--fg-dim);">※ The first line of the copied log automatically includes meta information such as the helper version, OS environment and resolution scale, so the developer can grasp your environment at once.</span>
           </li>
           <li>
-            <strong style="color:var(--blue);">Step 2: Paste into Telegram Group Chat</strong><br>
-            On your smartphone or PC, go to the <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a> group chat, click the message input field, and press <kbd>Ctrl</kbd> + <kbd>V</kbd> (on mobile, long-press the input field and select paste).
+            <strong style="color:var(--blue);">Step 2: Paste into the Telegram group</strong><br>
+            On your smartphone or PC, go to the <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a> group, click the message input box, and press <kbd>Ctrl</kbd> + <kbd>V</kbd>(on mobile, long-press the input box and then choose Paste).
           </li>
           <li>
-            <strong style="color:var(--green);">Step 3: Add a Description of the Situation</strong><br>
-            Along with the logs, please provide 1-2 lines explaining <em>"what situation the problem occurred in"</em>:<br>
+            <strong style="color:var(--green);">Step 3: Add a description of what happened</strong><br>
+            Along with the log, please also leave <em>"in what situation the problem happened"</em> in one or two lines:<br>
             <div style="background:var(--card-subtle); padding:10px 14px; border-radius:var(--radius-sm); border-left:3px solid var(--gold); margin:8px 0; font-size:13px; color:var(--fg-dim);">
-              Example 1: "The inventory pre-transformation stops at the 12th slot during the cube emptying verification step. Logs attached."<br>
-              Example 2: "I changed the overlay position in global settings, but the overlay does not appear on screen."
+              Example 1: "After starting inventory Stat Alteration, it stops at the Cube Empty Check step on the 12th slot. Here is my log."<br>
+              Example 2: "I changed the overlay position in Global Settings but the overlay does not appear on the screen."
             </div>
-            Attaching screenshots or photos from your phone will lead to faster and more accurate diagnosis and patching.
+            If you also attach a screenshot or a phone photo, we can diagnose and patch faster and more accurately.
           </li>
         </ol>
       </section>
 
-      <!-- ─── 11. 클랜 & 방송 커뮤니티 ─── --><section class="doc-section" id="community">
+      <!-- ─── 11. 클랜 & 방송 커뮤니티 ─── -->
+      <section class="doc-section" id="community">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">11</span> Cute Clan & Uncle Anjandaing Channel</h2>
+          <h2 class="section-title"><span class="section-num">11</span> 앙증맞은 (Adorable) Clan & 삼촌안잔다잉 Channel</h2>
         </div>
 
-        <p>This is the clan the creator is active in and the clan leader's game streaming channel. Both are separate from the helper.</p>
+        <p>The clan where the developer is active, and the game streaming channel of that clan's leader. Both are separate from the helper.</p>
 
         <!-- 상단 2열: 클랜 개요 카드 & 삼촌안잔다잉 방송 채널 카드 (높이 균형 & 럭셔리 디자인) -->
         <div class="clan-showcase-grid">
@@ -2993,21 +2619,21 @@
               <div class="clan-card-header">
                 <div class="clan-card-crest">⚔️</div>
                 <div>
-                  <h3 class="clan-card-title">&lt;Cute&gt; Rainbow Wings</h3>
-                  <p class="clan-card-sub">Diablo 4 In-game Clan · Clan Leader Republic of Korea (Uncle Anjandaing)</p>
+                  <h3 class="clan-card-title">&lt;앙증맞은&gt; Rainbow Wings</h3>
+                  <p class="clan-card-sub">Diablo IV in-game clan · Clan leader South Korea (삼촌안잔다잉)</p>
                 </div>
               </div>
               <p style="font-size:13.5px; color:var(--fg-dim); margin:0 0 14px; line-height: 1.75;">
-                This is a casual in-game clan the creator is active in. The motto is <strong>"Help is Reciprocal"</strong> — a give-and-take where members look out for each other rather than one-sided carries, and making searching a habit.
+                An in-game friendly clan where the developer is also active. Its motto is <strong>"Help is a mutual exchange"</strong> — a give-and-take where we look out for each other rather than one-way carries, and making a quick search a habit.
               </p>
               <ul style="font-size:13px; color:var(--fg-dim); margin:0 0 16px 18px; padding:0; line-height:1.75;">
-                <li>Each season, we climb high-tier Pits, run endless Torches, and party up for boss fights.</li>
-                <li>Farm Mythic Unique items and complete Season Journey together.</li>
-                <li>We do not operate a Discord server; after applying in-game, please check the YouTube channel for confirmation.</li>
+                <li>Every season we do Pit high-tier climbing, endless Torch runs, and boss parties together</li>
+                <li>Farming Mythic Unique gear and completing the seasonal Journey together</li>
+                <li>We do not run Discord; apply in-game, then check on the YouTube channel</li>
               </ul>
             </div>
             <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="clan-btn gold">
-              <span>Uncle Anjandaing Channel — Notify of Membership ↗</span>
+              <span>삼촌안잔다잉 Channel — Announce that you joined ↗</span>
             </a>
           </div>
 
@@ -3017,24 +2643,24 @@
               <div class="clan-card-header">
                 <div class="clan-card-crest" style="border-color: rgba(229, 72, 77, 0.45); background: rgba(229, 72, 77, 0.1);">📺</div>
                 <div>
-                  <h3 class="clan-card-title" style="color: #ff999c;">Uncle Anjandaing</h3>
-                  <p class="clan-card-sub">🌙 When everyone sleeps, Uncle is gaming! · Simultaneous broadcast on YouTube & Chzzik</p>
+                  <h3 class="clan-card-title" style="color: #ff999c;">삼촌안잔다잉</h3>
+                  <p class="clan-card-sub">🌙 While everyone sleeps, Uncle is gaming! · Simulcast on YouTube and CHZZK</p>
                 </div>
               </div>
               <p style="font-size:13.5px; color:var(--fg-dim); margin:0 0 10px; line-height: 1.75;">
-                This is the <strong>game streaming channel</strong> operated by the clan leader (it's not the creator's channel). It shares vivid experiences and strategies from playing Diablo 4, primarily.
+                The <strong>game streaming channel</strong>run by the clan leader (it is not the developer's channel). Centered on Diablo IV, he shares vivid first-hand play experience and strategies.
               </p>
               <ul style="font-size:13px; margin:0 0 12px 18px; padding:0; color:var(--fg-dim); line-height:1.75;">
-                <li>Season-specific character progression·build·skill·Paragon guides & gear setup tips</li>
-                <li>Public Test Realm (PTR) experiences, patch changes, and pause-and-watch shorts 'Strategy Guide in Hand'</li>
+                <li>Seasonal character leveling, builds, skills, Conqueror guides & gear setup tips</li>
+                <li>Public Test Realm (PTR) experiences, patch change notes, and the freeze-frame Shorts 'Guidebook in Your Palm'</li>
               </ul>
               <div class="alert-box gold" style="margin: 0 0 16px; padding: 10px 14px; font-size: 12.5px;">
                 <span class="alert-icon">⚠️</span>
-                <div><strong>Helper/macro questions are not accepted on this channel.</strong> This channel is purely for enjoying the game; helper inquiries and bug reports are only accepted in the official Telegram group (<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a>).</div>
+                <div><strong>Helper/macro questions are not accepted on this channel.</strong> The channel is purely a stream for enjoying the game; helper inquiries and bug reports are accepted only in the official Telegram group (<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a>).</div>
               </div>
             </div>
             <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="clan-btn ruby">
-              <span>Go to Uncle Anjandaing YouTube ↗</span>
+              <span>Go to 삼촌안잔다잉 YouTube ↗</span>
             </a>
           </div>
         </div>
@@ -3044,8 +2670,8 @@
           <div class="clan-guide-header">
             <span style="font-size:24px;">🛡️</span>
             <div>
-              <h3 class="clan-guide-title">&lt;Cute&gt; Rainbow Wings Clan Membership & Basic Life Guide</h3>
-              <p style="margin:2px 0 0; font-size:12.5px; color:var(--fg-dim);">We create a Diablo 4 clan culture where members care for each other and enjoy playing together.</p>
+              <h3 class="clan-guide-title">&lt;앙증맞은&gt; Rainbow Wings Clan: Joining & Basic Community Guide</h3>
+              <p style="margin:2px 0 0; font-size:12.5px; color:var(--fg-dim);">We build a Diablo IV clan culture of consideration and fun together.</p>
             </div>
           </div>
 
@@ -3053,29 +2679,29 @@
             <!-- 1. 가입 절차 4단계 패널 -->
             <div class="clan-sub-panel blue-border">
               <h4 class="clan-sub-panel-title" style="color:var(--blue);">
-                <span>🎥</span> <strong>4-Step Membership Process</strong> <span class="chip" style="font-size:11px; margin-left:auto;">No Discord Membership!</span>
+                <span>🎥</span> <strong>4 Steps to Join</strong> <span class="chip" style="font-size:11px; margin-left:auto;">No Discord sign-up!</span>
               </h4>
               <ol style="margin:0 0 0 18px; padding:0; line-height:1.9; font-size:13.5px; color:var(--fg);">
-                <li>Search for clan in-game → Find <strong>Cute</strong> → <strong>Apply for Membership</strong></li>
-                <li>Notify of membership in <strong>Uncle Anjandaing Channel</strong> (live streams, etc.)</li>
-                <li><strong>Clan leader and administrators</strong> review the application and <strong>approve</strong> it.</li>
-                <li>Applicant clicks <strong>Final Approval (Accept)</strong> in-game to complete membership.</li>
+                <li>Search for clans in-game → <strong>앙증맞은</strong> and find it → <strong>Apply to join</strong></li>
+                <li><strong>삼촌안잔다잉 Channel</strong>(live stream, etc.) — announce that you applied</li>
+                <li><strong>The clan leader and admins</strong>check the application and <strong>approve</strong>it</li>
+                <li>The applicant goes back in-game and presses <strong>final approval (accept)</strong>to complete joining</li>
               </ol>
               <div style="margin-top:auto; padding-top:14px; font-size:12px; color:var(--fg-muted);">
-                ※ Discord is not operated, and clan approval is confirmed via Uncle Anjandaing's live broadcast.
+                ※ We do not run Discord, and clan approval goes through live confirmation on the 삼촌안잔다잉 stream.
               </div>
             </div>
 
             <!-- 2. 가입 후 활동 가이드 & 생활 수칙 패널 -->
             <div class="clan-sub-panel gold-border">
               <h4 class="clan-sub-panel-title" style="color:var(--gold-bright);">
-                <span>🤝</span> <strong>Post-Membership Activities & Basic Clan Rules</strong>
+                <span>🤝</span> <strong>Activities After Joining & Basic Clan Etiquette</strong>
               </h4>
               <ul style="margin:0 0 0 18px; padding:0; line-height:1.85; font-size:13px; color:var(--fg-dim);">
-                <li><strong style="color:var(--fg);">Welcome First Greetings & Building Camaraderie</strong>: After membership approval, leave a first greeting in the in-game guild chat. You'll quickly get to know each other by calling each other by nicknames.</li>
-                <li><strong style="color:var(--fg);">Requesting Help & Reciprocal Culture</strong>: When you need help with character progression, high-tier Pits, boss summon parties, etc., feel free to request it in the <strong>guild chat or YouTube live stream</strong>. <em>"Help is Reciprocal (give and take)"</em> mindset, you can help other members later.</li>
-                <li><strong style="color:var(--fg);">Basic Etiquette and Mutual Respect</strong>: As this is a casual space for various users, please use considerate language (no derogatory or abusive language). Light searching before asking questions is also encouraged.</li>
-                <li><strong style="color:var(--fg);">Season End and New Season Return</strong>: If inactive for more than 10 days after a season ends, members may be removed, but you are always welcome to re-apply for membership when a new season begins.</li>
+                <li><strong style="color:var(--fg);">A warm first greeting & building closeness</strong>: After your join approval, please leave a first greeting in the in-game guild chat. Greet each other by nickname and you will get close quickly.</li>
+                <li><strong style="color:var(--fg);">Asking for help & the give-and-take culture</strong>: When you need help with leveling, Pit tiers, boss-summoning parties and so on, feel free to ask in <strong>the guild chat or on the YouTube live stream</strong>. <em>"Help is a mutual exchange (give and take)"</em> — with that spirit, just help other family members later.</li>
+                <li><strong style="color:var(--fg);">Basic courtesy & mutual respect</strong>: Since this is a friendly space with many different players, please use considerate language (no belittling or swearing). Making a quick search before asking is also encouraged.</li>
+                <li><strong style="color:var(--fg);">Season off & returning for a new season</strong>: If you stay offline for 10 or more days after the season ends, members may be cleared out, but you can freely apply again whenever a new season starts.</li>
               </ul>
             </div>
           </div>
@@ -3088,32 +2714,33 @@
           <h2 class="section-title"><span class="section-num">12</span> Frequently Asked Questions (FAQ) & Troubleshooting</h2>
         </div>
 
-        <h3>Q. My skills don't activate when I press the trigger key.</h3>
+        <h3>Q. I press the trigger key but the skill does not fire.</h3>
         <ul>
-          <li>Check if the status on the top bar is <strong>Running</strong> (whether the <span class="chip green">▶ Start</span> button has been clicked).</li>
-          <li>Check if the <strong>macro activation switch</strong> for the selected slot is turned on, and if there is at least one step in the sequence tab.</li>
-          <li>The Diablo 4 game window must be focused in the foreground.</li>
-          <li>If you have chat or inventory open and the helper is paused due to the <strong>Pause Key</strong>, pressing the trigger key once more will unpause it.</li>
+          <li>Check that the top bar's status shows <strong>Running</strong>(whether you clicked the<span class="chip green">▶ Start</span> button).</li>
+          <li>Check that the selected slot's <strong>macro active switch</strong>is on, and that at least one step is in the Sequence tab.</li>
+          <li>The Diablo IV game window must be focused at the very front of the screen.</li>
+          <li>If you opened chat or the inventory and it is paused by a <strong>pause key</strong>, press the trigger key once more to release it.</li>
         </ul>
 
-        <h3>Q. I use the right mouse button as the trigger key, but windows keep closing in my inventory or stash.</h3>
-        <p>Set the <strong>Press Delay</strong> in the macro settings to <code>250ms ~ 300ms</code>. This way, a 'short click' when right-clicking to move items will be passed directly to the game, and the macro will only activate when you hold down the button, completely eliminating accidental window closures.</p>
+        <h3>Q. I use right mouse as the trigger key, but the window keeps closing in the inventory or stash.</h3>
+        <p>In the macro settings, set <strong>Press Delay</strong>to <code>250ms ~ 300ms</code>. This way the 'short click' you make when right-clicking items to move them passes through to the game as is, the macro turns on only when you press and hold, and the window-closing malfunction disappears completely.</p>
 
-        <h3>Q. The Horadric Cube's Transmutation button isn't found or it stops.</h3>
-        <p>In version 1.30, the OCR text recognition logic and cube emptiness verification have been significantly enhanced. If text is too blurry or UI scaling is extreme in your in-game graphics settings, recognition may be difficult. If the issue persists, please copy the <code>alter_slots.txt</code> file from the <code>%APPDATA%\d4cute_helper\debug\</code> folder and inquire in the Telegram group.</p>
+        <h3>Q. Horadric Cube Stat Alteration cannot find the button or stops.</h3>
+        <p>Version 1.30 greatly strengthened the OCR text recognition logic and the Cube Empty Check. If the text in the in-game graphics settings is too blurry or the UI scale is extreme, recognition can be difficult, so if the problem continues, in the <code>%APPDATA%\d4cute_helper\debug\</code> folder, copy the <code>alter_slots.txt</code> file and ask in the Telegram group.</p>
 
-        <h3>Q. In Transmutation, two items overlap, or it moves to the next slot without transmuting.</h3>
-        <p>This symptom occurs on PCs where the transmutation animation is slow. Increase the <strong>Result Wait ms</strong> in the Convenience Features tab (e.g., 3000 → 5000). If it still repeats, please upload <code>debug\alter_slots.txt</code> to the group. Starting from 1.30.1, it checks if the first slot of the cube is empty using an image and presses Enter even if the acceptance window appears late.</p>
+        <h3>Q. In Stat Alteration, two items overlap, or it moves on to the next slot without altering.</h3>
+        <p>This happens on PCs where the alteration animation is slow. In the Tools tab, raise the <strong>Result Wait ms</strong>(e.g. 3000 → 5000), and if it still repeats, post <code>debug\alter_slots.txt</code> to the group. Since 1.30.1, it checks that the cube is empty using the cube's first-slot image and presses Enter even if the accept window shows up late.</p>
 
-        <h3>Q. Where can I ask helper/macro questions?</h3>
-        <p>They are only accepted in the Telegram user group <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer"><code>@d4cute_helper</code></a>. The Uncle Anjandaing YouTube channel is a game streaming channel and does not accept helper/macro inquiries.</p>
+        <h3>Q. Where do I ask helper/macro questions?</h3>
+        <p>Telegram user group <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer"><code>@d4cute_helper</code></a> is the only place we take them. The 삼촌안잔다잉 YouTube channel is a stream for enjoying the game, so it does not accept helper/macro inquiries.</p>
 
-        <h3>Q. The window appears white or flickers (white screen phenomenon).</h3>
-        <p>In 1.30, the renderer of the embedded browser was changed to fix the white screen issue. If it reappears, please upload the <span class="chip">Copy Errors Only</span> result from the log viewer and a screenshot to the Telegram group.</p>
+        <h3>Q. The window turns white or flickers (whiteout).</h3>
+        <p>Version 1.30 fixed the whiteout by changing the embedded browser's renderer. If you still see it again, post the log viewer's <span class="chip">Copy Errors Only</span> result and a screen capture to the Telegram group.</p>
       </section>
+
       <footer>
         <div>d4cute helper v1.30.0 Documentation · Crafted with Care</div>
-        <div><a href="#quickstart" style="color: var(--gold);">맨 위로 이동 ↑</a></div>
+        <div><a href="#quickstart" style="color: var(--gold);">Back to top ↑</a></div>
       </footer>
 
     </main>
@@ -3124,23 +2751,23 @@
     <div class="lightbox-topbar">
       <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
       <div class="lightbox-controls">
-        <button class="lightbox-btn" id="zoomOutBtn" title="축소 (마우스 휠 아래)">－</button>
+        <button class="lightbox-btn" id="zoomOutBtn" title="Zoom out (mouse wheel down)">－</button>
         <span class="lightbox-zoom-indicator" id="zoomLevel">100%</span>
-        <button class="lightbox-btn" id="zoomInBtn" title="확대 (마우스 휠 위)">＋</button>
-        <button class="lightbox-btn" id="zoomResetBtn" title="원본 크기">리셋</button>
-        <button class="lightbox-btn lightbox-close-btn" id="lightboxCloseBtn" title="닫기 (ESC)">✕ 닫기</button>
+        <button class="lightbox-btn" id="zoomInBtn" title="Zoom in (mouse wheel up)">＋</button>
+        <button class="lightbox-btn" id="zoomResetBtn" title="Original size">Reset</button>
+        <button class="lightbox-btn lightbox-close-btn" id="lightboxCloseBtn" title="Close (ESC)">✕ Close</button>
       </div>
     </div>
     
     <div class="lightbox-stage" id="lightboxStage">
-      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" title="이전 이미지 (←)">❮</button>
+      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" title="Previous image (←)">❮</button>
       <img src="" alt="" class="lightbox-img" id="lightboxImg">
-      <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" title="다음 이미지 (→)">❯</button>
+      <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" title="Next image (→)">❯</button>
     </div>
 
     <div class="lightbox-bottombar">
-      <div class="lightbox-caption-text" id="lightboxCaption">이미지 설명</div>
-      <div style="font-size: 12px; color: var(--fg-muted);">마우스 휠로 확대/축소 가능 · 좌우 방향키로 탐색</div>
+      <div class="lightbox-caption-text" id="lightboxCaption">Image description</div>
+      <div style="font-size: 12px; color: var(--fg-muted);">Zoom with the mouse wheel · navigate with the left/right arrow keys</div>
     </div>
   </div>
 
@@ -3290,7 +2917,7 @@
 
       // 영상 목록 사이드바 생성
       videoCards.forEach((vcard, vidx) => {
-        const title = vcard.dataset.videoTitle || `영상 가이드 ${vidx + 1}`;
+        const title = vcard.dataset.videoTitle || `Video guide ${vidx + 1}`;
         vcard.id = `vid-item-${vidx}`;
 
         const navCard = document.createElement('a');
@@ -3300,7 +2927,7 @@
           <div class="media-nav-thumb" style="display:flex;align-items:center;justify-content:center;background:#181622;color:var(--ruby);font-size:18px;">▶</div>
           <div class="media-nav-meta">
             <div class="media-nav-title"><span class="video-badge">VIDEO</span>${title}</div>
-            <div class="media-nav-desc">클릭하여 해당 영상 위치로 이동</div>
+            <div class="media-nav-desc">Click to jump to that video</div>
           </div>
         `;
         navCard.addEventListener('click', (e) => {
@@ -3413,7 +3040,7 @@
 
           searchMatchCount.innerText = matchCount;
           if (matchCount === 0) {
-            searchResultsList.innerHTML = `<div style="font-size:12.5px; color:var(--fg-muted); padding:16px 0; text-align:center;">검색 결과가 없습니다.</div>`;
+            searchResultsList.innerHTML = `<div style="font-size:12.5px; color:var(--fg-muted); padding:16px 0; text-align:center;">No search results.</div>`;
           }
         } else {
           searchClearBtn.classList.remove('visible');

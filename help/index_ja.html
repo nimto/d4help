@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>d4cute ヘルパー 公式ユーザーガイド (v1.30 最新版)</title>
-  <meta name="description" content="Diablo 4 d4cute ヘルパー v1.30 完全マニュアル — マクロ設定、アイテム厳選、リアルタイムアラーム、動画ガイドおよびコミュニティ案内。">
+  <title>d4cute helper 公式マニュアル (v1.30 最新版)</title>
+  <meta name="description" content="Diablo IV d4cute helper v1.30 総合マニュアル — マクロ設定、インベントリ線変性の便利機能、リアルタイムアラーム、画像/動画ガイド、앙증맞은(アンジュンマジュン)クランと삼촌안잔다잉チャンネル。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1390,287 +1390,6 @@
       gap: 12px;
     }
   
-    /* ─── 국기 언어 선택기 (오직 국기만 표시되는 고급 팝오버) ─── */
-    .flag-picker {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      margin-left: 8px;
-    }
-    .flag-picker-btn {
-      background: rgba(22, 21, 32, 0.85);
-      border: 1px solid rgba(229, 184, 92, 0.4);
-      border-radius: 8px;
-      padding: 4px 6px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-    .flag-picker-btn:hover {
-      background: rgba(229, 184, 92, 0.15);
-      border-color: var(--gold-bright);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px var(--gold-glow);
-    }
-    .flag-active-img {
-      width: 24px;
-      height: 16px;
-      object-fit: cover;
-      border-radius: 3px;
-      display: block;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    }
-    .flag-picker-dropdown {
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0;
-      background: rgba(18, 17, 26, 0.98);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(229, 184, 92, 0.35);
-      border-radius: 12px;
-      padding: 10px;
-      display: none;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(229, 184, 92, 0.15);
-      z-index: 2000;
-      min-width: 150px;
-    }
-    .flag-picker-dropdown.show {
-      display: grid;
-      animation: flagMenuPop 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    @keyframes flagMenuPop {
-      from { opacity: 0; transform: translateY(-6px) scale(0.96); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .flag-picker-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px;
-      border-radius: 6px;
-      border: 1px solid transparent;
-      background: rgba(255, 255, 255, 0.04);
-      transition: all 0.15s ease;
-      text-decoration: none;
-    }
-    .flag-picker-item:hover {
-      background: rgba(229, 184, 92, 0.22);
-      border-color: var(--gold);
-      transform: scale(1.1);
-    }
-    .flag-picker-item.active {
-      border-color: var(--gold);
-      background: rgba(229, 184, 92, 0.18);
-      box-shadow: 0 0 10px var(--gold-glow);
-    }
-    .flag-icon-img {
-      width: 26px;
-      height: 18px;
-      object-fit: cover;
-      border-radius: 3px;
-      display: block;
-    }
-
-
-    /* ─── 럭셔리 다크 판타지 텔레그램 상단 배너 ─── */
-    .telegram-banner-v3 {
-      position: relative;
-      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.2) 0%, rgba(18, 17, 24, 0.95) 60%),
-                  radial-gradient(ellipse at 90% 50%, rgba(229, 184, 92, 0.12) 0%, rgba(14, 13, 20, 0.98) 70%),
-                  #0e0d14;
-      border: 1px solid rgba(42, 171, 238, 0.35);
-      border-left: 5px solid #2AABEE;
-      border-radius: 14px;
-      padding: 22px 26px;
-      margin: 24px 0 32px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(42, 171, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-      overflow: hidden;
-    }
-    .telegram-banner-v3::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(42, 171, 238, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-      animation: bannerGlowPulse 6s ease-in-out infinite alternate;
-    }
-    @keyframes bannerGlowPulse {
-      0% { opacity: 0.5; transform: scale(0.98); }
-      100% { opacity: 1; transform: scale(1.02); }
-    }
-    .tg-v3-left {
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      position: relative;
-      z-index: 1;
-      flex: 1;
-    }
-    .tg-v3-icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .tg-v3-icon-box::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 16px;
-      border: 1px solid rgba(42, 171, 238, 0.5);
-      animation: pulseIconRing 2.5s infinite;
-    }
-    @keyframes pulseIconRing {
-      0% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.08); opacity: 0.3; }
-      100% { transform: scale(1); opacity: 0.8; }
-    }
-    .tg-v3-content {
-      flex: 1;
-    }
-    .tg-v3-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-    }
-    .tg-v3-title {
-      font-size: 19px;
-      font-weight: 800;
-      font-family: var(--font-title);
-      background: linear-gradient(135deg, #ffd778 0%, #e5b85c 60%, #b8860b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 0.4px;
-      margin: 0;
-    }
-    .tg-v3-badge {
-      background: rgba(229, 72, 77, 0.2);
-      border: 1px solid rgba(229, 72, 77, 0.5);
-      color: #ff6b6b;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .tg-v3-desc {
-      font-size: 14.5px;
-      color: #c9c7d8;
-      line-height: 1.65;
-      margin: 0 0 10px 0;
-    }
-    .tg-v3-highlight-box {
-      display: inline-block;
-      background: rgba(42, 171, 238, 0.08);
-      border: 1px solid rgba(42, 171, 238, 0.25);
-      border-radius: 8px;
-      padding: 7px 12px;
-      font-size: 13.5px;
-      color: #e2e8f0;
-      line-height: 1.5;
-    }
-    .tg-v3-highlight-box strong {
-      color: #38bdf8;
-    }
-    .tg-v3-highlight-box em {
-      color: #fbbf24;
-      font-style: normal;
-      font-weight: 700;
-    }
-    .tg-v3-right {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-      min-width: 170px;
-    }
-    .tg-v3-btn-channel {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 20px;
-      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 6px 18px rgba(0, 136, 204, 0.45);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-    .tg-v3-btn-channel:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 136, 204, 0.65);
-      filter: brightness(1.1);
-    }
-    .tg-v3-btn-group {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 20px;
-      background: rgba(255, 255, 255, 0.05);
-      color: #e6e5ee;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13.5px;
-      border-radius: 10px;
-      border: 1px solid rgba(229, 184, 92, 0.35);
-      transition: all 0.2s ease;
-    }
-    .tg-v3-btn-group:hover {
-      background: rgba(229, 184, 92, 0.15);
-      border-color: var(--gold);
-      color: var(--gold-bright);
-      transform: translateY(-1px);
-    }
-    @media (max-width: 860px) {
-      .telegram-banner-v3 {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 18px;
-        gap: 16px;
-      }
-      .tg-v3-right {
-        flex-direction: row;
-        width: 100%;
-      }
-      .tg-v3-btn-channel, .tg-v3-btn-group {
-        flex: 1;
-        padding: 10px 12px;
-        font-size: 13px;
-      }
-    }
-
-
     /* ─── 국기 언어 선택기 (자바스크립트 0% 순수 HTML5 details/summary) ─── */
     details.flag-picker {
       position: relative;
@@ -1756,32 +1475,153 @@
       display: block;
     }
 
-</style>
-  <script>
-    (function () {
-      try {
-        var params = new URLSearchParams(window.location.search);
-        var q = (params.get("lang") || "").toLowerCase();
-        var saved = (localStorage.getItem("d4help_lang") || "").toLowerCase();
-        var nav = (navigator.language || "").toLowerCase();
 
-        // en 페이지: 한국어 명시 시 상위(ko)로 이동
-        if (q.startsWith("ko")) {
-          localStorage.setItem("d4help_lang", "ko");
-          window.location.replace("../" + window.location.search + window.location.hash);
-          return;
-        }
-        localStorage.setItem("d4help_lang", "en");
-      } catch (e) {}
-    })();
-  </script>
+    /* ─── 럭셔리 다크 판타지 텔레그램 상단 배너 ─── */
+    .telegram-banner-v3 {
+      position: relative;
+      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.2) 0%, rgba(18, 17, 24, 0.95) 60%),
+                  radial-gradient(ellipse at 90% 50%, rgba(229, 184, 92, 0.12) 0%, rgba(14, 13, 20, 0.98) 70%),
+                  #0e0d14;
+      border: 1px solid rgba(42, 171, 238, 0.35);
+      border-left: 5px solid #2AABEE;
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 20px 0 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(42, 171, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+    .tg-v3-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      flex: 1;
+    }
+    .tg-v3-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .tg-v3-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .tg-v3-title {
+      font-size: 18px;
+      font-weight: 800;
+      font-family: var(--font-title);
+      color: #ffd778;
+      letter-spacing: 0.4px;
+      margin: 0;
+    }
+    .tg-v3-badge {
+      background: rgba(229, 72, 77, 0.2);
+      border: 1px solid rgba(229, 72, 77, 0.5);
+      color: #ff6b6b;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+    .tg-v3-desc {
+      font-size: 14px;
+      color: #c9c7d8;
+      line-height: 1.6;
+      margin: 0 0 8px 0;
+    }
+    .tg-v3-highlight-box {
+      display: inline-block;
+      background: rgba(42, 171, 238, 0.08);
+      border: 1px solid rgba(42, 171, 238, 0.25);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+    .tg-v3-highlight-box strong { color: #38bdf8; }
+    .tg-v3-highlight-box em { color: #fbbf24; font-style: normal; font-weight: 700; }
+    .tg-v3-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+      min-width: 165px;
+    }
+    .tg-v3-btn-channel {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13.5px;
+      border-radius: 9px;
+      box-shadow: 0 4px 14px rgba(0, 136, 204, 0.4);
+      transition: all 0.2s ease;
+    }
+    .tg-v3-btn-channel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+      filter: brightness(1.1);
+    }
+    .tg-v3-btn-group {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #e6e5ee;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      border-radius: 9px;
+      border: 1px solid rgba(229, 184, 92, 0.35);
+      transition: all 0.2s ease;
+    }
+    .tg-v3-btn-group:hover {
+      background: rgba(229, 184, 92, 0.15);
+      border-color: var(--gold);
+      color: var(--gold-bright);
+    }
+    @media (max-width: 860px) {
+      .telegram-banner-v3 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+      }
+      .tg-v3-right {
+        flex-direction: row;
+      }
+      .tg-v3-btn-channel, .tg-v3-btn-group {
+        flex: 1;
+      }
+    }
+
+</style>
 </head>
 <body>
 
   <!-- 상단 글로벌 바 -->
   <header class="top-nav">
     <div class="nav-left">
-      <button class="toggle-sidebar-btn" id="sidebarToggle" title="사이드바 접기/펼치기 (마우스 올리면 임시 표시)" aria-label="사이드바 토글">
+      <button class="toggle-sidebar-btn" id="sidebarToggle" title="サイドバーを折りたたむ/開く (マウスを乗せると一時表示)" aria-label="サイドバー切り替え">
         ☰
       </button>
       <a href="#" class="brand">
@@ -1790,30 +1630,25 @@
       </a>
     </div>
     <div class="nav-right">
-      <a href="#quickstart" class="nav-link">Quick Start</a>
-      <a href="#tools-alter" class="nav-link">Transmute Tools</a>
-      <a href="#community" class="nav-link">Community</a>
-      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">Repository ↗</a>
-      
-    
-      
-    
-    
+      <a href="#quickstart" class="nav-link">はじめに</a>
+      <a href="#tools-alter" class="nav-link">線変性ツール</a>
+      <a href="#community" class="nav-link">クラン & チャンネル</a>
+      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">リポジトリ ↗</a>
       <details class="flag-picker">
-      <summary class="flag-picker-btn" title="Language: 日本語">
-        <img src="https://flagcdn.com/w40/jp.png" alt="ja" class="flag-active-img">
-      </summary>
-      <div class="flag-picker-dropdown">
-        <a href="index.html" class="flag-picker-item" title="한국어 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
-        <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
-        <a href="index_ja.html" class="flag-picker-item active" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
-        <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
-        <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
-        <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
-        <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
-        <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
-      </div>
-    </details>
+          <summary class="flag-picker-btn" title="Language: 日本語">
+            <img src="https://flagcdn.com/w40/jp.png" alt="ja" class="flag-active-img">
+          </summary>
+          <div class="flag-picker-dropdown">
+            <a href="index.html" class="flag-picker-item" title="韓国語 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
+            <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
+            <a href="index_ja.html" class="flag-picker-item active" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
+            <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
+            <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
+            <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
+            <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
+            <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
+          </div>
+        </details>
     </div>
   </header>
 
@@ -1829,22 +1664,22 @@
       <div class="sidebar-tabs">
         <button class="sidebar-tab-btn active" data-tab="toc">
           <span class="tab-icon">📑</span>
-          <span>Table of Contents</span>
+          <span>目次</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="images">
           <span class="tab-icon">🖼️</span>
-          <span>Images (<span id="imgCount">0</span>)</span>
+          <span>画像 (<span id="imgCount">0</span>)</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="videos">
           <span class="tab-icon">🎬</span>
-          <span>Videos (<span id="vidCount">0</span>)</span>
+          <span>動画 (<span id="vidCount">0</span>)</span>
         </button>
       </div>
 
       <!-- 도움말 본문 전체 검색창 -->
       <div class="sidebar-search-box">
-        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="Search manual contents..." autocomplete="off">
-        <button class="search-clear-btn" id="searchClearBtn" title="검색어 지우기">✕</button>
+        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="ヘルプ全体を検索..." autocomplete="off">
+        <button class="search-clear-btn" id="searchClearBtn" title="検索語を消去">✕</button>
       </div>
 
       <!-- 사이드바 스크롤 컨테이너 -->
@@ -1853,8 +1688,8 @@
         <!-- 0. 실시간 검색 결과 패널 (검색 시 활성화) -->
         <div class="tab-panel" id="panel-search">
           <div style="font-size:12px; color:var(--fg-dim); margin-bottom:10px; display:flex; justify-content:space-between;">
-            <span>Search Results: <strong id="searchMatchCount" style="color:var(--gold);">0</strong>건</span>
-            <span style="font-size:11px; color:var(--fg-muted);">Click to jump to section</span>
+            <span>検索結果： <strong id="searchMatchCount" style="color:var(--gold);">0</strong>件</span>
+            <span style="font-size:11px; color:var(--fg-muted);">クリックでその位置へ移動</span>
           </div>
           <div class="search-results-list" id="searchResultsList">
             <!-- 자바스크립트로 본문 검색 결과 목록 생성 -->
@@ -1864,62 +1699,62 @@
         <!-- 1. 목차 패널 -->
         <div class="tab-panel active" id="panel-toc">
           <ul class="toc-tree">
-            <li><a href="#quickstart" class="toc-link">1. クイックスタートガイド</a></li>
+            <li><a href="#quickstart" class="toc-link">⚡ 1. 5分クイックスタート & インストール</a></li>
             <li>
-              <a href="#screen-ui" class="toc-link">2. 画面構成とUI要素</a>
+              <a href="#screen-ui" class="toc-link">🖥️ 2. 最新の画面構成 (1.30)</a>
               <ul class="toc-sub-tree">
-                <li><a href="#screen-topbar" class="toc-link">Top Bar & Profile Management</a></li>
-                <li><a href="#screen-slots" class="toc-link">Slot Bar (Macros, Sponsors, Tools, Alarms)</a></li>
+                <li><a href="#screen-topbar" class="toc-link">上部バー & プロファイル操作</a></li>
+                <li><a href="#screen-slots" class="toc-link">スロットバー (A~Gの7スロット、スポンサー、便利機能、アラーム)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#macro-engine" class="toc-link">3. マクロエンジン詳細設定</a>
+              <a href="#macro-engine" class="toc-link">⚙️ 3. マクロ設定 & 発動エンジン</a>
               <ul class="toc-sub-tree">
-                <li><a href="#macro-modes" class="toc-link">Sequential, Independent, Hold, Toggle, Single</a></li>
-                <li><a href="#macro-keys" class="toc-link">Trigger Keys & Delay Filters</a></li>
+                <li><a href="#macro-modes" class="toc-link">順次 · 独立 · ホールド · トグル · 一度</a></li>
+                <li><a href="#macro-keys" class="toc-link">発動キーと押下認識ディレイのフィルター</a></li>
               </ul>
             </li>
             <li>
-              <a href="#sequence-builder" class="toc-link">4. シーケンスビルダーマスター</a>
+              <a href="#sequence-builder" class="toc-link">📋 4. シーケンス & マウス録画</a>
               <ul class="toc-sub-tree">
-                <li><a href="#seq-cards" class="toc-link">스텝 카드 및 일괄 딜레이 변경</a></li>
-                <li><a href="#seq-recorder" class="toc-link">Live mouse-position recording &amp; randomness</a></li>
-                <li><a href="#seq-drag-path" class="toc-link">Drag-path recording (Whirlwind)</a></li>
-                <li><a href="#seq-rotation-pack" class="toc-link">🌀 360° Circular Drag Pack (9 Presets)</a></li>
+                <li><a href="#seq-cards" class="toc-link">ステップカードとディレイ一括変更</a></li>
+                <li><a href="#seq-recorder" class="toc-link">リアルタイムのマウス座標録画 & ランダム化</a></li>
+                <li><a href="#seq-drag-path" class="toc-link">ドラッグ軌跡の録画 (ワールウィンド · 精神集中)</a></li>
+                <li><a href="#seq-rotation-pack" class="toc-link">🌀 360度円形回転パック (9種プリセット)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#tools-alter" class="toc-link">5. アイテム変成ツール活用法</a>
+              <a href="#tools-alter" class="toc-link">🧪 5. 便利機能 — インベントリ線変性</a>
               <ul class="toc-sub-tree">
-                <li><a href="#alter-grid" class="toc-link">첫 칸/끝 칸 33칸 자동 계산</a></li>
-                <li><a href="#alter-safety" class="toc-link">귀속 건너뛰기 & 큐브 비움 검증</a></li>
+                <li><a href="#alter-grid" class="toc-link">最初のマス/最後のマスから33マスを自動計算</a></li>
+                <li><a href="#alter-safety" class="toc-link">帰属スキップ & キューブ空確認</a></li>
               </ul>
             </li>
             <li>
-              <a href="#alarm" class="toc-link">6. インゲームスマートアラーム＆タイマー</a>
+              <a href="#alarm" class="toc-link">🔔 6. スマートアラームシステム</a>
               <ul class="toc-sub-tree">
-                <li><a href="#alarm-events" class="toc-link">군단/보스 상시 백그라운드 감시</a></li>
-                <li><a href="#alarm-outputs" class="toc-link">인게임 배너 & 한국어 TTS 음성</a></li>
+                <li><a href="#alarm-events" class="toc-link">軍団/ボスを常時バックグラウンドで監視</a></li>
+                <li><a href="#alarm-outputs" class="toc-link">ゲーム内バナー & 韓国語TTS音声</a></li>
               </ul>
             </li>
             <li>
-              <a href="#window-modes" class="toc-link">7. ウィンドウモードと最適化設定</a>
+              <a href="#window-modes" class="toc-link">🪟 7. ウィンドウモード、ピン、オーバーレイ</a>
               <ul class="toc-sub-tree">
-                <li><a href="#window-mini" class="toc-link">미니창 모드 (초소형 바)</a></li>
-                <li><a href="#window-overlay" class="toc-link">인게임 HUD 오버레이</a></li>
+                <li><a href="#window-mini" class="toc-link">ミニウィンドウモード (超小型バー)</a></li>
+                <li><a href="#window-overlay" class="toc-link">ゲーム内HUDオーバーレイ</a></li>
               </ul>
             </li>
-            <li><a href="#safety-features" class="toc-link">8. セキュリティと安全設計</a></li>
-            <li><a href="#profile-sync" class="toc-link">9. プロファイルバックアップと移行</a></li>
+            <li><a href="#safety-features" class="toc-link">🛡️ 8. 安全装置 (待機キー & フォーカス)</a></li>
+            <li><a href="#profile-sync" class="toc-link">💾 9. プロファイル管理 & 共有</a></li>
             <li>
-              <a href="#telegram-support" class="toc-link">10. Telegram連携とリモート管理</a>
+              <a href="#telegram-support" class="toc-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2AABEE" style="vertical-align:-2px; margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 10. Telegramサポート & デバッグログ</a>
               <ul class="toc-sub-tree">
-                <li><a href="#telegram-install" class="toc-link">텔레그램 설치 & 그룹 가입</a></li>
-                <li><a href="#log-viewer-guide" class="toc-link">로그 복사 및 오류 해결 제보</a></li>
+                <li><a href="#telegram-install" class="toc-link">Telegramのインストール & グループ参加</a></li>
+                <li><a href="#log-viewer-guide" class="toc-link">ログのコピーとエラー報告</a></li>
               </ul>
             </li>
-            <li><a href="#community" class="toc-link">11. クラン＆公式コミュニティ案内</a></li>
-            <li><a href="#faq" class="toc-link">12. よくある質問 (FAQ)</a></li>
+            <li><a href="#community" class="toc-link">👑 11. クラン & 삼촌안잔다잉チャンネル</a></li>
+            <li><a href="#faq" class="toc-link">❓ 12. よくある質問 (FAQ)</a></li>
           </ul>
         </div>
 
@@ -1944,37 +1779,37 @@
         <!-- 앙증맞은 클랜 박스 -->
         <div class="community-box">
           <div class="community-head">
-            <span class="community-title">⚔️ &lt;앙증맞은&gt; 무지개날개</span>
-            <span class="community-tag">클랜</span>
+            <span class="community-title">⚔️ &lt;앙증맞은&gt; 虹の翼</span>
+            <span class="community-tag">クラン</span>
           </div>
-          <div class="community-desc">디아4 인게임 클랜 · 클랜장 <strong>대한민국</strong> · 가입: 인게임 검색(앙증맞은) → 채널에 알림 → 승인 → 최종 수락 (디스코드 없음)</div>
+          <div class="community-desc">Diablo IVゲーム内クラン · クランマスター <strong>大韓民国</strong> · 参加：ゲーム内で検索(앙증맞은) → チャンネルに通知 → 承認 → 最終承諾 (Discordなし)</div>
           <div class="community-links">
-            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="comm-btn telegram">💬 텔레그램 그룹</a>
-            <a href="#community" class="comm-btn clan">📜 클랜 안내</a>
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="comm-btn telegram">💬 Telegramグループ</a>
+            <a href="#community" class="comm-btn clan">📜 クラン案内</a>
           </div>
         </div>
         <!-- 삼촌안잔다잉 채널 박스 -->
         <div class="community-box">
           <div class="community-head">
-            <span class="community-title">📺 삼촌안잔다잉 채널</span>
-            <span class="community-tag" style="color:var(--ruby); background:rgba(229,72,77,0.15);">클랜장</span>
+            <span class="community-title">📺 삼촌안잔다잉チャンネル</span>
+            <span class="community-tag" style="color:var(--ruby); background:rgba(229,72,77,0.15);">クランマスター</span>
           </div>
-          <div class="community-desc">게임 방송 채널 · 헬퍼 질문은 텔레그램에서</div>
+          <div class="community-desc">ゲーム配信チャンネル · ヘルパーの質問はTelegramで</div>
           <div class="community-links">
-            <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="comm-btn youtube">▶ YouTube 방송 ↗</a>
+            <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="comm-btn youtube">▶ YouTube配信 ↗</a>
           </div>
         </div>
       </div>
 
       <!-- 접힘(미니) 모드용 아이콘 바 -->
       <div class="mini-icons-list">
-        <button class="mini-icon-btn" onclick="document.getElementById('quickstart').scrollIntoView({behavior:'smooth'})" title="시작하기">⚡</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('screen-ui').scrollIntoView({behavior:'smooth'})" title="화면 구성">🖥️</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('macro-engine').scrollIntoView({behavior:'smooth'})" title="매크로 설정">⚙️</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('tools-alter').scrollIntoView({behavior:'smooth'})" title="인벤 선변성">🧪</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('alarm').scrollIntoView({behavior:'smooth'})" title="스마트 알람">🔔</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})" title="클랜 & 방송">👑</button>
-        <button class="mini-icon-btn" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})" title="자주 묻는 질문">❓</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('quickstart').scrollIntoView({behavior:'smooth'})" title="はじめに">⚡</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('screen-ui').scrollIntoView({behavior:'smooth'})" title="画面構成">🖥️</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('macro-engine').scrollIntoView({behavior:'smooth'})" title="マクロ設定">⚙️</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('tools-alter').scrollIntoView({behavior:'smooth'})" title="インベントリ線変性">🧪</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('alarm').scrollIntoView({behavior:'smooth'})" title="スマートアラーム">🔔</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})" title="クラン & 配信">👑</button>
+        <button class="mini-icon-btn" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})" title="よくある質問">❓</button>
       </div>
 
     </aside>
@@ -1984,11 +1819,11 @@
       
       <!-- 히어로 배너 -->
       <div class="hero-banner-card">
-        <img src="images/hero_banner.jpg" alt="디아블로4 d4cute 헬퍼 배너" class="hero-banner-img">
+        <img src="../images/hero_banner.jpg" alt="Diablo IV d4cute ヘルパー バナー" class="hero-banner-img">
         <div class="hero-banner-overlay">
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
-          <h1 class="hero-title">d4cute helper 사용 설명서</h1>
-          <p class="hero-desc">1.30 최신 버전 기준 — A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
+          <h1 class="hero-title">d4cute helper 使い方マニュアル</h1>
+          <p class="hero-desc">1.30 最新バージョン基準 — A~Gの7スロットによる順次/独立マクロ、インベントリ線変性の自動化、リアルタイムイベントアラーム、앙증맞은クラン・삼촌안잔다잉チャンネルの紹介</p>
         </div>
       </div>
 
@@ -1999,21 +1834,21 @@
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
               <h3 style="margin: 0; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: 0.3px;">
-                📢 텔레그램 공식 채널에 꼭 가입하세요!
+                📢 Telegram公式チャンネルにぜひ参加してください！
               </h3>
-              <span class="chip blue" style="font-weight: 700;">필독 권장</span>
+              <span class="chip blue" style="font-weight: 700;">必読</span>
             </div>
             <p style="margin: 0 0 8px 0; font-size: 14px; color: var(--fg); line-height: 1.6;">
-              d4cute 헬퍼의 <strong>최신 업데이트 공지, 실시간 패치노트, 오류 제보 및 빠른 기술 지원</strong>은 텔레그램을 통해 가장 빠르게 전달됩니다.<br>
-              특히 이번에 추가된 <strong style="color:var(--gold-bright);">🌀 360도 원형 회전팩(.d4seq) 완성본 파일</strong>과 <strong style="color:#2AABEE;">실제 회전 시연 영상</strong>을 채널에서 무료로 바로 다운로드받으실 수 있습니다!
+              d4cute ヘルパーの <strong>最新アップデート告知、リアルタイムのパッチノート、エラー報告、迅速な技術サポート</strong>は、Telegramを通じて最も早くお届けします。<br>
+              特に今回追加された <strong style="color:var(--gold-bright);">🌀 360度円形回転パック(.d4seq)の完成版ファイル</strong>と <strong style="color:#2AABEE;">実際の回転デモ動画</strong>を、チャンネルから無料ですぐにダウンロードできます！
             </p>
           </div>
           <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
             <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #2AABEE; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13.5px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(42, 171, 238, 0.4);">
-              <span>📢 공지 채널 입장 ↗</span>
+              <span>📢 お知らせチャンネルに参加 ↗</span>
             </a>
             <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid rgba(42, 171, 238, 0.4); color: var(--fg); text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 13.5px; transition: all 0.2s;">
-              <span>💬 이용자 그룹 입장 ↗</span>
+              <span>💬 ユーザーグループに参加 ↗</span>
             </a>
           </div>
         </div>
@@ -2023,40 +1858,40 @@
       <div class="alert-box gold">
         <span class="alert-icon">💡</span>
         <div>
-          <strong>안내</strong>: 헬퍼 창의 <span class="chip gold">?</span> 버튼을 클릭하면 언제든지 이 최신 도움말 페이지가 열립니다. 사이드바 검색창으로 도움말 본문 내용을 실시간 검색할 수 있으며, 이미지를 클릭하면 <strong>마우스 휠 스크롤 확대/축소 및 이전/다음 탐색</strong>이 가능한 풀스크린 뷰어가 작동합니다.
+          <strong>案内</strong>：ヘルパーウィンドウの <span class="chip gold">?</span> ボタンをクリックすると、いつでもこの最新ヘルプページが開きます。サイドバーの検索欄でヘルプ本文をリアルタイム検索でき、画像をクリックすると <strong>マウスホイールでの拡大/縮小および前/次への移動</strong>が可能なフルスクリーンビューアーが起動します。
         </div>
       </div>
 
       <!-- ─── 1. 시작하기 ─── -->
       <section class="doc-section" id="quickstart">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">1</span> 처음 5분 — 설치부터 첫 매크로 가동까지</h2>
+          <h2 class="section-title"><span class="section-num">1</span> 最初の5分 — インストールから最初のマクロ稼働まで</h2>
         </div>
         
-        <p>d4cute helper는 디아블로4 플레이 시 반복 스킬 시전, 버프 유지, 복잡한 인벤토리 호라드림의 함 선변성 작업을 쾌적하고 안전하게 보조하는 고성능 도우미입니다.</p>
+        <p>d4cute helperは、Diablo IVのプレイ中に繰り返し行うスキル発動、バフの維持、複雑なインベントリのホラドリックキューブでの線変性作業を、快適かつ安全にサポートする高性能ヘルパーです。</p>
 
         <ol>
-          <li><a href="https://da.gd/d4help" target="_blank"><strong>최신 설치본 다운로드</strong></a> — 설치본(<code>d4cute_helper_setup.exe</code>)을 받아 설치하거나, 무설치 실행 파일(<code>d4cute_helper.exe</code>)을 바로 실행합니다. Windows가 "알 수 없는 게시자" 경고를 띄울 경우 <em>추가 정보 → 실행</em>을 누릅니다.</li>
-          <li>헬퍼를 켜면 창 크기가 자동으로 가장 작은 기본 크기로 시작되어 게임 화면을 가리지 않습니다.</li>
-          <li>프로필 줄에서 내 직업에 맞는 프로필을 선택하거나 <span class="chip green">＋</span> 버튼으로 새로 생성합니다.</li>
-          <li>슬롯 <span class="chip">A</span>를 누르고 <strong>매크로 설정</strong>에서 파란색 발동키 버튼을 누른 뒤, 사용할 마우스 또는 키보드 키를 지정합니다.</li>
-          <li><strong>시퀀스</strong> 탭에서 시전할 스킬 키와 딜레이를 추가하거나, <span class="chip">녹화</span> 버튼을 눌러 실제 게임 플레이 키 입력을 그대로 기록합니다.</li>
-          <li>하단의 <span class="chip green">▶ 시작</span> 버튼을 누르고 게임으로 돌아가 발동키를 누르면 매크로가 안전하게 동작합니다.</li>
+          <li><a href="https://da.gd/d4help" target="_blank"><strong>最新インストーラーをダウンロード</strong></a> — インストーラー(<code>d4cute_helper_setup.exe</code>)を入手してインストールするか、インストール不要の実行ファイル(<code>d4cute_helper.exe</code>)をそのまま実行します。Windowsが「不明な発行元」の警告を表示した場合は <em>詳細情報 → 実行</em>を押します。</li>
+          <li>ヘルパーを起動するとウィンドウサイズは自動的に最も小さい基本サイズで始まり、ゲーム画面を隠しません。</li>
+          <li>プロファイル行で自分のクラスに合ったプロファイルを選ぶか、 <span class="chip green">＋</span> ボタンで新規作成します。</li>
+          <li>スロット <span class="chip">A</span>を押して <strong>マクロ設定</strong>で青い発動キーのボタンを押し、使用するマウスまたはキーボードのキーを指定します。</li>
+          <li><strong>シーケンス</strong> タブで発動するスキルキーとディレイを追加するか、 <span class="chip">録画</span> ボタンを押して実際のゲームプレイのキー入力をそのまま記録します。</li>
+          <li>下部の <span class="chip green">▶ 開始</span> ボタンを押してゲームに戻り、発動キーを押すとマクロが安全に動作します。</li>
         </ol>
 
         <div class="alert-box info">
           <span class="alert-icon">🛡️</span>
-          <div><strong>게임 창 활성화 감지</strong>: 헬퍼는 디아블로4 창이 활성화되어 있을 때만 키보드/마우스 입력을 게임으로 전송합니다. 바탕화면이나 다른 창 작업 중에는 자동으로 입력이 정지됩니다.</div>
+          <div><strong>ゲームウィンドウのアクティブ検知</strong>：ヘルパーは、Diablo IVのウィンドウがアクティブな時だけキーボード/マウス入力をゲームに送信します。デスクトップや他のウィンドウで作業中は、自動的に入力が停止します。</div>
         </div>
         <div class="alert-box gold">
           <span class="alert-icon">🖥️</span>
-          <div><strong>게임 화면 모드</strong>: 디아블로4 화면 설정을 <strong>창 모드(전체 화면)</strong> 또는 창 모드로 두세요. 전체 화면(독점)에서는 오버레이가 보이지 않고 선변성의 화면 읽기가 실패할 수 있습니다.</div>
+          <div><strong>ゲーム画面モード</strong>：Diablo IVの画面設定を <strong>ウィンドウモード(フルスクリーン)</strong> またはウィンドウモードにしてください。フルスクリーン(排他)ではオーバーレイが表示されず、線変性の画面読み取りが失敗することがあります。</div>
         </div>
-        <div class="video-card" data-video-title="[영상] d4cute helper 사용법">
-          <div class="video-embed"><iframe src="https://www.youtube.com/embed/Ff7MBqD4WaI" title="[영상] d4cute helper 사용법" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-card" data-video-title="[動画] d4cute helper の使い方">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/Ff7MBqD4WaI" title="[動画] d4cute helper の使い方" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           <div class="video-info">
-            <span><strong>영상으로 보는 헬퍼 사용법 (삼촌안잔다잉 채널)</strong></span>
-            <a href="https://youtu.be/Ff7MBqD4WaI" target="_blank" rel="noopener noreferrer" class="chip">유튜브에서 보기 ↗</a>
+            <span><strong>動画で見るヘルパーの使い方 (삼촌안잔다잉チャンネル)</strong></span>
+            <a href="https://youtu.be/Ff7MBqD4WaI" target="_blank" rel="noopener noreferrer" class="chip">YouTubeで見る ↗</a>
           </div>
         </div>
       </section>
@@ -2064,124 +1899,121 @@
       <!-- ─── 2. 화면 구성 ─── -->
       <section class="doc-section" id="screen-ui">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">2</span> 최신 화면 구성 (v1.30)</h2>
+          <h2 class="section-title"><span class="section-num">2</span> 最新の画面構成 (v1.30)</h2>
         </div>
 
-        <p>1.30 판에서는 상단 바와 슬롯 탭 바가 한층 더 직관적이고 미려하게 업그레이드되었습니다.</p>
+        <p>1.30版では、上部バーとスロットタブバーがさらに直感的で美しくアップグレードされました。</p>
 
         <!-- 메인 매크로 화면 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="d4cute helper 메인 화면 — 프로필 전환 바, 매크로 슬롯(A~G 총 7개 슬롯으로 확장), 매크로 이름 직접 입력, 후원 탭, 편의기능, 알람 탭이 한눈에 배치된 최신 UI">
+        <div class="image-card is-thumbnail" data-caption="d4cute helper メイン画面 — プロファイル切り替えバー、マクロスロット(A~G計7スロットに拡張)、マクロ名の直接入力、スポンサータブ、便利機能、アラームタブが一目で配置された最新UI">
           <div class="thumb-container">
-            <img src="images/helper_main_macro.png" alt="헬퍼 메인 화면 매크로 탭">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/helper_main_macro.png" alt="ヘルパー メイン画面 マクロタブ">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>d4cute helper 1.30 메인 화면 (A~G 7개 매크로 슬롯 확장 지원)</span>
+            <span>📷</span> <span>d4cute helper 1.30 メイン画面 (A~G 7マクロスロット拡張に対応)</span>
           </div>
         </div>
 
-        <h3 id="screen-topbar">1) 상단 바 & 프로필 컨트롤</h3>
+        <h3 id="screen-topbar">1) 上部バー & プロファイルコントロール</h3>
         <ul>
-          <li><strong>실행 상태 표시기</strong> — <span style="color:var(--green); font-weight:700;">● 중지됨</span> / <span style="color:var(--green); font-weight:700;">● 실행 중</span> / <span style="color:var(--ruby); font-weight:700;">● 일시정지</span> 상태를 실시간 색상 점으로 표시합니다.</li>
-          <li><strong>상단 기능 버튼</strong> — <span class="chip">업데이트</span>(새 패치 감지 시 점멸), <span class="chip">설정(⚙)</span>, <span class="chip">테스트(⌨)</span>(입력 전송 검증), 미니창 전환, 항상 위(핀), <span class="chip">···</span>(추가 도구 메뉴).</li>
-          <li><strong>프로필 줄 (Profile Bar)</strong> — 
-            <span class="chip">‹ ›</span> 버튼으로 빠르게 프로필을 전환할 수 있으며, <strong>콤보박스를 더블클릭하면 즉시 이름을 변경</strong>할 수 있습니다. <span class="chip green">＋</span>(새 프로필), <span class="chip">✎</span>(이름 변경), <span class="chip ruby">🗑</span>(삭제), <span class="chip blue" style="display:inline-flex; align-items:center; gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span>, <span class="chip">문서</span>(시즌 문서), <span class="chip gold">?</span>(도움말) 버튼이 제공됩니다. 창은 켤 때마다 가장 작은 기본 크기로 뜨고(하한 900×700, 글꼴 배율에 따라 커짐), 전체창(최대화)은 없습니다.
+          <li><strong>実行状態インジケーター</strong> — <span style="color:var(--green); font-weight:700;">● 停止</span> / <span style="color:var(--green); font-weight:700;">● 実行中</span> / <span style="color:var(--ruby); font-weight:700;">● 一時停止</span> 状態をリアルタイムの色付きドットで表示します。</li>
+          <li><strong>上部の機能ボタン</strong> — <span class="chip">アップデート</span>(新しいパッチを検知すると点滅)、 <span class="chip">設定(⚙)</span>, <span class="chip">テスト(⌨)</span>(入力送信の検証)、ミニウィンドウ切り替え、常に手前(ピン)、 <span class="chip">···</span>(追加ツールメニュー)。</li>
+          <li><strong>プロファイル行 (Profile Bar)</strong> — 
+            <span class="chip">‹ ›</span> ボタンですばやくプロファイルを切り替えられ、 <strong>コンボボックスをダブルクリックするとすぐに名前を変更</strong>できます。 <span class="chip green">＋</span>(新規プロファイル)、 <span class="chip">✎</span>(名前変更)、 <span class="chip ruby">🗑</span>(削除)、 <span class="chip blue" style="display:inline-flex; align-items:center; gap:4px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegramロゴ</span>, <span class="chip">文書</span>(シーズン文書)、 <span class="chip gold">?</span>(ヘルプ)ボタンが用意されています。ウィンドウは起動のたびに最も小さい基本サイズで開き(下限900×700、フォント倍率により大きくなります)、最大化はありません。
           </li>
         </ul>
 
-        <h3 id="screen-slots">2) 슬롯 줄 (Slot Navigation) — 7개 슬롯(A~G) 대폭 확장</h3>
+        <h3 id="screen-slots">2) スロット行 (Slot Navigation) — 7スロット(A~G)に大幅拡張</h3>
         <ul>
-          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> <span class="chip ruby">E</span> <span class="chip ruby">F</span> <span class="chip ruby">G</span> — <strong style="color:var(--gold);">최신 패치를 통해 매크로 슬롯이 기존 4개(A~D)에서 총 7개(A~G)로 대폭 확장</strong>되었습니다! 복잡한 딜 사이클, 기동기, 보호막/버프 유지, 특정 상황 전용 스킬을 슬롯 부족 없이 넉넉하게 분리하여 등록할 수 있습니다. 켜진 슬롯은 테두리가 강조되고, 발동 중이면 붉은 바탕에 흰 글씨로 점등됩니다.</li>
-          <li><strong>매크로 이름 직접 지정</strong> — 각 슬롯의 매크로 설정 화면에서 <span class="chip">이름: [ 메인 매크로 ]</span> 입력 필드를 통해 슬롯마다 직관적인 고유 명칭을 입력할 수 있습니다. 슬롯 버튼에 마우스를 올렸을 때 뜨는 툴팁 맨 위에도 이 이름이 크게 표시됩니다.</li>
-          <li><span class="chip">♡ 후원</span> — "헬퍼는 무료입니다" 고지와 파트너 추천 링크(스타링크 등)·클랜장님 채널 소개가 배너 캐러셀로 나옵니다. 헬퍼가 자동으로 보내는 것은 없습니다.</li>
-          <li><span class="chip">🔧 편의</span> — 호라드림의 함 인벤 선변성 자동화 전용 한 페이지 UI.</li>
-          <li><span class="chip">⏱ ▶ 4 (알람)</span> — 군단, 세계 보스, 지옥물결 및 개인 타이머 알람 설정. 우측에 현재 동작 중인 알람 수가 배지로 표시됩니다.</li>
-          <li><strong>슬롯 우측 요약 칩</strong> — 현재 선택된 슬롯의 실행 방식(순차/독립), 발동 방식(홀드/토글/한 번), 발동키가 늘 실시간으로 요약 표시됩니다.</li>
+          <li><span class="chip ruby">A</span> <span class="chip ruby">B</span> <span class="chip ruby">C</span> <span class="chip ruby">D</span> <span class="chip ruby">E</span> <span class="chip ruby">F</span> <span class="chip ruby">G</span> — <strong style="color:var(--gold);">最新パッチにより、マクロスロットが従来の4つ(A~D)から計7つ(A~G)に大幅拡張</strong>されました！複雑なダメージサイクル、機動スキル、シールド/バフの維持、特定状況専用のスキルを、スロット不足なく余裕をもって分けて登録できます。オンのスロットは枠が強調表示され、発動中は赤い背景に白い文字で点灯します。</li>
+          <li><strong>マクロ名の直接指定</strong> — 各スロットのマクロ設定画面の <span class="chip">名前: [ メインマクロ ]</span> 入力欄で、スロットごとに分かりやすい固有の名前を入力できます。スロットボタンにマウスを乗せたときに出るツールチップの一番上にも、この名前が大きく表示されます。</li>
+          <li><span class="chip">♡ スポンサー</span> — 「ヘルパーは無料です」という告知と、パートナー紹介リンク(Starlinkなど)・クランマスターのチャンネル紹介がバナーカルーセルで表示されます。ヘルパーが自動で送信するものはありません。</li>
+          <li><span class="chip">🔧 便利機能</span> — ホラドリックキューブでのインベントリ線変性の自動化専用の1ページUIです。</li>
+          <li><span class="chip">⏱ ▶ 4 (アラーム)</span> — 軍団、ワールドボス、ヘルタイド、個人タイマーのアラームを設定します。右側に現在動作中のアラーム数がバッジで表示されます。</li>
+          <li><strong>スロット右の要約チップ</strong> — 現在選択中のスロットの実行方式(順次/独立)、発動方式(ホールド/トグル/一度)、発動キーが常にリアルタイムで要約表示されます。</li>
         </ul>
 
-        <h3 id="screen-bottombar">3) 하단 통합 제어 바</h3>
+        <h3 id="screen-bottombar">3) 下部の統合コントロールバー</h3>
         <ul>
-          <li><span class="chip green">▶ 시작</span> / <span class="chip ruby">■ 중지</span>: 헬퍼의 모든 매크로 감지 및 실행을 시작하거나 정지합니다 (기본 단축키 <kbd>F9</kbd>).</li>
-          <li><span class="chip blue">저장</span>: 현재 수정한 프로필 및 매크로 세팅을 디스크에 즉시 영구 저장합니다.</li>
-          <li><span class="chip">📁 불러오기</span>: 실수로 세팅을 잘못 건드렸을 때 마지막 저장된 상태로 프로필을 복원합니다.</li>
-          <li><span class="chip ruby" style="background:#cc0000; color:#fff; font-weight:700;">▶ 삼촌안잔다잉</span>: 클랜장님의 게임 방송 채널로 한 번에 이동합니다.</li>
-          <li><span class="chip">📤 내보내기</span>: 현재 프로필 세팅을 <code>.d4cute</code> 백업 파일로 저장합니다.</li>
-          <li><span class="chip blue">📥 가져오기</span>: 다른 사용자나 클랜원이 공유한 <code>.d4cute</code> 프로필을 불러와 즉시 적용합니다.</li>
-          <li><span class="chip">최소화</span>: 헬퍼 창을 작업 표시줄로 최소화합니다.</li>
+          <li><span class="chip green">▶ 開始</span> / <span class="chip ruby">■ 停止</span>：ヘルパーのすべてのマクロの検知と実行を開始または停止します (デフォルトのショートカット <kbd>F9</kbd>).</li>
+          <li><span class="chip blue">保存</span>：現在編集したプロファイルとマクロ設定をディスクに即座に永続保存します。</li>
+          <li><span class="chip">📁 読み込む</span>：誤って設定を変更してしまったとき、最後に保存した状態にプロファイルを復元します。</li>
+          <li><span class="chip ruby" style="background:#cc0000; color:#fff; font-weight:700;">▶ 삼촌안잔다잉</span>：クランマスターのゲーム配信チャンネルにワンクリックで移動します。</li>
+          <li><span class="chip">📤 エクスポート</span>：現在のプロファイル設定を <code>.d4cute</code> バックアップファイルとして保存します。</li>
+          <li><span class="chip blue">📥 インポート</span>：他のユーザーやクランメンバーが共有した <code>.d4cute</code> プロファイルを読み込んで、すぐに適用します。</li>
+          <li><span class="chip">最小化</span>：ヘルパーウィンドウをタスクバーに最小化します。</li>
         </ul>
 
-        <div class="image-card is-small" data-caption="후원 탭 — 헬퍼는 무료 고지, 파트너 추천 링크·클랜장님 채널 배너 캐러셀">
+        <div class="image-card is-small" data-caption="スポンサータブ — ヘルパー無料の告知、パートナー紹介リンク・クランマスターのチャンネルバナーカルーセル">
           <div class="thumb-container">
-            <img src="images/helper_sponsor_tab.png" alt="후원 탭 배너 캐러셀">
+            <img src="../images/helper_sponsor_tab.png" alt="スポンサータブ バナーカルーセル">
           </div>
-          <div class="image-caption"><span>📷</span> <span>후원 탭 (배너 캐러셀)</span></div>
+          <div class="image-caption"><span>📷</span> <span>スポンサータブ (バナーカルーセル)</span></div>
         </div>
       </section>
 
       <!-- ─── 3. 매크로 설정 ─── -->
       <section class="doc-section" id="macro-engine">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">3</span> 매크로 설정 — 실행 방식 · 발동 방식 · 발동키</h2>
+          <h2 class="section-title"><span class="section-num">3</span> マクロ設定 — 実行方式 · 発動方式 · 発動キー</h2>
         </div>
 
-        <h3 id="macro-modes">1) 실행 방식 및 발동 방식</h3>
+        <h3 id="macro-modes">1) 実行方式と発動方式</h3>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th style="width: 110px;">구분</th>
-                <th style="width: 100px;">모드명</th>
-                <th>설명 및 추천 사용처</th>
+                <th style="width: 110px;">区分</th>
+                <th style="width: 100px;">モード名</th>
+                <th>説明とおすすめの用途</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td rowspan="2" style="font-weight: 700; color: var(--gold);">실행 방식</td>
-                <td><strong>순차</strong></td>
-                <td>스텝 1부터 마지막 스텝까지 순서대로 시전한 뒤 다시 처음부터 반복합니다. 정해진 스킬 콤보 및 딜 사이클 로테이션에 적합합니다.</td>
+                <td rowspan="2" style="font-weight: 700; color: var(--gold);">実行方式</td>
+                <td><strong>順次</strong></td>
+                <td>ステップ1から最後のステップまで順番に発動し、再び最初から繰り返します。決まったスキルコンボやダメージサイクルのローテーションに適しています。</td>
               </tr>
               <tr>
-                <td><strong>독립</strong></td>
-                <td>스텝마다 각자 설정된 쿨다운(대기 시간)에 맞춰 독자적으로 반복 실행합니다. 쿨다운이 제각각인 보호막/버프 스킬 유지에 최적화되어 있습니다.</td>
+                <td><strong>独立</strong></td>
+                <td>ステップごとにそれぞれ設定されたクールダウン(待機時間)に合わせて、独自に繰り返し実行します。クールダウンがバラバラなシールド/バフスキルの維持に最適化されています。</td>
               </tr>
               <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--ruby);">발동 방식</td>
-                <td><strong>홀드</strong></td>
-                <td>발동키를 <strong>누르고 있는 동안만</strong> 매크로가 돌아가며, 키를 떼면 즉시 멈춥니다. 주력 딜링 스킬에 권장됩니다.</td>
+                <td rowspan="3" style="font-weight: 700; color: var(--ruby);">発動方式</td>
+                <td><strong>ホールド</strong></td>
+                <td>発動キーを <strong>押している間だけ</strong> マクロが動作し、キーを離すと即座に止まります。メインのダメージスキルにおすすめです。</td>
               </tr>
               <tr>
-                <td><strong>토글</strong></td>
-                <td>발동키를 한 번 누르면 켜지고, 다시 누르면 꺼집니다. 장시간 파밍이나 던전 순회 시 손가락 피로도를 덜어줍니다.</td>
+                <td><strong>トグル</strong></td>
+                <td>発動キーを1回押すとオンになり、もう一度押すとオフになります。長時間のファーミングやダンジョン周回での指の疲れを軽減します。</td>
               </tr>
               <tr>
-                <td><strong>한 번</strong></td>
-                <td>발동키를 누르면 시퀀스를 1회 처음부터 끝까지 수행하고 스스로 종료합니다. 물약 연속 제작, 장비 구매 등에 적합합니다.</td>
+                <td><strong>一度</strong></td>
+                <td>発動キーを押すとシーケンスを最初から最後まで1回実行し、自動的に終了します。ポーションの連続作成や装備の購入などに適しています。</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3 id="macro-keys">2) 발동키 선택 및 정밀 튜닝</h3>
+        <h3 id="macro-keys">2) 発動キーの選択と精密チューニング</h3>
         <ul>
-          <li><strong>유연한 발동키</strong>: 키보드 모든 키, 마우스 좌/우 클릭, 휠 위/아래, 사이드 버튼, <kbd>Ctrl</kbd> · <kbd>Shift</kbd> · <kbd>Alt</kbd> 조합 키를 모두 지원합니다. 여러 슬롯에 동일한 발동키를 지정하여 동시 연계 발동도 가능합니다. 단, 편의기능(선변성) 시작 단축키와는 겹칠 수 없습니다 — 겹치면 고를 때 거부됩니다.</li>
-          <li><strong>누름 인식 지연 (Press Delay)</strong>:
-            짧게 툭 친 클릭은 무시하고, 지정한 시간(예: 250~300ms) 이상 꾹 눌렀을 때만 매크로가 켜집니다. <strong>우클릭을 발동키로 쓸 때 인벤토리나 창고 창이 닫히는 현상을 방지하는 필수 설정</strong>입니다.
+          <li><strong>柔軟な発動キー</strong>：キーボードのすべてのキー、マウスの左/右クリック、ホイール上/下、サイドボタン、 <kbd>Ctrl</kbd> · <kbd>Shift</kbd> · <kbd>Alt</kbd> 組み合わせキーにすべて対応しています。複数のスロットに同じ発動キーを指定して、同時連携発動もできます。ただし、便利機能(線変性)の開始ショートカットとは重複できません — 重複すると選択時に拒否されます。</li>
+          <li><strong>押下認識ディレイ (Press Delay)</strong>：ちょんと軽く触れただけのクリックは無視し、指定した時間(例：250~300ms)以上しっかり押したときだけマクロがオンになります。 <strong>右クリックを発動キーにしたときにインベントリや倉庫のウィンドウが閉じてしまう現象を防ぐ必須設定</strong>です。
           </li>
-          <li><strong>떼고 유지 (Release Buffer)</strong>:
-            발동키를 손에서 뗀 후에도 지정한 시간 동안 매크로 동작을 연장 유지합니다. 사냥 직후 주변 바닥 아이템을 루팅하는 동안 공격이 끊기지 않도록 여유를 줍니다.
+          <li><strong>離したあと維持 (Release Buffer)</strong>：発動キーから指を離したあとも、指定した時間だけマクロの動作を延長して維持します。狩りの直後に周囲の床のアイテムを拾っている間も攻撃が途切れないよう、余裕を持たせます。
           </li>
-          <li><strong>동반 키 (Companion Keys)</strong>:
-            매크로가 가동되는 동안 지속적으로 함께 눌러두는 키(예: 제자리 강제 정지 공격 <kbd>Shift</kbd>, 강제 이동 키 등)를 지정할 수 있습니다.
+          <li><strong>同伴キー (Companion Keys)</strong>：マクロが稼働している間、継続して一緒に押し続けるキー(例：その場で強制停止攻撃 <kbd>Shift</kbd>、強制移動キーなど)を指定できます。
           </li>
         </ul>
 
         <!-- 키 피커 캡처 -->
-        <div class="image-card is-small" data-caption="발동키 지정 팝업창 — 키보드 키, 마우스 버튼 및 조합키를 안전하고 직관적으로 선택할 수 있습니다.">
+        <div class="image-card is-small" data-caption="発動キー指定ポップアップ — キーボードのキー、マウスボタン、組み合わせキーを安全かつ直感的に選択できます。">
           <div class="thumb-container">
-            <img src="images/helper_key_picker.png" alt="발동키 선택 다이얼로그">
+            <img src="../images/helper_key_picker.png" alt="発動キー選択ダイアログ">
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>발동키 선택 팝업창</span>
+            <span>📷</span> <span>発動キー選択ポップアップ</span>
           </div>
         </div>
       </section>
@@ -2189,291 +2021,227 @@
       <!-- ─── 4. 시퀀스 빌더 & 실시간 녹화 ─── -->
       <section class="doc-section" id="sequence-builder">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">4</span> 시퀀스 빌더 · 딜레이 일괄변경 · 마우스 녹화</h2>
+          <h2 class="section-title"><span class="section-num">4</span> シーケンスビルダー · ディレイ一括変更 · マウス録画</h2>
         </div>
 
-        <h3 id="seq-cards">1) 스텝 카드 및 일괄 조작</h3>
+        <h3 id="seq-cards">1) ステップカードと一括操作</h3>
         <ul>
-          <li>스텝 카드를 클릭하면 키, 동작 모드, 딜레이(대기 시간, ms)를 개별 변경할 수 있습니다.</li>
-          <li><strong>모드 옵션</strong>:
+          <li>ステップカードをクリックすると、キー、動作モード、ディレイ(待機時間、ms)を個別に変更できます。</li>
+          <li><strong>モードオプション</strong>:
             <ul>
-              <li><em>Single</em>: 키를 1회 단발 입력</li>
-              <li><em>Burst</em>: 지정된 간격으로 고속 연타</li>
-              <li><em>Hold</em>: 지정 시간 동안 키를 꾹 누르고 유지</li>
+              <li><em>Single</em>：キーを1回だけ単発入力</li>
+              <li><em>Burst</em>：指定した間隔で高速連打</li>
+              <li><em>Hold</em>：指定した時間、キーを押し続けて維持</li>
             </ul>
           </li>
-          <li><span class="chip">딜레이 일괄변경</span>: 모든 스텝의 대기 시간을 원하는 수치(ms)나 비율(%)로 한 번에 변경합니다.</li>
-          <li><span class="chip">전체 → Burst/Single</span>: 모든 등록 스텝의 동작 모드를 원클릭으로 일괄 전환합니다.</li>
+          <li><span class="chip">ディレイ一括変更</span>：すべてのステップの待機時間を、希望の数値(ms)または比率(%)で一度に変更します。</li>
+          <li><span class="chip">全体 → Burst/Single</span>：登録されたすべてのステップの動作モードをワンクリックで一括切り替えします。</li>
         </ul>
 
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <div class="image-card is-small" data-caption="스텝 편집기 — 키, 모드(Single/Burst/Hold), 딜레이를 정밀하게 설정">
+          <div class="image-card is-small" data-caption="ステップエディター — キー、モード(Single/Burst/Hold)、ディレイを精密に設定">
             <div class="thumb-container">
-              <img src="images/helper_step_editor.png" alt="스텝 편집기">
+              <img src="../images/helper_step_editor.png" alt="ステップエディター">
             </div>
-            <div class="image-caption"><span>📷</span> <span>개별 스텝 편집창</span></div>
+            <div class="image-caption"><span>📷</span> <span>個別ステップ編集ウィンドウ</span></div>
           </div>
-          <div class="image-card is-small" data-caption="딜레이 일괄변경 도구 — 전체 스텝 간격을 손쉽게 튜닝">
+          <div class="image-card is-small" data-caption="ディレイ一括変更ツール — 全ステップの間隔を簡単にチューニング">
             <div class="thumb-container">
-              <img src="images/helper_bulk_delay.png" alt="딜레이 일괄변경 다이얼로그">
+              <img src="../images/helper_bulk_delay.png" alt="ディレイ一括変更ダイアログ">
             </div>
-            <div class="image-caption"><span>📷</span> <span>딜레이 일괄변경 팝업</span></div>
+            <div class="image-caption"><span>📷</span> <span>ディレイ一括変更ポップアップ</span></div>
           </div>
         </div>
 
-        <h3 id="seq-recorder">2) Live mouse-position recording &amp; humanized randomness</h3>
+        <h3 id="seq-recorder">2) リアルタイムのマウス座標録画と人間らしいランダム誤差</h3>
         <ul>
-          <li>Press <span class="chip">Record</span>, then play in the game window: every key and mouse button is captured in order with its timing.</li>
-          <li><strong>Screen coordinates</strong>: each mouse click stores the absolute screen position (X, Y) it was made at, and playback clicks that same spot.</li>
-          <li><strong>Humanized randomness</strong>:
+          <li><span class="chip">録画</span> ボタンを押してゲーム画面でキーとマウスを入力すると、順序と時間間隔がそのまま記録されます。</li>
+          <li><strong>画面座標の記録</strong>：マウスクリック時に、そのときクリックした画面の絶対座標(X, Y)が記録され、マクロ再生時にその位置を自動でクリックします。</li>
+          <li><strong>人間らしいランダム誤差</strong>:
             <ul>
-              <li><strong>Click offset ± px</strong>: every click is nudged randomly within the given pixel radius.</li>
-              <li><strong>Random variance %</strong>: every step interval gets a random delay within the given ratio.</li>
+              <li><strong>クリック位置 ± px</strong>：クリックのたびに指定したピクセル半径内で不規則に誤差を加え、機械的な検知を防ぎます。</li>
+              <li><strong>ランダム変動 %</strong>：ステップ間隔ごとに一定の割合でランダムな遅延を混ぜ、自然な手の動きを模倣します。</li>
             </ul>
           </li>
         </ul>
 
-        <h3 id="seq-drag-path">3) Drag-path recording — the whole path while the button is held (1.32.0)</h3>
+        <h3 id="seq-drag-path">3) ドラッグ軌跡の録画 — 押したまま動かした経路まで (1.32.0)</h3>
         <ul>
-          <li>Move the mouse <strong>while holding a button</strong> during recording and the path is captured too: a point is stored whenever the cursor moves more than <strong>8 px</strong> from the last point or <strong>16 ms</strong> pass, so fast spins stay dense and slow moves stay continuous.</li>
-          <li>On playback the helper presses at the start point, <strong>follows the same path on the recorded timing</strong>, then releases at the end point. Earlier versions kept only the press and release points and jumped between them.</li>
-          <li><strong>Channeled skills such as Whirlwind</strong>: bind the skill to the <span class="chip">right mouse button</span> in game, hold it and spin during recording, and the spin is recorded and replayed as is. Holding the left button while moving works the same way.</li>
-          <li><strong>Random variance %</strong> is applied once to the whole path's duration and <strong>click offset ± px</strong> once to the whole path, so the cursor does not jitter.</li>
-          <li>Editing the position by number or pressing <span class="chip">Clear drag</span> in the step editor discards the path and falls back to the old jump playback.</li>
-          <li>Up to 600 points per drag (about 10 s at 16 ms). Paths are absolute screen coordinates: re-record after changing resolution or window position.</li>
+          <li>録画中にマウスボタンを <strong>押したまま動かすと</strong> その経路も一緒に記録されます。最後の記録点から <strong>8px</strong> 以上動いたとき、または <strong>16ms</strong> が経過するたびに座標を書き込むため、速い回転は細かく、遅い移動は途切れなく残ります。</li>
+          <li>再生時は押した位置でボタンを押してから <strong>記録された時刻に合わせて同じ経路で</strong> カーソルを動かし、離した位置で離します。以前のバージョンは押した位置と離した位置の2点だけを記憶していたため、瞬間移動していました。</li>
+          <li><strong>ワールウィンド · 精神集中のようなチャネリングスキル</strong>：ゲームでスキルを <span class="chip">マウス右ボタン</span>に置き、録画中に右ボタンを押したままぐるりと回すと、その回転がそのまま録画・再生されます。左ボタンを押したまま移動する場合も同様です。</li>
+          <li><strong>ランダム変動 %</strong>は軌跡全体の時間に対して1回、 <strong>クリック位置 ± px</strong>は軌跡全体に対して1回だけ適用されるため、カーソルが震えません。</li>
+          <li>ステップエディターで位置を数値で修正するか、 <span class="chip">ドラッグクリア</span>を押すと、軌跡は破棄され、以前のようにジャンプ再生になります。</li>
+          <li>1回のドラッグにつき最大600点まで保存します(16ms間隔で約10秒)。軌跡は画面の絶対座標なので、解像度やウィンドウ位置を変えた場合は録画し直してください。</li>
         </ul>
 
         <!-- 비디오 플레이스홀더 (마우스 녹화) -->
-        <div class="video-card" data-video-title="[영상 가이드] 매크로 시퀀스 작성 및 실시간 녹화 팁">
+        <div class="video-card" data-video-title="[動画ガイド] マクロシーケンスの作成とリアルタイム録画のコツ">
           <div class="placeholder-box" style="margin: 0; border: none; border-radius: 0;">
             <div class="placeholder-icon">🎬</div>
-            <div class="placeholder-title">매크로 시퀀스 녹화 튜토리얼 영상 (준비 중)</div>
-            <div class="placeholder-desc">유튜브 영상 주소를 전달해주시면 이곳에 바로 재생 가능한 임베드 영상으로 교체됩니다.</div>
+            <div class="placeholder-title">マクロシーケンス録画チュートリアル動画 (準備中)</div>
+            <div class="placeholder-desc">YouTube動画のアドレスをいただければ、ここにすぐ再生できる埋め込み動画に差し替えます。</div>
             <span class="placeholder-path">YouTube Video Slot: seq-record-guide</span>
           </div>
           <div class="video-info">
-            <span><strong>영상 1</strong>: 매크로 녹화 및 딜레이 튜닝 실전 팁</span>
-            <span class="chip ruby">준비 중</span>
+            <span><strong>動画1</strong>：マクロ録画とディレイ調整の実践Tips</span>
+            <span class="chip ruby">準備中</span>
           </div>
         </div>
 
-        <!-- 🌀 4) 360° Circular Drag Pack (9 Presets) & Download Guide -->
-        <h3 id="seq-rotation-pack">4) 360度円形回転ドラッグパック（9種プリセット）＆ ダウンロード</h3>
+        <!-- 🌀 4) 완성형 360도 원형 회전팩 (9종 프리셋) & 다운로드 안내 -->
+        <h3 id="seq-rotation-pack">4) 完成形の360度円形回転パック (9種プリセット) & ダウンロード</h3>
         <p>
-          マウスの手動録画では円が歪んだり、開始点と終了点で一時停止やカクつきが発生しやすくなります。<br>
-          これを解決するため、三角関数により精密計算された<strong>360度シームレス円形回転シ퀀ス（9種プリセット）</strong>を用意しました。
+          手で直接ドラッグを録画すると、円が歪んだり回転角度がぴったり合わなかったり、開始と終了でもたついたりしやすくなります。<br>
+          そのため、数学的に精密に計算された <strong>完全な360度閉曲線の円形回転シーケンスパック (9種プリセット)</strong>を提供しています。
         </p>
 
-        <!-- Telegram Download Banner -->
+        <!-- 텔레그램 다운로드 강조 배너 -->
         <div class="alert-box gold" style="margin: 16px 0; border-left: 4px solid var(--gold);">
-          <div style="font-weight: 700; font-size: 15px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
-            <span>📢 Telegram公式チャンネルで完成版ファイルおよび実演動画を無料配布中</span>
+          <span class="alert-icon">🎁</span>
+          <div>
+            <strong style="color:var(--gold-bright); font-size:15px;">実際のデモ動画と回転パックのダウンロード案内</strong><br>
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">公式Telegramお知らせチャンネル(@d4_notice)</a> および 
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">ユーザーグループ(@d4cute_helper)</a>で、 
+            <strong>実際のゲーム内360度回転デモ動画</strong>と完成版の <strong><code>sequences.d4seq</code> 回転パックファイル</strong>を、すぐに無料で入手できます！
           </div>
-          <p style="margin: 0; line-height: 1.6; color: var(--fg-dim);">
-            回転パック完成版ファイル（<code>sequences.d4seq</code>）および実機プレイ実演動画は<br>
-            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color: var(--gold-bright); font-weight: 700; text-decoration: underline;">公式Telegram告知チャンネル（@d4_notice）</a>から直接ダウンロードでき、ヘルパーの［インポート］ボタンから1秒で登録可能です。
-          </p>
-        </div>
-
-        <div class="table-wrap" style="margin: 16px 0;">
-          <table class="manual-table">
-            <thead>
-              <tr>
-                <th style="width: 140px;">半径（サイズ）</th>
-                <th style="width: 140px;">速度（周期）</th>
-                <th>プリセット名称</th>
-                <th>おすすめの活用シーン</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--gold);">小回転（300px）</td>
-                <td>超高速（0.75秒）</td>
-                <td><code>작은 초고속</code></td>
-                <td>その場での光速旋回、近接瞬間火力の集中</td>
-              </tr>
-              <tr>
-                <td>高速回転（1.5秒）</td>
-                <td><code>작은 빠른회전</code></td>
-                <td>近接スキル連携、狭い通路でのモンスター撃破</td>
-              </tr>
-              <tr>
-                <td>標準回転（2.5秒）</td>
-                <td><code>작은 회전</code></td>
-                <td>精密な近距離コントロール、安定した詠唱維持</td>
-              </tr>
-              <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--gold);">中回転（570px）</td>
-                <td>超高速（0.75秒）</td>
-                <td><code>중간 초고속</code></td>
-                <td>中距離モンスター群の素早い掃討・引き撃ち</td>
-              </tr>
-              <tr>
-                <td>高速回転（1.5秒）</td>
-                <td><code>중간 빠른회전</code></td>
-                <td><strong>［一番人気・標準推奨］</strong> 狩りで最も自然で安定した旋回</td>
-              </tr>
-              <tr>
-                <td>標準回転（2.5秒）</td>
-                <td><code>중간 회전</code></td>
-                <td>広い中距離範囲での持続攻撃・エリア維持</td>
-              </tr>
-              <tr>
-                <td rowspan="3" style="font-weight: 700; color: var(--gold);">大回転（800px）</td>
-                <td>超高速（0.75秒）</td>
-                <td><code>큰 초고속</code></td>
-                <td>画面全体の広域ターゲット誘導、超広範囲連射</td>
-              </tr>
-              <tr>
-                <td>高速回転（1.5秒）</td>
-                <td><code>큰 빠른회전</code></td>
-                <td>大規模モンスター集団の掃討、画面外縁までカバー</td>
-              </tr>
-              <tr>
-                <td>標準回転（2.5秒）</td>
-                <td><code>큰 회전</code></td>
-                <td>最大射程での外周周回攻撃</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
 
         <div style="overflow-x: auto; margin: 18px 0;">
           <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--line);">
             <thead>
               <tr style="background: rgba(229, 184, 92, 0.12); color: var(--gold-bright); border-bottom: 1px solid var(--line-bright); text-align: left;">
-                <th style="padding: 10px 14px;">Preset Name</th>
-                <th style="padding: 10px 14px;">Radius</th>
-                <th style="padding: 10px 14px;">Duration (`press_ms`)</th>
-                <th style="padding: 10px 14px;">Characteristics & Recommended Use</th>
+                <th style="padding: 10px 14px;">シーケンス名</th>
+                <th style="padding: 10px 14px;">回転半径 (Radius)</th>
+                <th style="padding: 10px 14px;">1周の時間 (`press_ms`)</th>
+                <th style="padding: 10px 14px;">特徴とおすすめの用途</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. 작은 빠른회전 (Small Fast)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. 小・高速回転</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range around character, snappy circular targeting</td>
+                <td style="padding: 9px 14px;">1.5秒 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">キャラクターの近接範囲、速くて軽快な全方位ターゲティング</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line); background: rgba(229, 184, 92, 0.05);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. 중간 빠른회전 (Medium Fast)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. 中・高速回転</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ Standard Pick</strong> — Balanced radius for smooth, fast 360° spin</td>
+                <td style="padding: 9px 14px;">1.5秒 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ 標準おすすめ</strong> — 基本解像度に最適な半径のなめらかな高速回転</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. 큰 빠른회전 (Large Fast)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. 大・高速回転</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Wide area coverage reaching screen edges</td>
+                <td style="padding: 9px 14px;">1.5秒 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">画面の外周まで広く掃く広範囲の高速回転</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. 작은 회전 (Small Normal)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. 小・回転</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range steady channeling at moderate speed</td>
+                <td style="padding: 9px 14px;">2.5秒 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">近接での安定した通常速度の回転チャネリング</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. 중간 회전 (Medium Normal)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. 中・回転</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Standard radius steady rotation</td>
+                <td style="padding: 9px 14px;">2.5秒 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">基本半径の安定した通常速度の回転</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. 큰 회전 (Large Normal)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. 大・回転</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Wide range smooth and relaxed rotation</td>
+                <td style="padding: 9px 14px;">2.5秒 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">広い範囲をなめらかにゆったり回転</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. 작은 초고속 (Small Ultra)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. 小・超高速</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range instant 360° spin in 0.75 seconds</td>
+                <td style="padding: 9px 14px;">0.75秒 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">近接での即時回転ターゲティング (0.75秒で1周ぐるり)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. 중간 초고속 (Medium Ultra)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. 中・超高速</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Lightning-fast all-around sweep at standard radius</td>
+                <td style="padding: 9px 14px;">0.75秒 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">基本半径の稲妻のような超高速全方位攻撃</td>
               </tr>
               <tr>
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. 큰 초고속 (Large Ultra)</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. 大・超高速</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">Screen-wide ultra-fast spin</td>
+                <td style="padding: 9px 14px;">0.75秒 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">画面全体を超高速で包み込む回転</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 How to Use & Pro Tips</h4>
+        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 回転パックの使い方と設定のコツ</h4>
         <ol style="margin-top: 6px; padding-left: 20px; line-height: 1.8;">
-          <li><strong>Import</strong>: Download <code>sequences.d4seq</code> from Telegram, click <span class="chip">Import</span> at the bottom of the helper window, and select the file. All 9 presets are registered at once.</li>
-          <li><strong>Assign to Slot</strong>: Select your preferred macro slot (A–G) and pick a preset from the <strong>Sequence Library</strong>.</li>
-          <li><strong>Spin Exactly Once?</strong>: Set the trigger mode to <strong style="color:var(--gold-bright);">[Once]</strong>. Each key press will execute <strong>exactly one clean 360° spin and automatically stop at the starting point</strong>.</li>
-          <li><strong>Continuous Spinning?</strong>: Keep trigger mode on <strong>[Hold]</strong> or <strong>[Toggle]</strong>. The delay between cycles (<code>interval_ms</code>) is optimized to <code>0ms</code>, allowing <strong>fluid, uninterrupted continuous spinning without any pause or stutter</strong>.</li>
+          <li><strong>インポート (Import)</strong>：Telegramからダウンロードした <code>sequences.d4seq</code> ファイルを用意し、ヘルパーウィンドウ下部の <span class="chip">インポート</span> ボタンを押してファイルを選択すると、9種のシーケンスが一度に登録されます。</li>
+          <li><strong>スロットの割り当て</strong>：使いたいマクロスロット(A~G)を押し、 <strong>シーケンスライブラリ</strong>で上記9種のうち気に入ったプリセットを選択します。</li>
+          <li><strong>ちょうど1周だけ回して止めたいときは？</strong>：マクロの発動方式を <strong style="color:var(--gold-bright);">[一度 (Once)]</strong>に設定してください。キーを押すたびに <strong>ちょうど1周だけぐるりと回り、その場で自動的にきれいに止まります。</strong>
+          </li>
+          <li><strong>押している間ずっと回転させたいときは？</strong>：発動方式を <strong>[ホールド (Hold)]</strong> または <strong>[トグル (Toggle)]</strong>にしてください。ステップ間のディレイ(<code>interval_ms</code>)が <code>0ms</code>に最適化されているため、 <strong>始まりと終わりで引っかかったりもたついたりすることなく、水が流れるように連続回転</strong>します。
+          </li>
         </ol>
       </section>
 
       <!-- ─── 5. 편의기능 — 인벤 선변성 ─── -->
       <section class="doc-section" id="tools-alter">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">5</span> 편의기능 — 인벤 선변성 (한 페이지 UI)</h2>
+          <h2 class="section-title"><span class="section-num">5</span> 便利機能 — インベントリ線変性 (1ページUI)</h2>
         </div>
 
-        <p>1.30 버전에서 새롭게 개편된 <strong>인벤 선변성 도구</strong>는 호라드림의 함을 이용한 전설·고유 장비 선변성 작업을 단 몇 번의 조작으로 자동화합니다.</p>
+        <p>1.30バージョンで新しく刷新された <strong>インベントリ線変性ツール</strong>は、ホラドリックキューブを利用したレジェンダリー・ユニーク装備の線変性作業を、わずか数回の操作で自動化します。</p>
 
         <!-- 선변성 도구 탭 스크린샷 카드 -->
-        <div class="image-card is-thumbnail" data-caption="인벤 선변성 전용 탭 — 첫 칸/끝 칸 좌표 보정, 비귀속 건너뛰기 스위치, 시작/중지 단축키, 결과 대기 조절이 한 화면에 통합된 최신 레이아웃">
+        <div class="image-card is-thumbnail" data-caption="インベントリ線変性専用タブ — 最初のマス/最後のマスの座標補正、非帰属スキップスイッチ、開始/停止ショートカット、結果待機の調整が1画面に統合された最新レイアウト">
           <div class="thumb-container">
-            <img src="images/helper_alter_tool.png" alt="인벤 선변성 한 페이지 UI">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/helper_alter_tool.png" alt="インベントリ線変性 1ページUI">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>편의기능: 호라드림의 함 인벤 선변성 한 페이지 UI</span>
+            <span>📷</span> <span>便利機能：ホラドリックキューブ インベントリ線変性 1ページUI</span>
           </div>
         </div>
 
-        <h3 id="alter-grid">1) 33칸 자동 그리드 계산 및 시작</h3>
+        <h3 id="alter-grid">1) 33マス自動グリッド計算と開始</h3>
         <ol>
-          <li>게임에서 <strong>인벤토리</strong>와 <strong>호라드림의 함</strong> 창을 열어 둡니다.</li>
-          <li><span class="chip gold">첫 칸 찍기</span>를 누른 뒤 게임 인벤토리의 맨 첫 번째 칸(좌상단)에 마우스를 올리고 <kbd>Enter</kbd>를 누릅니다.</li>
-          <li><span class="chip gold">끝 칸 찍기</span>를 누르고 인벤토리 맨 마지막 칸(우하단)에 마우스를 올린 뒤 <kbd>Enter</kbd>를 누릅니다. (취소는 언제든 <kbd>Esc</kbd>)</li>
-          <li>두 점의 위치만 지정하면 33개 인벤토리 칸의 중심 좌표가 자동으로 정확히 계산됩니다.</li>
-          <li>게임 화면에서 시작 단축키(기본 <kbd>F10</kbd>, 파란 키 버튼을 눌러 바꿀 수 있음)를 누르면 선변성이 전자동으로 시작됩니다. 편의기능 탭을 굳이 열어두지 않아도 단축키는 상시 작동합니다.</li>
+          <li>ゲームで <strong>インベントリ</strong>と <strong>ホラドリックキューブ</strong> のウィンドウを開いておきます。</li>
+          <li><span class="chip gold">最初のマスを撮る</span>を押したあと、ゲームのインベントリの一番最初のマス(左上)にマウスを乗せて <kbd>Enter</kbd>を押します。</li>
+          <li><span class="chip gold">最後のマスを撮る</span>を押し、インベントリの一番最後のマス(右下)にマウスを乗せてから <kbd>Enter</kbd>を押します。(キャンセルはいつでも <kbd>Esc</kbd>)</li>
+          <li>2点の位置を指定するだけで、33個のインベントリマスの中心座標が自動的に正確に計算されます。</li>
+          <li>ゲーム画面で開始ショートカット(デフォルト <kbd>F10</kbd>、青いキーのボタンを押して変更可能)を押すと、線変性が全自動で始まります。便利機能タブを開いておかなくても、ショートカットは常時動作します。</li>
         </ol>
 
-        <h3 id="alter-safety">2) 동작 메커니즘 및 지능형 안전장치</h3>
+        <h3 id="alter-safety">2) 動作メカニズムとインテリジェントな安全装置</h3>
         <ul>
-          <li><strong>지능형 반복 루프</strong>:
-            인벤토리 각 칸을 순회하며 <em>우클릭 → 호라드림 함에 올리기 → 아이템 변성 버튼 클릭 → 변환 → 수락(<kbd>Enter</kbd>) → 초기화</em>를 자동으로 진행합니다.
+          <li><strong>インテリジェントな繰り返しループ</strong>：インベントリの各マスを巡回しながら <em>右クリック → ホラドリックキューブに載せる → アイテム変性ボタンをクリック → 変換 → 承諾(<kbd>Enter</kbd>) → 初期化</em>を自動で進めます。
           </li>
-          <li><strong>계정 귀속 아이템 건너뛰기 스위치</strong>:
-            스위치를 켜면 귀속 아이템은 건너뛰고 비귀속 장비만 골라 변성합니다. 스위치를 끄면 귀속 장비도 변성하며 수락 팝업 창이 뜰 때만 안전하게 <kbd>Enter</kbd>를 전송합니다.
+          <li><strong>アカウント帰属アイテムをスキップするスイッチ</strong>：スイッチをオンにすると、帰属アイテムはスキップして非帰属の装備だけを選んで変性します。スイッチをオフにすると、帰属装備も変性し、承諾ポップアップが表示されたときにだけ安全に <kbd>Enter</kbd>を送信します。
           </li>
-          <li><strong>큐브 비움 검증 (Cube Empty Check)</strong>:
-            초기화 뒤 큐브 첫 칸의 <strong>그림</strong>(첫 아이템을 올릴 때 빈 모습·찬 모습을 기억해 둠)으로 비었는지 보고, 그림을 못 잡은 환경에선 큐브 머리글 글자로 보조 판정합니다. 비지 않았으면 초기화를 다시 누르고, 끝내 안 비면 멈춥니다 — 아이템 두 개가 겹쳐 올라가는 일을 막기 위한 장치입니다.
+          <li><strong>キューブ空確認 (Cube Empty Check)</strong>：初期化後、キューブの最初のマスの <strong>画像</strong>(最初のアイテムを載せるときに空の状態と埋まった状態を記憶)で空かどうかを確認し、画像を取得できない環境ではキューブのヘッダー文字で補助判定します。空でなければ初期化をもう一度押し、最終的に空にならなければ停止します — アイテムが2つ重なって載ることを防ぐための装置です。
           </li>
-          <li><strong>비상 정지</strong>: 작업 도중 키보드의 <kbd>Esc</kbd> 키를 누르면 어디서든 즉시 선변성이 멈춥니다.</li>
-          <li><strong>느린 PC 조절값</strong>: <span class="chip">시작 전 ms</span>(시작 버튼 뒤 게임 창으로 갈 여유), <span class="chip">결과 대기 ms</span>(기본 3000 — 변환·수락 뒤 변성이 끝나 변환 버튼이 꺼질 때까지 기다리는 상한, 신호가 오면 바로 넘어감), <span class="chip">초기화 뒤 ms</span>(기본 0 — 초기화 뒤 추가 대기). 연출이 느린 PC 에서 아이템이 겹치거나 변성 없이 넘어가면 결과 대기를 올리세요.</li>
-          <li><strong>실행 기록</strong>: 한 바퀴 돌 때마다 <code>%APPDATA%\d4cute_helper\debug\alter_slots.txt</code> 에 칸별 판정이 남습니다. 문제가 나면 이 파일을 텔레그램 그룹에 올려 주세요.</li>
+          <li><strong>非常停止</strong>：作業中にキーボードの <kbd>Esc</kbd> キーを押すと、どこからでも即座に線変性が止まります。</li>
+          <li><strong>低スペックPC向け調整値</strong>: <span class="chip">開始前 ms</span>(開始ボタンのあとゲームウィンドウに移る余裕)、 <span class="chip">結果待機 ms</span>(デフォルト3000 — 変換・承諾のあと、変性が終わって変換ボタンが消灯するまで待つ上限、信号が来ればすぐ次へ進む)、 <span class="chip">初期化後 ms</span>(デフォルト0 — 初期化後の追加待機)。演出が遅いPCでアイテムが重なったり、変性せずに次へ進んだりする場合は、結果待機を上げてください。</li>
+          <li><strong>実行記録</strong>：1周するたびに <code>%APPDATA%\d4cute_helper\debug\alter_slots.txt</code> にマスごとの判定が残ります。問題が出たら、このファイルをTelegramグループに投稿してください。</li>
         </ul>
 
         <!-- 인게임 실화면 플레이스홀더 -->
         <div class="placeholder-box">
           <div class="placeholder-icon">📸</div>
-          <div class="placeholder-title">[인게임 스크린샷 슬롯] 호라드림의 함 선변성 동작 화면</div>
-          <div class="placeholder-desc">게임 내에서 호라드림의 함과 인벤토리가 열려 있는 실제 캡처 이미지를 올려주시면 바로 연결됩니다.</div>
+          <div class="placeholder-title">[ゲーム内スクリーンショット枠] ホラドリックキューブ線変性の動作画面</div>
+          <div class="placeholder-desc">ゲーム内でホラドリックキューブとインベントリが開いている実際のキャプチャ画像をいただければ、すぐに差し替えます。</div>
           <span class="placeholder-path">Image Slot: _work/d4help-repo/images/inven/alter_ingame_live.png</span>
         </div>
 
         <!-- 선변성 유튜브 비디오 슬롯 -->
-        <div class="video-card" data-video-title="[영상] 인벤 선변성 도구 사용법">
-          <div class="video-embed"><iframe src="https://www.youtube.com/embed/O2mSUAEX-xM" title="[영상] 인벤 선변성 도구 사용법" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-card" data-video-title="[動画] インベントリ線変性ツールの使い方">
+          <div class="video-embed"><iframe src="https://www.youtube.com/embed/O2mSUAEX-xM" title="[動画] インベントリ線変性ツールの使い方" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
           <div class="video-info">
-            <span><strong>선변성 도구 사용법 영상 (삼촌안잔다잉 채널)</strong></span>
-            <a href="https://youtu.be/O2mSUAEX-xM" target="_blank" rel="noopener noreferrer" class="chip">유튜브에서 보기 ↗</a>
+            <span><strong>線変性ツールの使い方動画 (삼촌안잔다잉チャンネル)</strong></span>
+            <a href="https://youtu.be/O2mSUAEX-xM" target="_blank" rel="noopener noreferrer" class="chip">YouTubeで見る ↗</a>
           </div>
         </div>
       </section>
@@ -2481,299 +2249,291 @@
       <!-- ─── 6. 스마트 알람 시스템 ─── -->
       <section class="doc-section" id="alarm">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">6</span> 스마트 알람 시스템 — 이벤트 · 개인 · 화면 알림 · 음성(TTS)</h2>
+          <h2 class="section-title"><span class="section-num">6</span> スマートアラームシステム — イベント · 個人 · 画面通知 · 音声(TTS)</h2>
         </div>
 
-        <p>디아블로4의 주요 시간제 컨텐츠(군단 침공, 야외 우두머리, 지옥물결 등)와 사용자의 개인 타이머를 놓치지 않도록 알려주는 고성능 백그라운드 알람 엔진입니다.</p>
+        <p>Diablo IVの主な時間制コンテンツ(軍団侵攻、ワールドボス、ヘルタイドなど)やユーザー個人のタイマーを見逃さないようにお知らせする、高性能なバックグラウンドアラームエンジンです。</p>
 
-        <h3 id="alarm-events">1) 이벤트 알림 (야외 우두머리 · 지옥물결 · 군단)</h3>
-        <p>게임 외부 웹사이트(diablo4.life)와 실시간 연동되어 최신 보스 및 지옥물결 출현 시간을 자동으로 계산합니다.</p>
+        <h3 id="alarm-events">1) イベント通知 (ワールドボス · ヘルタイド · 軍団)</h3>
+        <p>ゲーム外のウェブサイト(diablo4.life)とリアルタイムで連携し、最新のボスやヘルタイドの出現時刻を自動で計算します。</p>
         
         <!-- 이벤트 알림 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="이벤트 알림 탭 — 야외 우두머리, 지옥물결, 군단 출현 시간 안내, 5분/3분/1분/시작 사전 알림 토글, 겹칠 때 우선순위 순서(▲/▼) 조절">
+        <div class="image-card is-thumbnail" data-caption="イベント通知タブ — ワールドボス、ヘルタイド、軍団の出現時刻の案内、5分/3分/1分/開始の事前通知トグル、重なったときの優先順位(▲/▼)調整">
           <div class="thumb-container">
-            <img src="images/alarm_event_schedule_list.png" alt="이벤트 알림 목록 및 우선순위">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_event_schedule_list.png" alt="イベント通知リストと優先順位">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>이벤트 알림 (야외 우두머리, 지옥물결, 군단 시간표 및 알림 시점)</span>
+            <span>📷</span> <span>イベント通知 (ワールドボス、ヘルタイド、軍団の時刻表と通知タイミング)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>알림 시점 선택</strong>: 각 이벤트마다 <span class="chip blue">5분</span>, <span class="chip blue">3분</span>, <span class="chip blue">1분</span> 전 및 <span class="chip blue">시작</span> 시각을 독립적으로 켜고 끌 수 있습니다.</li>
-          <li><strong>겹칠 때 우선순위 순서</strong>: <kbd>▲</kbd> <kbd>▼</kbd> 버튼을 눌러 이벤트 간의 순서를 변경할 수 있습니다. 동일한 시각에 여러 알림이 겹치면 위쪽에 있는 이벤트부터 먼저 소리를 내고 화면에 함께 표시합니다.</li>
-          <li><strong>군단 기준점 설정</strong>: 군단 출현 시간을 내 화면 상황에 맞게 0분 전 기준점으로 수동 보정할 수도 있습니다.</li>
+          <li><strong>通知タイミングの選択</strong>：各イベントごとに <span class="chip blue">5分</span>, <span class="chip blue">3分</span>, <span class="chip blue">1分</span> 前および <span class="chip blue">開始</span> の時刻を、それぞれ独立してオン/オフできます。</li>
+          <li><strong>重なったときの優先順位</strong>: <kbd>▲</kbd> <kbd>▼</kbd> ボタンを押してイベント間の順序を変更できます。同じ時刻に複数の通知が重なると、上にあるイベントから先に音を鳴らし、画面にも一緒に表示します。</li>
+          <li><strong>軍団の基準点設定</strong>：軍団の出現時刻を自分の画面の状況に合わせて、0分前の基準点として手動で補正することもできます。</li>
         </ul>
 
-        <h3 id="alarm-personal">2) 개인 알람 (맞춤 타이머 & 반복 주기)</h3>
-        <p>비약 30분 만료 알람, 던전 쿨다운, 휴식 안내 등 나만의 커스텀 타이머를 무제한으로 등록할 수 있습니다.</p>
+        <h3 id="alarm-personal">2) 個人アラーム (カスタムタイマー & 繰り返し周期)</h3>
+        <p>エリクサー30分の期限切れアラーム、ダンジョンのクールダウン、休憩の案内など、自分だけのカスタムタイマーを無制限に登録できます。</p>
 
         <!-- 개인 알람 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="개인 알람 탭 — + 알람 추가 버튼, 주기적 반복(예: 10분마다 뱃살 운동 무제한 타이머), 실시간 상태 토글 및 편집/삭제">
+        <div class="image-card is-thumbnail" data-caption="個人アラームタブ — ＋アラーム追加ボタン、定期的な繰り返し(例：10分ごとの腹筋運動の無制限タイマー)、リアルタイムの状態トグルと編集/削除">
           <div class="thumb-container">
-            <img src="images/alarm_personal_timer_list.png" alt="개인 알람 타이머 목록">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_personal_timer_list.png" alt="個人アラームタイマーリスト">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>개인 알람 설정 (맞춤 반복 타이머 목록)</span>
+            <span>📷</span> <span>個人アラーム設定 (カスタム繰り返しタイマーリスト)</span>
           </div>
         </div>
 
         <ul>
-          <li><span class="chip blue">＋ 알람 추가</span>: 원하는 이름과 주기(분 단위 또는 지정 시각), 시작 기준을 정해 등록합니다.</li>
-          <li><strong>스위치 On/Off</strong>: 필요한 타이머만 스위치로 즉시 켜고 끌 수 있으며, 다음 알림까지 남은 시간이 실시간으로 표시됩니다.</li>
+          <li><span class="chip blue">＋ アラーム追加</span>：好きな名前と周期(分単位または指定時刻)、開始基準を決めて登録します。</li>
+          <li><strong>スイッチ On/Off</strong>：必要なタイマーだけをスイッチですぐにオン/オフでき、次の通知までの残り時間がリアルタイムで表示されます。</li>
         </ul>
 
-        <h3 id="alarm-display">3) 화면 알림 (인게임 글자 오버레이 배너)</h3>
-        <p>게임 도중 시야를 방해하지 않으면서 중요한 알림을 직관적으로 확인할 수 있도록 화면 상에 텍스트를 띄웁니다.</p>
+        <h3 id="alarm-display">3) 画面通知 (ゲーム内テキストオーバーレイバナー)</h3>
+        <p>ゲーム中に視界を妨げずに、重要な通知を直感的に確認できるよう、画面上にテキストを表示します。</p>
 
         <!-- 화면 알림 설정 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="화면 알림 설정 — 위치(캐릭터 머리 위, 세로 오프셋 -59px), 글자 크기(35px), 색상(#FFD700), 굵게/외곽선 효과, 배경 투명도(24), 표시 시간(15초) 및 미리보기">
+        <div class="image-card is-thumbnail" data-caption="画面通知設定 — 位置(キャラクターの頭の上、縦オフセット -59px)、文字サイズ(35px)、色(#FFD700)、太字/アウトライン効果、背景の透明度(24)、表示時間(15秒)とプレビュー">
           <div class="thumb-container">
-            <img src="images/alarm_banner_display_settings.png" alt="화면 알림 배너 설정">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_banner_display_settings.png" alt="画面通知バナー設定">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>화면 알림 설정 (위치, 글자 크기, 색상, 외곽선 및 표시 시간)</span>
+            <span>📷</span> <span>画面通知設定 (位置、文字サイズ、色、アウトライン、表示時間)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>알람 위치 & 세로 오프셋</strong>: <span class="chip">캐릭터 머리 위</span> 등 원하는 위치를 고르고 세로 픽셀 오프셋(예: -59 px)을 미세 조정할 수 있습니다.</li>
-          <li><strong>가독성 옵션</strong>: 글자 크기(px), 색상 팔레트(골드 #FFD700 등), <strong>굵게</strong> 및 <strong>외곽선</strong> 스위치를 켜면 어두운 던전이나 화려한 스킬 이펙트 속에서도 글자가 뚜렷하게 보입니다.</li>
-          <li><span class="chip">미리보기</span> 버튼을 눌러 인게임에서 어떻게 표시되는지 즉시 테스트할 수 있습니다.</li>
+          <li><strong>アラーム位置 & 縦オフセット</strong>: <span class="chip">キャラクターの頭の上</span> など好きな位置を選び、縦ピクセルのオフセット(例：-59 px)を微調整できます。</li>
+          <li><strong>可読性オプション</strong>：文字サイズ(px)、カラーパレット(ゴールド #FFD700 など)、 <strong>太字</strong> および <strong>アウトライン</strong> スイッチをオンにすると、暗いダンジョンや派手なスキルエフェクトの中でも文字がはっきり見えます。</li>
+          <li><span class="chip">プレビュー</span> ボタンを押して、ゲーム内でどのように表示されるかをすぐにテストできます。</li>
         </ul>
 
-        <h3 id="alarm-sound">4) 기본 사운드 · 음성 (TTS & 효과음)</h3>
-        <p>알람음 효과음과 Supertonic 3 인공지능 음성 엔진을 통해 자연스러운 한국어 음성 안내를 제공합니다.</p>
+        <h3 id="alarm-sound">4) 基本音・音声 (TTS & 効果音)</h3>
+        <p>アラーム音の効果音と Supertonic 3 AI音声エンジンにより、自然な韓国語の音声案内を提供します。</p>
 
         <!-- 기본 사운드 음성 설정 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="기본 사운드 · 음성 설정 — 사운드 파일(Ring01), 알림 방식(알람음만 / 알람음+음성 / 음성만), Supertonic 3 한국어 음성 엔진(F1 여성, 속도 0.90x, 볼륨 조절) 및 실시간 테스트">
+        <div class="image-card is-thumbnail" data-caption="基本音・音声設定 — サウンドファイル(Ring01)、通知方式(アラーム音のみ / アラーム音+音声 / 音声のみ)、Supertonic 3 韓国語音声エンジン(F1 女性、速度0.90x、音量調整)とリアルタイムテスト">
           <div class="thumb-container">
-            <img src="images/alarm_sound_voice_settings.png" alt="기본 사운드 및 음성 설정">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/alarm_sound_voice_settings.png" alt="基本音・音声設定">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>기본 사운드 · 음성 (Supertonic 3 한국어 음성 및 효과음)</span>
+            <span>📷</span> <span>基本音・音声 (Supertonic 3 韓国語音声と効果音)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>알림 방식</strong>: <span class="chip">알람음만</span>, <span class="chip gold">알람음 ＋ 음성</span>, <span class="chip">음성만</span> 3가지 모드 지원.</li>
-          <li><strong>음성 엔진</strong>: 내장 <strong>Supertonic 3</strong> 음성 엔진 탑재 — 'F1 여성' 등 선명한 한국어 발음으로 읽어주며, 말 속도(0.90x 등)와 볼륨(0~100)을 자유롭게 조절할 수 있습니다.</li>
-          <li><span class="chip">▶ 테스트</span> 버튼으로 실제 음성 출력 품질을 즉시 확인 가능합니다.</li>
+          <li><strong>通知方式</strong>: <span class="chip">アラーム音のみ</span>, <span class="chip gold">アラーム音 ＋ 音声</span>, <span class="chip">音声のみ</span> の3つのモードに対応。</li>
+          <li><strong>音声エンジン</strong>：内蔵の <strong>Supertonic 3</strong> 音声エンジンを搭載 — 「F1 女性」などの明瞭な韓国語の発音で読み上げ、話す速度(0.90xなど)と音量(0~100)を自由に調整できます。</li>
+          <li><span class="chip">▶ テスト</span> ボタンで実際の音声出力の品質をすぐに確認できます。</li>
         </ul>
       </section>
 
       <!-- ─── 7. 창 모드, 핀, 오버레이 ─── -->
       <section class="doc-section" id="window-modes">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">7</span> 창 모드 · 항상 위(핀) · 인게임 오버레이</h2>
+          <h2 class="section-title"><span class="section-num">7</span> ウィンドウモード · 常に手前(ピン) · ゲーム内オーバーレイ</h2>
         </div>
 
-        <h3 id="window-mini">1) 미니창 모드 (Mini Bar)</h3>
-        <p>게임 화면 모니터 한구석에 작게 띄워두고 쓸 수 있는 초소형 한 줄 바 형태의 모드입니다.</p>
+        <h3 id="window-mini">1) ミニウィンドウモード (Mini Bar)</h3>
+        <p>ゲーム画面のモニターの隅に小さく表示して使える、超小型の一行バー形式のモードです。</p>
 
         <!-- 미니바 스크린샷 카드 -->
-        <div class="image-card is-small" data-caption="미니창 모드 — 슬롯 A~G 작동 상태, 시작/중지, 편의기능 바로가기, 기본창 복귀 버튼">
+        <div class="image-card is-small" data-caption="ミニウィンドウモード — スロットA~Gの稼働状態、開始/停止、便利機能ショートカット、基本ウィンドウに戻るボタン">
           <div class="thumb-container">
-            <img src="images/helper_mini_bar.png" alt="미니바 모드 화면">
+            <img src="../images/helper_mini_bar.png" alt="ミニバーモード画面">
           </div>
-          <div class="image-caption"><span>📷</span> <span>초소형 미니바 모드</span></div>
+          <div class="image-caption"><span>📷</span> <span>超小型ミニバーモード</span></div>
         </div>
 
         <ul>
-          <li>슬롯 A~G 7개의 현재 작동 상태가 점등되어 실시간 확인 가능.</li>
-          <li><span class="chip green">시작</span> / <span class="chip">중지</span> 버튼, 편의기능(렌치) 버튼 — 누르면 기본창으로 돌아와 편의기능 탭을 엽니다(선변성 시작은 단축키나 그 탭의 시작 버튼으로), 항상 위(핀) 버튼 내장.</li>
-          <li>복귀(네모) 버튼을 누르면 즉시 원래 크기의 기본 창으로 되돌아옵니다.</li>
+          <li>スロットA~Gの7つの現在の稼働状態が点灯し、リアルタイムで確認できます。</li>
+          <li><span class="chip green">開始</span> / <span class="chip">停止</span> ボタン、便利機能(レンチ)ボタン — 押すと基本ウィンドウに戻って便利機能タブが開きます(線変性の開始はショートカットまたはそのタブの開始ボタンで)、常に手前(ピン)ボタンを内蔵。</li>
+          <li>復帰(四角)ボタンを押すと、すぐに元のサイズの基本ウィンドウに戻ります。</li>
         </ul>
 
-        <h3 id="window-overlay">2) 인게임 HUD 오버레이</h3>
-        <p>게임 화면 위에 반투명으로 띄워 매크로 동작 상황을 실시간으로 확인하는 필수 HUD 도구입니다. 작동 중인 매크로 슬롯, 유지 키, 현재 타격 중인 키 목록이 투명하게 표시됩니다.</p>
+        <h3 id="window-overlay">2) ゲーム内HUDオーバーレイ</h3>
+        <p>ゲーム画面の上に半透明で表示し、マクロの動作状況をリアルタイムで確認する必須のHUDツールです。稼働中のマクロスロット、維持キー、現在打鍵中のキー一覧が透明に表示されます。</p>
 
         <!-- 1. 인게임 오버레이 실화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="인게임 HUD 오버레이 실화면 — 작동 중인 매크로 슬롯(•A, •B 빨간색 점등), 유지 키(유지 RClick), 실시간 눌림 키 목록(눌림 2 F F F F 4) 실시간 표시">
+        <div class="image-card is-thumbnail" data-caption="ゲーム内HUDオーバーレイの実画面 — 稼働中のマクロスロット(•A、•Bが赤く点灯)、維持キー(維持 RClick)、リアルタイムの押下キー一覧(押下 2 F F F F 4)をリアルタイム表示">
           <div class="thumb-container">
-            <img src="images/overlay_ingame_live_display.png" alt="인게임 HUD 오버레이 실화면">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/overlay_ingame_live_display.png" alt="ゲーム内HUDオーバーレイの実画面">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>인게임 HUD 오버레이 (작동 슬롯, 유지 키, 실시간 타격 키 목록)</span>
+            <span>📷</span> <span>ゲーム内HUDオーバーレイ (稼働スロット、維持キー、リアルタイム打鍵キー一覧)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>작동 매크로 슬롯 상태</strong>:
-            <span class="chip ruby">•A</span> <span class="chip ruby">•B</span> 처럼 현재 발동되어 돌고 있는 슬롯은 붉은색 테두리와 점(•)으로 점등되며, 비활성 슬롯(<span class="chip">C</span>)과 토글 대기 슬롯(<span class="chip green">○D</span>)이 한눈에 구분됩니다.
+          <li><strong>稼働中のマクロスロットの状態</strong>:
+            <span class="chip ruby">•A</span> <span class="chip ruby">•B</span> のように、現在発動して動いているスロットは赤い枠とドット(•)で点灯し、非アクティブなスロット(<span class="chip">C</span>)とトグル待機中のスロット(<span class="chip green">○D</span>)が一目で区別できます。
           </li>
-          <li><strong>유지 키 (Hold / Companion) 출력</strong>:
-            현재 지속적으로 눌려 있는 키(예: <code>유지 RClick</code>, <code>유지 Shift</code> 등)가 우측 상단에 실시간으로 표시됩니다.
+          <li><strong>維持キー (Hold / Companion) の出力</strong>：現在継続して押されているキー(例： <code>維持 RClick</code>, <code>維持 Shift</code> など)が右上にリアルタイムで表示されます。
           </li>
-          <li><strong>실시간 눌림 키 목록 (Key Log)</strong>:
-            하단에 현재 시퀀스에서 실시간으로 타격 중인 스킬 키(예: <code>눌림 2 F F F F 4</code>)가 연속 출력되어 스킬 로테이션이 정확히 맞물려 도는지 게임 중에 바로 확인 가능합니다.
+          <li><strong>リアルタイム押下キー一覧 (Key Log)</strong>：下部に、現在のシーケンスでリアルタイムに打鍵しているスキルキー(例： <code>押下 2 F F F F 4</code>)が連続で出力され、スキルローテーションが正確に噛み合って回っているかをゲーム中にすぐ確認できます。
           </li>
-          <li><strong>선변성 진행도</strong>: 호라드림의 함 선변성 동작 시에는 현재 칸 번호와 진행률이 오버레이에 뜹니다.</li>
+          <li><strong>線変性の進行度</strong>：ホラドリックキューブの線変性の動作中は、現在のマス番号と進行率がオーバーレイに表示されます。</li>
         </ul>
 
         <!-- 2. 오버레이 설정 화면 스크린샷 -->
-        <div class="image-card is-thumbnail" data-caption="전역 설정 — 오버레이 상세 커스텀 (모니터 선택, 위치 우측 하단, X/Y 픽셀 오프셋, 투명도 40%, 크기 118%, 가로 폭 409px 및 실시간 미리보기)">
+        <div class="image-card is-thumbnail" data-caption="グローバル設定 — オーバーレイ詳細カスタム (モニター選択、位置：右下、X/Yピクセルオフセット、透明度40%、サイズ118%、横幅409px、リアルタイムプレビュー)">
           <div class="thumb-container">
-            <img src="images/overlay_configuration_settings.png" alt="오버레이 상세 설정 화면">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/overlay_configuration_settings.png" alt="オーバーレイ詳細設定画面">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
           <div class="image-caption">
-            <span>📷</span> <span>오버레이 상세 설정 (모니터, 위치, X/Y 오프셋, 투명도, 크기, 폭 조절)</span>
+            <span>📷</span> <span>オーバーレイ詳細設定 (モニター、位置、X/Yオフセット、透明度、サイズ、幅の調整)</span>
           </div>
         </div>
 
         <ul>
-          <li><strong>게임 오버레이 표시</strong>: 오버레이를 켜고 끄는 마스터 스위치입니다.</li>
-          <li><strong>모니터 선택</strong>: 듀얼 및 다중 모니터 환경에서 디아블로4가 켜진 모니터(예: <code>2: LG HDR 4K (2560×1440)</code>)를 드롭다운으로 직접 지정할 수 있습니다.</li>
-          <li><strong>화면 위치 & 정밀 픽셀 오프셋</strong>:
-            화면의 9개 구역(예: <code>우측</code> <code>하단</code>)을 고른 뒤, <span class="chip">X 오프셋</span>(-13 px)과 <span class="chip">Y 오프셋</span>(-3 px)으로 미니맵이나 게임 UI를 가리지 않게 픽셀 단위로 위치를 미세 조정합니다.
+          <li><strong>ゲームオーバーレイ表示</strong>：オーバーレイをオン/オフするマスタースイッチです。</li>
+          <li><strong>モニター選択</strong>：デュアルおよびマルチモニター環境で、Diablo IVが起動しているモニター(例： <code>2: LG HDR 4K (2560×1440)</code>)をドロップダウンで直接指定できます。</li>
+          <li><strong>画面位置 & 精密ピクセルオフセット</strong>：画面の9つの区画(例： <code>右</code> <code>下</code>)を選んだあと、 <span class="chip">Xオフセット</span>(-13 px)と <span class="chip">Yオフセット</span>(-3 px)で、ミニマップやゲームUIを隠さないようにピクセル単位で位置を微調整します。
           </li>
-          <li><strong>투명도 & 크기 & 가로 폭</strong>:
-            슬라이더를 통해 <span class="chip">투명도</span>(기본 40% 반투명), <span class="chip">크기</span>(118% 등 배율), <span class="chip">가로 폭</span>(409 px)을 내 시야에 맞춰 최적화합니다.
+          <li><strong>透明度 & サイズ & 横幅</strong>：スライダーで <span class="chip">透明度</span>(デフォルト40%の半透明)、 <span class="chip">サイズ</span>(118%などの倍率)、 <span class="chip">横幅</span>(409 px)を自分の視界に合わせて最適化します。
           </li>
-          <li><span class="chip blue">👁 미리보기</span>: 매크로를 직접 실행하지 않아도 버튼을 누르면 설정된 위치와 크기로 오버레이가 화면에 즉시 나타나 확인하기 편리합니다.</li>
+          <li><span class="chip blue">👁 プレビュー</span>：マクロを実際に実行しなくても、ボタンを押すと設定した位置とサイズでオーバーレイが画面にすぐ表示されるので確認が便利です。</li>
         </ul>
       </section>
 
       <!-- ─── 8. 안전장치 ─── -->
       <section class="doc-section" id="safety-features">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">8</span> 안전 장치 — 대기 키(Stop Keys) · 게임 창 감지</h2>
+          <h2 class="section-title"><span class="section-num">8</span> 安全装置 — 待機キー(Stop Keys) · ゲームウィンドウ検知</h2>
         </div>
 
         <ul>
-          <li><strong>대기 키 (Stop Keys, 기본값: <kbd>Enter</kbd> <kbd>Tab</kbd> <kbd>T</kbd> <kbd>I</kbd>)</strong>:
-            채팅 창 열기(<kbd>Enter</kbd>), 지도 열기(<kbd>Tab</kbd>), 차원문(<kbd>T</kbd>), 인벤토리 열기(<kbd>I</kbd>) 등 게임 인터페이스를 열었을 때 매크로가 엉뚱하게 스킬을 난사하지 않도록 <strong>즉시 입력을 일시정지</strong>합니다. 대화를 마치고 다시 발동키를 누르면 매크로가 재개됩니다.
+          <li><strong>待機キー (Stop Keys、デフォルト： <kbd>Enter</kbd> <kbd>Tab</kbd> <kbd>T</kbd> <kbd>I</kbd>)</strong>：チャットを開く(<kbd>Enter</kbd>)、マップを開く(<kbd>Tab</kbd>)、次元の門(<kbd>T</kbd>)、インベントリを開く(<kbd>I</kbd>)などゲームインターフェースを開いたときに、マクロが見当違いにスキルを乱射しないよう <strong>即座に入力を一時停止</strong>します。会話を終えて再び発動キーを押すと、マクロが再開します。
           </li>
-          <li><strong>게임 창 감지</strong>:
-            디아블로4 프로세스가 활성 윈도우 창일 때만 작동합니다. 설정에서 특정 창 제목이나 프로세스명을 사용자가 직접 커스텀 매칭할 수도 있습니다.
+          <li><strong>ゲームウィンドウ検知</strong>：Diablo IVのプロセスがアクティブなウィンドウのときだけ動作します。設定で特定のウィンドウタイトルやプロセス名をユーザーが自分でカスタムマッチングすることもできます。
           </li>
-          <li><strong>입력 전송 검증 도구</strong>:
-            상단 바의 <span class="chip">테스트</span> 버튼을 누르면 게임 밖에서도 가상 키 입력이 정상적으로 시스템에 주입되는지 사전에 점검할 수 있습니다.
+          <li><strong>入力送信検証ツール</strong>：上部バーの <span class="chip">テスト</span> ボタンを押すと、ゲームの外でも仮想キー入力がシステムに正しく注入されるかを事前に点検できます。
           </li>
         </ul>
 
-        <h3 id="input-test">3) 입력 테스트 창</h3>
-        <p>상단 바의 <span class="chip">테스트</span> 버튼을 누르면 작은 창이 뜨고, 매크로가 보내는 키·마우스 입력이 그대로 들어오는지 눈으로 확인할 수 있습니다. 발동키를 눌러도 아무 일이 없을 때 "헬퍼가 입력을 못 보내는지, 게임이 안 받는지" 를 가르는 첫 점검 도구입니다.</p>
-        <div class="image-card is-small" data-caption="입력 테스트 창 — 매크로가 보내는 키·마우스 입력이 실제로 들어오는지 확인">
+        <h3 id="input-test">3) 入力テストウィンドウ</h3>
+        <p>上部バーの <span class="chip">テスト</span> ボタンを押すと小さなウィンドウが開き、マクロが送るキー・マウス入力がそのまま入ってくるかを目で確認できます。発動キーを押しても何も起きないときに、「ヘルパーが入力を送れていないのか、ゲームが受け取っていないのか」を切り分ける最初の点検ツールです。</p>
+        <div class="image-card is-small" data-caption="入力テストウィンドウ — マクロが送るキー・マウス入力が実際に入ってくるかを確認">
           <div class="thumb-container">
-            <img src="images/helper_input_test.png" alt="입력 테스트 창">
+            <img src="../images/helper_input_test.png" alt="入力テストウィンドウ">
           </div>
-          <div class="image-caption"><span>📷</span> <span>입력 테스트 창</span></div>
+          <div class="image-caption"><span>📷</span> <span>入力テストウィンドウ</span></div>
         </div>
         <!-- 설정창 캡처 -->
-        <div class="image-card is-thumbnail" data-caption="전역 설정 창 — 안전 대기 키 커스텀, 게임 창 감지 프로세스 지정, 오버레이 위치/투명도 조정">
+        <div class="image-card is-thumbnail" data-caption="グローバル設定ウィンドウ — 安全待機キーのカスタム、ゲームウィンドウ検知プロセスの指定、オーバーレイの位置/透明度の調整">
           <div class="thumb-container">
-            <img src="images/helper_settings_dialog.png" alt="전역 설정 다이얼로그">
-            <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+            <img src="../images/helper_settings_dialog.png" alt="グローバル設定ダイアログ">
+            <span class="zoom-hint-badge">🔍 クリックで拡大</span>
           </div>
-          <div class="image-caption"><span>📷</span> <span>헬퍼 전역 설정(⚙) 다이얼로그</span></div>
+          <div class="image-caption"><span>📷</span> <span>ヘルパー グローバル設定(⚙)ダイアログ</span></div>
         </div>
       </section>
 
       <!-- ─── 9. 프로필 관리 & 공유 ─── -->
       <section class="doc-section" id="profile-sync">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">9</span> 프로필 관리 · 백업 · 클랜원 공유</h2>
+          <h2 class="section-title"><span class="section-num">9</span> プロファイル管理 · バックアップ · クランメンバーとの共有</h2>
         </div>
 
         <ul>
-          <li>프로필 하나에는 슬롯 A~G(총 7개)의 모든 시퀀스와 딜레이, 발동키 설정이 통째로 묶여 저장됩니다.</li>
-          <li>원소술사, 야만용사, 드루이드, 강령술사, 도적, 혼령사 등 직업별 및 빌드별로 프로필을 분리해두면 클릭 한 번으로 모든 세팅이 교체됩니다.</li>
-          <li><span class="chip">내보내기</span>: 현재 세팅을 <code>.d4cute</code> 파일로 내보내어 안전하게 백업하거나 클랜원에게 공유할 수 있습니다.</li>
-          <li><span class="chip blue">가져오기</span>: 다른 사용자가 공유한 <code>.d4cute</code> 프로필 파일을 불러와 내 헬퍼에 즉시 적용합니다.</li>
-          <li><span class="chip">저장</span> 버튼을 눌러야 디스크에 안전하게 반영되며, 잘못 건드렸을 때는 <span class="chip">불러오기</span>를 눌러 마지막 저장 시점으로 되돌릴 수 있습니다.</li>
+          <li>プロファイル1つには、スロットA~G(計7つ)のすべてのシーケンスとディレイ、発動キーの設定がまるごとまとめて保存されます。</li>
+          <li>ソーサラー、バーバリアン、ドルイド、ネクロマンサー、ローグ、スピリットボーンなど、クラス別・ビルド別にプロファイルを分けておけば、ワンクリックですべての設定が切り替わります。</li>
+          <li><span class="chip">エクスポート</span>：現在の設定を <code>.d4cute</code> ファイルとして書き出し、安全にバックアップしたり、クランメンバーに共有したりできます。</li>
+          <li><span class="chip blue">インポート</span>：他のユーザーが共有した <code>.d4cute</code> プロファイルファイルを読み込んで、自分のヘルパーにすぐ適用します。</li>
+          <li><span class="chip">保存</span> ボタンを押して初めてディスクに安全に反映され、誤って設定を変更してしまったときは <span class="chip">読み込む</span>を押して、最後に保存した時点に戻せます。</li>
         </ul>
       </section>
 
       <!-- ─── 10. 텔레그램 연동 & 디버그 로그 ─── -->
       <section class="doc-section" id="telegram-support">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">10</span> 텔레그램 지원 & 디버그 로그 뷰어</h2>
+          <h2 class="section-title"><span class="section-num">10</span> Telegramサポート & デバッグログビューアー</h2>
         </div>
 
         <p>
-          헬퍼 상단 프로필 줄의 파란색 <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span> 아이콘을 클릭하면 텔레그램 연동 다이얼로그가 열립니다.
-          새 버전 소식을 빠르게 확인하고, <strong style="color:var(--gold);">@d4cute_helper</strong> 이용자 그룹에서 질문 및 버그 제보를 진행하며, 오류 발생 시 <strong style="color:var(--ruby);">디버그 로그를 원클릭으로 추출</strong>하여 해결을 지원받을 수 있습니다.
+          ヘルパー上部のプロファイル行にある青い <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> Telegramロゴ</span> アイコンをクリックすると、Telegram連携ダイアログが開きます。新バージョンの情報をすばやく確認し、 <strong style="color:var(--gold);">@d4cute_helper</strong> ユーザーグループで質問やバグ報告を行い、エラー発生時には <strong style="color:var(--ruby);">デバッグログをワンクリックで抽出</strong>して、解決のサポートを受けられます。
         </p>
 
         <!-- 텔레그램 및 로그 뷰어 스크린샷 2종 갤러리 -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0;">
-          <div class="image-card is-thumbnail" data-caption="텔레그램 다이얼로그 — 공지 채널(@d4_notice), 이용자 소통 그룹(@d4cute_helper), 스마트폰 즉시 입장 QR 코드, 로그 보기 및 텔레그램 설치 버튼">
+          <div class="image-card is-thumbnail" data-caption="Telegramダイアログ — お知らせチャンネル(@d4_notice)、ユーザー交流グループ(@d4cute_helper)、スマートフォンですぐ参加できるQRコード、ログ表示とTelegramインストールボタン">
             <div class="thumb-container">
-              <img src="images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
-              <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+              <img src="../images/telegram_qr_dialog.png" alt="Telegram連携ダイアログとQRコード">
+              <span class="zoom-hint-badge">🔍 クリックで拡大</span>
             </div>
             <div class="image-caption">
-              <span>📷</span> <span>텔레그램 연동 팝업 (공지/이용자 그룹/QR 코드/설치)</span>
+              <span>📷</span> <span>Telegram連携ポップアップ (お知らせ/ユーザーグループ/QRコード/インストール)</span>
             </div>
           </div>
           
-          <div class="image-card is-thumbnail" data-caption="로그 뷰어 다이얼로그 — 날짜별 로그 조회, 경고·오류만 필터링 토글, 최근 200줄 복사, 오류만 복사, 로컬 로그 폴더 열기">
+          <div class="image-card is-thumbnail" data-caption="ログビューアーダイアログ — 日付別のログ閲覧、警告・エラーのみのフィルタートグル、直近200行のコピー、エラーのみコピー、ローカルログフォルダを開く">
             <div class="thumb-container">
-              <img src="images/log_viewer_error_copy.png" alt="디버그 로그 뷰어 다이얼로그">
-              <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
+              <img src="../images/log_viewer_error_copy.png" alt="デバッグログビューアーダイアログ">
+              <span class="zoom-hint-badge">🔍 クリックで拡大</span>
             </div>
             <div class="image-caption">
-              <span>📷</span> <span>원클릭 디버그 로그 뷰어 (오류만 복사/최근 200줄 복사)</span>
+              <span>📷</span> <span>ワンクリックデバッグログビューアー (エラーのみコピー/直近200行コピー)</span>
             </div>
           </div>
         </div>
 
         <!-- 1) 텔레그램 설치 및 계정 준비 -->
-        <h3 id="telegram-install">1) 텔레그램 설치 및 사전 준비</h3>
+        <h3 id="telegram-install">1) Telegramのインストールと事前準備</h3>
         <p>
-          텔레그램은 PC와 스마트폰에서 가볍고 안전하게 구동되는 글로벌 메신저입니다. PC나 모바일에 텔레그램이 아직 설치되어 있지 않다면 아래 방법으로 간편하게 준비할 수 있습니다.
+          Telegramは、PCとスマートフォンで軽く安全に動作するグローバルメッセンジャーです。PCまたはモバイルにまだTelegramがインストールされていない場合は、以下の方法で簡単に準備できます。
         </p>
         <div class="alert-box info" style="margin: 12px 0 18px;">
           <span class="alert-icon">💡</span>
           <div>
-            <strong>안전한 공식 설치 안내</strong><br>
-            헬퍼 텔레그램 창 하단의 <span class="chip blue">텔레그램 설치</span> 버튼을 누르면 텔레그램 공식 웹사이트(<a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">telegram.org</a>)로 브라우저가 열립니다. 
-            <span style="color:var(--green); font-weight:600;">헬퍼가 임의로 실행 파일을 내려받거나 설치하지 않으므로 안심하고 이용하세요.</span>
+            <strong>安全な公式インストール案内</strong><br>
+            ヘルパーのTelegramウィンドウ下部の <span class="chip blue">Telegramインストール</span> ボタンを押すと、Telegram公式ウェブサイト(<a href="https://telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">telegram.org</a>)がブラウザで開きます。 
+            <span style="color:var(--green); font-weight:600;">ヘルパーが勝手に実行ファイルをダウンロードしたりインストールしたりすることはないので、安心してご利用ください。</span>
           </div>
         </div>
         <ul>
-          <li><strong>스마트폰 (모바일)</strong>: <span style="color:var(--gold); font-weight:600;">구글 플레이스토어</span> 또는 <span style="color:var(--gold); font-weight:600;">애플 앱스토어</span>에서 <code>Telegram</code>을 검색하여 무료 다운로드합니다. 전화번호 인증만 거치면 1분 만에 가입이 완료됩니다.</li>
-          <li><strong>PC (데스크톱)</strong>: <a href="https://desktop.telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">Telegram Desktop ↗</a> 공식 페이지에서 Windows용 설치 버전을 내려받아 설치한 뒤, 모바일 텔레그램 앱의 <span class="chip">설정 → 기기 → 데스크톱 연결</span>을 통해 QR 코드를 스캔하면 비밀번호 없이 즉시 로그인됩니다.</li>
+          <li><strong>スマートフォン (モバイル)</strong>: <span style="color:var(--gold); font-weight:600;">Google Playストア</span> または <span style="color:var(--gold); font-weight:600;">Apple App Store</span>で、 <code>Telegram</code>で検索して無料ダウンロードします。電話番号認証だけで、1分で登録が完了します。</li>
+          <li><strong>PC (デスクトップ)</strong>: <a href="https://desktop.telegram.org" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">Telegram Desktop ↗</a> 公式ページからWindows向けインストール版をダウンロードしてインストールしたあと、モバイルのTelegramアプリの <span class="chip">設定 → デバイス → デスクトップデバイスをリンク</span>でQRコードをスキャンすると、パスワードなしですぐにログインできます。</li>
         </ul>
 
         <!-- 2) 채널 및 그룹방 가입 방법 -->
-        <h3 id="telegram-channels">2) 채널 & 이용자 그룹방 가입 방법</h3>
+        <h3 id="telegram-channels">2) チャンネル & ユーザーグループへの参加方法</h3>
         <p>
-          d4cute helper는 목적에 따라 두 개의 공식 텔레그램 방을 운영합니다.
+          d4cute helperは、目的に応じて2つの公式Telegramルームを運営しています。
         </p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 14px 0 20px;">
           <div class="clan-card" style="padding: 16px;">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
               <span style="font-size:20px;">📢</span>
-              <strong style="color:var(--gold); font-size:16px;">공지 전용 채널</strong>
+              <strong style="color:var(--gold); font-size:16px;">お知らせ専用チャンネル</strong>
             </div>
             <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
-              새 버전 업데이트 소식, 시즌 패치 대응 현황, 긴급 안내를 전달하는 단방향 알림 채널입니다.
+              新バージョンのアップデート情報、シーズンパッチへの対応状況、緊急のお知らせを伝える一方向の通知チャンネルです。
             </p>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700;">@d4_notice ↗</a>
-              <span class="chip">공지 구독</span>
+              <span class="chip">お知らせを購読</span>
             </div>
           </div>
 
           <div class="clan-card" style="padding: 16px; border-color: rgba(59, 130, 246, 0.4);">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
               <span style="font-size:20px;">💬</span>
-              <strong style="color:var(--blue); font-size:16px;">이용자 소통 그룹방</strong>
+              <strong style="color:var(--blue); font-size:16px;">ユーザー交流グループルーム</strong>
             </div>
             <p style="font-size:13px; color:var(--fg-dim); margin:0 0 10px;">
-              <strong>헬퍼 설정 팁 공유, 질문, 기능 건의, 오류 제보는 오직 여기서만 받습니다!</strong>
+              <strong>ヘルパーの設定Tipsの共有、質問、機能の要望、エラー報告は、ここでのみ受け付けています！</strong>
             </p>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper ↗</a>
-              <span class="chip blue">문의/제보</span>
+              <span class="chip blue">お問い合わせ/報告</span>
             </div>
           </div>
         </div>
@@ -2781,64 +2541,64 @@
         <div class="alert-box gold" style="margin: 12px 0 18px;">
           <span class="alert-icon">⚠️</span>
           <div>
-            <strong>문의 채널 주의사항</strong><br>
-            삼촌안잔다잉 유튜브 채널은 디아블로4 게임 플레이와 소통을 즐기는 개인 방송 공간입니다. <span style="color:var(--ruby); font-weight:700;">유튜브 방송 채팅이나 댓글로는 헬퍼 문의를 일절 받지 않으니</span>, 반드시 텔레그램 공식 그룹방(<span style="color:var(--blue); font-weight:700;">@d4cute_helper</span>)으로 방문해 주세요.
+            <strong>お問い合わせチャンネルの注意事項</strong><br>
+            삼촌안잔다잉のYouTubeチャンネルは、Diablo IVのゲームプレイと交流を楽しむ個人の配信スペースです。 <span style="color:var(--ruby); font-weight:700;">YouTube配信のチャットやコメントでは、ヘルパーに関するお問い合わせを一切受け付けていませんので</span>、必ずTelegram公式グループルーム(<span style="color:var(--blue); font-weight:700;">@d4cute_helper</span>)にお越しください。
           </div>
         </div>
 
-        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">📱 그룹방 간편 입장 방법 2가지</h4>
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">📱 グループルームへの簡単な参加方法2つ</h4>
         <ul>
-          <li><strong>방법 A (스마트폰 카메라 QR 스캔 — 가장 추천!)</strong>: 스마트폰의 기본 카메라 앱을 켜고 화면 오른쪽의 <strong style="color:var(--gold);">대형 QR 코드</strong>를 비추면 상단에 노란색 텔레그램 링크 배너가 나타납니다. 터치 한 번으로 <span class="chip blue">@d4cute_helper</span> 그룹방에 즉시 들어오실 수 있습니다.</li>
-          <li><strong>방법 B (PC 텔레그램 바로 열기)</strong>: 창에서 <span class="chip">열기</span> 버튼을 누르거나 웹 링크(<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">https://t.me/d4cute_helper</a>)를 클릭하면 PC 텔레그램 클라이언트로 직행합니다.</li>
+          <li><strong>方法A (スマートフォンのカメラでQRスキャン — 一番のおすすめ！)</strong>：スマートフォンの標準カメラアプリを起動して、画面右側の <strong style="color:var(--gold);">大きなQRコード</strong>にかざすと、上部に黄色いTelegramリンクのバナーが表示されます。ワンタッチで <span class="chip blue">@d4cute_helper</span> グループルームにすぐ入れます。</li>
+          <li><strong>方法B (PCのTelegramをそのまま開く)</strong>：ウィンドウで <span class="chip">開く</span> ボタンを押すか、ウェブリンク(<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:600;">https://t.me/d4cute_helper</a>)をクリックすると、PCのTelegramクライアントに直行します。</li>
         </ul>
 
         <!-- 3) 로그 뷰어를 통한 오류 복사 & 문제 해결 -->
-        <h3 id="log-viewer-guide">3) 로그 보기를 통한 오류 복사 & 문제 해결 방법</h3>
+        <h3 id="log-viewer-guide">3) ログ表示によるエラーコピー & 問題解決の方法</h3>
         <p>
-          매크로가 갑자기 멈추거나, 선변성 도중 오류가 발생하거나, 예상치 못한 동작이 나타났을 때 제작자에게 상황을 설명하려면 <strong style="color:var(--gold);">로그 데이터</strong>가 가장 확실한 열쇠가 됩니다.
+          マクロが突然止まったり、線変性の途中でエラーが発生したり、予期しない動作が現れたときに、制作者へ状況を説明するには <strong style="color:var(--gold);">ログデータ</strong>が最も確実な手がかりになります。
         </p>
 
-        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">🔍 로그 뷰어 화면 구성 & 버튼 기능</h4>
+        <h4 style="color:var(--gold-bright); margin: 16px 0 8px;">🔍 ログビューアーの画面構成 & ボタンの機能</h4>
         <ul>
-          <li><strong><span style="color:var(--gold); font-weight:700;">로그 일자 드롭다운</span></strong>: 오류가 발생한 날짜(기본: 오늘 날짜)를 선택합니다. 로그는 최근 <span class="chip">7일간 자동 보관</span>된 후 오래된 파일부터 순차 삭제됩니다.</li>
-          <li><strong><span class="chip">경고·오류만</span> 토글 스위치</strong>: 수천 줄의 일반적인 <code>INFO</code> 로그를 숨기고, 시스템 경고(<span style="color:#f59e0b; font-weight:700;">WARN</span>) 및 오류(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 항목만 쏙 뽑아서 볼 수 있습니다.</li>
-          <li><strong><span class="chip">새로 고침</span></strong>: 헬퍼를 켜둔 상태에서 실시간으로 쌓이는 최신 로그를 즉시 화면에 다시 로드합니다.</li>
-          <li><strong><span class="chip">폴더 열기</span></strong>: 로그 원본 텍스트 파일들이 저장된 윈도우 탐색기 폴더(<code>%APPDATA%\d4cute_helper\logs</code>)를 직접 엽니다.</li>
-          <li><strong><span class="chip gold">최근 200줄 복사</span></strong>: 오류 직전까지 어떤 키가 눌렸고 어떤 이벤트가 일어났는지 맥락을 파악할 수 있도록 최근 200행의 로그를 클립보드로 복사합니다.</li>
-          <li><strong><span class="chip ruby">오류만 복사</span></strong>: 로그 전체 중에서 오류(<span style="color:var(--ruby); font-weight:700;">ERROR</span>) 및 예외 스택트레이스 구문만 정밀 추출하여 클립보드에 담습니다.</li>
-          <li><strong><span class="chip">선택 복사</span></strong>: 텍스트 창에서 마우스로 원하는 부분을 드래그한 뒤 해당 구간만 복사합니다.</li>
+          <li><strong><span style="color:var(--gold); font-weight:700;">ログ日付ドロップダウン</span></strong>：エラーが発生した日付(デフォルト：今日の日付)を選択します。ログは直近 <span class="chip">7日間自動保管</span>されたあと、古いファイルから順に削除されます。</li>
+          <li><strong><span class="chip">警告・エラーのみ</span> トグルスイッチ</strong>：数千行に及ぶ通常の <code>INFO</code> ログを隠し、システム警告(<span style="color:#f59e0b; font-weight:700;">WARN</span>)とエラー(<span style="color:var(--ruby); font-weight:700;">ERROR</span>)の項目だけを抜き出して見られます。</li>
+          <li><strong><span class="chip">リフレッシュ</span></strong>：ヘルパーを起動したまま、リアルタイムで溜まっていく最新ログを即座に画面に再読み込みします。</li>
+          <li><strong><span class="chip">フォルダを開く</span></strong>：ログの元テキストファイルが保存されているWindowsエクスプローラーのフォルダ(<code>%APPDATA%\d4cute_helper\logs</code>)を直接開きます。</li>
+          <li><strong><span class="chip gold">直近200行をコピー</span></strong>：エラー直前までどのキーが押され、どのイベントが起きたのか文脈を把握できるよう、直近200行分のログをクリップボードにコピーします。</li>
+          <li><strong><span class="chip ruby">エラーのみコピー</span></strong>：ログ全体の中から、エラー(<span style="color:var(--ruby); font-weight:700;">ERROR</span>)と例外のスタックトレース部分だけを精密に抽出してクリップボードに入れます。</li>
+          <li><strong><span class="chip">選択コピー</span></strong>：テキストウィンドウでマウスを使って必要な部分をドラッグし、その区間だけをコピーします。</li>
         </ul>
 
         <div class="alert-box info" style="margin: 14px 0 18px;">
           <span class="alert-icon">🛡️</span>
           <div>
-            <strong>개인정보 안심 보호 & 자동 전송 차단</strong><br>
+            <strong>個人情報の安心保護 & 自動送信の遮断</strong><br>
             <ul style="margin: 6px 0 0 18px; padding: 0;">
-              <li><strong>사용자명 자동 마스킹</strong>: 로그 안의 파일 경로(예: <code>C:\Users\홍길동\...</code>)에서 사용자 계정명은 자동으로 식별 불가능하게 숨겨져 복사되므로 사생활 노출 걱정이 없습니다.</li>
-              <li><strong>외부 자동 전송 차단</strong>: 하단 안내문("<em>복사한 내용을 텔레그램 그룹에 붙여넣어 보내 주세요 — 헬퍼가 자동으로 보내는 것은 없습니다.</em>")처럼, 헬퍼는 인터넷을 통해 사용자의 로그를 몰래 외부로 전송하지 않습니다. 오직 사용자가 직접 복사하여 붙여넣을 때만 안전하게 공유됩니다.</li>
+              <li><strong>ユーザー名の自動マスキング</strong>：ログ内のファイルパス(例： <code>C:\Users\山田太郎\...</code>)のユーザーアカウント名は、自動的に判別できないよう隠されてコピーされるので、プライバシーが漏れる心配はありません。</li>
+              <li><strong>外部への自動送信の遮断</strong>：下部の案内文(「<em>コピーした内容をTelegramグループに貼り付けて送ってください — ヘルパーが自動で送るものはありません。</em>」)のとおり、ヘルパーはインターネットを通じてユーザーのログをこっそり外部へ送信することはありません。ユーザー自身がコピーして貼り付けたときにだけ、安全に共有されます。</li>
             </ul>
           </div>
         </div>
 
-        <h4 style="color:var(--gold-bright); margin: 18px 0 10px;">🚀 오류 로그 전달 및 신속 해결 3단계 가이드</h4>
+        <h4 style="color:var(--gold-bright); margin: 18px 0 10px;">🚀 エラーログの共有と迅速な解決 3ステップガイド</h4>
         <ol style="line-height: 1.85;">
           <li>
-            <strong style="color:var(--gold);">1단계: 로그 복사하기</strong><br>
-            문제가 발생한 즉시 텔레그램 다이얼로그에서 <span class="chip gold">📁 로그 보기</span> 버튼을 누르고, 창 하단에서 <span class="chip ruby">오류만 복사</span> 또는 <span class="chip gold">최근 200줄 복사</span> 버튼을 클릭합니다.<br>
-            <span style="font-size: 13px; color: var(--fg-dim);">※ 복사된 로그의 맨 첫 줄에는 헬퍼 버전, OS 환경, 해상도 배율 메타 정보가 자동으로 첨부되어 개발자가 환경을 단번에 파악할 수 있습니다.</span>
+            <strong style="color:var(--gold);">ステップ1：ログをコピーする</strong><br>
+            問題が発生したらすぐに、Telegramダイアログで <span class="chip gold">📁 ログ表示</span> ボタンを押し、ウィンドウ下部の <span class="chip ruby">エラーのみコピー</span> または <span class="chip gold">直近200行をコピー</span> ボタンをクリックします。<br>
+            <span style="font-size: 13px; color: var(--fg-dim);">※ コピーされたログの一番上の行には、ヘルパーのバージョン、OS環境、解像度倍率のメタ情報が自動的に付加され、開発者が環境を一目で把握できます。</span>
           </li>
           <li>
-            <strong style="color:var(--blue);">2단계: 텔레그램 그룹방에 붙여넣기</strong><br>
-            스마트폰 또는 PC에서 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a> 그룹방으로 이동한 후, 메시지 입력창을 클릭하고 <kbd>Ctrl</kbd> + <kbd>V</kbd>(모바일은 입력창 길게 누른 뒤 붙여넣기)를 실행합니다.
+            <strong style="color:var(--blue);">ステップ2：Telegramグループルームに貼り付ける</strong><br>
+            スマートフォンまたはPCから <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a> グループルームに移動し、メッセージ入力欄をクリックして <kbd>Ctrl</kbd> + <kbd>V</kbd>(モバイルは入力欄を長押ししてから貼り付け)を実行します。
           </li>
           <li>
-            <strong style="color:var(--green);">3단계: 발생 상황 설명 덧붙이기</strong><br>
-            로그와 함께 <em>"어떤 상황에서 문제가 일어났는지"</em> 1~2줄을 함께 남겨주세요:<br>
+            <strong style="color:var(--green);">ステップ3：発生状況の説明を添える</strong><br>
+            ログと一緒に <em>「どんな状況で問題が起きたのか」</em> を1~2行添えてください：<br>
             <div style="background:var(--card-subtle); padding:10px 14px; border-radius:var(--radius-sm); border-left:3px solid var(--gold); margin:8px 0; font-size:13px; color:var(--fg-dim);">
-              예시 1: "인벤 선변성 시작 후 12번째 칸에서 큐브 비움 검증 단계에서 멈춥니다. 로그 남깁니다."<br>
-              예시 2: "전역 설정에서 오버레이 위치를 바꿨는데 화면에 오버레이가 나타나지 않습니다."
+              例1：「インベントリ線変性を開始したあと、12番目のマスでキューブ空確認の段階で止まります。ログを残します。」<br>
+              例2：「グローバル設定でオーバーレイの位置を変えたのですが、画面にオーバーレイが表示されません。」
             </div>
-            스크린샷이나 휴대폰 사진을 함께 첨부해 주시면 더욱 빠르고 정확한 진단과 패치가 이루어집니다.
+            スクリーンショットやスマートフォンの写真を一緒に添付していただけると、より迅速で正確な診断とパッチにつながります。
           </li>
         </ol>
       </section>
@@ -2846,10 +2606,10 @@
       <!-- ─── 11. 클랜 & 방송 커뮤니티 ─── -->
       <section class="doc-section" id="community">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">11</span> 앙증맞은 클랜 & 삼촌안잔다잉 채널</h2>
+          <h2 class="section-title"><span class="section-num">11</span> 앙증맞은クラン & 삼촌안잔다잉チャンネル</h2>
         </div>
 
-        <p>제작자가 활동하는 클랜과, 그 클랜장님의 게임 방송 채널입니다. 둘 다 헬퍼와는 별개의 곳입니다.</p>
+        <p>制作者が活動しているクランと、そのクランマスターのゲーム配信チャンネルです。どちらもヘルパーとは別の場所です。</p>
 
         <!-- 상단 2열: 클랜 개요 카드 & 삼촌안잔다잉 방송 채널 카드 (높이 균형 & 럭셔리 디자인) -->
         <div class="clan-showcase-grid">
@@ -2859,21 +2619,21 @@
               <div class="clan-card-header">
                 <div class="clan-card-crest">⚔️</div>
                 <div>
-                  <h3 class="clan-card-title">&lt;앙증맞은&gt; 무지개날개</h3>
-                  <p class="clan-card-sub">디아블로4 인게임 클랜 · 클랜장 대한민국(삼촌안잔다잉)</p>
+                  <h3 class="clan-card-title">&lt;앙증맞은&gt; 虹の翼</h3>
+                  <p class="clan-card-sub">Diablo IVゲーム内クラン · クランマスター 大韓民国(삼촌안잔다잉)</p>
                 </div>
               </div>
               <p style="font-size:13.5px; color:var(--fg-dim); margin:0 0 14px; line-height: 1.75;">
-                제작자가 함께 활동하는 인게임 친목 클랜입니다. 모토는 <strong>"도움은 품앗이"</strong> — 일방적인 버스보다 서로 챙기는 기브 앤 테이크, 검색 생활화.
+                制作者が一緒に活動しているゲーム内の親睦クランです。モットーは <strong>「助け合いは持ちつ持たれつ」</strong> — 一方的なバス(キャリー)よりも互いに気にかけ合うギブ・アンド・テイク、検索の習慣化。
               </p>
               <ul style="font-size:13px; color:var(--fg-dim); margin:0 0 16px 18px; padding:0; line-height:1.75;">
-                <li>시즌마다 나락 고단 등반, 횃불 무한런, 우두머리 파티 함께 진행</li>
-                <li>신화 고유 장비 파밍 및 시즌 여정 함께 달성</li>
-                <li>디스코드는 운영하지 않으며, 인게임 신청 후 유튜브 채널에서 확인</li>
+                <li>シーズンごとに奈落の高段登攀、たいまつ無限周回、ボスパーティを一緒に進行</li>
+                <li>ミシック・ユニーク装備のファーミングとシーズンジャーニーを一緒に達成</li>
+                <li>Discordは運営しておらず、ゲーム内で申請後にYouTubeチャンネルで確認</li>
               </ul>
             </div>
             <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="clan-btn gold">
-              <span>삼촌안잔다잉 채널 — 가입 사실 알리기 ↗</span>
+              <span>삼촌안잔다잉チャンネル — 参加したことを知らせる ↗</span>
             </a>
           </div>
 
@@ -2884,23 +2644,23 @@
                 <div class="clan-card-crest" style="border-color: rgba(229, 72, 77, 0.45); background: rgba(229, 72, 77, 0.1);">📺</div>
                 <div>
                   <h3 class="clan-card-title" style="color: #ff999c;">삼촌안잔다잉</h3>
-                  <p class="clan-card-sub">🌙 다들 잘 때, 삼촌은 게임 중! · 유튜브·치지직 동시 방송</p>
+                  <p class="clan-card-sub">🌙 みんなが寝ている間、おじさんはゲーム中！ · YouTube・CHZZK同時配信</p>
                 </div>
               </div>
               <p style="font-size:13.5px; color:var(--fg-dim); margin:0 0 10px; line-height: 1.75;">
-                클랜장님이 운영하는 <strong>게임 방송 채널</strong>입니다(제작자 채널이 아닙니다). 디아블로4를 중심으로 직접 플레이한 생생한 경험과 공략을 나눕니다.
+                クランマスターが運営する <strong>ゲーム配信チャンネル</strong>です(制作者のチャンネルではありません)。Diablo IVを中心に、自ら体験したリアルな経験と攻略を共有します。
               </p>
               <ul style="font-size:13px; margin:0 0 12px 18px; padding:0; color:var(--fg-dim); line-height:1.75;">
-                <li>시즌별 캐릭터 육성·빌드·스킬·정복자 가이드 & 장비 세팅 팁</li>
-                <li>공개 테스트 서버(PTR) 체험, 패치 변경점 및 멈춰 보는 쇼츠 '손안의 공략집'</li>
+                <li>シーズンごとのキャラクター育成・ビルド・スキル・征服者ガイド & 装備セットアップのTips</li>
+                <li>公開テストサーバー(PTR)体験、パッチ変更点、そして止めて見るショート動画「手のひら攻略集」</li>
               </ul>
               <div class="alert-box gold" style="margin: 0 0 16px; padding: 10px 14px; font-size: 12.5px;">
                 <span class="alert-icon">⚠️</span>
-                <div><strong>헬퍼·매크로 질문은 이 채널에서 받지 않습니다.</strong> 채널은 순수하게 게임을 즐기는 방송이며, 헬퍼 문의·버그 제보는 텔레그램 공식 그룹(<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a>)에서만 받습니다.</div>
+                <div><strong>ヘルパー・マクロの質問はこのチャンネルでは受け付けていません。</strong> チャンネルは純粋にゲームを楽しむ配信であり、ヘルパーのお問い合わせ・バグ報告はTelegram公式グループ(<a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--blue); font-weight:700;">@d4cute_helper</a>)でのみ受け付けています。</div>
               </div>
             </div>
             <a href="https://www.youtube.com/@%EC%82%BC%EC%B4%8C%EC%95%88%EC%9E%94%EB%8B%A4%EC%9E%89" target="_blank" rel="noopener noreferrer" class="clan-btn ruby">
-              <span>삼촌안잔다잉 유튜브 바로가기 ↗</span>
+              <span>삼촌안잔다잉 YouTubeへ移動 ↗</span>
             </a>
           </div>
         </div>
@@ -2910,8 +2670,8 @@
           <div class="clan-guide-header">
             <span style="font-size:24px;">🛡️</span>
             <div>
-              <h3 class="clan-guide-title">&lt;앙증맞은&gt; 무지개날개 클랜 가입 및 기본 생활 가이드</h3>
-              <p style="margin:2px 0 0; font-size:12.5px; color:var(--fg-dim);">서로 배려하고 즐겁게 함께하는 디아블로4 클랜 문화를 만들어갑니다.</p>
+              <h3 class="clan-guide-title">&lt;앙증맞은&gt; 虹の翼 クラン参加と基本生活ガイド</h3>
+              <p style="margin:2px 0 0; font-size:12.5px; color:var(--fg-dim);">互いに思いやり、楽しく一緒に過ごせるDiablo IVのクラン文化を作っていきます。</p>
             </div>
           </div>
 
@@ -2919,29 +2679,29 @@
             <!-- 1. 가입 절차 4단계 패널 -->
             <div class="clan-sub-panel blue-border">
               <h4 class="clan-sub-panel-title" style="color:var(--blue);">
-                <span>🎥</span> <strong>가입 절차 4단계</strong> <span class="chip" style="font-size:11px; margin-left:auto;">디스코드 가입 없음!</span>
+                <span>🎥</span> <strong>参加手順4ステップ</strong> <span class="chip" style="font-size:11px; margin-left:auto;">Discordへの参加は不要！</span>
               </h4>
               <ol style="margin:0 0 0 18px; padding:0; line-height:1.9; font-size:13.5px; color:var(--fg);">
-                <li>인게임에서 클랜 검색 → <strong>앙증맞은</strong> 찾기 → <strong>가입 신청</strong></li>
-                <li><strong>삼촌안잔다잉 채널</strong>(라이브 방송 등)에서 가입 사실을 알린다</li>
-                <li><strong>클랜장 및 관리자</strong>가 신청 내역을 확인 후 <strong>승인</strong>한다</li>
-                <li>신청자가 인게임에서 다시 <strong>최종 승인(수락)</strong>을 누르면 가입 완료</li>
+                <li>ゲーム内でクランを検索 → <strong>앙증맞은</strong> を探す → <strong>参加申請</strong></li>
+                <li><strong>삼촌안잔다잉チャンネル</strong>(ライブ配信など)で参加したことを知らせる</li>
+                <li><strong>クランマスターおよび管理者</strong>が申請内容を確認後、 <strong>承認</strong>する</li>
+                <li>申請者がゲーム内でもう一度 <strong>最終承認(承諾)</strong>を押せば参加完了</li>
               </ol>
               <div style="margin-top:auto; padding-top:14px; font-size:12px; color:var(--fg-muted);">
-                ※ 디스코드는 운영하지 않으며, 클랜 승인은 삼촌안잔다잉 방송 라이브 확인을 거칩니다.
+                ※ Discordは運営しておらず、クランの承認は삼촌안잔다잉配信のライブ確認を経て行われます。
               </div>
             </div>
 
             <!-- 2. 가입 후 활동 가이드 & 생활 수칙 패널 -->
             <div class="clan-sub-panel gold-border">
               <h4 class="clan-sub-panel-title" style="color:var(--gold-bright);">
-                <span>🤝</span> <strong>가입 후 활동 & 클랜 기본 생활 수칙</strong>
+                <span>🤝</span> <strong>参加後の活動 & クランの基本生活ルール</strong>
               </h4>
               <ul style="margin:0 0 0 18px; padding:0; line-height:1.85; font-size:13px; color:var(--fg-dim);">
-                <li><strong style="color:var(--fg);">반가운 첫인사 & 친밀감 쌓기</strong>: 가입 승인 후 인게임 길드 채팅창에 첫인사를 남겨주세요. 서로 닉네임을 부르며 인사하다 보면 금방 친해집니다.</li>
-                <li><strong style="color:var(--fg);">도움 요청 & 품앗이 문화</strong>: 육성, 나락 고단, 우두머리 소환 파티 등 도움이 필요할 때는 <strong>길드 채팅창이나 유튜브 라이브 방송</strong>에 편하게 요청하세요. <em>"도움은 품앗이(기브 앤 테이크)"</em> 마음으로 나중에 다른 식구를 함께 도와주시면 됩니다.</li>
-                <li><strong style="color:var(--fg);">기본 예의와 상호 존중</strong>: 다양한 유저가 함께하는 친목 공간이므로 배려하는 언어(비하·욕설 금지)를 사용해 주세요. 질문 전 가벼운 검색 생활화도 권장합니다.</li>
-                <li><strong style="color:var(--fg);">시즌오프 및 새 시즌 복귀</strong>: 시즌오프 뒤 10일 이상 미접속 시 인원 정리가 될 수 있으나, 새 시즌이 시작되면 언제든 다시 편하게 가입 신청하시면 됩니다.</li>
+                <li><strong style="color:var(--fg);">うれしい最初の挨拶 & 親しみを築く</strong>：参加承認後、ゲーム内のギルドチャット欄に最初の挨拶を残してください。お互いにニックネームで呼び合いながら挨拶していれば、すぐに仲良くなれます。</li>
+                <li><strong style="color:var(--fg);">助けの依頼 & 持ちつ持たれつの文化</strong>：育成、奈落の高段、ボス召喚パーティなど助けが必要なときは、 <strong>ギルドチャット欄やYouTubeライブ配信</strong>に気軽に依頼してください。 <em>「助け合いは持ちつ持たれつ(ギブ・アンド・テイク)」</em> の気持ちで、後で他の仲間を一緒に助けてあげてください。</li>
+                <li><strong style="color:var(--fg);">基本マナーと相互尊重</strong>：さまざまなユーザーが集まる親睦の場なので、思いやりのある言葉づかい(中傷・暴言禁止)をお願いします。質問の前に軽く検索する習慣も推奨します。</li>
+                <li><strong style="color:var(--fg);">シーズンオフと新シーズンへの復帰</strong>：シーズンオフ後に10日以上ログインしないとメンバー整理が行われることがありますが、新シーズンが始まればいつでも気軽に再度参加申請していただけます。</li>
               </ul>
             </div>
           </div>
@@ -2951,36 +2711,36 @@
       <!-- ─── 12. FAQ ─── -->
       <section class="doc-section" id="faq">
         <div class="section-header">
-          <h2 class="section-title"><span class="section-num">12</span> 자주 묻는 질문 (FAQ) & 문제 해결</h2>
+          <h2 class="section-title"><span class="section-num">12</span> よくある質問 (FAQ) & トラブルシューティング</h2>
         </div>
 
-        <h3>Q. 발동키를 눌러도 스킬이 나가지 않아요.</h3>
+        <h3>Q. 発動キーを押してもスキルが出ません。</h3>
         <ul>
-          <li>상단 바의 상태가 <strong>실행 중</strong>인지 확인하세요 (<span class="chip green">▶ 시작</span> 버튼 클릭 여부).</li>
-          <li>선택한 슬롯의 <strong>매크로 활성 스위치</strong>가 켜져 있는지, 시퀀스 탭에 스텝이 1개 이상 들어있는지 확인하세요.</li>
-          <li>디아블로4 게임 창이 화면 맨 앞에 포커스되어 있어야 합니다.</li>
-          <li>채팅이나 인벤토리를 열어 <strong>대기 키</strong>로 인해 일시정지된 상태라면, 발동키를 한 번 더 누르면 풀립니다.</li>
+          <li>上部バーの状態が <strong>実行中</strong>になっているか確認してください (<span class="chip green">▶ 開始</span> ボタンをクリックしたか)。</li>
+          <li>選択したスロットの <strong>マクロ有効スイッチ</strong>がオンになっているか、シーケンスタブにステップが1つ以上入っているか確認してください。</li>
+          <li>Diablo IVのゲームウィンドウが画面の最前面でフォーカスされている必要があります。</li>
+          <li>チャットやインベントリを開いて <strong>待機キー</strong>により一時停止している状態なら、発動キーをもう一度押せば解除されます。</li>
         </ul>
 
-        <h3>Q. 오른쪽 마우스를 발동키로 쓰는데 인벤토리나 창고에서 자꾸 창이 닫혀요.</h3>
-        <p>매크로 설정의 <strong>누름 인식 지연(Press Delay)</strong>을 <code>250ms ~ 300ms</code>로 설정하세요. 이렇게 하면 아이템을 우클릭해서 옮길 때의 '짧은 클릭'은 게임에 그대로 전달되고, 꾹 누를 때만 매크로가 켜져 창 닫힘 오동작이 완전히 사라집니다.</p>
+        <h3>Q. 右マウスを発動キーにしているのですが、インベントリや倉庫でウィンドウが何度も閉じてしまいます。</h3>
+        <p>マクロ設定の <strong>押下認識ディレイ(Press Delay)</strong>を <code>250ms ~ 300ms</code>に設定してください。こうすると、アイテムを右クリックして移動するときの「短いクリック」はそのままゲームに伝わり、長押ししたときだけマクロがオンになるため、ウィンドウが閉じる誤動作が完全になくなります。</p>
 
-        <h3>Q. 호라드림의 함 선변성이 버튼을 못 찾거나 멈춰요.</h3>
-        <p>1.30 버전에서 OCR 글자 인식 로직과 큐브 비움 검증이 대폭 강화되었습니다. 게임 내 그래픽 설정에서 글자가 너무 흐리거나 UI 배율이 극단적인 경우 인식이 어려울 수 있으니, 문제가 지속되면 <code>%APPDATA%\d4cute_helper\debug\</code> 폴더의 <code>alter_slots.txt</code> 파일을 복사하여 텔레그램 그룹에 문의해 주세요.</p>
+        <h3>Q. ホラドリックキューブの線変性がボタンを見つけられない、または止まります。</h3>
+        <p>1.30バージョンでOCR文字認識ロジックとキューブ空確認が大幅に強化されました。ゲーム内のグラフィック設定で文字がぼやけすぎている場合や、UI倍率が極端な場合は認識が難しいことがありますので、問題が続く場合は <code>%APPDATA%\d4cute_helper\debug\</code> フォルダの <code>alter_slots.txt</code> ファイルをコピーしてTelegramグループにお問い合わせください。</p>
 
-        <h3>Q. 선변성에서 아이템 두 개가 겹치거나, 변성 없이 다음 칸으로 넘어가요.</h3>
-        <p>변성 연출이 느린 PC 에서 생기는 증상입니다. 편의기능 탭의 <strong>결과 대기 ms</strong>를 올리고(예: 3000 → 5000), 그래도 반복되면 <code>debug\alter_slots.txt</code> 를 그룹에 올려 주세요. 1.30.1 부터는 큐브 첫 칸 그림으로 비었는지 확인하고 수락창이 늦게 떠도 Enter 를 칩니다.</p>
+        <h3>Q. 線変性でアイテムが2つ重なったり、変性せずに次のマスへ進んだりします。</h3>
+        <p>変性の演出が遅いPCで起こる症状です。便利機能タブの <strong>結果待機 ms</strong>を上げ(例：3000 → 5000)、それでも繰り返す場合は <code>debug\alter_slots.txt</code> をグループに投稿してください。1.30.1以降は、キューブの最初のマスの画像で空かどうかを確認し、承諾ウィンドウが遅れて表示されてもEnterを押します。</p>
 
-        <h3>Q. 헬퍼·매크로 질문은 어디서 하나요?</h3>
-        <p>텔레그램 이용자 그룹 <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer"><code>@d4cute_helper</code></a> 에서만 받습니다. 삼촌안잔다잉 유튜브 채널은 게임을 즐기는 방송이라 헬퍼·매크로 문의를 받지 않습니다.</p>
+        <h3>Q. ヘルパー・マクロの質問はどこでできますか？</h3>
+        <p>Telegramユーザーグループ <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer"><code>@d4cute_helper</code></a> でのみ受け付けています。삼촌안잔다잉のYouTubeチャンネルはゲームを楽しむ配信のため、ヘルパー・マクロのお問い合わせは受け付けていません。</p>
 
-        <h3>Q. 창이 하얗게 뜨거나 깜빡여요 (백화 현상).</h3>
-        <p>1.30 에서 내장 브라우저의 렌더러를 바꿔 백화를 고쳤습니다. 그래도 다시 보이면 로그 뷰어의 <span class="chip">오류만 복사</span> 결과와 화면 캡처를 텔레그램 그룹에 올려 주세요.</p>
+        <h3>Q. ウィンドウが真っ白になったり、ちらついたりします (白化現象)。</h3>
+        <p>1.30で内蔵ブラウザのレンダラーを変更して白化を修正しました。それでも再び見られる場合は、ログビューアーの <span class="chip">エラーのみコピー</span> 結果と画面キャプチャをTelegramグループに投稿してください。</p>
       </section>
 
       <footer>
         <div>d4cute helper v1.30.0 Documentation · Crafted with Care</div>
-        <div><a href="#quickstart" style="color: var(--gold);">맨 위로 이동 ↑</a></div>
+        <div><a href="#quickstart" style="color: var(--gold);">一番上へ移動 ↑</a></div>
       </footer>
 
     </main>
@@ -2991,23 +2751,23 @@
     <div class="lightbox-topbar">
       <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
       <div class="lightbox-controls">
-        <button class="lightbox-btn" id="zoomOutBtn" title="축소 (마우스 휠 아래)">－</button>
+        <button class="lightbox-btn" id="zoomOutBtn" title="縮小 (マウスホイール下)">－</button>
         <span class="lightbox-zoom-indicator" id="zoomLevel">100%</span>
-        <button class="lightbox-btn" id="zoomInBtn" title="확대 (마우스 휠 위)">＋</button>
-        <button class="lightbox-btn" id="zoomResetBtn" title="원본 크기">리셋</button>
-        <button class="lightbox-btn lightbox-close-btn" id="lightboxCloseBtn" title="닫기 (ESC)">✕ 닫기</button>
+        <button class="lightbox-btn" id="zoomInBtn" title="拡大 (マウスホイール上)">＋</button>
+        <button class="lightbox-btn" id="zoomResetBtn" title="原寸大">リセット</button>
+        <button class="lightbox-btn lightbox-close-btn" id="lightboxCloseBtn" title="閉じる (ESC)">✕ 閉じる</button>
       </div>
     </div>
     
     <div class="lightbox-stage" id="lightboxStage">
-      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" title="이전 이미지 (←)">❮</button>
+      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" title="前の画像 (←)">❮</button>
       <img src="" alt="" class="lightbox-img" id="lightboxImg">
-      <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" title="다음 이미지 (→)">❯</button>
+      <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" title="次の画像 (→)">❯</button>
     </div>
 
     <div class="lightbox-bottombar">
-      <div class="lightbox-caption-text" id="lightboxCaption">이미지 설명</div>
-      <div style="font-size: 12px; color: var(--fg-muted);">마우스 휠로 확대/축소 가능 · 좌우 방향키로 탐색</div>
+      <div class="lightbox-caption-text" id="lightboxCaption">画像の説明</div>
+      <div style="font-size: 12px; color: var(--fg-muted);">マウスホイールで拡大/縮小可能 · 左右の方向キーで移動</div>
     </div>
   </div>
 
@@ -3157,7 +2917,7 @@
 
       // 영상 목록 사이드바 생성
       videoCards.forEach((vcard, vidx) => {
-        const title = vcard.dataset.videoTitle || `영상 가이드 ${vidx + 1}`;
+        const title = vcard.dataset.videoTitle || `動画ガイド ${vidx + 1}`;
         vcard.id = `vid-item-${vidx}`;
 
         const navCard = document.createElement('a');
@@ -3167,7 +2927,7 @@
           <div class="media-nav-thumb" style="display:flex;align-items:center;justify-content:center;background:#181622;color:var(--ruby);font-size:18px;">▶</div>
           <div class="media-nav-meta">
             <div class="media-nav-title"><span class="video-badge">VIDEO</span>${title}</div>
-            <div class="media-nav-desc">클릭하여 해당 영상 위치로 이동</div>
+            <div class="media-nav-desc">クリックしてその動画の位置へ移動</div>
           </div>
         `;
         navCard.addEventListener('click', (e) => {
@@ -3280,7 +3040,7 @@
 
           searchMatchCount.innerText = matchCount;
           if (matchCount === 0) {
-            searchResultsList.innerHTML = `<div style="font-size:12.5px; color:var(--fg-muted); padding:16px 0; text-align:center;">검색 결과가 없습니다.</div>`;
+            searchResultsList.innerHTML = `<div style="font-size:12.5px; color:var(--fg-muted); padding:16px 0; text-align:center;">検索結果がありません。</div>`;
           }
         } else {
           searchClearBtn.classList.remove('visible');
