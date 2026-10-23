@@ -1,5 +1,6 @@
 // d4cute 헬퍼 [후원] 탭에 실리는 광고 목록 - 여기만 고치면 헬퍼를 다시 빌드하지 않아도 바뀐다
 // 추가 방법은 같은 폴더의 README.md 참고. 항목 순서가 화면 순서다. active:false 면 숨긴다.
+// i18n 객체에 en 등 타 언어 번역을 추가하면 ?lang=en 시 자동 반영된다.
 window.D4CUTE_ADS = [
   {
     id: "starlink",
@@ -45,7 +46,36 @@ window.D4CUTE_ADS = [
       { label: "뉴시스 2025-12-04 · 요금제", url: "https://www.newsis.com/view/NISX20251204_0003429054" },
       { label: "디지털데일리 2025-12-03 · 무제한 요금", url: "https://www.ddaily.co.kr/page/view/2025120316581962434" },
       { label: "뉴시스 2026-04-07 · KISDI 분석", url: "https://www.newsis.com/view/NISX20260407_0003581677" }
-    ]
+    ],
+    i18n: {
+      en: {
+        category: "Satellite Internet",
+        title: "From mountain campsites to the open sea — internet anywhere",
+        lead:
+          "Starlink delivers high-speed, low-latency broadband internet via low Earth orbit satellites. " +
+          "Ideal for remote outdoor camping, islands, cabins, RVs, boats, or emergency backup when terrestrial lines fail.",
+        points: [
+          { h: "Camping & Outdoors", p: "Video calls, streaming, and remote work even in the deepest wilderness." },
+          { h: "Remote Islands & Cabins", p: "No utility trenching needed. As long as you have a clear sky view, you are connected." },
+          { h: "RVs, Boats & Yachts", p: "Stay connected on the move. Explore in-motion mobility and maritime plans." },
+          { h: "Emergency Backup", p: "An independent satellite infrastructure that works when landlines and cell towers go down." },
+          { h: "Online Gaming?", p: "Latency is generally higher than fiber-optic. Check regional speed and ping specs before subscribing." }
+        ],
+        facts: [
+          { k: "Residential", v: "Unlimited high-speed data" },
+          { k: "Standard Kit (Dish)", v: "Hardware purchase required" },
+          { k: "Roam & Mobility", v: "Available for portable use" }
+        ],
+        factsNote: "Pricing and plans subject to regional availability. Please visit the official Starlink site for live details.",
+        cta: {
+          label: "Join via Referral Link",
+          url: "https://starlink.com?referral=RC-DF-5813441-39413-44"
+        },
+        disclosureShort: "Referral Link · May reward the creator at no additional cost to you.",
+        disclosure:
+          "This is a creator referral link. Signing up may grant referral benefits to the author at no extra cost to you. Terms are governed by Starlink."
+      }
+    }
   },
   {
     // 제작자가 속한 클랜의 클랜장이 운영하는 유튜브 채널 (제작자 채널 아님) - 후원 링크가 아니라 소개 (문구·영상은 d4help README 기준)
@@ -72,7 +102,25 @@ window.D4CUTE_ADS = [
     ],
     cta: { label: "채널 구독하러 가기", url: "https://www.youtube.com/@삼촌안잔다잉" },
     disclosureShort: "후원 링크가 아니라 제작자가 속한 클랜의 클랜장 채널 소개입니다 — 비용도 보상도 없습니다.",
-    disclosure: "이 슬라이드는 추천 링크가 아닙니다. 제작자가 속한 클랜의 클랜장 채널 소개이며, 헬퍼 문의는 받지 않는 순수 게임 채널입니다. 구독해도 누구에게도 비용이나 보상이 생기지 않습니다."
+    disclosure: "이 슬라이드는 추천 링크가 아닙니다. 제작자가 속한 클랜의 클랜장 채널 소개이며, 헬퍼 문의는 받지 않는 순수 게임 채널입니다. 구독해도 누구에게도 비용이나 보상이 생기지 않습니다.",
+    i18n: {
+      en: {
+        category: "YouTube · Clan Leader",
+        title: "Clan Leader Live Streams & In-depth Guides — UncleNeverSleeps",
+        lead:
+          "A Diablo 4 gameplay and build channel hosted by the leader of the Rainbow Wing clan. " +
+          "Join high-tier Pit runs, torch farming, and community party play every season.",
+        points: [
+          { h: "Live Communication", p: "Q&A, theorycrafting, and season launch discussions during live streams." },
+          { h: "Core Guides", p: "Deep dives on boss farming, special transmogs, and class mechanics." },
+          { h: "In-Game Clan", p: "An active community for end-game boss rotations and mythic unique farming." },
+          { h: "Leveling & Builds", p: "Character progression, skill tree setups, paragon boards, and gear optimization." }
+        ],
+        cta: { label: "Subscribe to Channel", url: "https://www.youtube.com/@삼촌안잔다잉" },
+        disclosureShort: "Community channel intro of our in-game clan leader — no fees or referral rewards.",
+        disclosure: "This is a community channel introduction for our in-game clan leader. It is not an affiliate link and carries no compensation."
+      }
+    }
   },
   {
     // 파트너 모집 슬라이드 - 광고가 늘면 자연스럽게 뒤로 밀린다. 빼고 싶으면 active:false
@@ -85,6 +133,14 @@ window.D4CUTE_ADS = [
     title: "다음 파트너 자리입니다",
     lead: "디아블로 4 를 즐기는 분들께 닿는 자리입니다. 헬퍼 이용자에게 도움이 되는 서비스라면 제안해 주세요. 배너 한 장으로 들어갑니다.",
     cta: { label: "텔레그램 그룹에서 제안하기", url: "https://t.me/d4cute_helper" },
-    disclosureShort: "광고는 가입자에게 추가 비용이 없는 추천 링크만 받습니다."
+    disclosureShort: "광고는 가입자에게 추가 비용이 없는 추천 링크만 받습니다.",
+    i18n: {
+      en: {
+        title: "Your Partnership Here",
+        lead: "Directly reach active Diablo 4 players. If your service or product benefits our community, propose a partnership.",
+        cta: { label: "Propose on Telegram Group", url: "https://t.me/d4cute_helper" },
+        disclosureShort: "We only feature partnerships that offer genuine value with no extra cost to users."
+      }
+    }
   }
 ];

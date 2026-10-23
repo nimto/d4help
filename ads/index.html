@@ -148,23 +148,43 @@
       .lead { -webkit-line-clamp: 2; }
       .detail-grid { grid-template-columns: 1fr; }
       .facts { grid-template-columns: 1fr; }
-      .head .promise { margin-left: 0; }
-      .arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; }
-      .arrow.prev { left: 6px; } .arrow.next { right: 6px; }
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 4px;
+      gap: 2px;
+      margin-left: auto;
     }
-    @media (prefers-reduced-motion: reduce) {
-      .track, .cta, .dot, .arrow, .vchip { transition: none; }
-      .cta:hover { transform: none; }
+    .lang-btn {
+      background: transparent;
+      border: 0;
+      color: var(--dim);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all .15s;
     }
+    .lang-btn:hover { color: var(--gold); }
+    .lang-btn.active { background: var(--gold); color: var(--gold-ink); }
+    .head .promise { margin-left: 0; }
   </style>
 </head>
 <body>
   <section class="screen" aria-label="후원 배너">
     <header class="head">
-      <span class="eyebrow">후원</span>
-      <h1>헬퍼는 무료입니다.</h1>
-      <p>파트너 추천 링크 한 번이 다음 업데이트를 만듭니다. 가입자가 더 내는 비용은 없습니다.</p>
-      <p class="promise">헬퍼는 자동으로 아무것도 보내지 않고, 가입 여부도 알지 못합니다.</p>
+      <span class="eyebrow" id="ui-eyebrow">후원</span>
+      <h1 id="ui-h1">헬퍼는 무료입니다.</h1>
+      <p id="ui-desc">파트너 추천 링크 한 번이 다음 업데이트를 만듭니다. 가입자가 더 내는 비용은 없습니다.</p>
+      <p class="promise" id="ui-promise">헬퍼는 자동으로 아무것도 보내지 않고, 가입 여부도 알지 못합니다.</p>
+      <div class="lang-switcher" role="group" aria-label="언어 선택 (Language)">
+        <button class="lang-btn active" id="btn-lang-ko" type="button">한국어</button>
+        <button class="lang-btn" id="btn-lang-en" type="button">English</button>
+      </div>
     </header>
 
     <div class="stage">
@@ -188,7 +208,91 @@
   <script src="./ads.js"></script>
   <script>
     (function () {
-      var ads = (window.D4CUTE_ADS || []).filter(function (a) { return a && a.active !== false; });
+      var UI_STRINGS = {
+        ko: {
+          eyebrow: "후원",
+          h1: "헬퍼는 무료입니다.",
+          desc: "파트너 추천 링크 한 번이 다음 업데이트를 만듭니다. 가입자가 더 내는 비용은 없습니다.",
+          promise: "헬퍼는 자동으로 아무것도 보내지 않고, 가입 여부도 알지 못합니다.",
+          empty: "아직 등록된 파트너가 없습니다.",
+          recruitBadge: "파트너 모집",
+          partnerPrefix: "파트너 · ",
+          learnMore: "자세히 보기",
+          viewDetail: "자세히 · 영상 보기",
+          backToCarousel: "← 캐러셀 메인으로",
+          toTheTop: "↑ 캐러셀 메인",
+          sources: "출처: ",
+          promoCode: "추천 코드 ",
+          codeApplied: " · 링크에 자동 적용"
+        },
+        en: {
+          eyebrow: "Sponsors & Support",
+          h1: "The helper is free to use.",
+          desc: "Using partner referral links supports future development at zero additional cost to you.",
+          promise: "The helper never sends telemetry or personal data and cannot track your account status.",
+          empty: "No registered partners at the moment.",
+          recruitBadge: "Partner Recruitment",
+          partnerPrefix: "Partner · ",
+          learnMore: "Learn More",
+          viewDetail: "Details & Videos",
+          backToCarousel: "← Back to Carousel",
+          toTheTop: "↑ Back to Top",
+          sources: "Sources: ",
+          promoCode: "Referral Code ",
+          codeApplied: " · Automatically applied"
+        }
+      };
+
+      function resolveLang() {
+        var params = new URLSearchParams(window.location.search);
+        var q = (params.get("lang") || "").toLowerCase();
+        if (q.startsWith("ko")) return "ko";
+        if (q.startsWith("en")) return "en";
+        var saved = (localStorage.getItem("d4help_lang") || "").toLowerCase();
+        if (saved.startsWith("ko")) return "ko";
+        if (saved.startsWith("en")) return "en";
+        var nav = (navigator.language || "").toLowerCase();
+        if (nav.startsWith("ko")) return "ko";
+        return "en";
+      }
+
+      var currentLang = resolveLang();
+
+      function getAdField(ad, field) {
+        if (currentLang === "en" && ad.i18n && ad.i18n.en && ad.i18n.en[field] !== undefined) {
+          return ad.i18n.en[field];
+        }
+        return ad[field];
+      }
+
+      function updateUIHeader() {
+        var t = UI_STRINGS[currentLang] || UI_STRINGS.ko;
+        document.getElementById("ui-eyebrow").textContent = t.eyebrow;
+        document.getElementById("ui-h1").textContent = t.h1;
+        document.getElementById("ui-desc").textContent = t.desc;
+        document.getElementById("ui-promise").textContent = t.promise;
+        document.getElementById("tothetop").textContent = t.toTheTop;
+        document.getElementById("btn-lang-ko").classList.toggle("active", currentLang === "ko");
+        document.getElementById("btn-lang-en").classList.toggle("active", currentLang === "en");
+      }
+
+      document.getElementById("btn-lang-ko").addEventListener("click", function() { switchLang("ko"); });
+      document.getElementById("btn-lang-en").addEventListener("click", function() { switchLang("en"); });
+
+      function switchLang(lang) {
+        if (currentLang === lang) return;
+        currentLang = lang;
+        localStorage.setItem("d4help_lang", lang);
+        var url = new URL(window.location.href);
+        url.searchParams.set("lang", lang);
+        window.history.replaceState({}, "", url.toString());
+        updateUIHeader();
+        renderAds();
+      }
+
+      updateUIHeader();
+
+      var rawAds = (window.D4CUTE_ADS || []).filter(function (a) { return a && a.active !== false; });
       var track = document.getElementById("track");
       var controls = document.getElementById("controls");
       var detail = document.getElementById("detail");
@@ -206,48 +310,64 @@
       function embedUrl(id) { return "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?rel=0&modestbranding=1&autoplay=1"; }
       function thumbUrl(id) { return "https://i.ytimg.com/vi/" + encodeURIComponent(id) + "/hqdefault.jpg"; }
       function link(label, url, cls) {
-        var a = el("a", cls, label); a.href = url; a.target = "_blank"; a.rel = "noopener";   // 헬퍼 안에서는 기본 브라우저로
+        var a = el("a", cls, label); a.href = url; a.target = "_blank"; a.rel = "noopener";
         a.addEventListener("click", function (e) { e.stopPropagation(); });
         return a;
       }
 
-      if (!ads.length) {
-        document.getElementById("viewport").appendChild(el("div", "empty", "아직 등록된 파트너가 없습니다."));
-        return;
-      }
+      function renderAds() {
+        track.innerHTML = "";
+        controls.innerHTML = "";
+        detail.innerHTML = "";
+        detail.classList.remove("open");
+        document.getElementById("tothetop").classList.remove("show");
 
-      // ── 배너 ──
-      ads.forEach(function (ad, i) {
-        var slide = el("article", "slide" + (ad.kind === "recruit" ? " recruit" : ""));
-        slide.setAttribute("role", "group");
-        slide.setAttribute("aria-roledescription", "배너");
-        slide.setAttribute("aria-label", (i + 1) + " / " + ads.length + " · " + (ad.partner || ad.title));
-        if (ad.accent) slide.style.setProperty("--accent", ad.accent);
+        var t = UI_STRINGS[currentLang] || UI_STRINGS.ko;
+        if (!rawAds.length) {
+          document.getElementById("viewport").appendChild(el("div", "empty", t.empty));
+          return;
+        }
 
-        var copy = el("div", "copy");
-        var badges = el("div", "badge-row");
-        badges.appendChild(el("span", "badge", ad.kind === "recruit" ? "파트너 모집" : "파트너 · " + ad.partner));
-        if (ad.category) badges.appendChild(el("span", "cat", ad.category));
-        copy.appendChild(badges);
-        copy.appendChild(el("h2", null, ad.title));
-        if (ad.lead) copy.appendChild(el("p", "lead", ad.lead));
-        if (ad.points && ad.points.length) {
-          var chips = el("div", "chips");
-          ad.points.slice(0, 3).forEach(function (p) {
-            var c = el("span", "chip"); c.appendChild(el("b", null, "✓")); c.appendChild(document.createTextNode(p.h)); chips.appendChild(c);
-          });
-          copy.appendChild(chips);
-        }
-        var actions = el("div", "actions");
-        if (ad.cta && ad.cta.url) actions.appendChild(link(ad.cta.label || "자세히 보기", ad.cta.url, "cta"));
-        if (ad.kind !== "recruit") {
-          var more = el("button", "more", "자세히 · 영상 보기");
-          more.type = "button";
-          more.addEventListener("click", function (e) { e.stopPropagation(); openDetail(i); });
-          actions.appendChild(more);
-        }
-        copy.appendChild(actions);
-        if (ad.disclosureShort || ad.disclosure) copy.appendChild(el("p", "fine", ad.disclosureShort || ad.disclosure));
+        rawAds.forEach(function (ad, i) {
+          var title = getAdField(ad, "title");
+          var lead = getAdField(ad, "lead");
+          var category = getAdField(ad, "category");
+          var points = getAdField(ad, "points") || [];
+          var cta = getAdField(ad, "cta") || {};
+          var disclosureShort = getAdField(ad, "disclosureShort");
+          var disclosure = getAdField(ad, "disclosure");
+
+          var slide = el("article", "slide" + (ad.kind === "recruit" ? " recruit" : ""));
+          slide.setAttribute("role", "group");
+          slide.setAttribute("aria-roledescription", "banner");
+          slide.setAttribute("aria-label", (i + 1) + " / " + rawAds.length + " · " + (ad.partner || title));
+          if (ad.accent) slide.style.setProperty("--accent", ad.accent);
+
+          var copy = el("div", "copy");
+          var badges = el("div", "badge-row");
+          badges.appendChild(el("span", "badge", ad.kind === "recruit" ? t.recruitBadge : t.partnerPrefix + ad.partner));
+          if (category) badges.appendChild(el("span", "cat", category));
+          copy.appendChild(badges);
+          copy.appendChild(el("h2", null, title));
+          if (lead) copy.appendChild(el("p", "lead", lead));
+          if (points.length) {
+            var chips = el("div", "chips");
+            points.slice(0, 3).forEach(function (p) {
+              var c = el("span", "chip"); c.appendChild(el("b", null, "✓")); c.appendChild(document.createTextNode(p.h)); chips.appendChild(c);
+            });
+            copy.appendChild(chips);
+          }
+          var actions = el("div", "actions");
+          if (cta && cta.url) actions.appendChild(link(cta.label || t.learnMore, cta.url, "cta"));
+          if (ad.kind !== "recruit") {
+            var more = el("button", "more", t.viewDetail);
+            more.type = "button";
+            more.addEventListener("click", function (e) { e.stopPropagation(); openDetail(i); });
+            actions.appendChild(more);
+          }
+          copy.appendChild(actions);
+          if (disclosureShort || disclosure) copy.appendChild(el("p", "fine", disclosureShort || disclosure));
+
         slide.appendChild(copy);
 
         if (ad.kind !== "recruit") {
@@ -269,56 +389,61 @@
         } else {
           slide.style.cursor = "default";
         }
-        track.appendChild(slide);
+          track.appendChild(slide);
 
-        var dot = el("button", "dot"); dot.type = "button"; dot.setAttribute("role", "tab");
-        dot.setAttribute("aria-label", (i + 1) + "번째 배너");
-        dot.addEventListener("click", function () { userTouched = true; go(i); });
-        controls.appendChild(dot);
-      });
-      var count = el("span", "count", ""); controls.appendChild(count);
+          var dot = el("button", "dot"); dot.type = "button"; dot.setAttribute("role", "tab");
+          dot.setAttribute("aria-label", (i + 1) + "번째 배너");
+          dot.addEventListener("click", function () { userTouched = true; go(i); });
+          controls.appendChild(dot);
+        });
+        var count = el("span", "count", ""); controls.appendChild(count);
+
+        if (rawAds.length > 1) {
+          prevBtn.hidden = false; nextBtn.hidden = false;
+        } else {
+          controls.style.display = "none";
+          prevBtn.hidden = true; nextBtn.hidden = true;
+        }
+        goRandom();
+      }
 
       function go(i) {
-        index = (i + ads.length) % ads.length;
+        index = (i + rawAds.length) % rawAds.length;
         track.style.transform = "translateX(" + (-100 * index) + "%)";
         var dots = controls.querySelectorAll(".dot");
         dots.forEach(function (d, k) { d.setAttribute("aria-current", k === index ? "true" : "false"); });
-        count.textContent = (index + 1) + " / " + ads.length;
+        var countEl = controls.querySelector(".count");
+        if (countEl) countEl.textContent = (index + 1) + " / " + rawAds.length;
       }
       function next() { go(index + 1); }
       function prev() { go(index - 1); }
 
-      if (ads.length > 1) {
-        prevBtn.hidden = false; nextBtn.hidden = false;
-        prevBtn.addEventListener("click", function () { userTouched = true; prev(); });
-        nextBtn.addEventListener("click", function () { userTouched = true; next(); });
-        document.addEventListener("keydown", function (e) {
-          if (e.target && /input|textarea/i.test(e.target.tagName)) return;
-          if (e.key === "ArrowRight") { userTouched = true; next(); }
-          if (e.key === "ArrowLeft") { userTouched = true; prev(); }
-        });
-        // 스와이프
-        var sx = null;
-        track.addEventListener("pointerdown", function (e) { sx = e.clientX; });
-        track.addEventListener("pointerup", function (e) {
-          if (sx == null) return;
-          var dx = e.clientX - sx; sx = null;
-          if (Math.abs(dx) > 48) { userTouched = true; dx < 0 ? next() : prev(); }
-        });
-        // 자동 넘김 - 마우스를 올리면 쉬고, 한 번 손대면 끝
-        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (!reduce) {
-          timer = setInterval(function () { if (!userTouched && !document.hidden) next(); }, AUTO_MS);
-          var stage = document.querySelector(".stage");
-          stage.addEventListener("mouseenter", function () { clearInterval(timer); timer = null; });
-          stage.addEventListener("mouseleave", function () { if (!timer && !userTouched) timer = setInterval(function () { if (!userTouched && !document.hidden) next(); }, AUTO_MS); });
-        }
-      } else {
-        controls.style.display = "none";
+      prevBtn.addEventListener("click", function () { userTouched = true; prev(); });
+      nextBtn.addEventListener("click", function () { userTouched = true; next(); });
+      document.addEventListener("keydown", function (e) {
+        if (e.target && /input|textarea/i.test(e.target.tagName)) return;
+        if (e.key === "ArrowRight") { userTouched = true; next(); }
+        if (e.key === "ArrowLeft") { userTouched = true; prev(); }
+      });
+      // 스와이프
+      var sx = null;
+      track.addEventListener("pointerdown", function (e) { sx = e.clientX; });
+      track.addEventListener("pointerup", function (e) {
+        if (sx == null) return;
+        var dx = e.clientX - sx; sx = null;
+        if (Math.abs(dx) > 48) { userTouched = true; dx < 0 ? next() : prev(); }
+      });
+      // 자동 넘김 - 마우스를 올리면 쉬고, 한 번 손대면 끝
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) {
+        timer = setInterval(function () { if (!userTouched && !document.hidden) next(); }, AUTO_MS);
+        var stage = document.querySelector(".stage");
+        stage.addEventListener("mouseenter", function () { clearInterval(timer); timer = null; });
+        stage.addEventListener("mouseleave", function () { if (!timer && !userTouched) timer = setInterval(function () { if (!userTouched && !document.hidden) next(); }, AUTO_MS); });
       }
-      // 처음 들어올 때와 캐러셀 메인으로 돌아올 때는 아무 배너나 - 1번만 늘 보이지 않게 (2026-10-22)
-      function goRandom() { go(ads.length > 1 ? Math.floor(Math.random() * ads.length) : 0); }
-      goRandom();
+
+      // 처음 들어올 때와 캐러셀 메인으로 돌아올 때는 아무 배너나 - 1번만 늘 보이지 않게
+      function goRandom() { go(rawAds.length > 1 ? Math.floor(Math.random() * rawAds.length) : 0); }
 
       // ── 상세 ──
       function closeDetail() {
@@ -333,15 +458,24 @@
 
       function openDetail(i) {
         userTouched = true;
-        var ad = ads[i];
+        var ad = rawAds[i];
         detail.innerHTML = "";
         var card = el("div", "detail-card");
         if (ad.accent) card.style.setProperty("--accent", ad.accent);
 
+        var t = UI_STRINGS[currentLang] || UI_STRINGS.ko;
+        var title = getAdField(ad, "title");
+        var lead = getAdField(ad, "lead");
+        var points = getAdField(ad, "points") || [];
+        var facts = getAdField(ad, "facts") || [];
+        var factsNote = getAdField(ad, "factsNote");
+        var cta = getAdField(ad, "cta") || {};
+        var disclosure = getAdField(ad, "disclosure");
+
         var head = el("div", "detail-head");
-        head.appendChild(el("span", "badge", "파트너 · " + ad.partner));
-        head.appendChild(el("h3", null, ad.title));
-        var close = el("button", "close", "← 캐러셀 메인으로"); close.type = "button";
+        head.appendChild(el("span", "badge", t.partnerPrefix + ad.partner));
+        head.appendChild(el("h3", null, title));
+        var close = el("button", "close", t.backToCarousel); close.type = "button";
         close.addEventListener("click", closeDetail);
         head.appendChild(close);
         card.appendChild(head);
@@ -353,7 +487,7 @@
         if (videos.length) {
           var player = el("div", "player");
           var frame = document.createElement("iframe");
-          frame.src = embedUrl(videos[0].id);           // 열 때만 - 배너에는 iframe 이 없다
+          frame.src = embedUrl(videos[0].id);
           frame.title = videos[0].label;
           frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
           frame.setAttribute("allowfullscreen", "");
@@ -361,7 +495,7 @@
           player.appendChild(frame);
           left.appendChild(player);
           if (videos.length > 1) {
-            var vchips = el("div", "vchips"); vchips.setAttribute("role", "group"); vchips.setAttribute("aria-label", "영상 고르기");
+            var vchips = el("div", "vchips"); vchips.setAttribute("role", "group"); vchips.setAttribute("aria-label", "Videos");
             videos.forEach(function (v, k) {
               var chip = el("button", "vchip", v.label); chip.type = "button";
               chip.setAttribute("aria-pressed", k === 0 ? "true" : "false");
@@ -377,27 +511,27 @@
             left.appendChild(vchips);
           }
         }
-        if (ad.lead) { var lead = el("p", "lead", ad.lead); lead.style.webkitLineClamp = "unset"; lead.style.marginTop = "14px"; left.appendChild(lead); }
+        if (lead) { var leadEl = el("p", "lead", lead); leadEl.style.webkitLineClamp = "unset"; leadEl.style.marginTop = "14px"; left.appendChild(leadEl); }
 
-        if (ad.points && ad.points.length) {
+        if (points.length) {
           var ul = el("ul", "points");
-          ad.points.forEach(function (pt) { var li = el("li"); li.appendChild(el("b", null, pt.h)); li.appendChild(el("span", null, pt.p)); ul.appendChild(li); });
+          points.forEach(function (pt) { var li = el("li"); li.appendChild(el("b", null, pt.h)); li.appendChild(el("span", null, pt.p)); ul.appendChild(li); });
           right.appendChild(ul);
         }
-        if (ad.facts && ad.facts.length) {
+        if (facts.length) {
           var dl = el("dl", "facts");
-          ad.facts.forEach(function (f) { dl.appendChild(el("dt", null, f.k)); dl.appendChild(el("dd", null, f.v)); });
+          facts.forEach(function (f) { dl.appendChild(el("dt", null, f.k)); dl.appendChild(el("dd", null, f.v)); });
           right.appendChild(dl);
-          if (ad.factsNote) right.appendChild(el("p", "facts-note", ad.factsNote));
+          if (factsNote) right.appendChild(el("p", "facts-note", factsNote));
         }
-        if (ad.cta && ad.cta.url) {
-          var cta = link(ad.cta.label || "자세히 보기", ad.cta.url, "cta"); cta.style.display = "block"; cta.style.textAlign = "center";
-          right.appendChild(cta);
+        if (cta && cta.url) {
+          var ctaBtn = link(cta.label || t.learnMore, cta.url, "cta"); ctaBtn.style.display = "block"; ctaBtn.style.textAlign = "center";
+          right.appendChild(ctaBtn);
           if (ad.code) {
             var affix = el("p", "affix");
-            affix.appendChild(document.createTextNode("추천 코드 "));
+            affix.appendChild(document.createTextNode(t.promoCode));
             affix.appendChild(el("code", null, ad.code));
-            affix.appendChild(document.createTextNode(" · 링크에 자동 적용"));
+            affix.appendChild(document.createTextNode(t.codeApplied));
             right.appendChild(affix);
           }
         }
@@ -405,9 +539,9 @@
         card.appendChild(grid);
 
         var foot = el("div", "detail-foot");
-        if (ad.disclosure) foot.appendChild(el("p", null, ad.disclosure));
+        if (disclosure) foot.appendChild(el("p", null, disclosure));
         if (ad.sources && ad.sources.length) {
-          var p = el("p", null, "출처: ");
+          var p = el("p", null, t.sources);
           ad.sources.forEach(function (s, k) { if (k) p.appendChild(document.createTextNode(" · ")); p.appendChild(link(s.label, s.url, null)); });
           foot.appendChild(p);
         }
@@ -415,9 +549,10 @@
         detail.appendChild(card);
         detail.classList.add("open");
         document.getElementById("tothetop").classList.add("show");
-        // 상세는 첫 화면 아래 - 거기로 내려간다 (스크롤바는 없지만 휠·키로 움직인다)
         requestAnimationFrame(function () { detail.scrollIntoView({ behavior: "smooth", block: "start" }); });
       }
+
+      renderAds();
     })();
   </script>
 </body>
