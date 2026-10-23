@@ -1510,6 +1510,7 @@
                 <li><a href="#seq-cards" class="toc-link">스텝 카드 및 일괄 딜레이 변경</a></li>
                 <li><a href="#seq-recorder" class="toc-link">실시간 마우스 좌표 녹화 & 무작위화</a></li>
                 <li><a href="#seq-drag-path" class="toc-link">드래그 궤적 녹화 (휠윈드 · 정신집중)</a></li>
+                <li><a href="#seq-rotation-pack" class="toc-link">🌀 360도 원형 회전팩 (9종 프리셋)</a></li>
               </ul>
             </li>
             <li>
@@ -1613,6 +1614,33 @@
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
           <h1 class="hero-title">d4cute helper 사용 설명서</h1>
           <p class="hero-desc">1.30 최신 버전 기준 — A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
+        </div>
+      </div>
+
+      <!-- 📢 상단 텔레그램 공식 채널 필수 가입 배너 -->
+      <div class="telegram-top-banner" style="background: linear-gradient(135deg, rgba(42, 171, 238, 0.16) 0%, rgba(20, 36, 69, 0.45) 100%); border: 1.5px solid rgba(42, 171, 238, 0.45); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 280px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              <h3 style="margin: 0; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: 0.3px;">
+                📢 텔레그램 공식 채널에 꼭 가입하세요!
+              </h3>
+              <span class="chip blue" style="font-weight: 700;">필독 권장</span>
+            </div>
+            <p style="margin: 0 0 8px 0; font-size: 14px; color: var(--fg); line-height: 1.6;">
+              d4cute 헬퍼의 <strong>최신 업데이트 공지, 실시간 패치노트, 오류 제보 및 빠른 기술 지원</strong>은 텔레그램을 통해 가장 빠르게 전달됩니다.<br>
+              특히 이번에 추가된 <strong style="color:var(--gold-bright);">🌀 360도 원형 회전팩(.d4seq) 완성본 파일</strong>과 <strong style="color:#2AABEE;">실제 회전 시연 영상</strong>을 채널에서 무료로 바로 다운로드받으실 수 있습니다!
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #2AABEE; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13.5px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(42, 171, 238, 0.4);">
+              <span>📢 공지 채널 입장 ↗</span>
+            </a>
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid rgba(42, 171, 238, 0.4); color: var(--fg); text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 13.5px; transition: all 0.2s;">
+              <span>💬 이용자 그룹 입장 ↗</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1853,6 +1881,105 @@
             <span class="chip ruby">준비 중</span>
           </div>
         </div>
+
+        <!-- 🌀 4) 완성형 360도 원형 회전팩 (9종 프리셋) & 다운로드 안내 -->
+        <h3 id="seq-rotation-pack">4) 완성형 360도 원형 회전팩 (9종 프리셋) & 다운로드</h3>
+        <p>
+          손으로 직접 드래그를 녹화하면 원이 찌그러지거나 회전 각도가 딱 맞지 않고, 시작과 끝에서 멈칫거리는 현상이 발생하기 쉽습니다.<br>
+          이를 위해 수학적으로 정밀하게 계산된 <strong>완벽한 360도 폐곡선 원형 회전 시퀀스 팩 (9종 프리셋)</strong>을 제공합니다.
+        </p>
+
+        <!-- 텔레그램 다운로드 강조 배너 -->
+        <div class="alert-box gold" style="margin: 16px 0; border-left: 4px solid var(--gold);">
+          <span class="alert-icon">🎁</span>
+          <div>
+            <strong style="color:var(--gold-bright); font-size:15px;">실제 시연 영상 및 회전팩 다운로드 안내</strong><br>
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">공식 텔레그램 공지 채널(@d4_notice)</a> 및 
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">이용자 그룹(@d4cute_helper)</a>에서 
+            <strong>실제 인게임 360도 회전 시연 영상</strong>과 완성본 <strong><code>sequences.d4seq</code> 회전팩 파일</strong>을 바로 무료로 받으실 수 있습니다!
+          </div>
+        </div>
+
+        <div style="overflow-x: auto; margin: 18px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--line);">
+            <thead>
+              <tr style="background: rgba(229, 184, 92, 0.12); color: var(--gold-bright); border-bottom: 1px solid var(--line-bright); text-align: left;">
+                <th style="padding: 10px 14px;">시퀀스 이름</th>
+                <th style="padding: 10px 14px;">회전 반경 (Radius)</th>
+                <th style="padding: 10px 14px;">1바퀴 시간 (`press_ms`)</th>
+                <th style="padding: 10px 14px;">특징 및 추천 용도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. 작은 빠른회전</td>
+                <td style="padding: 9px 14px;">300 px</td>
+                <td style="padding: 9px 14px;">1.5 초 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">캐릭터 근접 범위, 빠르고 경쾌한 전방위 타겟팅</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--line); background: rgba(229, 184, 92, 0.05);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. 중간 빠른회전</td>
+                <td style="padding: 9px 14px;">570 px</td>
+                <td style="padding: 9px 14px;">1.5 초 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ 표준 추천</strong> — 기본 해상도 최적 반경의 매끄러운 빠른 회전</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. 큰 빠른회전</td>
+                <td style="padding: 9px 14px;">800 px</td>
+                <td style="padding: 9px 14px;">1.5 초 (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">화면 외곽까지 넓게 훑는 광범위 빠른 회전</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. 작은 회전</td>
+                <td style="padding: 9px 14px;">300 px</td>
+                <td style="padding: 9px 14px;">2.5 초 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">근접 안정적인 보통 속도 회전 채널링</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. 중간 회전</td>
+                <td style="padding: 9px 14px;">570 px</td>
+                <td style="padding: 9px 14px;">2.5 초 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">기본 반경의 안정적인 보통 속도 회전</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. 큰 회전</td>
+                <td style="padding: 9px 14px;">800 px</td>
+                <td style="padding: 9px 14px;">2.5 초 (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">넓은 범위를 부드럽고 여유롭게 회전</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. 작은 초고속</td>
+                <td style="padding: 9px 14px;">300 px</td>
+                <td style="padding: 9px 14px;">0.75 초 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">근접 즉각 회전 타겟팅 (0.75초 만에 1바퀴 휙)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. 중간 초고속</td>
+                <td style="padding: 9px 14px;">570 px</td>
+                <td style="padding: 9px 14px;">0.75 초 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">기본 반경의 번개 같은 초고속 전방위 공격</td>
+              </tr>
+              <tr>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. 큰 초고속</td>
+                <td style="padding: 9px 14px;">800 px</td>
+                <td style="padding: 9px 14px;">0.75 초 (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">화면 전체를 초고속으로 휘감는 회전</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 회전팩 사용법 및 설정 꿀팁</h4>
+        <ol style="margin-top: 6px; padding-left: 20px; line-height: 1.8;">
+          <li><strong>가져오기 (Import)</strong>: 텔레그램에서 다운로드받은 <code>sequences.d4seq</code> 파일을 준비하고, 헬퍼 창 하단의 <span class="chip">가져오기</span> 버튼을 눌러 파일을 선택하면 9종 시퀀스가 한 번에 등록됩니다.</li>
+          <li><strong>슬롯 배정</strong>: 원하는 매크로 슬롯(A~G)을 누르고 <strong>시퀀스 라이브러리</strong>에서 위 9종 중 마음에 드는 프리셋을 선택합니다.</li>
+          <li><strong>딱 한 바퀴만 돌고 멈추게 하려면?</strong>:
+            매크로 발동 방식을 <strong style="color:var(--gold-bright);">[한 번 실행 (Once)]</strong>으로 설정하세요. 키를 누를 때마다 <strong>정확히 1바퀴만 휙 돌고 제자리에서 자동으로 깔끔하게 멈춥니다.</strong>
+          </li>
+          <li><strong>누르고 있는 동안 계속 회전하려면?</strong>:
+            발동 방식을 <strong>[누르고 있는 동안 (Hold)]</strong> 또는 <strong>[토글 (Toggle)]</strong>로 두세요. 스텝 간 딜레이(<code>interval_ms</code>)가 <code>0ms</code>로 최적화되어 있어, <strong>처음과 끝에서 턱 걸리거나 멈칫거리는 현상 없이 물 흐르듯 연속 회전</strong>합니다.
+          </li>
+        </ol>
       </section>
 
       <!-- ─── 5. 편의기능 — 인벤 선변성 ─── -->
