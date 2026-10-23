@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>d4cute helper 공식 사용 설명서 (v1.30 최신판)</title>
-  <meta name="description" content="디아블로4 d4cute helper v1.30 종합 매뉴얼 — 매크로 설정, 인벤 선변성 편의기능, 실시간 알람, 이미지/영상 가이드, 앙증맞은 클랜 및 삼촌안잔다잉 채널.">
+  <title>d4cute ヘルパー 公式ユーザーガイド (v1.30 最新版)</title>
+  <meta name="description" content="Diablo 4 d4cute ヘルパー v1.30 完全マニュアル — マクロ設定、アイテム厳選、リアルタイムアラーム、動画ガイドおよびコミュニティ案内。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1390,259 +1390,305 @@
       gap: 12px;
     }
   
-    /* ─── 프리미엄 텔레그램 상단 배너 V2 ─── */
-    .telegram-banner-v2 {
+    /* ─── 국기 언어 선택기 (오직 국기만 표시되는 고급 팝오버) ─── */
+    .flag-picker {
       position: relative;
-      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.22) 0%, rgba(18, 17, 24, 0.9) 65%),
-                  linear-gradient(135deg, rgba(20, 36, 69, 0.5) 0%, rgba(14, 13, 20, 0.98) 100%);
-      border: 1px solid rgba(42, 171, 238, 0.45);
-      border-left: 4px solid #2AABEE;
-      border-radius: var(--radius-md);
-      padding: 18px 22px;
-      margin-bottom: 22px;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 8px;
+    }
+    .flag-picker-btn {
+      background: rgba(22, 21, 32, 0.85);
+      border: 1px solid rgba(229, 184, 92, 0.4);
+      border-radius: 8px;
+      padding: 4px 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+    .flag-picker-btn:hover {
+      background: rgba(229, 184, 92, 0.15);
+      border-color: var(--gold-bright);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px var(--gold-glow);
+    }
+    .flag-active-img {
+      width: 24px;
+      height: 16px;
+      object-fit: cover;
+      border-radius: 3px;
+      display: block;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    }
+    .flag-picker-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: rgba(18, 17, 26, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(229, 184, 92, 0.35);
+      border-radius: 12px;
+      padding: 10px;
+      display: none;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(229, 184, 92, 0.15);
+      z-index: 2000;
+      min-width: 150px;
+    }
+    .flag-picker-dropdown.show {
+      display: grid;
+      animation: flagMenuPop 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes flagMenuPop {
+      from { opacity: 0; transform: translateY(-6px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .flag-picker-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: rgba(255, 255, 255, 0.04);
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    .flag-picker-item:hover {
+      background: rgba(229, 184, 92, 0.22);
+      border-color: var(--gold);
+      transform: scale(1.1);
+    }
+    .flag-picker-item.active {
+      border-color: var(--gold);
+      background: rgba(229, 184, 92, 0.18);
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+    .flag-icon-img {
+      width: 26px;
+      height: 18px;
+      object-fit: cover;
+      border-radius: 3px;
+      display: block;
+    }
+
+
+    /* ─── 럭셔리 다크 판타지 텔레그램 상단 배너 ─── */
+    .telegram-banner-v3 {
+      position: relative;
+      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.2) 0%, rgba(18, 17, 24, 0.95) 60%),
+                  radial-gradient(ellipse at 90% 50%, rgba(229, 184, 92, 0.12) 0%, rgba(14, 13, 20, 0.98) 70%),
+                  #0e0d14;
+      border: 1px solid rgba(42, 171, 238, 0.35);
+      border-left: 5px solid #2AABEE;
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 24px 0 32px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      gap: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(42, 171, 238, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
       overflow: hidden;
     }
-    @media (max-width: 860px) {
-      .telegram-banner-v2 {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-      }
-      .tg-v2-buttons {
-        justify-content: flex-start;
-      }
+    .telegram-banner-v3::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(42, 171, 238, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      animation: bannerGlowPulse 6s ease-in-out infinite alternate;
     }
-    .tg-v2-left {
+    @keyframes bannerGlowPulse {
+      0% { opacity: 0.5; transform: scale(0.98); }
+      100% { opacity: 1; transform: scale(1.02); }
+    }
+    .tg-v3-left {
       display: flex;
       align-items: flex-start;
-      gap: 16px;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
       flex: 1;
-      min-width: 260px;
     }
-    .tg-v2-icon-box {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #2AABEE 0%, #167ebc 100%);
+    .tg-v3-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 4px 18px rgba(42, 171, 238, 0.45);
+      position: relative;
     }
-    .tg-v2-title-row {
+    .tg-v3-icon-box::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 16px;
+      border: 1px solid rgba(42, 171, 238, 0.5);
+      animation: pulseIconRing 2.5s infinite;
+    }
+    @keyframes pulseIconRing {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.08); opacity: 0.3; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    .tg-v3-content {
+      flex: 1;
+    }
+    .tg-v3-header {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
-    .tg-v2-title {
-      margin: 0;
-      font-size: 17.5px;
+    .tg-v3-title {
+      font-size: 19px;
       font-weight: 800;
-      color: #ffffff;
-      letter-spacing: -0.2px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      font-family: var(--font-title);
+      background: linear-gradient(135deg, #ffd778 0%, #e5b85c 60%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.4px;
+      margin: 0;
     }
-    .tg-v2-badge {
-      display: inline-flex;
-      align-items: center;
-      background: rgba(42, 171, 238, 0.18);
-      border: 1px solid rgba(42, 171, 238, 0.55);
-      color: #64cbff;
+    .tg-v3-badge {
+      background: rgba(229, 72, 77, 0.2);
+      border: 1px solid rgba(229, 72, 77, 0.5);
+      color: #ff6b6b;
       font-size: 11px;
       font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 20px;
-      letter-spacing: 0.3px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .tg-v2-desc {
-      margin: 0;
-      font-size: 13.8px;
-      color: #cfd2dc;
-      line-height: 1.62;
+    .tg-v3-desc {
+      font-size: 14.5px;
+      color: #c9c7d8;
+      line-height: 1.65;
+      margin: 0 0 10px 0;
     }
-    .tg-v2-desc strong {
-      color: #ffffff;
+    .tg-v3-highlight-box {
+      display: inline-block;
+      background: rgba(42, 171, 238, 0.08);
+      border: 1px solid rgba(42, 171, 238, 0.25);
+      border-radius: 8px;
+      padding: 7px 12px;
+      font-size: 13.5px;
+      color: #e2e8f0;
+      line-height: 1.5;
     }
-    .tg-v2-desc .highlight-gold {
-      color: #ffd778;
+    .tg-v3-highlight-box strong {
+      color: #38bdf8;
+    }
+    .tg-v3-highlight-box em {
+      color: #fbbf24;
+      font-style: normal;
       font-weight: 700;
     }
-    .tg-v2-desc .highlight-blue {
-      color: #5ec7ff;
-      font-weight: 700;
-    }
-    .tg-v2-buttons {
+    .tg-v3-right {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       gap: 10px;
       flex-shrink: 0;
-      flex-wrap: wrap;
-    }
-    .tg-v2-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, #2AABEE 0%, #1a8cc7 100%);
-      color: #ffffff;
-      font-size: 13.5px;
-      font-weight: 700;
-      padding: 10px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 16px rgba(42, 171, 238, 0.35);
-    }
-    .tg-v2-btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(42, 171, 238, 0.55);
-      background: linear-gradient(135deg, #3bb5f5 0%, #2099d8 100%);
-      color: #ffffff;
-    }
-    .tg-v2-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(23, 22, 34, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #e6e5ee;
-      font-size: 13.5px;
-      font-weight: 600;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .tg-v2-btn-secondary:hover {
-      background: rgba(42, 171, 238, 0.15);
-      border-color: rgba(42, 171, 238, 0.45);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    /* ─── 국기 언어 선택기 ─── */
-    .flag-lang-picker {
       position: relative;
-      display: inline-block;
+      z-index: 1;
+      min-width: 170px;
     }
-    .flag-trigger-btn {
+    .tg-v3-btn-channel {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(23, 22, 34, 0.92);
-      border: 1.5px solid var(--line-bright);
-      border-radius: 20px;
-      padding: 4px 10px 4px 6px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      outline: none;
-    }
-    .flag-trigger-btn:hover,
-    .flag-trigger-btn.active {
-      border-color: var(--gold);
-      background: rgba(30, 29, 44, 1);
-      box-shadow: 0 0 14px var(--gold-glow);
-    }
-    .flag-current-img {
-      width: 24px;
-      height: 17px;
-      border-radius: 3px;
-      object-fit: cover;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.5);
-      display: block;
-    }
-    .flag-arrow {
-      font-size: 10px;
-      color: var(--fg-dim);
-      transition: transform 0.2s ease;
-    }
-    .flag-trigger-btn.active .flag-arrow {
-      transform: rotate(180deg);
-      color: var(--gold);
-    }
-    .flag-dropdown {
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0;
-      background: #14131d;
-      border: 1px solid var(--line-bright);
-      border-radius: 12px;
-      padding: 6px;
-      min-width: 170px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255,255,255,0.06);
-      display: none;
-      z-index: 2000;
-      animation: flagFadeIn 0.16s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    @keyframes flagFadeIn {
-      from { opacity: 0; transform: translateY(-6px) scale(0.97); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .flag-dropdown.show {
-      display: block;
-    }
-    .flag-option {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 10px;
-      border-radius: 6px;
-      color: var(--fg);
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #0088cc 0%, #00b4d8 100%);
+      color: #ffffff;
       text-decoration: none;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.15s ease;
-    }
-    .flag-option:hover {
-      background: rgba(229, 184, 92, 0.12);
-      color: var(--gold-bright);
-    }
-    .flag-option.active {
-      background: rgba(42, 171, 238, 0.16);
-      color: #64cbff;
       font-weight: 700;
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 18px rgba(0, 136, 204, 0.45);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
     }
-    .flag-option-img {
-      width: 22px;
-      height: 15px;
-      border-radius: 2px;
-      object-fit: cover;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    .tg-v3-btn-channel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 136, 204, 0.65);
+      filter: brightness(1.1);
     }
-
-  </style>
-  
-  <script>
-    // Selected language persistence
-    window.addEventListener('DOMContentLoaded', function() {
-      var picker = document.getElementById('flagLangPicker');
-      var btn = document.getElementById('flagTriggerBtn');
-      var drop = document.getElementById('flagDropdown');
-      if (btn && drop) {
-        btn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          btn.classList.toggle('active');
-          drop.classList.toggle('show');
-        });
-        document.addEventListener('click', function(e) {
-          if (!picker.contains(e.target)) {
-            btn.classList.remove('active');
-            drop.classList.remove('show');
-          }
-        });
+    .tg-v3-btn-group {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #e6e5ee;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13.5px;
+      border-radius: 10px;
+      border: 1px solid rgba(229, 184, 92, 0.35);
+      transition: all 0.2s ease;
+    }
+    .tg-v3-btn-group:hover {
+      background: rgba(229, 184, 92, 0.15);
+      border-color: var(--gold);
+      color: var(--gold-bright);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 860px) {
+      .telegram-banner-v3 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px;
+        gap: 16px;
       }
-    });
-  </script>
+      .tg-v3-right {
+        flex-direction: row;
+        width: 100%;
+      }
+      .tg-v3-btn-channel, .tg-v3-btn-group {
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+    }
 
+</style>
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var q = (params.get("lang") || "").toLowerCase();
+        var saved = (localStorage.getItem("d4help_lang") || "").toLowerCase();
+        var nav = (navigator.language || "").toLowerCase();
+
+        // en 페이지: 한국어 명시 시 상위(ko)로 이동
+        if (q.startsWith("ko")) {
+          localStorage.setItem("d4help_lang", "ko");
+          window.location.replace("../" + window.location.search + window.location.hash);
+          return;
+        }
+        localStorage.setItem("d4help_lang", "en");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -1658,54 +1704,44 @@
       </a>
     </div>
     <div class="nav-right">
-      <a href="#quickstart" class="nav-link">시작하기</a>
-      <a href="#tools-alter" class="nav-link">선변성 도구</a>
-      <a href="#community" class="nav-link">클랜 & 채널</a>
-      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">저장소 ↗</a>
+      <a href="#quickstart" class="nav-link">Quick Start</a>
+      <a href="#tools-alter" class="nav-link">Transmute Tools</a>
+      <a href="#community" class="nav-link">Community</a>
+      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">Repository ↗</a>
       
-      <!-- 국기 기반 언어 선택기 (flagcdn.com) -->
-      <div class="flag-lang-picker" id="flagLangPicker">
-        <button class="flag-trigger-btn" id="flagTriggerBtn" aria-label="언어 변경 (Select Language)" title="언어 선택 / Change Language (简体中文)">
-          <img src="https://flagcdn.com/w40/cn.png" alt="简体中文" class="flag-current-img" loading="lazy">
-          <span class="flag-arrow">▼</span>
-        </button>
-        <div class="flag-dropdown" id="flagDropdown">
-          <div style="font-size:11px; font-weight:700; color:var(--fg-muted); padding:4px 8px 6px; border-bottom:1px solid var(--line); margin-bottom:4px; letter-spacing:0.5px; text-transform:uppercase;">Select Language</div>
-          
-          <a href="index.html" class="flag-option ">
-            <img src="https://flagcdn.com/w40/kr.png" alt="한국어" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>한국어</span>
-          </a>
-          <a href="index._en.html" class="flag-option ">
-            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>English</span>
-          </a>
-          <a href="index._ja.html" class="flag-option ">
-            <img src="https://flagcdn.com/w40/jp.png" alt="日本語" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>日本語</span>
-          </a>
-          <a href="index._zh-CN.html" class="flag-option active">
-            <img src="https://flagcdn.com/w40/cn.png" alt="简体中文" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>简体中文</span>
-          </a>
-          <a href="index._zh-TW.html" class="flag-option ">
-            <img src="https://flagcdn.com/w40/tw.png" alt="繁體中文" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>繁體中文</span>
-          </a>
-          <a href="index._vi.html" class="flag-option ">
-            <img src="https://flagcdn.com/w40/vn.png" alt="Tiếng Việt" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>Tiếng Việt</span>
-          </a>
-          <a href="index._th.html" class="flag-option ">
-            <img src="https://flagcdn.com/w40/th.png" alt="ไทย" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>ไทย</span>
-          </a>
-          <a href="index._fil.html" class="flag-option ">
-            <img src="https://flagcdn.com/w40/ph.png" alt="Filipino" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
-            <span>Filipino</span>
-          </a>
-        </div>
+    
+      
+    <div class="flag-picker" id="flagPicker">
+      <button type="button" class="flag-picker-btn" id="flagPickerBtn" aria-label="Change Language" title="Language: 日本語">
+        <img src="https://flagcdn.com/w40/jp.png" alt="ja" class="flag-active-img">
+      </button>
+      <div class="flag-picker-dropdown" id="flagPickerDropdown" role="menu">
+        <a href="index.html" class="flag-picker-item" title="한국어">
+      <img src="https://flagcdn.com/w40/kr.png" alt="ko" class="flag-icon-img" loading="lazy">
+    </a>
+      <a href="index_en.html" class="flag-picker-item" title="English">
+      <img src="https://flagcdn.com/w40/us.png" alt="en" class="flag-icon-img" loading="lazy">
+    </a>
+      <a href="index_ja.html" class="flag-picker-item active" title="日本語">
+      <img src="https://flagcdn.com/w40/jp.png" alt="ja" class="flag-icon-img" loading="lazy">
+    </a>
+      <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文">
+      <img src="https://flagcdn.com/w40/cn.png" alt="zh-CN" class="flag-icon-img" loading="lazy">
+    </a>
+      <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文">
+      <img src="https://flagcdn.com/w40/tw.png" alt="zh-TW" class="flag-icon-img" loading="lazy">
+    </a>
+      <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt">
+      <img src="https://flagcdn.com/w40/vn.png" alt="vi" class="flag-icon-img" loading="lazy">
+    </a>
+      <a href="index_th.html" class="flag-picker-item" title="ไทย">
+      <img src="https://flagcdn.com/w40/th.png" alt="th" class="flag-icon-img" loading="lazy">
+    </a>
+      <a href="index_fil.html" class="flag-picker-item" title="Filipino">
+      <img src="https://flagcdn.com/w40/ph.png" alt="fil" class="flag-icon-img" loading="lazy">
+    </a>
       </div>
+    </div>
     </div>
   </header>
 
@@ -1721,21 +1757,21 @@
       <div class="sidebar-tabs">
         <button class="sidebar-tab-btn active" data-tab="toc">
           <span class="tab-icon">📑</span>
-          <span>목차</span>
+          <span>Table of Contents</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="images">
           <span class="tab-icon">🖼️</span>
-          <span>이미지 (<span id="imgCount">0</span>)</span>
+          <span>Images (<span id="imgCount">0</span>)</span>
         </button>
         <button class="sidebar-tab-btn" data-tab="videos">
           <span class="tab-icon">🎬</span>
-          <span>영상 (<span id="vidCount">0</span>)</span>
+          <span>Videos (<span id="vidCount">0</span>)</span>
         </button>
       </div>
 
       <!-- 도움말 본문 전체 검색창 -->
       <div class="sidebar-search-box">
-        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="도움말 전체 내용 검색..." autocomplete="off">
+        <input type="text" id="sidebarSearch" class="sidebar-search-input" placeholder="Search manual contents..." autocomplete="off">
         <button class="search-clear-btn" id="searchClearBtn" title="검색어 지우기">✕</button>
       </div>
 
@@ -1745,8 +1781,8 @@
         <!-- 0. 실시간 검색 결과 패널 (검색 시 활성화) -->
         <div class="tab-panel" id="panel-search">
           <div style="font-size:12px; color:var(--fg-dim); margin-bottom:10px; display:flex; justify-content:space-between;">
-            <span>검색 결과: <strong id="searchMatchCount" style="color:var(--gold);">0</strong>건</span>
-            <span style="font-size:11px; color:var(--fg-muted);">클릭 시 해당 위치로 이동</span>
+            <span>Search Results: <strong id="searchMatchCount" style="color:var(--gold);">0</strong>건</span>
+            <span style="font-size:11px; color:var(--fg-muted);">Click to jump to section</span>
           </div>
           <div class="search-results-list" id="searchResultsList">
             <!-- 자바스크립트로 본문 검색 결과 목록 생성 -->
@@ -1756,62 +1792,62 @@
         <!-- 1. 목차 패널 -->
         <div class="tab-panel active" id="panel-toc">
           <ul class="toc-tree">
-            <li><a href="#quickstart" class="toc-link">⚡ 1. 5분 퀵스타트 & 설치</a></li>
+            <li><a href="#quickstart" class="toc-link">1. クイックスタートガイド</a></li>
             <li>
-              <a href="#screen-ui" class="toc-link">🖥️ 2. 최신 화면 구성 (1.30)</a>
+              <a href="#screen-ui" class="toc-link">2. 画面構成とUI要素</a>
               <ul class="toc-sub-tree">
-                <li><a href="#screen-topbar" class="toc-link">상단 바 & 프로필 조작</a></li>
-                <li><a href="#screen-slots" class="toc-link">슬롯 바 (A~G 7개 슬롯, 후원, 편의, 알람)</a></li>
+                <li><a href="#screen-topbar" class="toc-link">Top Bar & Profile Management</a></li>
+                <li><a href="#screen-slots" class="toc-link">Slot Bar (Macros, Sponsors, Tools, Alarms)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#macro-engine" class="toc-link">⚙️ 3. 매크로 설정 & 발동 엔진</a>
+              <a href="#macro-engine" class="toc-link">3. マクロエンジン詳細設定</a>
               <ul class="toc-sub-tree">
-                <li><a href="#macro-modes" class="toc-link">순차 · 독립 · 홀드 · 토글 · 1회</a></li>
-                <li><a href="#macro-keys" class="toc-link">발동키 및 누름 지연 필터</a></li>
+                <li><a href="#macro-modes" class="toc-link">Sequential, Independent, Hold, Toggle, Single</a></li>
+                <li><a href="#macro-keys" class="toc-link">Trigger Keys & Delay Filters</a></li>
               </ul>
             </li>
             <li>
-              <a href="#sequence-builder" class="toc-link">📋 4. 시퀀스 & 마우스 녹화</a>
+              <a href="#sequence-builder" class="toc-link">4. シーケンスビルダーマスター</a>
               <ul class="toc-sub-tree">
                 <li><a href="#seq-cards" class="toc-link">스텝 카드 및 일괄 딜레이 변경</a></li>
-                <li><a href="#seq-recorder" class="toc-link">실시간 마우스 좌표 녹화 & 무작위화</a></li>
-                <li><a href="#seq-drag-path" class="toc-link">드래그 궤적 녹화 (휠윈드 · 정신집중)</a></li>
-                <li><a href="#seq-rotation-pack" class="toc-link">🌀 360도 원형 회전팩 (9종 프리셋)</a></li>
+                <li><a href="#seq-recorder" class="toc-link">Live mouse-position recording &amp; randomness</a></li>
+                <li><a href="#seq-drag-path" class="toc-link">Drag-path recording (Whirlwind)</a></li>
+                <li><a href="#seq-rotation-pack" class="toc-link">🌀 360° Circular Drag Pack (9 Presets)</a></li>
               </ul>
             </li>
             <li>
-              <a href="#tools-alter" class="toc-link">🧪 5. 편의기능 — 인벤 선변성</a>
+              <a href="#tools-alter" class="toc-link">5. アイテム変成ツール活用法</a>
               <ul class="toc-sub-tree">
                 <li><a href="#alter-grid" class="toc-link">첫 칸/끝 칸 33칸 자동 계산</a></li>
                 <li><a href="#alter-safety" class="toc-link">귀속 건너뛰기 & 큐브 비움 검증</a></li>
               </ul>
             </li>
             <li>
-              <a href="#alarm" class="toc-link">🔔 6. 스마트 알람 시스템</a>
+              <a href="#alarm" class="toc-link">6. インゲームスマートアラーム＆タイマー</a>
               <ul class="toc-sub-tree">
                 <li><a href="#alarm-events" class="toc-link">군단/보스 상시 백그라운드 감시</a></li>
                 <li><a href="#alarm-outputs" class="toc-link">인게임 배너 & 한국어 TTS 음성</a></li>
               </ul>
             </li>
             <li>
-              <a href="#window-modes" class="toc-link">🪟 7. 창 모드, 핀, 오버레이</a>
+              <a href="#window-modes" class="toc-link">7. ウィンドウモードと最適化設定</a>
               <ul class="toc-sub-tree">
                 <li><a href="#window-mini" class="toc-link">미니창 모드 (초소형 바)</a></li>
                 <li><a href="#window-overlay" class="toc-link">인게임 HUD 오버레이</a></li>
               </ul>
             </li>
-            <li><a href="#safety-features" class="toc-link">🛡️ 8. 안전장치 (대기 키 & 포커스)</a></li>
-            <li><a href="#profile-sync" class="toc-link">💾 9. 프로필 관리 & 공유</a></li>
+            <li><a href="#safety-features" class="toc-link">8. セキュリティと安全設計</a></li>
+            <li><a href="#profile-sync" class="toc-link">9. プロファイルバックアップと移行</a></li>
             <li>
-              <a href="#telegram-support" class="toc-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2AABEE" style="vertical-align:-2px; margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 10. 텔레그램 지원 & 디버그 로그</a>
+              <a href="#telegram-support" class="toc-link">10. Telegram連携とリモート管理</a>
               <ul class="toc-sub-tree">
                 <li><a href="#telegram-install" class="toc-link">텔레그램 설치 & 그룹 가입</a></li>
                 <li><a href="#log-viewer-guide" class="toc-link">로그 복사 및 오류 해결 제보</a></li>
               </ul>
             </li>
-            <li><a href="#community" class="toc-link">👑 11. 클랜 & 삼촌안잔다잉 채널</a></li>
-            <li><a href="#faq" class="toc-link">❓ 12. 자주 묻는 질문 (FAQ)</a></li>
+            <li><a href="#community" class="toc-link">11. クラン＆公式コミュニティ案内</a></li>
+            <li><a href="#faq" class="toc-link">12. よくある質問 (FAQ)</a></li>
           </ul>
         </div>
 
@@ -1876,7 +1912,7 @@
       
       <!-- 히어로 배너 -->
       <div class="hero-banner-card">
-        <img src="../images/hero_banner.jpg" alt="디아블로4 d4cute 헬퍼 배너" class="hero-banner-img">
+        <img src="images/hero_banner.jpg" alt="디아블로4 d4cute 헬퍼 배너" class="hero-banner-img">
         <div class="hero-banner-overlay">
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
           <h1 class="hero-title">d4cute helper 사용 설명서</h1>
@@ -1884,28 +1920,30 @@
         </div>
       </div>
 
-      
-      <!-- 📢 프리미엄 텔레그램 상단 배너 V2 -->
-      <div class="telegram-banner-v2">
-        <div class="tg-v2-left">
-          <div class="tg-v2-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-          </div>
-          <div>
-            <div class="tg-v2-title-row">
-              <h3 class="tg-v2-title">请务必加入官方 Telegram 频道！</h3>
-              <span class="tg-v2-badge">必看推荐</span>
+      <!-- 📢 상단 텔레그램 공식 채널 필수 가입 배너 -->
+      <div class="telegram-top-banner" style="background: linear-gradient(135deg, rgba(42, 171, 238, 0.16) 0%, rgba(20, 36, 69, 0.45) 100%); border: 1.5px solid rgba(42, 171, 238, 0.45); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 280px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              <h3 style="margin: 0; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: 0.3px;">
+                📢 텔레그램 공식 채널에 꼭 가입하세요!
+              </h3>
+              <span class="chip blue" style="font-weight: 700;">필독 권장</span>
             </div>
-            <p class="tg-v2-desc">d4cute 助手的<strong>最新更新公告、实时更新日志、问题反馈及快速技术支持</strong>均通过 Telegram 第一时间发布。<br>特别是本次新增的 <strong class="highlight-gold">🌀 360度完美圆形旋转包 (.d4seq) 预设文件</strong>和<strong class="highlight-blue">游戏内实机演示视频</strong>，均可在频道内免费下载！</p>
+            <p style="margin: 0 0 8px 0; font-size: 14px; color: var(--fg); line-height: 1.6;">
+              d4cute 헬퍼의 <strong>최신 업데이트 공지, 실시간 패치노트, 오류 제보 및 빠른 기술 지원</strong>은 텔레그램을 통해 가장 빠르게 전달됩니다.<br>
+              특히 이번에 추가된 <strong style="color:var(--gold-bright);">🌀 360도 원형 회전팩(.d4seq) 완성본 파일</strong>과 <strong style="color:#2AABEE;">실제 회전 시연 영상</strong>을 채널에서 무료로 바로 다운로드받으실 수 있습니다!
+            </p>
           </div>
-        </div>
-        <div class="tg-v2-buttons">
-          <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" class="tg-v2-btn-primary">
-            <span>📢 官方公告频道 ↗</span>
-          </a>
-          <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="tg-v2-btn-secondary">
-            <span>💬 用户交流群组 ↗</span>
-          </a>
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #2AABEE; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13.5px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(42, 171, 238, 0.4);">
+              <span>📢 공지 채널 입장 ↗</span>
+            </a>
+            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid rgba(42, 171, 238, 0.4); color: var(--fg); text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 13.5px; transition: all 0.2s;">
+              <span>💬 이용자 그룹 입장 ↗</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1962,7 +2000,7 @@
         <!-- 메인 매크로 화면 스크린샷 카드 -->
         <div class="image-card is-thumbnail" data-caption="d4cute helper 메인 화면 — 프로필 전환 바, 매크로 슬롯(A~G 총 7개 슬롯으로 확장), 매크로 이름 직접 입력, 후원 탭, 편의기능, 알람 탭이 한눈에 배치된 최신 UI">
           <div class="thumb-container">
-            <img src="../images/helper_main_macro.png" alt="헬퍼 메인 화면 매크로 탭">
+            <img src="images/helper_main_macro.png" alt="헬퍼 메인 화면 매크로 탭">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2002,7 +2040,7 @@
 
         <div class="image-card is-small" data-caption="후원 탭 — 헬퍼는 무료 고지, 파트너 추천 링크·클랜장님 채널 배너 캐러셀">
           <div class="thumb-container">
-            <img src="../images/helper_sponsor_tab.png" alt="후원 탭 배너 캐러셀">
+            <img src="images/helper_sponsor_tab.png" alt="후원 탭 배너 캐러셀">
           </div>
           <div class="image-caption"><span>📷</span> <span>후원 탭 (배너 캐러셀)</span></div>
         </div>
@@ -2068,7 +2106,7 @@
         <!-- 키 피커 캡처 -->
         <div class="image-card is-small" data-caption="발동키 지정 팝업창 — 키보드 키, 마우스 버튼 및 조합키를 안전하고 직관적으로 선택할 수 있습니다.">
           <div class="thumb-container">
-            <img src="../images/helper_key_picker.png" alt="발동키 선택 다이얼로그">
+            <img src="images/helper_key_picker.png" alt="발동키 선택 다이얼로그">
           </div>
           <div class="image-caption">
             <span>📷</span> <span>발동키 선택 팝업창</span>
@@ -2099,38 +2137,38 @@
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
           <div class="image-card is-small" data-caption="스텝 편집기 — 키, 모드(Single/Burst/Hold), 딜레이를 정밀하게 설정">
             <div class="thumb-container">
-              <img src="../images/helper_step_editor.png" alt="스텝 편집기">
+              <img src="images/helper_step_editor.png" alt="스텝 편집기">
             </div>
             <div class="image-caption"><span>📷</span> <span>개별 스텝 편집창</span></div>
           </div>
           <div class="image-card is-small" data-caption="딜레이 일괄변경 도구 — 전체 스텝 간격을 손쉽게 튜닝">
             <div class="thumb-container">
-              <img src="../images/helper_bulk_delay.png" alt="딜레이 일괄변경 다이얼로그">
+              <img src="images/helper_bulk_delay.png" alt="딜레이 일괄변경 다이얼로그">
             </div>
             <div class="image-caption"><span>📷</span> <span>딜레이 일괄변경 팝업</span></div>
           </div>
         </div>
 
-        <h3 id="seq-recorder">2) 실시간 마우스 좌표 녹화 및 인간화 랜덤 오차</h3>
+        <h3 id="seq-recorder">2) Live mouse-position recording &amp; humanized randomness</h3>
         <ul>
-          <li><span class="chip">녹화</span> 버튼을 누르고 게임 화면에서 키와 마우스를 입력하면 순서와 시간 간격이 그대로 기록됩니다.</li>
-          <li><strong>화면 좌표 기록</strong>: 마우스 클릭 시 당시 클릭한 화면의 절대 좌표(X, Y)가 기록되어 매크로 재생 시 해당 위치를 자동으로 클릭합니다.</li>
-          <li><strong>인간화 랜덤 오차</strong>:
+          <li>Press <span class="chip">Record</span>, then play in the game window: every key and mouse button is captured in order with its timing.</li>
+          <li><strong>Screen coordinates</strong>: each mouse click stores the absolute screen position (X, Y) it was made at, and playback clicks that same spot.</li>
+          <li><strong>Humanized randomness</strong>:
             <ul>
-              <li><strong>클릭 위치 ± px</strong>: 매 클릭마다 지정된 픽셀 반경 내에서 불규칙하게 오차를 주어 기계적 감지를 방지합니다.</li>
-              <li><strong>랜덤 변동 %</strong>: 스텝 간격마다 일정 비율의 무작위 지연을 섞어 자연스러운 손동작을 모방합니다.</li>
+              <li><strong>Click offset ± px</strong>: every click is nudged randomly within the given pixel radius.</li>
+              <li><strong>Random variance %</strong>: every step interval gets a random delay within the given ratio.</li>
             </ul>
           </li>
         </ul>
 
-        <h3 id="seq-drag-path">3) 드래그 궤적 녹화 — 누른 채 움직인 경로까지 (1.32.0)</h3>
+        <h3 id="seq-drag-path">3) Drag-path recording — the whole path while the button is held (1.32.0)</h3>
         <ul>
-          <li>녹화 중 마우스 버튼을 <strong>누른 채 움직이면</strong> 그 경로가 함께 기록됩니다. 마지막 기록점에서 <strong>8px</strong> 넘게 움직이거나 <strong>16ms</strong> 가 지날 때마다 좌표를 적어, 빠른 회전은 촘촘하게·느린 이동은 끊김 없이 남습니다.</li>
-          <li>재생 때는 누른 자리에서 버튼을 누른 뒤 <strong>적힌 시각에 맞춰 같은 경로로</strong> 커서를 움직이고, 뗀 자리에서 뗍니다. 이전 버전은 누른 자리·뗀 자리 두 점만 기억해 순간 이동했습니다.</li>
-          <li><strong>휠윈드 · 정신집중 같은 채널링 스킬</strong>: 게임에서 스킬을 <span class="chip">마우스 오른쪽 버튼</span>에 두고, 녹화 중 오른쪽 버튼을 누른 채 빙글 돌리면 그 회전이 그대로 녹화·재생됩니다. 왼쪽 버튼을 누른 채 이동하는 것도 같습니다.</li>
-          <li><strong>랜덤 변동 %</strong>는 궤적 전체 시간에 한 번, <strong>클릭 위치 ± px</strong>는 궤적 전체에 한 번만 적용돼 커서가 떨리지 않습니다.</li>
-          <li>스텝 편집기에서 자리를 수치로 고치거나 <span class="chip">드래그 지우기</span>를 누르면 궤적은 버리고 이전처럼 점프 재생합니다.</li>
-          <li>한 번의 드래그에 600 점까지 저장합니다(16ms 간격이면 약 10 초). 궤적은 화면 절대 좌표라 해상도·창 위치를 바꿨으면 다시 녹화하세요.</li>
+          <li>Move the mouse <strong>while holding a button</strong> during recording and the path is captured too: a point is stored whenever the cursor moves more than <strong>8 px</strong> from the last point or <strong>16 ms</strong> pass, so fast spins stay dense and slow moves stay continuous.</li>
+          <li>On playback the helper presses at the start point, <strong>follows the same path on the recorded timing</strong>, then releases at the end point. Earlier versions kept only the press and release points and jumped between them.</li>
+          <li><strong>Channeled skills such as Whirlwind</strong>: bind the skill to the <span class="chip">right mouse button</span> in game, hold it and spin during recording, and the spin is recorded and replayed as is. Holding the left button while moving works the same way.</li>
+          <li><strong>Random variance %</strong> is applied once to the whole path's duration and <strong>click offset ± px</strong> once to the whole path, so the cursor does not jitter.</li>
+          <li>Editing the position by number or pressing <span class="chip">Clear drag</span> in the step editor discards the path and falls back to the old jump playback.</li>
+          <li>Up to 600 points per drag (about 10 s at 16 ms). Paths are absolute screen coordinates: re-record after changing resolution or window position.</li>
         </ul>
 
         <!-- 비디오 플레이스홀더 (마우스 녹화) -->
@@ -2147,103 +2185,162 @@
           </div>
         </div>
 
-        <!-- 🌀 4) 완성형 360도 원형 회전팩 (9종 프리셋) & 다운로드 안내 -->
-        <h3 id="seq-rotation-pack">4) 360度完美圆形旋转包 (9种预设) 与下载指南</h3>
+        <!-- 🌀 4) 360° Circular Drag Pack (9 Presets) & Download Guide -->
+        <h3 id="seq-rotation-pack">4) 360度円形回転ドラッグパック（9種プリセット）＆ ダウンロード</h3>
         <p>
-          손으로 직접 드래그를 녹화하면 원이 찌그러지거나 회전 각도가 딱 맞지 않고, 시작과 끝에서 멈칫거리는 현상이 발생하기 쉽습니다.<br>
-          이를 위해 수학적으로 정밀하게 계산된 <strong>완벽한 360도 폐곡선 원형 회전 시퀀스 팩 (9종 프리셋)</strong>을 제공합니다.
+          マウスの手動録画では円が歪んだり、開始点と終了点で一時停止やカクつきが発生しやすくなります。<br>
+          これを解決するため、三角関数により精密計算された<strong>360度シームレス円形回転シ퀀ス（9種プリセット）</strong>を用意しました。
         </p>
 
-        <!-- 텔레그램 다운로드 강조 배너 -->
+        <!-- Telegram Download Banner -->
         <div class="alert-box gold" style="margin: 16px 0; border-left: 4px solid var(--gold);">
-          <span class="alert-icon">🎁</span>
-          <div>
-            <strong style="color:var(--gold-bright); font-size:15px;">实机演示视频及旋转包免费下载</strong><br>
-            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">공식 텔레그램 공지 채널(@d4_notice)</a> 및 
-            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright); font-weight:700; text-decoration:underline;">이용자 그룹(@d4cute_helper)</a>에서 
-            <strong>실제 인게임 360도 회전 시연 영상</strong>과 완성본 <strong><code>sequences.d4seq</code> 회전팩 파일</strong>을 바로 무료로 받으실 수 있습니다!
+          <div style="font-weight: 700; font-size: 15px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+            <span>📢 Telegram公式チャンネルで完成版ファイルおよび実演動画を無料配布中</span>
           </div>
+          <p style="margin: 0; line-height: 1.6; color: var(--fg-dim);">
+            回転パック完成版ファイル（<code>sequences.d4seq</code>）および実機プレイ実演動画は<br>
+            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="color: var(--gold-bright); font-weight: 700; text-decoration: underline;">公式Telegram告知チャンネル（@d4_notice）</a>から直接ダウンロードでき、ヘルパーの［インポート］ボタンから1秒で登録可能です。
+          </p>
+        </div>
+
+        <div class="table-wrap" style="margin: 16px 0;">
+          <table class="manual-table">
+            <thead>
+              <tr>
+                <th style="width: 140px;">半径（サイズ）</th>
+                <th style="width: 140px;">速度（周期）</th>
+                <th>プリセット名称</th>
+                <th>おすすめの活用シーン</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3" style="font-weight: 700; color: var(--gold);">小回転（300px）</td>
+                <td>超高速（0.75秒）</td>
+                <td><code>작은 초고속</code></td>
+                <td>その場での光速旋回、近接瞬間火力の集中</td>
+              </tr>
+              <tr>
+                <td>高速回転（1.5秒）</td>
+                <td><code>작은 빠른회전</code></td>
+                <td>近接スキル連携、狭い通路でのモンスター撃破</td>
+              </tr>
+              <tr>
+                <td>標準回転（2.5秒）</td>
+                <td><code>작은 회전</code></td>
+                <td>精密な近距離コントロール、安定した詠唱維持</td>
+              </tr>
+              <tr>
+                <td rowspan="3" style="font-weight: 700; color: var(--gold);">中回転（570px）</td>
+                <td>超高速（0.75秒）</td>
+                <td><code>중간 초고속</code></td>
+                <td>中距離モンスター群の素早い掃討・引き撃ち</td>
+              </tr>
+              <tr>
+                <td>高速回転（1.5秒）</td>
+                <td><code>중간 빠른회전</code></td>
+                <td><strong>［一番人気・標準推奨］</strong> 狩りで最も自然で安定した旋回</td>
+              </tr>
+              <tr>
+                <td>標準回転（2.5秒）</td>
+                <td><code>중간 회전</code></td>
+                <td>広い中距離範囲での持続攻撃・エリア維持</td>
+              </tr>
+              <tr>
+                <td rowspan="3" style="font-weight: 700; color: var(--gold);">大回転（800px）</td>
+                <td>超高速（0.75秒）</td>
+                <td><code>큰 초고속</code></td>
+                <td>画面全体の広域ターゲット誘導、超広範囲連射</td>
+              </tr>
+              <tr>
+                <td>高速回転（1.5秒）</td>
+                <td><code>큰 빠른회전</code></td>
+                <td>大規模モンスター集団の掃討、画面外縁までカバー</td>
+              </tr>
+              <tr>
+                <td>標準回転（2.5秒）</td>
+                <td><code>큰 회전</code></td>
+                <td>最大射程での外周周回攻撃</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div style="overflow-x: auto; margin: 18px 0;">
           <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--line);">
             <thead>
               <tr style="background: rgba(229, 184, 92, 0.12); color: var(--gold-bright); border-bottom: 1px solid var(--line-bright); text-align: left;">
-                <th style="padding: 10px 14px;">시퀀스 이름</th>
-                <th style="padding: 10px 14px;">회전 반경 (Radius)</th>
-                <th style="padding: 10px 14px;">1바퀴 시간 (`press_ms`)</th>
-                <th style="padding: 10px 14px;">특징 및 추천 용도</th>
+                <th style="padding: 10px 14px;">Preset Name</th>
+                <th style="padding: 10px 14px;">Radius</th>
+                <th style="padding: 10px 14px;">Duration (`press_ms`)</th>
+                <th style="padding: 10px 14px;">Characteristics & Recommended Use</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. 작은 빠른회전</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">1. 작은 빠른회전 (Small Fast)</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">1.5 초 (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">캐릭터 근접 범위, 빠르고 경쾌한 전방위 타겟팅</td>
+                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range around character, snappy circular targeting</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line); background: rgba(229, 184, 92, 0.05);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. 중간 빠른회전</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">2. 중간 빠른회전 (Medium Fast)</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">1.5 초 (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ 표준 추천</strong> — 기본 해상도 최적 반경의 매끄러운 빠른 회전</td>
+                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);"><strong style="color:var(--gold);">★ Standard Pick</strong> — Balanced radius for smooth, fast 360° spin</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. 큰 빠른회전</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">3. 큰 빠른회전 (Large Fast)</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">1.5 초 (1500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">화면 외곽까지 넓게 훑는 광범위 빠른 회전</td>
+                <td style="padding: 9px 14px;">1.5 s (1500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Wide area coverage reaching screen edges</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. 작은 회전</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">4. 작은 회전 (Small Normal)</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">2.5 초 (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">근접 안정적인 보통 속도 회전 채널링</td>
+                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range steady channeling at moderate speed</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. 중간 회전</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">5. 중간 회전 (Medium Normal)</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">2.5 초 (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">기본 반경의 안정적인 보통 속도 회전</td>
+                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Standard radius steady rotation</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. 큰 회전</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">6. 큰 회전 (Large Normal)</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">2.5 초 (2500ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">넓은 범위를 부드럽고 여유롭게 회전</td>
+                <td style="padding: 9px 14px;">2.5 s (2500ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Wide range smooth and relaxed rotation</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. 작은 초고속</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">7. 작은 초고속 (Small Ultra)</td>
                 <td style="padding: 9px 14px;">300 px</td>
-                <td style="padding: 9px 14px;">0.75 초 (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">근접 즉각 회전 타겟팅 (0.75초 만에 1바퀴 휙)</td>
+                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Close range instant 360° spin in 0.75 seconds</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--line);">
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. 중간 초고속</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">8. 중간 초고속 (Medium Ultra)</td>
                 <td style="padding: 9px 14px;">570 px</td>
-                <td style="padding: 9px 14px;">0.75 초 (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">기본 반경의 번개 같은 초고속 전방위 공격</td>
+                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Lightning-fast all-around sweep at standard radius</td>
               </tr>
               <tr>
-                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. 큰 초고속</td>
+                <td style="padding: 9px 14px; font-weight: 700; color: #fff;">9. 큰 초고속 (Large Ultra)</td>
                 <td style="padding: 9px 14px;">800 px</td>
-                <td style="padding: 9px 14px;">0.75 초 (750ms)</td>
-                <td style="padding: 9px 14px; color: var(--fg-dim);">화면 전체를 초고속으로 휘감는 회전</td>
+                <td style="padding: 9px 14px;">0.75 s (750ms)</td>
+                <td style="padding: 9px 14px; color: var(--fg-dim);">Screen-wide ultra-fast spin</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 회전팩 사용법 및 설정 꿀팁</h4>
+        <h4 style="color:var(--gold); margin: 20px 0 8px 0; font-size:15px;">🔧 How to Use & Pro Tips</h4>
         <ol style="margin-top: 6px; padding-left: 20px; line-height: 1.8;">
-          <li><strong>가져오기 (Import)</strong>: 텔레그램에서 다운로드받은 <code>sequences.d4seq</code> 파일을 준비하고, 헬퍼 창 하단의 <span class="chip">가져오기</span> 버튼을 눌러 파일을 선택하면 9종 시퀀스가 한 번에 등록됩니다.</li>
-          <li><strong>슬롯 배정</strong>: 원하는 매크로 슬롯(A~G)을 누르고 <strong>시퀀스 라이브러리</strong>에서 위 9종 중 마음에 드는 프리셋을 선택합니다.</li>
-          <li><strong>딱 한 바퀴만 돌고 멈추게 하려면?</strong>:
-            매크로 발동 방식을 <strong style="color:var(--gold-bright);">[한 번 실행 (Once)]</strong>으로 설정하세요. 키를 누를 때마다 <strong>정확히 1바퀴만 휙 돌고 제자리에서 자동으로 깔끔하게 멈춥니다.</strong>
-          </li>
-          <li><strong>누르고 있는 동안 계속 회전하려면?</strong>:
-            발동 방식을 <strong>[누르고 있는 동안 (Hold)]</strong> 또는 <strong>[토글 (Toggle)]</strong>로 두세요. 스텝 간 딜레이(<code>interval_ms</code>)가 <code>0ms</code>로 최적화되어 있어, <strong>처음과 끝에서 턱 걸리거나 멈칫거리는 현상 없이 물 흐르듯 연속 회전</strong>합니다.
-          </li>
+          <li><strong>Import</strong>: Download <code>sequences.d4seq</code> from Telegram, click <span class="chip">Import</span> at the bottom of the helper window, and select the file. All 9 presets are registered at once.</li>
+          <li><strong>Assign to Slot</strong>: Select your preferred macro slot (A–G) and pick a preset from the <strong>Sequence Library</strong>.</li>
+          <li><strong>Spin Exactly Once?</strong>: Set the trigger mode to <strong style="color:var(--gold-bright);">[Once]</strong>. Each key press will execute <strong>exactly one clean 360° spin and automatically stop at the starting point</strong>.</li>
+          <li><strong>Continuous Spinning?</strong>: Keep trigger mode on <strong>[Hold]</strong> or <strong>[Toggle]</strong>. The delay between cycles (<code>interval_ms</code>) is optimized to <code>0ms</code>, allowing <strong>fluid, uninterrupted continuous spinning without any pause or stutter</strong>.</li>
         </ol>
       </section>
 
@@ -2258,7 +2355,7 @@
         <!-- 선변성 도구 탭 스크린샷 카드 -->
         <div class="image-card is-thumbnail" data-caption="인벤 선변성 전용 탭 — 첫 칸/끝 칸 좌표 보정, 비귀속 건너뛰기 스위치, 시작/중지 단축키, 결과 대기 조절이 한 화면에 통합된 최신 레이아웃">
           <div class="thumb-container">
-            <img src="../images/helper_alter_tool.png" alt="인벤 선변성 한 페이지 UI">
+            <img src="images/helper_alter_tool.png" alt="인벤 선변성 한 페이지 UI">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2323,7 +2420,7 @@
         <!-- 이벤트 알림 화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="이벤트 알림 탭 — 야외 우두머리, 지옥물결, 군단 출현 시간 안내, 5분/3분/1분/시작 사전 알림 토글, 겹칠 때 우선순위 순서(▲/▼) 조절">
           <div class="thumb-container">
-            <img src="../images/alarm_event_schedule_list.png" alt="이벤트 알림 목록 및 우선순위">
+            <img src="images/alarm_event_schedule_list.png" alt="이벤트 알림 목록 및 우선순위">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2343,7 +2440,7 @@
         <!-- 개인 알람 화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="개인 알람 탭 — + 알람 추가 버튼, 주기적 반복(예: 10분마다 뱃살 운동 무제한 타이머), 실시간 상태 토글 및 편집/삭제">
           <div class="thumb-container">
-            <img src="../images/alarm_personal_timer_list.png" alt="개인 알람 타이머 목록">
+            <img src="images/alarm_personal_timer_list.png" alt="개인 알람 타이머 목록">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2362,7 +2459,7 @@
         <!-- 화면 알림 설정 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="화면 알림 설정 — 위치(캐릭터 머리 위, 세로 오프셋 -59px), 글자 크기(35px), 색상(#FFD700), 굵게/외곽선 효과, 배경 투명도(24), 표시 시간(15초) 및 미리보기">
           <div class="thumb-container">
-            <img src="../images/alarm_banner_display_settings.png" alt="화면 알림 배너 설정">
+            <img src="images/alarm_banner_display_settings.png" alt="화면 알림 배너 설정">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2382,7 +2479,7 @@
         <!-- 기본 사운드 음성 설정 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="기본 사운드 · 음성 설정 — 사운드 파일(Ring01), 알림 방식(알람음만 / 알람음+음성 / 음성만), Supertonic 3 한국어 음성 엔진(F1 여성, 속도 0.90x, 볼륨 조절) 및 실시간 테스트">
           <div class="thumb-container">
-            <img src="../images/alarm_sound_voice_settings.png" alt="기본 사운드 및 음성 설정">
+            <img src="images/alarm_sound_voice_settings.png" alt="기본 사운드 및 음성 설정">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2409,7 +2506,7 @@
         <!-- 미니바 스크린샷 카드 -->
         <div class="image-card is-small" data-caption="미니창 모드 — 슬롯 A~G 작동 상태, 시작/중지, 편의기능 바로가기, 기본창 복귀 버튼">
           <div class="thumb-container">
-            <img src="../images/helper_mini_bar.png" alt="미니바 모드 화면">
+            <img src="images/helper_mini_bar.png" alt="미니바 모드 화면">
           </div>
           <div class="image-caption"><span>📷</span> <span>초소형 미니바 모드</span></div>
         </div>
@@ -2426,7 +2523,7 @@
         <!-- 1. 인게임 오버레이 실화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="인게임 HUD 오버레이 실화면 — 작동 중인 매크로 슬롯(•A, •B 빨간색 점등), 유지 키(유지 RClick), 실시간 눌림 키 목록(눌림 2 F F F F 4) 실시간 표시">
           <div class="thumb-container">
-            <img src="../images/overlay_ingame_live_display.png" alt="인게임 HUD 오버레이 실화면">
+            <img src="images/overlay_ingame_live_display.png" alt="인게임 HUD 오버레이 실화면">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2450,7 +2547,7 @@
         <!-- 2. 오버레이 설정 화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="전역 설정 — 오버레이 상세 커스텀 (모니터 선택, 위치 우측 하단, X/Y 픽셀 오프셋, 투명도 40%, 크기 118%, 가로 폭 409px 및 실시간 미리보기)">
           <div class="thumb-container">
-            <img src="../images/overlay_configuration_settings.png" alt="오버레이 상세 설정 화면">
+            <img src="images/overlay_configuration_settings.png" alt="오버레이 상세 설정 화면">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2493,14 +2590,14 @@
         <p>상단 바의 <span class="chip">테스트</span> 버튼을 누르면 작은 창이 뜨고, 매크로가 보내는 키·마우스 입력이 그대로 들어오는지 눈으로 확인할 수 있습니다. 발동키를 눌러도 아무 일이 없을 때 "헬퍼가 입력을 못 보내는지, 게임이 안 받는지" 를 가르는 첫 점검 도구입니다.</p>
         <div class="image-card is-small" data-caption="입력 테스트 창 — 매크로가 보내는 키·마우스 입력이 실제로 들어오는지 확인">
           <div class="thumb-container">
-            <img src="../images/helper_input_test.png" alt="입력 테스트 창">
+            <img src="images/helper_input_test.png" alt="입력 테스트 창">
           </div>
           <div class="image-caption"><span>📷</span> <span>입력 테스트 창</span></div>
         </div>
         <!-- 설정창 캡처 -->
         <div class="image-card is-thumbnail" data-caption="전역 설정 창 — 안전 대기 키 커스텀, 게임 창 감지 프로세스 지정, 오버레이 위치/투명도 조정">
           <div class="thumb-container">
-            <img src="../images/helper_settings_dialog.png" alt="전역 설정 다이얼로그">
+            <img src="images/helper_settings_dialog.png" alt="전역 설정 다이얼로그">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption"><span>📷</span> <span>헬퍼 전역 설정(⚙) 다이얼로그</span></div>
@@ -2537,7 +2634,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0;">
           <div class="image-card is-thumbnail" data-caption="텔레그램 다이얼로그 — 공지 채널(@d4_notice), 이용자 소통 그룹(@d4cute_helper), 스마트폰 즉시 입장 QR 코드, 로그 보기 및 텔레그램 설치 버튼">
             <div class="thumb-container">
-              <img src="../images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
+              <img src="images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
               <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
             </div>
             <div class="image-caption">
@@ -2547,7 +2644,7 @@
           
           <div class="image-card is-thumbnail" data-caption="로그 뷰어 다이얼로그 — 날짜별 로그 조회, 경고·오류만 필터링 토글, 최근 200줄 복사, 오류만 복사, 로컬 로그 폴더 열기">
             <div class="thumb-container">
-              <img src="../images/log_viewer_error_copy.png" alt="디버그 로그 뷰어 다이얼로그">
+              <img src="images/log_viewer_error_copy.png" alt="디버그 로그 뷰어 다이얼로그">
               <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
             </div>
             <div class="image-caption">
