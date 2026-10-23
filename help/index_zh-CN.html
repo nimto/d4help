@@ -1644,6 +1644,13 @@
       .image-card.is-thumbnail .thumb-container img,
       .image-card.is-small img { width: 100%; max-height: none; border-radius: 0; }
     }
+
+    /* ─── 2026-10-24: 헤더가 내용 높이만큼 늘어나게 - 사진은 배경으로 깔고 글자 칸이 높이를 정한다(경고 칸 추가로 위가 잘리던 것) ─── */
+    .hero-banner-img { position: absolute; inset: 0; height: 100% !important; }
+    .hero-banner-overlay { position: relative; min-height: 250px; }
+    .hero-tag { align-self: flex-start; }
+    @media (max-width: 860px) { .hero-banner-overlay { min-height: 180px; } }
+    @media (max-width: 480px) { .hero-notbot { display: block !important; } }
 </style>
 </head>
 <body>
@@ -1855,6 +1862,7 @@
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
           <h1 class="hero-title">d4cute helper 使用说明书</h1>
           <p class="hero-desc">以 1.30 最新版本为准 — A~G 7个槽位顺序/独立宏、背包预变性自动化、实时事件闹钟、앙증맞은 氏族·삼촌안잔다잉 频道介绍</p>
+          <div class="hero-notbot" style="margin-top:14px; display:inline-block; max-width:760px; padding:12px 16px; border-radius:10px; background:rgba(229,72,77,0.16); border:1.5px solid rgba(229,72,77,0.65); box-shadow:0 4px 18px rgba(0,0,0,0.45); backdrop-filter:blur(4px);"><div style="font-size:17px; font-weight:800; color:#ff8a8a; margin-bottom:4px;">⚠️ 这不是自动打怪程序</div><div style="font-size:14px; line-height:1.6; color:#f3f1f8;">d4cute helper 是在您亲自游玩时减少重复输入的游戏便利工具。它没有自行打怪、移动或战斗的自动打怪(机器人)功能。</div></div>
         </div>
       </div>
 
