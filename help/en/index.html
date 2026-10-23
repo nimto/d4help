@@ -1500,7 +1500,8 @@
               <a href="#sequence-builder" class="toc-link">📋 4. Sequences & Mouse Recording</a>
               <ul class="toc-sub-tree">
                 <li><a href="#seq-cards" class="toc-link">스텝 카드 및 일괄 딜레이 변경</a></li>
-                <li><a href="#seq-recorder" class="toc-link">실시간 마우스 좌표 녹화 & 무작위화</a></li>
+                <li><a href="#seq-recorder" class="toc-link">Live mouse-position recording &amp; randomness</a></li>
+                <li><a href="#seq-drag-path" class="toc-link">Drag-path recording (Whirlwind)</a></li>
               </ul>
             </li>
             <li>
@@ -1809,16 +1810,26 @@
           </div>
         </div>
 
-        <h3 id="seq-recorder">2) 실시간 마우스 좌표 녹화 및 인간화 랜덤 오차</h3>
+        <h3 id="seq-recorder">2) Live mouse-position recording &amp; humanized randomness</h3>
         <ul>
-          <li><span class="chip">녹화</span> 버튼을 누르고 게임 화면에서 키와 마우스를 입력하면 순서와 시간 간격이 그대로 기록됩니다.</li>
-          <li><strong>화면 좌표 기록</strong>: 마우스 클릭 시 당시 클릭한 화면의 절대 좌표(X, Y)가 기록되어 매크로 재생 시 해당 위치를 자동으로 클릭합니다.</li>
-          <li><strong>인간화 랜덤 오차</strong>:
+          <li>Press <span class="chip">Record</span>, then play in the game window: every key and mouse button is captured in order with its timing.</li>
+          <li><strong>Screen coordinates</strong>: each mouse click stores the absolute screen position (X, Y) it was made at, and playback clicks that same spot.</li>
+          <li><strong>Humanized randomness</strong>:
             <ul>
-              <li><strong>클릭 위치 ± px</strong>: 매 클릭마다 지정된 픽셀 반경 내에서 불규칙하게 오차를 주어 기계적 감지를 방지합니다.</li>
-              <li><strong>랜덤 변동 %</strong>: 스텝 간격마다 일정 비율의 무작위 지연을 섞어 자연스러운 손동작을 모방합니다.</li>
+              <li><strong>Click offset ± px</strong>: every click is nudged randomly within the given pixel radius.</li>
+              <li><strong>Random variance %</strong>: every step interval gets a random delay within the given ratio.</li>
             </ul>
           </li>
+        </ul>
+
+        <h3 id="seq-drag-path">3) Drag-path recording — the whole path while the button is held (1.32.0)</h3>
+        <ul>
+          <li>Move the mouse <strong>while holding a button</strong> during recording and the path is captured too: a point is stored whenever the cursor moves more than <strong>8 px</strong> from the last point or <strong>16 ms</strong> pass, so fast spins stay dense and slow moves stay continuous.</li>
+          <li>On playback the helper presses at the start point, <strong>follows the same path on the recorded timing</strong>, then releases at the end point. Earlier versions kept only the press and release points and jumped between them.</li>
+          <li><strong>Channeled skills such as Whirlwind</strong>: bind the skill to the <span class="chip">right mouse button</span> in game, hold it and spin during recording, and the spin is recorded and replayed as is. Holding the left button while moving works the same way.</li>
+          <li><strong>Random variance %</strong> is applied once to the whole path's duration and <strong>click offset ± px</strong> once to the whole path, so the cursor does not jitter.</li>
+          <li>Editing the position by number or pressing <span class="chip">Clear drag</span> in the step editor discards the path and falls back to the old jump playback.</li>
+          <li>Up to 600 points per drag (about 10 s at 16 ms). Paths are absolute screen coordinates: re-record after changing resolution or window position.</li>
         </ul>
 
         <!-- 비디오 플레이스홀더 (마우스 녹화) -->
