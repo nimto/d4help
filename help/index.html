@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <script>
-  (function() {
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get("lang");
-    if (lang && lang.toLowerCase() !== "ko") {
-      const map = {
-        "en": "index_en.html",
-        "ja": "index_ja.html",
-        "zh-cn": "index_zh-CN.html",
-        "zh-tw": "index_zh-TW.html",
-        "zh": "index_zh-CN.html",
-        "vi": "index_vi.html",
-        "th": "index_th.html",
-        "fil": "index_fil.html"
-      };
-      const target = map[lang.toLowerCase()];
-      if (target) {
-        window.location.replace(target);
-      }
-    }
-  })();
-</script>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>d4cute helper 공식 사용 설명서 (v1.30 최신판)</title>
@@ -1922,49 +1901,98 @@
       }
     }
 
+
+    /* ─── 국기 언어 선택기 (자바스크립트 0% 순수 HTML5 details/summary) ─── */
+    details.flag-picker {
+      position: relative;
+      display: inline-block;
+      margin-left: 8px;
+    }
+    details.flag-picker summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(22, 21, 32, 0.85);
+      border: 1px solid rgba(229, 184, 92, 0.4);
+      border-radius: 8px;
+      padding: 4px 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    details.flag-picker summary::-webkit-details-marker {
+      display: none;
+    }
+    details.flag-picker summary:hover {
+      border-color: var(--gold-bright);
+      box-shadow: 0 4px 14px var(--gold-glow);
+      transform: translateY(-1px);
+    }
+    details.flag-picker[open] summary {
+      border-color: var(--gold);
+      background: rgba(229, 184, 92, 0.15);
+    }
+    details.flag-picker .flag-picker-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: rgba(18, 17, 26, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(229, 184, 92, 0.35);
+      border-radius: 12px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(229, 184, 92, 0.15);
+      z-index: 2000;
+      min-width: 150px;
+    }
+    .flag-active-img {
+      width: 24px;
+      height: 16px;
+      object-fit: cover;
+      border-radius: 3px;
+      display: block;
+    }
+    .flag-picker-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: rgba(255, 255, 255, 0.04);
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    .flag-picker-item:hover {
+      background: rgba(229, 184, 92, 0.22);
+      border-color: var(--gold);
+      transform: scale(1.1);
+    }
+    .flag-picker-item.active {
+      border-color: var(--gold);
+      background: rgba(229, 184, 92, 0.18);
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+    .flag-picker-item img {
+      width: 26px;
+      height: 18px;
+      object-fit: cover;
+      border-radius: 3px;
+      display: block;
+    }
+
 </style>
   
-  <script>
-    // Selected language persistence
-    window.addEventListener('DOMContentLoaded', function() {
-      var picker = document.getElementById('flagLangPicker');
-      var btn = document.getElementById('flagTriggerBtn');
-      var drop = document.getElementById('flagDropdown');
-      if (btn && drop) {
-        btn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          btn.classList.toggle('active');
-          drop.classList.toggle('show');
-        });
-        document.addEventListener('click', function(e) {
-          if (!picker.contains(e.target)) {
-            btn.classList.remove('active');
-            drop.classList.remove('show');
-          }
-        });
-      }
-    });
-  </script>
+  
 
 
-  <script>
-    (function() {
-      try {
-        var p = new URLSearchParams(window.location.search);
-        var l = p.get('lang');
-        if (l) {
-          l = l.toLowerCase();
-          if (l.startsWith('en')) window.location.replace('index._en.html' + window.location.hash);
-          else if (l.startsWith('ja')) window.location.replace('index._ja.html' + window.location.hash);
-          else if (l === 'zh-cn' || l === 'zh_cn' || l === 'zh') window.location.replace('index._zh-CN.html' + window.location.hash);
-          else if (l === 'zh-tw' || l === 'zh_tw') window.location.replace('index._zh-TW.html' + window.location.hash);
-          else if (l.startsWith('vi')) window.location.replace('index._vi.html' + window.location.hash);
-          else if (l.startsWith('th')) window.location.replace('index._th.html' + window.location.hash);
-          else if (l.startsWith('fil')) window.location.replace('index._fil.html' + window.location.hash);
-        }
-      } catch(e) {}
-    })();
-  </script>
+  
 </head>
 <body>
 
@@ -1985,46 +2013,27 @@
       <a href="#community" class="nav-link">클랜 & 채널</a>
       <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">저장소 ↗</a>
       
-      <!-- 국기 기반 언어 선택기 (flagcdn.com) -->
       
-    
-      
-    <div class="flag-picker" id="flagPicker">
-      <button type="button" class="flag-picker-btn" id="flagPickerBtn" aria-label="Change Language" title="Language: 한국어">
-        <img src="https://flagcdn.com/w40/kr.png" alt="ko" class="flag-active-img">
-      </button>
-      <div class="flag-picker-dropdown" id="flagPickerDropdown" role="menu">
-        <a href="index.html" class="flag-picker-item active" title="한국어">
-      <img src="https://flagcdn.com/w40/kr.png" alt="ko" class="flag-icon-img" loading="lazy">
-    </a>
-      <a href="index_en.html" class="flag-picker-item" title="English">
-      <img src="https://flagcdn.com/w40/us.png" alt="en" class="flag-icon-img" loading="lazy">
-    </a>
-      <a href="index_ja.html" class="flag-picker-item" title="日本語">
-      <img src="https://flagcdn.com/w40/jp.png" alt="ja" class="flag-icon-img" loading="lazy">
-    </a>
-      <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文">
-      <img src="https://flagcdn.com/w40/cn.png" alt="zh-CN" class="flag-icon-img" loading="lazy">
-    </a>
-      <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文">
-      <img src="https://flagcdn.com/w40/tw.png" alt="zh-TW" class="flag-icon-img" loading="lazy">
-    </a>
-      <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt">
-      <img src="https://flagcdn.com/w40/vn.png" alt="vi" class="flag-icon-img" loading="lazy">
-    </a>
-      <a href="index_th.html" class="flag-picker-item" title="ไทย">
-      <img src="https://flagcdn.com/w40/th.png" alt="th" class="flag-icon-img" loading="lazy">
-    </a>
-      <a href="index_fil.html" class="flag-picker-item" title="Filipino">
-      <img src="https://flagcdn.com/w40/ph.png" alt="fil" class="flag-icon-img" loading="lazy">
-    </a>
-      </div>
-    </div>
-    </div>
   </header>
 
   <!-- 모바일 사이드바 배경 오버레이 -->
-  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+  <div class="sidebar-backdrop" id="sidebarBackdrop">
+      <details class="flag-picker">
+      <summary class="flag-picker-btn" title="Language: 한국어">
+        <img src="https://flagcdn.com/w40/kr.png" alt="ko" class="flag-active-img">
+      </summary>
+      <div class="flag-picker-dropdown">
+        <a href="index.html" class="flag-picker-item active" title="한국어 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
+        <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
+        <a href="index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
+        <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
+        <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
+        <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
+        <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
+        <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
+      </div>
+    </details>
+    </div>
 
   <div class="layout-container">
 
@@ -2190,7 +2199,7 @@
       
       <!-- 히어로 배너 -->
       <div class="hero-banner-card">
-        <img src="../images/hero_banner.jpg" alt="디아블로4 d4cute 헬퍼 배너" class="hero-banner-img">
+        <img src="images/hero_banner.jpg" alt="디아블로4 d4cute 헬퍼 배너" class="hero-banner-img">
         <div class="hero-banner-overlay">
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
           <h1 class="hero-title">d4cute helper 사용 설명서</h1>
@@ -2263,7 +2272,7 @@
         <!-- 메인 매크로 화면 스크린샷 카드 -->
         <div class="image-card is-thumbnail" data-caption="d4cute helper 메인 화면 — 프로필 전환 바, 매크로 슬롯(A~G 총 7개 슬롯으로 확장), 매크로 이름 직접 입력, 후원 탭, 편의기능, 알람 탭이 한눈에 배치된 최신 UI">
           <div class="thumb-container">
-            <img src="../images/helper_main_macro.png" alt="헬퍼 메인 화면 매크로 탭">
+            <img src="images/helper_main_macro.png" alt="헬퍼 메인 화면 매크로 탭">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2303,7 +2312,7 @@
 
         <div class="image-card is-small" data-caption="후원 탭 — 헬퍼는 무료 고지, 파트너 추천 링크·클랜장님 채널 배너 캐러셀">
           <div class="thumb-container">
-            <img src="../images/helper_sponsor_tab.png" alt="후원 탭 배너 캐러셀">
+            <img src="images/helper_sponsor_tab.png" alt="후원 탭 배너 캐러셀">
           </div>
           <div class="image-caption"><span>📷</span> <span>후원 탭 (배너 캐러셀)</span></div>
         </div>
@@ -2369,7 +2378,7 @@
         <!-- 키 피커 캡처 -->
         <div class="image-card is-small" data-caption="발동키 지정 팝업창 — 키보드 키, 마우스 버튼 및 조합키를 안전하고 직관적으로 선택할 수 있습니다.">
           <div class="thumb-container">
-            <img src="../images/helper_key_picker.png" alt="발동키 선택 다이얼로그">
+            <img src="images/helper_key_picker.png" alt="발동키 선택 다이얼로그">
           </div>
           <div class="image-caption">
             <span>📷</span> <span>발동키 선택 팝업창</span>
@@ -2400,13 +2409,13 @@
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
           <div class="image-card is-small" data-caption="스텝 편집기 — 키, 모드(Single/Burst/Hold), 딜레이를 정밀하게 설정">
             <div class="thumb-container">
-              <img src="../images/helper_step_editor.png" alt="스텝 편집기">
+              <img src="images/helper_step_editor.png" alt="스텝 편집기">
             </div>
             <div class="image-caption"><span>📷</span> <span>개별 스텝 편집창</span></div>
           </div>
           <div class="image-card is-small" data-caption="딜레이 일괄변경 도구 — 전체 스텝 간격을 손쉽게 튜닝">
             <div class="thumb-container">
-              <img src="../images/helper_bulk_delay.png" alt="딜레이 일괄변경 다이얼로그">
+              <img src="images/helper_bulk_delay.png" alt="딜레이 일괄변경 다이얼로그">
             </div>
             <div class="image-caption"><span>📷</span> <span>딜레이 일괄변경 팝업</span></div>
           </div>
@@ -2559,7 +2568,7 @@
         <!-- 선변성 도구 탭 스크린샷 카드 -->
         <div class="image-card is-thumbnail" data-caption="인벤 선변성 전용 탭 — 첫 칸/끝 칸 좌표 보정, 비귀속 건너뛰기 스위치, 시작/중지 단축키, 결과 대기 조절이 한 화면에 통합된 최신 레이아웃">
           <div class="thumb-container">
-            <img src="../images/helper_alter_tool.png" alt="인벤 선변성 한 페이지 UI">
+            <img src="images/helper_alter_tool.png" alt="인벤 선변성 한 페이지 UI">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2624,7 +2633,7 @@
         <!-- 이벤트 알림 화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="이벤트 알림 탭 — 야외 우두머리, 지옥물결, 군단 출현 시간 안내, 5분/3분/1분/시작 사전 알림 토글, 겹칠 때 우선순위 순서(▲/▼) 조절">
           <div class="thumb-container">
-            <img src="../images/alarm_event_schedule_list.png" alt="이벤트 알림 목록 및 우선순위">
+            <img src="images/alarm_event_schedule_list.png" alt="이벤트 알림 목록 및 우선순위">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2644,7 +2653,7 @@
         <!-- 개인 알람 화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="개인 알람 탭 — + 알람 추가 버튼, 주기적 반복(예: 10분마다 뱃살 운동 무제한 타이머), 실시간 상태 토글 및 편집/삭제">
           <div class="thumb-container">
-            <img src="../images/alarm_personal_timer_list.png" alt="개인 알람 타이머 목록">
+            <img src="images/alarm_personal_timer_list.png" alt="개인 알람 타이머 목록">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2663,7 +2672,7 @@
         <!-- 화면 알림 설정 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="화면 알림 설정 — 위치(캐릭터 머리 위, 세로 오프셋 -59px), 글자 크기(35px), 색상(#FFD700), 굵게/외곽선 효과, 배경 투명도(24), 표시 시간(15초) 및 미리보기">
           <div class="thumb-container">
-            <img src="../images/alarm_banner_display_settings.png" alt="화면 알림 배너 설정">
+            <img src="images/alarm_banner_display_settings.png" alt="화면 알림 배너 설정">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2683,7 +2692,7 @@
         <!-- 기본 사운드 음성 설정 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="기본 사운드 · 음성 설정 — 사운드 파일(Ring01), 알림 방식(알람음만 / 알람음+음성 / 음성만), Supertonic 3 한국어 음성 엔진(F1 여성, 속도 0.90x, 볼륨 조절) 및 실시간 테스트">
           <div class="thumb-container">
-            <img src="../images/alarm_sound_voice_settings.png" alt="기본 사운드 및 음성 설정">
+            <img src="images/alarm_sound_voice_settings.png" alt="기본 사운드 및 음성 설정">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2710,7 +2719,7 @@
         <!-- 미니바 스크린샷 카드 -->
         <div class="image-card is-small" data-caption="미니창 모드 — 슬롯 A~G 작동 상태, 시작/중지, 편의기능 바로가기, 기본창 복귀 버튼">
           <div class="thumb-container">
-            <img src="../images/helper_mini_bar.png" alt="미니바 모드 화면">
+            <img src="images/helper_mini_bar.png" alt="미니바 모드 화면">
           </div>
           <div class="image-caption"><span>📷</span> <span>초소형 미니바 모드</span></div>
         </div>
@@ -2727,7 +2736,7 @@
         <!-- 1. 인게임 오버레이 실화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="인게임 HUD 오버레이 실화면 — 작동 중인 매크로 슬롯(•A, •B 빨간색 점등), 유지 키(유지 RClick), 실시간 눌림 키 목록(눌림 2 F F F F 4) 실시간 표시">
           <div class="thumb-container">
-            <img src="../images/overlay_ingame_live_display.png" alt="인게임 HUD 오버레이 실화면">
+            <img src="images/overlay_ingame_live_display.png" alt="인게임 HUD 오버레이 실화면">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2751,7 +2760,7 @@
         <!-- 2. 오버레이 설정 화면 스크린샷 -->
         <div class="image-card is-thumbnail" data-caption="전역 설정 — 오버레이 상세 커스텀 (모니터 선택, 위치 우측 하단, X/Y 픽셀 오프셋, 투명도 40%, 크기 118%, 가로 폭 409px 및 실시간 미리보기)">
           <div class="thumb-container">
-            <img src="../images/overlay_configuration_settings.png" alt="오버레이 상세 설정 화면">
+            <img src="images/overlay_configuration_settings.png" alt="오버레이 상세 설정 화면">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption">
@@ -2794,14 +2803,14 @@
         <p>상단 바의 <span class="chip">테스트</span> 버튼을 누르면 작은 창이 뜨고, 매크로가 보내는 키·마우스 입력이 그대로 들어오는지 눈으로 확인할 수 있습니다. 발동키를 눌러도 아무 일이 없을 때 "헬퍼가 입력을 못 보내는지, 게임이 안 받는지" 를 가르는 첫 점검 도구입니다.</p>
         <div class="image-card is-small" data-caption="입력 테스트 창 — 매크로가 보내는 키·마우스 입력이 실제로 들어오는지 확인">
           <div class="thumb-container">
-            <img src="../images/helper_input_test.png" alt="입력 테스트 창">
+            <img src="images/helper_input_test.png" alt="입력 테스트 창">
           </div>
           <div class="image-caption"><span>📷</span> <span>입력 테스트 창</span></div>
         </div>
         <!-- 설정창 캡처 -->
         <div class="image-card is-thumbnail" data-caption="전역 설정 창 — 안전 대기 키 커스텀, 게임 창 감지 프로세스 지정, 오버레이 위치/투명도 조정">
           <div class="thumb-container">
-            <img src="../images/helper_settings_dialog.png" alt="전역 설정 다이얼로그">
+            <img src="images/helper_settings_dialog.png" alt="전역 설정 다이얼로그">
             <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
           </div>
           <div class="image-caption"><span>📷</span> <span>헬퍼 전역 설정(⚙) 다이얼로그</span></div>
@@ -2838,7 +2847,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0;">
           <div class="image-card is-thumbnail" data-caption="텔레그램 다이얼로그 — 공지 채널(@d4_notice), 이용자 소통 그룹(@d4cute_helper), 스마트폰 즉시 입장 QR 코드, 로그 보기 및 텔레그램 설치 버튼">
             <div class="thumb-container">
-              <img src="../images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
+              <img src="images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
               <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
             </div>
             <div class="image-caption">
@@ -2848,7 +2857,7 @@
           
           <div class="image-card is-thumbnail" data-caption="로그 뷰어 다이얼로그 — 날짜별 로그 조회, 경고·오류만 필터링 토글, 최근 200줄 복사, 오류만 복사, 로컬 로그 폴더 열기">
             <div class="thumb-container">
-              <img src="../images/log_viewer_error_copy.png" alt="디버그 로그 뷰어 다이얼로그">
+              <img src="images/log_viewer_error_copy.png" alt="디버그 로그 뷰어 다이얼로그">
               <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
             </div>
             <div class="image-caption">
