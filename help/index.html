@@ -1389,31 +1389,277 @@
       flex-wrap: wrap;
       gap: 12px;
     }
+  
+    /* ─── 프리미엄 텔레그램 상단 배너 V2 ─── */
+    .telegram-banner-v2 {
+      position: relative;
+      background: radial-gradient(ellipse at 10% 50%, rgba(42, 171, 238, 0.22) 0%, rgba(18, 17, 24, 0.9) 65%),
+                  linear-gradient(135deg, rgba(20, 36, 69, 0.5) 0%, rgba(14, 13, 20, 0.98) 100%);
+      border: 1px solid rgba(42, 171, 238, 0.45);
+      border-left: 4px solid #2AABEE;
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      overflow: hidden;
+    }
+    @media (max-width: 860px) {
+      .telegram-banner-v2 {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+      .tg-v2-buttons {
+        justify-content: flex-start;
+      }
+    }
+    .tg-v2-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      flex: 1;
+      min-width: 260px;
+    }
+    .tg-v2-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2AABEE 0%, #167ebc 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 18px rgba(42, 171, 238, 0.45);
+    }
+    .tg-v2-title-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .tg-v2-title {
+      margin: 0;
+      font-size: 17.5px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .tg-v2-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(42, 171, 238, 0.18);
+      border: 1px solid rgba(42, 171, 238, 0.55);
+      color: #64cbff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+    .tg-v2-desc {
+      margin: 0;
+      font-size: 13.8px;
+      color: #cfd2dc;
+      line-height: 1.62;
+    }
+    .tg-v2-desc strong {
+      color: #ffffff;
+    }
+    .tg-v2-desc .highlight-gold {
+      color: #ffd778;
+      font-weight: 700;
+    }
+    .tg-v2-desc .highlight-blue {
+      color: #5ec7ff;
+      font-weight: 700;
+    }
+    .tg-v2-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .tg-v2-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #2AABEE 0%, #1a8cc7 100%);
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(42, 171, 238, 0.35);
+    }
+    .tg-v2-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(42, 171, 238, 0.55);
+      background: linear-gradient(135deg, #3bb5f5 0%, #2099d8 100%);
+      color: #ffffff;
+    }
+    .tg-v2-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(23, 22, 34, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e6e5ee;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .tg-v2-btn-secondary:hover {
+      background: rgba(42, 171, 238, 0.15);
+      border-color: rgba(42, 171, 238, 0.45);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ─── 국기 언어 선택기 ─── */
+    .flag-lang-picker {
+      position: relative;
+      display: inline-block;
+    }
+    .flag-trigger-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(23, 22, 34, 0.92);
+      border: 1.5px solid var(--line-bright);
+      border-radius: 20px;
+      padding: 4px 10px 4px 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+    .flag-trigger-btn:hover,
+    .flag-trigger-btn.active {
+      border-color: var(--gold);
+      background: rgba(30, 29, 44, 1);
+      box-shadow: 0 0 14px var(--gold-glow);
+    }
+    .flag-current-img {
+      width: 24px;
+      height: 17px;
+      border-radius: 3px;
+      object-fit: cover;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      display: block;
+    }
+    .flag-arrow {
+      font-size: 10px;
+      color: var(--fg-dim);
+      transition: transform 0.2s ease;
+    }
+    .flag-trigger-btn.active .flag-arrow {
+      transform: rotate(180deg);
+      color: var(--gold);
+    }
+    .flag-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: #14131d;
+      border: 1px solid var(--line-bright);
+      border-radius: 12px;
+      padding: 6px;
+      min-width: 170px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255,255,255,0.06);
+      display: none;
+      z-index: 2000;
+      animation: flagFadeIn 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes flagFadeIn {
+      from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .flag-dropdown.show {
+      display: block;
+    }
+    .flag-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .flag-option:hover {
+      background: rgba(229, 184, 92, 0.12);
+      color: var(--gold-bright);
+    }
+    .flag-option.active {
+      background: rgba(42, 171, 238, 0.16);
+      color: #64cbff;
+      font-weight: 700;
+    }
+    .flag-option-img {
+      width: 22px;
+      height: 15px;
+      border-radius: 2px;
+      object-fit: cover;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
   </style>
+  
   <script>
-    (function () {
+    // Selected language persistence
+    window.addEventListener('DOMContentLoaded', function() {
+      var picker = document.getElementById('flagLangPicker');
+      var btn = document.getElementById('flagTriggerBtn');
+      var drop = document.getElementById('flagDropdown');
+      if (btn && drop) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          btn.classList.toggle('active');
+          drop.classList.toggle('show');
+        });
+        document.addEventListener('click', function(e) {
+          if (!picker.contains(e.target)) {
+            btn.classList.remove('active');
+            drop.classList.remove('show');
+          }
+        });
+      }
+    });
+  </script>
+
+
+  <script>
+    (function() {
       try {
-        var params = new URLSearchParams(window.location.search);
-        var q = (params.get("lang") || "").toLowerCase();
-        var saved = (localStorage.getItem("d4help_lang") || "").toLowerCase();
-        var nav = (navigator.language || "").toLowerCase();
-
-        // 1. 한국어 명시 요청 시 로컬 저장 후 현재 페이지(ko) 유지
-        if (q.startsWith("ko")) {
-          localStorage.setItem("d4help_lang", "ko");
-          return;
+        var p = new URLSearchParams(window.location.search);
+        var l = p.get('lang');
+        if (l) {
+          l = l.toLowerCase();
+          if (l.startsWith('en')) window.location.replace('index._en.html' + window.location.hash);
+          else if (l.startsWith('ja')) window.location.replace('index._ja.html' + window.location.hash);
+          else if (l === 'zh-cn' || l === 'zh_cn' || l === 'zh') window.location.replace('index._zh-CN.html' + window.location.hash);
+          else if (l === 'zh-tw' || l === 'zh_tw') window.location.replace('index._zh-TW.html' + window.location.hash);
+          else if (l.startsWith('vi')) window.location.replace('index._vi.html' + window.location.hash);
+          else if (l.startsWith('th')) window.location.replace('index._th.html' + window.location.hash);
+          else if (l.startsWith('fil')) window.location.replace('index._fil.html' + window.location.hash);
         }
-
-        // 2. 영어 명시 요청, 또는 저장된 언어가 영어, 또는 브라우저 기본이 비한국어인 경우 en/ 이동
-        var targetLang = q || saved || (!nav.startsWith("ko") ? "en" : "ko");
-        if (targetLang.startsWith("en") || (!targetLang.startsWith("ko") && targetLang)) {
-          localStorage.setItem("d4help_lang", "en");
-          var s = window.location.search;
-          if (!s) s = "?lang=en";
-          else if (!s.includes("lang=")) s += "&lang=en";
-          window.location.replace("en/" + s + window.location.hash);
-        }
-      } catch (e) {}
+      } catch(e) {}
     })();
   </script>
 </head>
@@ -1435,9 +1681,49 @@
       <a href="#tools-alter" class="nav-link">선변성 도구</a>
       <a href="#community" class="nav-link">클랜 & 채널</a>
       <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">저장소 ↗</a>
-      <div class="lang-switcher" role="group" aria-label="언어 선택 (Language)">
-        <a href="?lang=ko" class="lang-btn active" title="한국어 (현재 페이지)">KO</a>
-        <a href="en/?lang=en" class="lang-btn" title="English">EN</a>
+      
+      <!-- 국기 기반 언어 선택기 (flagcdn.com) -->
+      <div class="flag-lang-picker" id="flagLangPicker">
+        <button class="flag-trigger-btn" id="flagTriggerBtn" aria-label="언어 변경 (Select Language)" title="언어 선택 / Change Language (한국어)">
+          <img src="https://flagcdn.com/w40/kr.png" alt="한국어" class="flag-current-img" loading="lazy">
+          <span class="flag-arrow">▼</span>
+        </button>
+        <div class="flag-dropdown" id="flagDropdown">
+          <div style="font-size:11px; font-weight:700; color:var(--fg-muted); padding:4px 8px 6px; border-bottom:1px solid var(--line); margin-bottom:4px; letter-spacing:0.5px; text-transform:uppercase;">Select Language</div>
+          
+          <a href="index.html" class="flag-option active">
+            <img src="https://flagcdn.com/w40/kr.png" alt="한국어" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>한국어</span>
+          </a>
+          <a href="index._en.html" class="flag-option ">
+            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>English</span>
+          </a>
+          <a href="index._ja.html" class="flag-option ">
+            <img src="https://flagcdn.com/w40/jp.png" alt="日本語" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>日本語</span>
+          </a>
+          <a href="index._zh-CN.html" class="flag-option ">
+            <img src="https://flagcdn.com/w40/cn.png" alt="简体中文" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>简体中文</span>
+          </a>
+          <a href="index._zh-TW.html" class="flag-option ">
+            <img src="https://flagcdn.com/w40/tw.png" alt="繁體中文" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>繁體中文</span>
+          </a>
+          <a href="index._vi.html" class="flag-option ">
+            <img src="https://flagcdn.com/w40/vn.png" alt="Tiếng Việt" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>Tiếng Việt</span>
+          </a>
+          <a href="index._th.html" class="flag-option ">
+            <img src="https://flagcdn.com/w40/th.png" alt="ไทย" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>ไทย</span>
+          </a>
+          <a href="index._fil.html" class="flag-option ">
+            <img src="https://flagcdn.com/w40/ph.png" alt="Filipino" class="flag-option-img" loading="lazy" onerror="this.style.display='none'">
+            <span>Filipino</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -1617,30 +1903,28 @@
         </div>
       </div>
 
-      <!-- 📢 상단 텔레그램 공식 채널 필수 가입 배너 -->
-      <div class="telegram-top-banner" style="background: linear-gradient(135deg, rgba(42, 171, 238, 0.16) 0%, rgba(20, 36, 69, 0.45) 100%); border: 1.5px solid rgba(42, 171, 238, 0.45); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);">
-        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 280px;">
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-              <h3 style="margin: 0; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: 0.3px;">
-                📢 텔레그램 공식 채널에 꼭 가입하세요!
-              </h3>
-              <span class="chip blue" style="font-weight: 700;">필독 권장</span>
+      
+      <!-- 📢 프리미엄 텔레그램 상단 배너 V2 -->
+      <div class="telegram-banner-v2">
+        <div class="tg-v2-left">
+          <div class="tg-v2-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </div>
+          <div>
+            <div class="tg-v2-title-row">
+              <h3 class="tg-v2-title">텔레그램 공식 채널에 꼭 가입하세요!</h3>
+              <span class="tg-v2-badge">필독 권장</span>
             </div>
-            <p style="margin: 0 0 8px 0; font-size: 14px; color: var(--fg); line-height: 1.6;">
-              d4cute 헬퍼의 <strong>최신 업데이트 공지, 실시간 패치노트, 오류 제보 및 빠른 기술 지원</strong>은 텔레그램을 통해 가장 빠르게 전달됩니다.<br>
-              특히 이번에 추가된 <strong style="color:var(--gold-bright);">🌀 360도 원형 회전팩(.d4seq) 완성본 파일</strong>과 <strong style="color:#2AABEE;">실제 회전 시연 영상</strong>을 채널에서 무료로 바로 다운로드받으실 수 있습니다!
-            </p>
+            <p class="tg-v2-desc">d4cute 헬퍼의 <strong>최신 업데이트 공지, 실시간 패치노트, 오류 제보 및 빠른 기술 지원</strong>은 텔레그램을 통해 가장 빠르게 전달됩니다.<br>특히 이번에 추가된 <strong class="highlight-gold">🌀 360도 원형 회전팩(.d4seq) 완성본 파일</strong>과 <strong class="highlight-blue">실제 회전 시연 영상</strong>을 채널에서 무료로 바로 다운로드받으실 수 있습니다!</p>
           </div>
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-            <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #2AABEE; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: 13.5px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(42, 171, 238, 0.4);">
-              <span>📢 공지 채널 입장 ↗</span>
-            </a>
-            <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid rgba(42, 171, 238, 0.4); color: var(--fg); text-decoration: none; padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 13.5px; transition: all 0.2s;">
-              <span>💬 이용자 그룹 입장 ↗</span>
-            </a>
-          </div>
+        </div>
+        <div class="tg-v2-buttons">
+          <a href="https://t.me/d4_notice" target="_blank" rel="noopener noreferrer" class="tg-v2-btn-primary">
+            <span>📢 공지 채널 입장 ↗</span>
+          </a>
+          <a href="https://t.me/d4cute_helper" target="_blank" rel="noopener noreferrer" class="tg-v2-btn-secondary">
+            <span>💬 이용자 그룹 입장 ↗</span>
+          </a>
         </div>
       </div>
 
