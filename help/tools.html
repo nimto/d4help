@@ -176,10 +176,11 @@
     <a class="tile" href="#" data-go="legend" style="--c:#f0821e"><span class="ic">⬆</span><b><span data-l="ko">전설로 업그레이드</span><span data-l="en">Upgrade to Legendary</span></b><small><span data-l="ko">마법·희귀 → 속성 4개 → 전설</span><span data-l="en">Magic/rare → 4 affixes → legendary</span></small></a>
     <a class="tile" href="#" data-go="unique" style="--c:#c9a867"><span class="ic">✦</span><b><span data-l="ko">고유 아이템 제작</span><span data-l="en">Unique Item Crafting</span></b><small><span data-l="ko">일반 장비 → 고유 (빈 칸 1칸)</span><span data-l="en">Normal gear → unique (1 free slot)</span></small></a>
     <a class="tile" href="#" data-go="mythic" style="--c:#b57bff"><span class="ic">✷</span><b><span data-l="ko">신화로 업그레이드</span><span data-l="en">Upgrade to Mythic</span></b><small><span data-l="ko">선조 고유 → 신화 (빈 칸 1칸)</span><span data-l="en">Ancestral unique → mythic (1 free slot)</span></small></a>
+    <a class="tile" href="#" data-go="enchant" style="--c:#e6ff3a"><span class="ic">✧</span><b><span data-l="ko">자동 마부</span><span data-l="en">Auto Enchant</span></b><small><span data-l="ko">비술사 속성 교체를 목표 수치까지</span><span data-l="en">Reroll an Occultist affix to a target</span></small></a>
     <a class="tile" href="#" data-go="overlay" style="--c:#ffd778"><span class="ic">▣</span><b><span data-l="ko">오버레이 (진행 카드)</span><span data-l="en">Overlays (progress card)</span></b><small><span data-l="ko">게임 위에 뜨는 표시와 각 칸의 뜻</span><span data-l="en">What appears over the game and what it means</span></small></a>
     <a class="tile" href="#" data-go="lowres" style="--c:#3b82f6"><span class="ic">🖥</span><b><span data-l="ko">저해상도 준비</span><span data-l="en">Lower resolutions</span></b><small><span data-l="ko">1080p 이하에서 맞출 설정</span><span data-l="en">Settings for 1080p and below</span></small></a>
     <a class="tile" href="#" data-go="trouble" style="--c:#e5484d"><span class="ic">🛠</span><b><span data-l="ko">안 될 때 먼저 확인</span><span data-l="en">Troubleshooting</span></b><small><span data-l="ko">가장 먼저 볼 9가지와 기록 파일</span><span data-l="en">9 first checks and log files</span></small></a>
-    <a class="tile" href="#" data-go="soon" style="--c:#6b697a"><span class="ic">⏳</span><b><span data-l="ko">준비 중</span><span data-l="en">Coming soon</span></b><small><span data-l="ko">자동 마부 · 자동 부적</span><span data-l="en">Auto Enchant · Auto Talisman</span></small></a>
+    <a class="tile" href="#" data-go="soon" style="--c:#6b697a"><span class="ic">⏳</span><b><span data-l="ko">준비 중</span><span data-l="en">Coming soon</span></b><small><span data-l="ko">자동 부적</span><span data-l="en">Auto Talisman</span></small></a>
   </nav>
 
   <!-- ① 준비 -->
@@ -268,6 +269,33 @@
   </section>
 
   <!-- ④ 저해상도 -->
+  <section id="enchant" data-topic="enchant">
+    <h2><span class="num">✧</span><span data-l="ko">자동 마부</span><span data-l="en">Auto Enchant</span></h2>
+    <div class="card">
+      <div class="note warn" data-l="ko"><b>시작하기 전에 꼭 해 주세요</b>비술사 › 아이템 마법부여에 아이템을 올리고, <b>바꿀 속성을 직접 골라 [마법부여] → [속성 교체] 를 한 번 진행</b>해 두세요. 어떤 속성을 바꿀지는 사용자가 정합니다. 헬퍼는 그다음부터 그 속성 자리만 계속 바꿉니다.</div>
+      <div class="note warn" data-l="en"><b>Do this before you start</b>Put the item into Occultist › Enchant, <b>pick the affix you want to replace yourself and run [Enchant] → [Replace Affix] once</b>. You choose which affix to change; the helper then keeps rerolling that slot only.</div>
+      <p data-l="ko">원하는 속성·수치가 나올 때까지 비술사 속성 교체를 되풀이합니다. 매번 쓴 골드를 더해 한도를 넘기 전에 멈춥니다.</p>
+      <p data-l="en">Repeats the Occultist affix reroll until the affix and value you want appear. It adds up the gold each time and stops before the limit.</p>
+      <div class="flow"><span data-l="ko">[마법부여]</span><span data-l="en">[Enchant]</span><i>›</i>
+        <span data-l="ko">후보 2줄 읽기</span><span data-l="en">Read 2 candidates</span><i>›</i>
+        <span data-l="ko">목표면 그 줄 동그라미 선택</span><span data-l="en">Pick the target row's circle</span><i>›</i>
+        <span data-l="ko">[속성 교체]</span><span data-l="en">[Replace Affix]</span><i>›</i>
+        <span data-l="ko">결과 창 [닫기]</span><span data-l="en">Close the result</span></div>
+      <ul>
+        <li data-l="ko"><b>목표 속성</b>: 목록에서 고르거나 직접 씁니다. 한 번 쓴 목표는 목록 맨 위에 남습니다. 중간 글자로도 찾을 수 있습니다(예: '재생' → 생명력 재생).</li>
+        <li data-l="en"><b>Target affix</b>: pick from the list or type it. Recent targets stay at the top; partial words work (e.g. 'regen').</li>
+        <li data-l="ko"><b>목표 수치(이상)</b>: 7.0 이면 7.0 이상, 6.0 이면 6.1·6.9·7.0 에서도 멈춥니다. 목표 속성이 처음 나오면 수치와 상관없이 바꾸고, 그 뒤엔 지금보다 높을 때만 바꿉니다.</li>
+        <li data-l="en"><b>Target value (or higher)</b>: 7.0 stops at 7.0+, 6.0 also stops at 6.1·6.9·7.0. The first time the affix appears it is taken; after that only higher values replace it.</li>
+        <li data-l="ko"><b>골드 한도</b>: 다음 [마법부여] 금액까지 더해 한도를 넘으면 누르기 전에 멈춥니다. 진행 카드의 막대는 사용한 골드 ÷ 한도입니다.</li>
+        <li data-l="en"><b>Gold limit</b>: if the next enchant would go over, it stops before clicking. The card's bar shows spent ÷ limit.</li>
+        <li data-l="ko"><b>목표 도달</b>: 멈추고 알람과 음성으로 알립니다. [확인] · Esc · 시작 키 · 마우스 클릭으로 끄면 음성도 바로 끝납니다.</li>
+        <li data-l="en"><b>Goal reached</b>: it stops and alerts with sound and voice. Dismiss with [OK] · Esc · start key · a mouse click; the voice stops right away.</li>
+      </ul>
+      <div class="note tip" data-l="ko"><b>글자 읽기</b>후보 줄은 정확도가 높은 RapidOCR(PP-OCRv5 한국어)로 먼저 읽고, 못 읽으면 Windows OCR 로 읽습니다. 진행 카드 아래에 읽은 속성 이름과 수치가 보입니다.</div>
+      <div class="note tip" data-l="en"><b>Text reading</b>Candidate rows are read first with RapidOCR (PP-OCRv5 Korean) and fall back to Windows OCR. The card shows the matched affix names and values.</div>
+    </div>
+  </section>
+
   <section id="overlay" data-topic="overlay">
     <h2><span class="num">◆</span><span data-l="ko">오버레이 (게임 위 진행 카드)</span><span data-l="en">Overlays (progress card over the game)</span></h2>
     <div class="card">
@@ -416,8 +444,6 @@
   <section id="soon" data-topic="soon">
     <h2><span class="num">6</span><span data-l="ko">준비 중</span><span data-l="en">Coming soon</span></h2>
     <div class="grid">
-      <div class="card"><h3><span data-l="ko">자동 마부</span><span data-l="en">Auto Enchant</span><span class="tag soon" data-l="ko">준비 중</span><span class="tag soon" data-l="en">soon</span></h3>
-        <p class="muted" data-l="ko">다음 판에 들어옵니다.</p><p class="muted" data-l="en">Arriving in a future version.</p></div>
       <div class="card"><h3><span data-l="ko">자동 부적</span><span data-l="en">Auto Talisman</span><span class="tag soon" data-l="ko">준비 중</span><span class="tag soon" data-l="en">soon</span></h3>
         <p class="muted" data-l="ko">다음 판에 들어옵니다.</p><p class="muted" data-l="en">Arriving in a future version.</p></div>
     </div>
