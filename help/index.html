@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>d4cute helper 공식 사용 설명서 (v1.30 최신판)</title>
-  <meta name="description" content="디아블로4 d4cute helper v1.30 종합 매뉴얼 — 매크로 설정, 인벤 선변성 편의기능, 실시간 알람, 이미지/영상 가이드, 앙증맞은 클랜 및 삼촌안잔다잉 채널.">
+  <title>d4cute helper 공식 사용 설명서 (v2.0 최신판)</title>
+  <meta name="description" content="디아블로4 d4cute helper v2.0 종합 매뉴얼 — 매크로 설정, 인벤 선변성 편의기능, 실시간 알람, 이미지/영상 가이드, 앙증맞은 클랜 및 삼촌안잔다잉 채널.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1674,7 +1674,7 @@
       </button>
       <a href="#" class="brand">
         <span class="brand-title">D4CUTE HELPER</span>
-        <span class="brand-ver">v1.30.x</span>
+        <span class="brand-ver">v2.0.x</span>
       </a>
     </div>
     <div class="nav-right">
@@ -1747,6 +1747,7 @@
         <!-- 1. 목차 패널 -->
         <div class="tab-panel active" id="panel-toc">
           <ul class="toc-tree">
+            <li><a href="#whats-new-2" class="toc-link">★ v2.0.0 새 기능</a></li>
             <li><a href="#quickstart" class="toc-link">⚡ 1. 5분 퀵스타트 & 설치</a></li>
             <li>
               <a href="#screen-ui" class="toc-link">🖥️ 2. 최신 화면 구성 (1.30)</a>
@@ -1872,7 +1873,7 @@
         <div class="hero-banner-overlay">
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
           <h1 class="hero-title">d4cute helper 사용 설명서</h1>
-          <p class="hero-desc">1.30 최신 버전 기준 — A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
+          <p class="hero-desc">2.0.0 최신 버전 기준 — 자동 마부 · 자동 부적 · 제조법 4종 · 테마 9종 · 언어팩 8종, A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
           <div class="hero-notbot" style="margin-top:14px; display:inline-block; max-width:760px; padding:12px 16px; border-radius:10px; background:rgba(229,72,77,0.16); border:1.5px solid rgba(229,72,77,0.65); box-shadow:0 4px 18px rgba(0,0,0,0.45); backdrop-filter:blur(4px);"><div style="font-size:17px; font-weight:800; color:#ff8a8a; margin-bottom:4px;">⚠️ 자동사냥 프로그램이 아닙니다</div><div style="font-size:14px; line-height:1.6; color:#f3f1f8;">d4cute helper 는 직접 플레이할 때 반복 입력을 덜어 주는 게임 편의 도구입니다. 스스로 사냥·이동·전투를 하는 자동사냥(봇) 기능은 없습니다.</div></div>
         </div>
       </div>
@@ -1911,6 +1912,59 @@
           <strong>안내</strong>: 헬퍼 창의 <span class="chip gold">?</span> 버튼을 클릭하면 언제든지 이 최신 도움말 페이지가 열립니다. 사이드바 검색창으로 도움말 본문 내용을 실시간 검색할 수 있으며, 이미지를 클릭하면 <strong>마우스 휠 스크롤 확대/축소 및 이전/다음 탐색</strong>이 가능한 풀스크린 뷰어가 작동합니다.
         </div>
       </div>
+
+      <!-- ─── v2.0.0 새 기능 ─── -->
+      <section class="doc-section" id="whats-new-2">
+        <div class="section-header">
+          <h2 class="section-title"><span class="section-num">★</span> v2.0.0 새 기능</h2>
+        </div>
+        <p>2.0.0 에서는 편의기능이 크게 늘었고, 화면과 설정이 더 쉬워졌습니다. 아래 내용을 먼저 훑어보세요.</p>
+
+        <h3 id="new2-tools">1) 편의기능 탭</h3>
+        <ul>
+          <li><strong>인벤 선변성</strong> — 인벤토리 아이템을 한 칸씩 자동으로 변성합니다. 변성할 수 있는 칸만 골라 돕니다. <a href="tools.html?topic=alter">자세히 보기</a></li>
+          <li><strong>제조법 4종</strong> — 호라드림의 함 제조법 속성 제거 · 전설로 업그레이드 · 고유 아이템 제작 · 신화로 업그레이드를 자동으로 반복합니다. 전설로 업그레이드는 마법(파랑)·희귀(노랑) 아이템만 골라 속성을 4개까지 채운 뒤 큐브 안에서 바로 전설로 올립니다. 고유 · 신화는 인벤 빈 칸 1칸이 필요하며 없으면 빨간 카드와 음성으로 알립니다. <a href="tools.html?topic=recipe">자세히 보기</a></li>
+          <li><strong>자동 마부</strong> — 비술사 속성 교체를 원하는 속성과 수치가 나올 때까지 되풀이하고, 골드 한도를 넘기 전에 멈춥니다. 실행 기록은 [기록 보기] 창에서 확인합니다. <a href="tools.html?topic=enchant">자세히 보기</a></li>
+          <li><strong>자동 부적</strong> — 세트 부적을 “세트 부적 무작위 변경” 제조법으로 굴려 고른 속성(최소 수치 · ★ 포함)이 나올 때까지 되풀이합니다. 확률과 필요한 재료표를 미리 보여 줍니다. <a href="tools.html?topic=talisman">자세히 보기</a></li>
+        </ul>
+
+        <h3 id="new2-startkey">2) 공통 시작 키 · 음성 · 진행 카드</h3>
+        <ul>
+          <li>모든 편의기능이 <strong>시작 키 하나</strong>(기본 <kbd>F11</kbd>)를 같이 씁니다. 열려 있는 탭의 기능이 시작되고, 다시 누르면 일시정지, <kbd>Esc</kbd> 는 완전 중지입니다.</li>
+          <li>시작할 때와 끝날 때 <strong>음성 안내</strong>가 나옵니다. 아이템 하나가 끝날 때 나는 <strong>짧은 소리</strong>는 옵션으로 켜고 끌 수 있습니다.</li>
+          <li>진행 상황은 캐릭터 창 위에 <strong>진행 카드</strong>(오버레이)로 보입니다.</li>
+        </ul>
+
+        <h3 id="new2-theme">3) 테마 9종</h3>
+        <p><strong>전역 설정 › 표시 › 테마</strong>에서 고릅니다. 바꾸면 헬퍼가 자동으로 다시 시작됩니다.</p>
+        <ul>
+          <li>다크(기본) · 라이트 · 성역(붉은·금) · 미드나잇 블루</li>
+          <li><strong>색약 배려</strong> 밝게 / 어둡게 — Okabe-Ito 색을 써서 성공은 파랑, 위험은 주홍, 경고는 노랑으로 구분합니다.</li>
+          <li>양피지 · 서리 · 라벤더</li>
+        </ul>
+
+        <h3 id="new2-lang">4) 언어팩 8종</h3>
+        <p>한국어, English, 日本語, 简体中文, 繁體中文, ไทย, Tiếng Việt, Filipino 를 지원합니다. <strong>전역 설정</strong>에서 바꾸면 헬퍼가 자동으로 다시 시작됩니다.</p>
+
+        <h3 id="new2-macro">5) 매크로 설정이 쉬워졌습니다</h3>
+        <ul>
+          <li>스텝 편집기는 기본으로 <strong>키와 딜레이</strong>만 보입니다. 나머지는 <strong>고급 설정</strong>으로 접혀 있고, 열림/닫힘 상태는 모든 창이 함께 씁니다.</li>
+          <li>위치 줄은 마우스 키일 때만 나옵니다. 키 입력 칸에서 <strong>키를 직접 눌러</strong> 지정할 수 있습니다.</li>
+          <li>모든 방식(순차 · 독립 · 홀드 · 토글 · N 번)에 쉬운 말로 된 툴팁이 붙었습니다. 설명 칸은 바뀌는 값을 노랑/초록으로 강조합니다.</li>
+          <li>[기본값] 버튼, 딜레이 일괄 변경이 있고, 멈춤 키는 토글 방식일 때만 보입니다.</li>
+          <li>시퀀스 이름이 <strong>키입력</strong>으로 바뀌었고, 저장/불러오기 버튼은 키입력 탭에서만 켜집니다. 켜진 매크로의 이름 칸은 색으로 표시됩니다.</li>
+        </ul>
+
+        <h3 id="new2-window">6) 미니 창 · 오버레이 · 창 동작</h3>
+        <ul>
+          <li><strong>미니 창</strong>은 켜 둔 슬롯만 보여 주고 폭이 알맞게 줄며, 제목 줄 없이 왼쪽 <strong>⠿ 손잡이</strong>를 잡아 옮깁니다.</li>
+          <li><strong>오버레이 투명도</strong> 설정이 이제 실제로 적용됩니다(글자는 읽히는 상태를 유지). 밝은 테마에서는 오버레이도 밝게 그려집니다.</li>
+          <li><strong>항상 위</strong>를 켜면 팝업 창도 메인 창 위에 머뭅니다. 창 위치와 크기는 기억됩니다.</li>
+        </ul>
+
+        <h3 id="new2-ocr">7) 글자 읽기(OCR)</h3>
+        <p>기본으로 <strong>Windows OCR</strong>을 씁니다. 한국어 OCR 언어 기능이 없으면 안내 레이어가 열리고 Windows 설정으로 바로 연결됩니다. 자동 마부와 자동 부적은 더 정확한 내장 OCR 엔진(<strong>RapidOCR</strong>, PP-OCRv5 한국어)으로 글자를 읽습니다.</p>
+      </section>
 
       <!-- ─── 1. 시작하기 ─── -->
       <section class="doc-section" id="quickstart">
@@ -2267,7 +2321,7 @@
           <li><span class="chip gold">첫 칸 찍기</span>를 누른 뒤 게임 인벤토리의 맨 첫 번째 칸(좌상단)에 마우스를 올리고 <kbd>Enter</kbd>를 누릅니다.</li>
           <li><span class="chip gold">끝 칸 찍기</span>를 누르고 인벤토리 맨 마지막 칸(우하단)에 마우스를 올린 뒤 <kbd>Enter</kbd>를 누릅니다. (취소는 언제든 <kbd>Esc</kbd>)</li>
           <li>두 점의 위치만 지정하면 33개 인벤토리 칸의 중심 좌표가 자동으로 정확히 계산됩니다.</li>
-          <li>게임 화면에서 시작 단축키(기본 <kbd>F10</kbd>, 파란 키 버튼을 눌러 바꿀 수 있음)를 누르면 선변성이 전자동으로 시작됩니다. 편의기능 탭을 굳이 열어두지 않아도 단축키는 상시 작동합니다.</li>
+          <li>게임 화면에서 시작 단축키(기본 <kbd>F11</kbd>, 파란 키 버튼을 눌러 바꿀 수 있음)를 누르면 선변성이 전자동으로 시작됩니다. 편의기능 탭을 굳이 열어두지 않아도 단축키는 상시 작동합니다.</li>
         </ol>
 
         <h3 id="alter-safety">2) 동작 메커니즘 및 지능형 안전장치</h3>
@@ -2807,7 +2861,7 @@
       </section>
 
       <footer>
-        <div>d4cute helper v1.30.0 Documentation · Crafted with Care</div>
+        <div>d4cute helper v2.0.0 Documentation · Crafted with Care</div>
         <div><a href="#quickstart" style="color: var(--gold);">맨 위로 이동 ↑</a></div>
       </footer>
 
