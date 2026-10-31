@@ -148,6 +148,8 @@
       .lead { -webkit-line-clamp: 2; }
       .detail-grid { grid-template-columns: 1fr; }
       .facts { grid-template-columns: 1fr; }
+      .head .promise { margin-left: 0; }
+    }
     .lang-switcher {
       display: inline-flex;
       align-items: center;
@@ -171,7 +173,6 @@
     }
     .lang-btn:hover { color: var(--gold); }
     .lang-btn.active { background: var(--gold); color: var(--gold-ink); }
-    .head .promise { margin-left: 0; }
   </style>
 </head>
 <body>
@@ -182,8 +183,8 @@
       <p id="ui-desc">파트너 추천 링크 한 번이 다음 업데이트를 만듭니다. 가입자가 더 내는 비용은 없습니다.</p>
       <p class="promise" id="ui-promise">헬퍼는 자동으로 아무것도 보내지 않고, 가입 여부도 알지 못합니다.</p>
       <div class="lang-switcher" role="group" aria-label="언어 선택 (Language)">
-        <button class="lang-btn active" id="btn-lang-ko" type="button">한국어</button>
-        <button class="lang-btn" id="btn-lang-en" type="button">English</button>
+        <button class="lang-btn active" id="btn-lang-ko" type="button" title="한국어" aria-label="한국어"><img src="https://flagcdn.com/w40/kr.png" alt="한국어" title="한국어" style="width:26px;height:auto;display:block;border-radius:3px"></button>
+        <button class="lang-btn" id="btn-lang-en" type="button" title="English" aria-label="English"><img src="https://flagcdn.com/w40/us.png" alt="English" title="English" style="width:26px;height:auto;display:block;border-radius:3px"></button>
       </div>
     </header>
 

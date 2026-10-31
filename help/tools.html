@@ -160,7 +160,7 @@
 <div class="wrap">
 
   <header class="hero">
-    <div class="lang"><button id="b-ko" type="button">한국어</button><button id="b-en" type="button">English</button></div>
+    <div class="lang"><button id="b-ko" type="button" title="한국어" aria-label="한국어"><img src="https://flagcdn.com/w40/kr.png" alt="한국어" title="한국어" style="width:26px;height:auto;display:block;border-radius:3px"></button><button id="b-en" type="button" title="English" aria-label="English"><img src="https://flagcdn.com/w40/us.png" alt="English" title="English" style="width:26px;height:auto;display:block;border-radius:3px"></button></div>
     <div class="eyebrow">d4cute helper · Tools</div>
     <h1 data-l="ko">편의기능 도움말</h1>
     <h1 data-l="en">Tools Guide</h1>
@@ -557,7 +557,14 @@
       });
       document.querySelectorAll(".card.recipe").forEach(function (c) { c.classList.toggle("show", c.classList.contains(t)); });
       window.scrollTo(0, 0);
+      try {   // 주소의 topic 도 같이 바꾼다 - 헬퍼의 [전체 도움말]·뒤로가기가 지금 화면을 알게
+        var u = new URL(location.href);
+        if (u.searchParams.get("topic") !== t) { u.searchParams.set("topic", t); history.pushState({ t: t }, "", u); }
+      } catch (e) {}
     }
+    window.addEventListener("popstate", function () {
+      show((new URLSearchParams(location.search).get("topic") || "all").toLowerCase());
+    });
     document.querySelectorAll("[data-go]").forEach(function (a) {
       a.addEventListener("click", function (e) { e.preventDefault(); show(a.getAttribute("data-go")); });
     });
