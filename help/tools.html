@@ -109,6 +109,47 @@
     .tag.soon { background: #2a2838; color: var(--fg-dim); border: 1px solid var(--line-bright); }
     footer { margin-top: 40px; text-align: center; color: var(--fg-muted); font-size: 12px; }
 
+    /* 진행 카드 모형 */
+    .mock { width: 300px; max-width: 100%; border-radius: 10px; padding: 14px 16px 12px; position: relative;
+      background: linear-gradient(180deg, rgba(30,28,40,.96), rgba(14,13,20,.96)); border: 1.5px solid var(--k);
+      box-shadow: 0 0 0 4px rgba(0,0,0,.25), 0 6px 22px rgba(0,0,0,.5); font-size: 12px; }
+    .mock .h { display: flex; justify-content: space-between; color: var(--fg-dim); font-size: 11px; font-weight: 700; }
+    .mock .t { color: var(--k); font-size: 19px; font-weight: 800; margin: 2px 0 6px; }
+    .mock .bar { height: 7px; border-radius: 9px; background: #2a2836; overflow: hidden; margin: 8px 0 3px; }
+    .mock .bar i { display: block; height: 100%; width: var(--p); background: linear-gradient(90deg, var(--k), #fff3); }
+    .mock .pr { display: flex; justify-content: space-between; color: var(--fg-dim); font-size: 11px; }
+    .mock .pr b { color: var(--k); }
+    .mock .row { display: flex; justify-content: space-between; border-top: 1px solid #ffffff12; padding: 4px 0; color: var(--fg-dim); }
+    .mock .row b { color: var(--fg); }
+    .mock .now { color: var(--k); margin-top: 6px; }
+    .mock .ft { color: var(--fg-muted); text-align: center; font-size: 11px; margin-top: 4px; }
+    .mocks { display: flex; flex-wrap: wrap; gap: 24px 36px; align-items: flex-start; margin: 8px 0 4px; }
+    .mocks > div { flex: 1 1 280px; }
+    .legend-list { list-style: none; padding: 0; margin: 0; counter-reset: n; }
+    .legend-list li { counter-increment: n; padding-left: 28px; position: relative; }
+    .legend-list li::before { content: counter(n); position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 50%;
+      background: var(--gold); color: #1b1407; font-size: 10px; font-weight: 800; display: grid; place-items: center; }
+    .steps { font-size: 13px; }
+    .steps td:first-child { white-space: nowrap; color: var(--gold-bright); font-weight: 700; }
+    /* 대시보드 · 주제 보기 */
+    .dash { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; margin: 18px 0 4px; }
+    .tile { position: relative; display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: var(--fg);
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 16px 16px 14px 60px;
+      min-height: 84px; transition: .15s; overflow: hidden; }
+    .tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--c); }
+    .tile:hover { background: var(--card-hover); border-color: var(--c); transform: translateY(-1px); }
+    .tile .ic { position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border-radius: 9px; display: grid;
+      place-items: center; font-size: 17px; background: color-mix(in srgb, var(--c) 22%, transparent);
+      border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); }
+    .tile b { font-size: 15px; color: var(--c); }
+    .tile small { color: var(--fg-dim); font-size: 12.5px; line-height: 1.5; }
+    .backbar { display: none; margin: 14px 0 0; }
+    .backbar a { display: inline-block; text-decoration: none; color: var(--gold-bright); background: var(--card);
+      border: 1px solid var(--line-bright); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 700; }
+    .backbar a:hover { border-color: var(--gold-dim); }
+    body.topic .dash, body.topic section, body.topic .card.recipe { display: none; }
+    body.topic .backbar, body.topic section.show, body.topic .card.recipe.show { display: block; }
+    body.home section { display: none; }
     [data-l="en"] { display: none; }
     body.en [data-l="ko"] { display: none; }
     body.en [data-l="en"] { display: revert; }
@@ -127,17 +168,22 @@
     <p data-l="en">How to use Inventory Transfigure and the Horadric Cube recipes (Remove Affix · Upgrade to Legendary · Unique crafting · Upgrade to Mythic), what to prepare on lower resolutions, and what to check first when something does not work.</p>
   </header>
 
-  <nav class="toc">
-    <a href="#start"><span data-l="ko">① 시작 전 준비</span><span data-l="en">① Before you start</span></a>
-    <a href="#alter"><span data-l="ko">② 인벤 선변성</span><span data-l="en">② Inventory Transfigure</span></a>
-    <a href="#recipe"><span data-l="ko">③ 제조법</span><span data-l="en">③ Recipes</span></a>
-    <a href="#lowres"><span data-l="ko">④ 저해상도 준비</span><span data-l="en">④ Lower resolutions</span></a>
-    <a href="#trouble"><span data-l="ko">⑤ 안 될 때 먼저 확인</span><span data-l="en">⑤ Troubleshooting</span></a>
-    <a href="#soon"><span data-l="ko">⑥ 준비 중</span><span data-l="en">⑥ Coming soon</span></a>
+  <div class="backbar"><a href="#" data-go="all"><span data-l="ko">← 전체 도움말</span><span data-l="en">← All topics</span></a> <a href="#" data-go="overlay"><span data-l="ko">▣ 진행 카드(오버레이) 설명</span><span data-l="en">▣ Progress card (overlay)</span></a> <a href="#" data-go="trouble"><span data-l="ko">🛠 안 될 때</span><span data-l="en">🛠 Troubleshooting</span></a></div>
+  <nav class="dash">
+    <a class="tile" href="#" data-go="start" style="--c:#e5b85c"><span class="ic">⚙</span><b><span data-l="ko">시작 전 준비</span><span data-l="en">Before you start</span></b><small><span data-l="ko">자리 찍기 · 시작 키 · 멈추기 · 알림</span><span data-l="en">Slots · start key · stop · alerts</span></small></a>
+    <a class="tile" href="#" data-go="alter" style="--c:#3fbf9f"><span class="ic">🎲</span><b><span data-l="ko">인벤 선변성</span><span data-l="en">Inventory Transfigure</span></b><small><span data-l="ko">인벤 아이템을 한 칸씩 변성</span><span data-l="en">Transfigure items slot by slot</span></small></a>
+    <a class="tile" href="#" data-go="strip" style="--c:#9aa0ad"><span class="ic">✂</span><b><span data-l="ko">속성 제거</span><span data-l="en">Remove Affix</span></b><small><span data-l="ko">속성을 모두 지워 일반 아이템으로</span><span data-l="en">Strip every affix</span></small></a>
+    <a class="tile" href="#" data-go="legend" style="--c:#f0821e"><span class="ic">⬆</span><b><span data-l="ko">전설로 업그레이드</span><span data-l="en">Upgrade to Legendary</span></b><small><span data-l="ko">마법·희귀 → 속성 4개 → 전설</span><span data-l="en">Magic/rare → 4 affixes → legendary</span></small></a>
+    <a class="tile" href="#" data-go="unique" style="--c:#c9a867"><span class="ic">✦</span><b><span data-l="ko">고유 아이템 제작</span><span data-l="en">Unique Item Crafting</span></b><small><span data-l="ko">일반 장비 → 고유 (빈 칸 1칸)</span><span data-l="en">Normal gear → unique (1 free slot)</span></small></a>
+    <a class="tile" href="#" data-go="mythic" style="--c:#b57bff"><span class="ic">✷</span><b><span data-l="ko">신화로 업그레이드</span><span data-l="en">Upgrade to Mythic</span></b><small><span data-l="ko">선조 고유 → 신화 (빈 칸 1칸)</span><span data-l="en">Ancestral unique → mythic (1 free slot)</span></small></a>
+    <a class="tile" href="#" data-go="overlay" style="--c:#ffd778"><span class="ic">▣</span><b><span data-l="ko">오버레이 (진행 카드)</span><span data-l="en">Overlays (progress card)</span></b><small><span data-l="ko">게임 위에 뜨는 표시와 각 칸의 뜻</span><span data-l="en">What appears over the game and what it means</span></small></a>
+    <a class="tile" href="#" data-go="lowres" style="--c:#3b82f6"><span class="ic">🖥</span><b><span data-l="ko">저해상도 준비</span><span data-l="en">Lower resolutions</span></b><small><span data-l="ko">1080p 이하에서 맞출 설정</span><span data-l="en">Settings for 1080p and below</span></small></a>
+    <a class="tile" href="#" data-go="trouble" style="--c:#e5484d"><span class="ic">🛠</span><b><span data-l="ko">안 될 때 먼저 확인</span><span data-l="en">Troubleshooting</span></b><small><span data-l="ko">가장 먼저 볼 9가지와 기록 파일</span><span data-l="en">9 first checks and log files</span></small></a>
+    <a class="tile" href="#" data-go="soon" style="--c:#6b697a"><span class="ic">⏳</span><b><span data-l="ko">준비 중</span><span data-l="en">Coming soon</span></b><small><span data-l="ko">자동 마부 · 자동 부적</span><span data-l="en">Auto Enchant · Auto Talisman</span></small></a>
   </nav>
 
   <!-- ① 준비 -->
-  <section id="start">
+  <section id="start" data-topic="start">
     <h2><span class="num">1</span><span data-l="ko">시작 전 준비 (공통)</span><span data-l="en">Before you start (all tools)</span></h2>
     <div class="grid">
       <div class="card">
@@ -164,7 +210,7 @@
   </section>
 
   <!-- ② 선변성 -->
-  <section id="alter">
+  <section id="alter" data-topic="alter">
     <h2><span class="num">2</span><span data-l="ko">인벤 선변성</span><span data-l="en">Inventory Transfigure</span></h2>
     <div class="card">
       <p data-l="ko">인벤토리의 아이템을 한 칸씩 <b>아이템 변성</b>합니다. 시작하면 먼저 변성할 수 있는 칸만 골라 두고(어두워지는 칸은 뺍니다) 그 칸만 돕니다.</p>
@@ -184,7 +230,7 @@
   </section>
 
   <!-- ③ 제조법 -->
-  <section id="recipe">
+  <section id="recipe" data-topic="recipe">
     <h2><span class="num">3</span><span data-l="ko">제조법</span><span data-l="en">Recipes</span></h2>
     <p class="muted" data-l="ko">제조법 탭에서 하나를 고르고 ▶ 시작 → 확인 창 → 정한 초만큼 기다린 뒤 시작합니다. 제조법 줄은 화면 글자로 찾고, 목록 아래쪽 줄은 휠로 내려서 찾습니다.</p>
     <p class="muted" data-l="en">Pick a recipe, press ▶ Start → confirm → it starts after the delay you set. Recipe rows are found by reading the screen; lower rows are reached with the mouse wheel.</p>
@@ -222,7 +268,92 @@
   </section>
 
   <!-- ④ 저해상도 -->
-  <section id="lowres">
+  <section id="overlay" data-topic="overlay">
+    <h2><span class="num">◆</span><span data-l="ko">오버레이 (게임 위 진행 카드)</span><span data-l="en">Overlays (progress card over the game)</span></h2>
+    <div class="card">
+      <p data-l="ko">선변성·제조법을 돌리는 동안 <b>캐릭터 창 그림 자리</b>(양옆 장비 칸 사이)에 진행 카드가 뜹니다. 크기와 글자는 인벤 칸 간격 비율로 정해져 해상도가 달라도 같은 모양입니다. 마우스로 누를 수 없고 게임 조작을 막지 않습니다.</p>
+      <p data-l="en">While a tool runs, a progress card appears over the <b>character portrait area</b> (between the equipment columns). Its size follows the inventory slot spacing, so it looks the same at any resolution. It cannot be clicked and never blocks game input.</p>
+      <div class="mocks">
+        <div><div class="mock" style="--k:#e5b85c;--p:39%"><div class="h"><span>호라드림의 함 · 제조법</span><span>⏱ 1:13</span></div><div class="t">속성 제거</div><div class="bar"><i></i></div><div class="pr"><span>진행 13 / 31</span><b>39%</b></div><div class="row"><span>지금 칸</span><b>13 / 31</b></div><div class="row"><span>이 아이템 변환</span><b>2</b></div><div class="row"><span>끝낸 칸</span><b>12</b></div><div class="now">› 변환 2</div><div class="ft">멈추기: 게임에서 Esc</div></div></div>
+        <div>
+          <ol class="legend-list" data-l="ko">
+            <li><b>머리글</b> - 무엇을 하는지(호라드림의 함 · 제조법 / 선변성)와 오른쪽 ⏱ 걸린 시간.</li>
+            <li><b>제목</b> - 지금 돌리는 기능. 제조법은 등급색(전설 주황 · 고유 금빛 · 신화 보라)으로 보입니다. 옆의 점은 도는 동안 깜빡입니다.</li>
+            <li><b>진행 막대</b> - 지나간 칸 / 전체. 건너뛴 칸도 진행으로 셉니다. 아래에 ‘진행 n / 전체’ 와 %.</li>
+            <li><b>지금 칸</b> - 몇 번째 대상 칸인지.</li>
+            <li><b>이 아이템 변환</b> - 한 아이템에 변환을 몇 번 눌렀는지(속성 제거·속성 추가처럼 반복하는 제조법).</li>
+            <li><b>끝낸 칸</b> - 실제로 끝까지 마친 칸 수.</li>
+            <li><b>› 지금 하는 일</b> - 아래 ‘단계 문구’ 표를 보세요.</li>
+            <li><b>아래 줄</b> - 멈추는 법(Esc). 고유·신화는 ‘빈 칸 1칸 필요’ 안내가 붙습니다.</li>
+          </ol>
+          <ol class="legend-list" data-l="en">
+            <li><b>Header</b> - what is running (Horadric Cube · Recipes / Transfigure) and ⏱ elapsed time.</li>
+            <li><b>Title</b> - the running tool, in rarity color for recipes (legendary orange · unique gold · mythic purple). The dot blinks while running.</li>
+            <li><b>Progress bar</b> - slots passed / total; skipped slots count too. Below: ‘Progress n / total’ and %.</li>
+            <li><b>Current slot</b> - which target slot is being worked on.</li>
+            <li><b>Converts on this item</b> - how many times Convert was pressed (repeating recipes such as Remove/Add Affix).</li>
+            <li><b>Slots done</b> - slots actually finished.</li>
+            <li><b>› Now</b> - see the step table below.</li>
+            <li><b>Footer</b> - how to stop (Esc); unique/mythic also show ‘1 free slot needed’.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <h3 data-l="ko">카드 색 3가지</h3><h3 data-l="en">Three card colors</h3>
+    <div class="mocks">
+      <div><div class="mock" style="--k:#e5b85c;--p:25%"><div class="h"><span>호라드림의 함 · 제조법</span><span>⏱ 1:13</span></div><div class="t">전설로 업그레이드</div><div class="bar"><i></i></div><div class="pr"><span>진행 4 / 16</span><b>25%</b></div><div class="row"><span>지금 칸</span><b>4 / 16</b></div><div class="row"><span>끝낸 칸</span><b>3</b></div><div class="now">› 속성 추가</div><div class="ft">멈추기: 게임에서 Esc</div></div>
+        <p class="muted" data-l="ko"><b>금색</b> - 진행 중</p><p class="muted" data-l="en"><b>Gold</b> - running</p></div>
+      <div><div class="mock" style="--k:#22c55e;--p:100%"><div class="h"><span>호라드림의 함 · 선변성</span><span>⏱ 1:13</span></div><div class="t">인벤 선변성</div><div class="bar"><i></i></div><div class="pr"><span>진행 28 / 28</span><b>100%</b></div><div class="row"><span>끝낸 칸</span><b>28</b></div><div class="now">› 28 칸을 돌았습니다.</div><div class="ft">멈추기: 게임에서 Esc</div></div>
+        <p class="muted" data-l="ko"><b>초록</b> - 끝남 (7초 뒤 사라짐)</p><p class="muted" data-l="en"><b>Green</b> - finished (fades after 7 s)</p></div>
+      <div><div class="mock" style="--k:#e5484d;--p:0%"><div class="h"><span>호라드림의 함 · 제조법</span><span>⏱ 1:13</span></div><div class="t">고유 아이템 제작</div><div class="bar"><i></i></div><div class="pr"><span>진행 0 / 19</span><b>0%</b></div><div class="row"><span>끝낸 칸</span><b>0</b></div><div class="now">› 인벤토리에 빈 칸이 없어 시작하지 않았습니다</div><div class="ft">멈추기: 게임에서 Esc</div></div>
+        <p class="muted" data-l="ko"><b>빨강</b> - 시작 못 함 (15초 남음) + 음성 “인벤토리 한 칸을 비워 주세요”</p>
+        <p class="muted" data-l="en"><b>Red</b> - could not start (stays 15 s) + voice “Please free up one inventory slot”</p></div>
+    </div>
+
+    <h3 data-l="ko">단계 문구 (› 지금 하는 일)</h3><h3 data-l="en">Step messages (› Now)</h3>
+    <div class="card">
+      <table class="steps" data-l="ko">
+        <tr><td>n 초 뒤 시작</td><td>확인 뒤 대기 중입니다. 이때 게임 창으로 넘어가세요.</td></tr>
+        <tr><td>아이템 올리기</td><td>칸을 우클릭해 큐브에 올리는 중입니다.</td></tr>
+        <tr><td>(제조법 이름)</td><td>제조법 줄을 찾아 누르는 중입니다. ‘(선택 유지)’ 는 이미 골라져 있어 누르지 않은 것입니다.</td></tr>
+        <tr><td>변환 · 변환 n</td><td>변환 버튼을 눌렀습니다. 숫자는 반복 횟수입니다.</td></tr>
+        <tr><td>수락(Enter)</td><td>귀속 확인 창이 떠서 Enter 를 눌렀습니다.</td></tr>
+        <tr><td>결과 대기</td><td>변환 연출이 끝나기를 기다립니다(느린 PC 는 길어집니다).</td></tr>
+        <tr><td>초기화</td><td>큐브를 비우고 아이템이 칸으로 돌아왔는지 확인합니다.</td></tr>
+        <tr><td>전설로 업그레이드</td><td>(전설) 속성이 4개가 되어 바로 전설로 올리는 중입니다.</td></tr>
+        <tr><td>안 되는 아이템 - 넘김</td><td>그 아이템엔 제조법이 안 되어 넘깁니다(재료가 모자랄 때도 여기로 옵니다).</td></tr>
+        <tr><td>계정 귀속 - 건너뜀</td><td>(선변성) 이미 귀속된 아이템을 재료 절약을 위해 넘깁니다.</td></tr>
+      </table>
+      <table class="steps" data-l="en">
+        <tr><td>Starting in n s</td><td>Waiting after confirm — switch to the game now.</td></tr>
+        <tr><td>Placing item</td><td>Right-clicking the slot into the cube.</td></tr>
+        <tr><td>(recipe name)</td><td>Finding and clicking the recipe row. ‘(kept)’ means it was already selected and not clicked.</td></tr>
+        <tr><td>Convert · Convert n</td><td>Convert was pressed; n is the repeat count.</td></tr>
+        <tr><td>Accept (Enter)</td><td>The bind confirmation appeared and Enter was pressed.</td></tr>
+        <tr><td>Waiting for result</td><td>Waiting for the conversion animation (longer on slow PCs).</td></tr>
+        <tr><td>Reset</td><td>Clearing the cube and checking the item returned to its slot.</td></tr>
+        <tr><td>Upgrade to Legendary</td><td>(Legendary) the item reached 4 affixes and is upgraded right away.</td></tr>
+        <tr><td>Not possible - skipped</td><td>The recipe does not apply to that item (also when materials run out).</td></tr>
+        <tr><td>Account-bound - skipped</td><td>(Transfigure) already bound, skipped to save materials.</td></tr>
+      </table>
+    </div>
+
+    <h3 data-l="ko">그 밖의 표시</h3><h3 data-l="en">Other indicators</h3>
+    <div class="grid">
+      <div class="card"><b data-l="ko">상단 상태 오버레이</b><b data-l="en">Top status overlay</b>
+        <p data-l="ko">시작·끝 안내 문구가 잠깐 뜹니다(시작 금색, 끝 주황). 헬퍼 설정에서 오버레이를 껐다면 뜨지 않습니다.</p>
+        <p data-l="en">Start/finish notices appear briefly (start gold, finish orange). Hidden if overlays are turned off in the helper settings.</p></div>
+      <div class="card"><b data-l="ko">칸 표시 네모</b><b data-l="en">Slot markers</b>
+        <p data-l="ko">선변성 탭에서 [자리 확인] 을 누르면 찍어 둔 첫 칸·끝 칸과 전체 칸 자리를 게임 위에 네모로 보여 줍니다.</p>
+        <p data-l="en">On the Transfigure tab, [Check slots] draws boxes over the marked first/last slot and every slot.</p></div>
+      <div class="card"><b data-l="ko">소리 · 음성</b><b data-l="en">Sound · voice</b>
+        <p data-l="ko">아이템 하나가 끝날 때 짧은 소리, 시작할 때 “속성 제거 시작합니다.”, 끝날 때 “30개 중 28개 성공했습니다.” 처럼 알려 줍니다(음성 안내 스위치).</p>
+        <p data-l="en">A short sound per item, “Starting Remove Affix.” at start and “28 of 30 succeeded.” at the end (Voice switch).</p></div>
+    </div>
+  </section>
+
+  <section id="lowres" data-topic="lowres">
     <h2><span class="num">4</span><span data-l="ko">저해상도(1080p 이하)에서 준비할 것</span><span data-l="en">Preparing for lower resolutions (1080p and below)</span></h2>
     <div class="card">
       <p data-l="ko">헬퍼는 화면 글자(OCR)와 칸 색을 읽습니다. 화면이 작을수록 글자가 작아져 아래 준비가 중요합니다.</p>
@@ -250,13 +381,14 @@
   </section>
 
   <!-- ⑤ 문제 해결 -->
-  <section id="trouble">
+  <section id="trouble" data-topic="trouble">
     <h2><span class="num">5</span><span data-l="ko">작동하지 않을 때 가장 먼저 확인할 것</span><span data-l="en">When it does not work — check these first</span></h2>
     <ol class="check" data-l="ko">
       <li><b>큐브와 인벤토리가 둘 다 열려 있나요?</b> ‘초기화를 못 찾았습니다’는 대부분 큐브가 닫혀 있을 때입니다.</li>
       <li><b>디아블로 창이 맨 앞인가요?</b> 다른 창(디스코드 오버레이, 방송 프로그램 등)이 게임을 가리면 글자를 못 읽습니다.</li>
       <li><b>인벤 첫 칸·끝 칸을 찍었나요?</b> 해상도·창 크기를 바꿨다면 다시 찍으세요.</li>
-      <li><b>Windows 한국어 OCR(필기·OCR 언어 팩)이 설치되어 있나요?</b> 설정 › 시간 및 언어 › 언어 › 한국어 › 언어 옵션에서 설치합니다.</li>
+      <li><b>게임 채팅창이 열려 있지 않나요?</b> 채팅창이 열려 있으면 큐브 버튼과 글자를 가려 ‘초기화·변환을 못 찾았습니다’ 가 납니다. <kbd>Enter</kbd> 나 <kbd>Esc</kbd> 로 채팅창을 닫고 시작하세요.</li>
+      <li><b>Windows 한국어 OCR(문자 인식)이 설치되어 있나요?</b> 없으면 헬퍼의 편의기능을 열 때 설치 안내가 뜹니다. <b>[Windows 설정 열기]</b> 를 누르면 언어 설정이 바로 열리고, 한국어 옆 [···] › 언어 옵션 › ‘광학 문자 인식’ [다운로드] 뒤 [다시 확인] 을 누르면 됩니다.</li>
       <li><b>큐브가 비어 있는 상태에서 시작했나요?</b> 남은 아이템이 있으면 [초기화]로 먼저 내리세요.</li>
       <li><b>고유 제작·신화 업그레이드라면 인벤에 빈 칸이 있나요?</b> 1칸 이상 필요합니다.</li>
       <li><b>재료가 충분한가요?</b> 재료가 모자라면 변환 버튼이 켜지지 않아 그 아이템을 넘깁니다.</li>
@@ -266,7 +398,8 @@
       <li><b>Are both the Cube and the inventory open?</b> “Could not find Reset” almost always means the cube is closed.</li>
       <li><b>Is the Diablo window in front?</b> Other windows (Discord overlay, streaming tools) covering the game block text reading.</li>
       <li><b>Did you mark the first/last inventory slot?</b> Re-mark after changing resolution or window size.</li>
-      <li><b>Is the Windows OCR language pack for the game language installed?</b> Settings › Time &amp; language › Language › (language) › Options.</li>
+      <li><b>Is the game chat box open?</b> An open chat box covers the cube buttons and text, causing ‘could not find Reset/Convert’. Close it with <kbd>Enter</kbd> or <kbd>Esc</kbd> before starting.</li>
+      <li><b>Is Windows Korean OCR (text recognition) installed?</b> If not, the helper shows an install guide when you open Tools. <b>[Open Windows Settings]</b> opens the language settings directly: [···] next to Korean › Language options › ‘Optical character recognition’ [Download], then [Check again].</li>
       <li><b>Did you start with an empty cube?</b> Clear leftovers with [Reset] first.</li>
       <li><b>Unique/Mythic: is there a free inventory slot?</b> At least one is required.</li>
       <li><b>Enough materials?</b> Without them the Convert button stays off and the item is skipped.</li>
@@ -280,7 +413,7 @@
   </section>
 
   <!-- ⑥ 준비 중 -->
-  <section id="soon">
+  <section id="soon" data-topic="soon">
     <h2><span class="num">6</span><span data-l="ko">준비 중</span><span data-l="en">Coming soon</span></h2>
     <div class="grid">
       <div class="card"><h3><span data-l="ko">자동 마부</span><span data-l="en">Auto Enchant</span><span class="tag soon" data-l="ko">준비 중</span><span class="tag soon" data-l="en">soon</span></h3>
@@ -305,6 +438,22 @@
     document.getElementById("b-ko").onclick = function () { set("ko"); };
     document.getElementById("b-en").onclick = function () { set("en"); };
     set(lang);
+    var RECIPES = ["strip", "legend", "unique", "mythic"];
+    function show(t) {
+      t = t || "all";
+      document.body.classList.toggle("home", t === "all");
+      document.body.classList.toggle("topic", t !== "all");
+      document.querySelectorAll("section").forEach(function (s) {
+        var tp = s.getAttribute("data-topic");
+        s.classList.toggle("show", tp === t || (tp === "recipe" && RECIPES.indexOf(t) >= 0));
+      });
+      document.querySelectorAll(".card.recipe").forEach(function (c) { c.classList.toggle("show", c.classList.contains(t)); });
+      window.scrollTo(0, 0);
+    }
+    document.querySelectorAll("[data-go]").forEach(function (a) {
+      a.addEventListener("click", function (e) { e.preventDefault(); show(a.getAttribute("data-go")); });
+    });
+    show((new URLSearchParams(location.search).get("topic") || "all").toLowerCase());
   })();
 </script>
 </body>
