@@ -1650,7 +1650,6 @@
     .hero-banner-overlay { position: relative; min-height: 250px; }
     .hero-tag { align-self: flex-start; }
     @media (max-width: 860px) { .hero-banner-overlay { min-height: 180px; } }
-    @media (max-width: 480px) { .hero-notbot { display: block !important; } }
 </style>
   <script>
     // ?lang=xx 로 열리면(헬퍼 [?] 버튼) 그 언어 파일로 - 자동 감지는 하지 않는다 (2026-10-24)
@@ -1874,7 +1873,6 @@
           <span class="hero-tag">DIABLO IV HELPER MANUAL</span>
           <h1 class="hero-title">d4cute helper 사용 설명서</h1>
           <p class="hero-desc">2.0.0 최신 버전 기준 — 자동 마부 · 자동 부적 · 제조법 4종 · 테마 9종 · 언어팩 8종, A~G 7개 슬롯 순차/독립 매크로, 인벤토리 선변성 자동화, 실시간 이벤트 알람, 앙증맞은 클랜·삼촌안잔다잉 채널 소개</p>
-          <div class="hero-notbot" style="margin-top:14px; display:inline-block; max-width:760px; padding:12px 16px; border-radius:10px; background:rgba(229,72,77,0.16); border:1.5px solid rgba(229,72,77,0.65); box-shadow:0 4px 18px rgba(0,0,0,0.45); backdrop-filter:blur(4px);"><div style="font-size:17px; font-weight:800; color:#ff8a8a; margin-bottom:4px;">⚠️ 자동사냥 프로그램이 아닙니다</div><div style="font-size:14px; line-height:1.6; color:#f3f1f8;">d4cute helper 는 직접 플레이할 때 반복 입력을 덜어 주는 게임 편의 도구입니다. 스스로 사냥·이동·전투를 하는 자동사냥(봇) 기능은 없습니다.</div></div>
         </div>
       </div>
 
@@ -2571,14 +2569,14 @@
         </ul>
       </section>
 
-      <!-- ─── 10. 텔레그램 연동 & 디버그 로그 ─── -->
+      <!-- ─── 10. 텔레그램 지원 & 디버그 로그 ─── -->
       <section class="doc-section" id="telegram-support">
         <div class="section-header">
           <h2 class="section-title"><span class="section-num">10</span> 텔레그램 지원 & 디버그 로그 뷰어</h2>
         </div>
 
         <p>
-          헬퍼 상단 프로필 줄의 파란색 <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span> 아이콘을 클릭하면 텔레그램 연동 다이얼로그가 열립니다.
+          헬퍼 상단 프로필 줄의 파란색 <span class="chip blue" style="display:inline-flex; align-items:center; gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2AABEE"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg> 텔레그램 로고</span> 아이콘을 클릭하면 텔레그램 안내 다이얼로그가 열립니다.
           새 버전 소식을 빠르게 확인하고, <strong style="color:var(--gold);">@d4cute_helper</strong> 이용자 그룹에서 질문 및 버그 제보를 진행하며, 오류 발생 시 <strong style="color:var(--ruby);">디버그 로그를 원클릭으로 추출</strong>하여 해결을 지원받을 수 있습니다.
         </p>
 
@@ -2586,11 +2584,11 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0;">
           <div class="image-card is-thumbnail" data-caption="텔레그램 다이얼로그 — 공지 채널(@d4_notice), 이용자 소통 그룹(@d4cute_helper), 스마트폰 즉시 입장 QR 코드, 로그 보기 및 텔레그램 설치 버튼">
             <div class="thumb-container">
-              <img src="../images/telegram_qr_dialog.png" alt="텔레그램 연동 다이얼로그 및 QR 코드">
+              <img src="../images/telegram_qr_dialog.png" alt="텔레그램 안내 다이얼로그 및 QR 코드">
               <span class="zoom-hint-badge">🔍 클릭하여 확대</span>
             </div>
             <div class="image-caption">
-              <span>📷</span> <span>텔레그램 연동 팝업 (공지/이용자 그룹/QR 코드/설치)</span>
+              <span>📷</span> <span>텔레그램 안내 팝업 (공지/이용자 그룹/QR 코드/설치)</span>
             </div>
           </div>
           
