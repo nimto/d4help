@@ -2,8 +2,10 @@
 
 디아블로 4 매크로 도우미 **d4cute helper** 의 최신 버전, 기능 설명, 클랜 프로필 공유, 시즌 문서를 한곳에 모았습니다.
 
-**짧은 주소: https://da.gd/d4help** (이 페이지로 바로 옵니다 — 클랜원에게 이 주소를 알려 주세요)  
-📖 **[인벤 상세 사용설명서 & 가이드 (INVEN_GUIDE.md)](INVEN_GUIDE.md)**: 인벤 팁과 노하우 커뮤니티 공유용으로 작성된 상세 그림 매뉴얼입니다.
+> 📢 **공식 저장소 안내**: 최신 버전 다운로드·시즌 문서·이슈 지원은 **[https://github.com/kaljake70/d4helper](https://github.com/kaljake70/d4helper)** 에서 제공됩니다.
+
+**공식 주소: [https://github.com/kaljake70/d4helper](https://github.com/kaljake70/d4helper)** (클랜원에게 이 주소를 알려 주세요)  
+📖 **[인벤 상세 사용설명서 & 가이드 (INVEN_GUIDE.md)](https://github.com/kaljake70/d4helper/blob/main/INVEN_GUIDE.md)**: 인벤 팁과 노하우 커뮤니티 공유용으로 작성된 상세 그림 매뉴얼입니다.
 
 ## 🛡️ 디아블로 4 클랜 — &lt;앙증맞은&gt; 무지개날개
 
@@ -67,30 +69,30 @@ ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQH
 
 게임에서 **전리품 필터** 창 → 필터 이름 칸 오른쪽 **`⋯`** → **가져오기** 에 붙여 넣고, `모두 사용` 으로 켜면 됩니다(규칙 5 / 25).
 
-📂 **더보기 — [전리품 필터 모음 · 서로 공유하기](./전리품필터/README.md)** · 내 필터를 올리려면 [전리품 필터 공유](https://github.com/nimto/d4help/issues/new?template=loot-filter-share.yml) 로, 남들이 올린 것은 [필터 목록](https://github.com/nimto/d4help/issues?q=label%3A%22전리품+필터%22) 에서.
+📂 **더보기 — [전리품 필터 모음 · 서로 공유하기](https://github.com/kaljake70/d4helper/blob/main/%EC%A0%84%EB%A6%AC%ED%92%88%ED%95%84%ED%84%B0/README.md)** · 내 필터를 올리려면 [전리품 필터 공유](https://github.com/kaljake70/d4helper/issues/new?template=loot-filter-share.yml) 로, 남들이 올린 것은 [필터 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22전리품+필터%22) 에서.
 
 ## 🙋 버그 · 질문 · 사용 팁은 여기로
 
 | 무엇을 올리나 | 바로가기 | 모아 보기 |
 |---|---|---|
-| 🐛 헬퍼가 이상하게 동작한다 | **[버그 신고](https://github.com/nimto/d4help/issues/new?template=bug-report.yml)** | [버그 목록](https://github.com/nimto/d4help/issues?q=label%3A버그) |
-| ❓ 사용법 · 설정이 궁금하다 | **[질문하기](https://github.com/nimto/d4help/issues/new?template=question.yml)** | [답변 완료된 질문](https://github.com/nimto/d4help/issues?q=label%3A%22답변+완료%22) |
-| 💡 좋은 설정 · 플레이 팁을 나누고 싶다 | **[사용 팁 올리기](https://github.com/nimto/d4help/issues/new?template=tip.yml)** | [사용 팁 목록](https://github.com/nimto/d4help/issues?q=label%3A%22사용+팁%22) |
-| 📦 내 매크로 프로필을 공유한다 | **[프로필 공유](https://github.com/nimto/d4help/issues/new?template=profile-share.yml)** | [프로필 목록](https://github.com/nimto/d4help/issues?q=label%3A%22프로필+공유%22) · [프로필/](./프로필/README.md) |
-| 🎯 내 전리품 필터를 공유한다 | **[전리품 필터 공유](https://github.com/nimto/d4help/issues/new?template=loot-filter-share.yml)** | [필터 목록](https://github.com/nimto/d4help/issues?q=label%3A%22전리품+필터%22) · [전리품필터/](./전리품필터/README.md) |
-| 📖 커뮤니티 상세 매뉴얼 | **[인벤 사용설명서](INVEN_GUIDE.md)** | [INVEN_GUIDE.md](INVEN_GUIDE.md) |
-| 🖥️ 혼자 설정하기 어렵다 (원격 지원) | **[원격 지원 안내](ANYDESK_GUIDE.md)** | [애니데스크 가이드](ANYDESK_GUIDE.md) |
+| 🐛 헬퍼가 이상하게 동작한다 | **[버그 신고](https://github.com/kaljake70/d4helper/issues/new?template=bug-report.yml)** | [버그 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A버그) |
+| ❓ 사용법 · 설정이 궁금하다 | **[질문하기](https://github.com/kaljake70/d4helper/issues/new?template=question.yml)** | [답변 완료된 질문](https://github.com/kaljake70/d4helper/issues?q=label%3A%22답변+완료%22) |
+| 💡 좋은 설정 · 플레이 팁을 나누고 싶다 | **[사용 팁 올리기](https://github.com/kaljake70/d4helper/issues/new?template=tip.yml)** | [사용 팁 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22사용+팁%22) |
+| 📦 내 매크로 프로필을 공유한다 | **[프로필 공유](https://github.com/kaljake70/d4helper/issues/new?template=profile-share.yml)** | [프로필 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22프로필+공유%22) · [프로필/](https://github.com/kaljake70/d4helper/blob/main/%ED%94%84%EB%A1%9C%ED%95%84/README.md) |
+| 🎯 내 전리품 필터를 공유한다 | **[전리품 필터 공유](https://github.com/kaljake70/d4helper/issues/new?template=loot-filter-share.yml)** | [필터 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22전리품+필터%22) · [전리품필터/](https://github.com/kaljake70/d4helper/blob/main/%EC%A0%84%EB%A6%AC%ED%92%88%ED%95%84%ED%84%B0/README.md) |
+| 📖 커뮤니티 상세 매뉴얼 | **[인벤 사용설명서](https://github.com/kaljake70/d4helper/blob/main/INVEN_GUIDE.md)** | [INVEN_GUIDE.md](https://github.com/kaljake70/d4helper/blob/main/INVEN_GUIDE.md) |
+| 🖥️ 혼자 설정하기 어렵다 (원격 지원) | **[원격 지원 안내](https://github.com/kaljake70/d4helper/blob/main/ANYDESK_GUIDE.md)** | [애니데스크 가이드](https://github.com/kaljake70/d4helper/blob/main/ANYDESK_GUIDE.md) |
 
-GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 달리면 **답변 완료** 라벨이 붙습니다. 전체 목록은 [Issues](https://github.com/nimto/d4help/issues).
+GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 달리면 **답변 완료** 라벨이 붙습니다. 전체 목록은 [Issues](https://github.com/kaljake70/d4helper/issues).
 
 ## 다운로드
 
 | 파일 | 설명 |
 |---|---|
-| **[d4cute_helper_setup.exe](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper_setup.exe)** | 설치 버전 (권장). 설치 후 자동 업데이트가 동작합니다. |
-| [d4cute_helper.exe](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper.exe) | 설치 없이 바로 실행하는 포터블 버전. |
+| **[d4cute_helper_setup.exe](https://github.com/kaljake70/d4helper/releases/latest/download/d4cute_helper_setup.exe)** | 설치 버전 (권장). 설치 후 자동 업데이트가 동작합니다. |
+| [d4cute_helper.exe](https://github.com/kaljake70/d4helper/releases/latest/download/d4cute_helper.exe) | 설치 없이 바로 실행하는 포터블 버전. |
 
-위 두 링크는 항상 **가장 최신 릴리스**의 파일로 연결됩니다. 버전별 파일과 변경 내용은 [릴리스 목록](https://github.com/nimto/d4help/releases)에서 볼 수 있습니다.
+위 두 링크는 항상 **가장 최신 릴리스**의 파일로 연결됩니다. 버전별 파일과 변경 내용은 [릴리스 목록](https://github.com/kaljake70/d4helper/releases)에서 볼 수 있습니다.
 
 ## 설치 · 실행
 
@@ -98,7 +100,7 @@ GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 �
 2. Windows SmartScreen 경고가 뜨면 **추가 정보 → 실행** 을 누릅니다(서명되지 않은 개인 배포 파일이라 뜨는 경고입니다).
 3. 설치가 끝나면 시작 메뉴의 **d4cute helper** 로 실행합니다. 새 버전이 나오면 앱이 알려 주고 바로 업데이트할 수 있습니다.
 4. 요구 사항: Windows 10 / 11. 디아블로 4 는 **창 모드 또는 테두리 없는 창**으로 두면 오버레이와 화면 알림이 보입니다(배타 전체화면에서는 보이지 않음).
-5. 설치나 초기 설정이 잘 안 풀리면 **[애니데스크 원격 지원](ANYDESK_GUIDE.md)** 을 통해 도움을 받으실 수 있습니다.
+5. 설치나 초기 설정이 잘 안 풀리면 **[애니데스크 원격 지원](https://github.com/kaljake70/d4helper/blob/main/ANYDESK_GUIDE.md)** 을 통해 도움을 받으실 수 있습니다.
 
 ## 기능 설명
 
@@ -118,7 +120,7 @@ GitHub 계정만 있으면 누구나 올릴 수 있습니다. 질문에 답이 �
 | **🔊 음성 알림 (TTS)** | Supertonic 3 온디바이스 한국어 음성 (남/여 10종) | [바로가기](#-음성-알림tts--supertonic-3-160) |
 | **📚 시즌 문서 & 영상 뷰어** | 시즌15 공략 문서, 삼촌안잔다잉 등 유튜브 채널 내장 뷰어 | [바로가기](#디아블로-4-문서--영상-뷰어) |
 
-> 💡 스크린샷과 함께 친절하게 설명된 인벤 스타일 가이드를 보시려면 **[인벤 상세 사용설명서 (INVEN_GUIDE.md)](INVEN_GUIDE.md)**를 함께 참고하세요.
+> 💡 스크린샷과 함께 친절하게 설명된 인벤 스타일 가이드를 보시려면 **[인벤 상세 사용설명서 (INVEN_GUIDE.md)](https://github.com/kaljake70/d4helper/blob/main/INVEN_GUIDE.md)**를 함께 참고하세요.
 
 ---
 
@@ -245,7 +247,7 @@ v2.0.0 에서 추가된 강력한 신규 자동화 도구입니다.
 ### 프로필
 
 - 직업별 기본 프로필 7 개(성기사 · 혼령사 · 야만용사 · 원소술사 · 강령술사 · 드루이드 · 도적)가 들어 있고, 새 프로필 · 이름 변경 · 삭제가 됩니다.
-- **내보내기 / 가져오기(.d4cute)** 로 프로필을 파일로 주고받습니다 → 클랜 프로필 공유는 [프로필/](./프로필/README.md). 버튼은 화면 맨 아래 `최소화` 왼쪽에 있습니다(1.12.0 — 매크로 슬롯을 누르다 잘못 누르지 않게 옮김).
+- **내보내기 / 가져오기(.d4cute)** 로 프로필을 파일로 주고받습니다 → 클랜 프로필 공유는 [프로필/](https://github.com/kaljake70/d4helper/blob/main/%ED%94%84%EB%A1%9C%ED%95%84/README.md). 버튼은 화면 맨 아래 `최소화` 왼쪽에 있습니다(1.12.0 — 매크로 슬롯을 누르다 잘못 누르지 않게 옮김).
 - **프로필 전체 백업 · 복원(1.33.0)**: 프로필 줄의 상자 아이콘 ▾ 메뉴. 프로필 전부를 `.d4bak` 한 파일로 백업하고, 복원하면 같은 이름은 덮어쓰고 없는 것은 둡니다. 복원 전 상태는 자동 백업되고 끝나면 헬퍼가 다시 켜집니다.
 
 ### 백업 · 복원 · 언어팩 보기 (1.33.0)
@@ -354,27 +356,27 @@ v2.0.0 에서 추가된 강력한 신규 자동화 도구입니다.
 
 ### 자동 업데이트
 
-전체 변경 내역은 [CHANGELOG.md](CHANGELOG.md) 에서 버전별로 볼 수 있습니다(업데이트 확인 창의 `전체 변경 내역(GitHub)` 버튼과 같은 곳).
+전체 변경 내역은 [CHANGELOG.md](https://github.com/kaljake70/d4helper/blob/main/CHANGELOG.md) 에서 버전별로 볼 수 있습니다(업데이트 확인 창의 `전체 변경 내역(GitHub)` 버튼과 같은 곳).
 
 - 1 시간마다 새 버전을 확인하고, 있으면 상단 배너로 알립니다. 릴리스 노트를 보고 **원클릭 설치**(설치 버전) 또는 다운로드 링크.
 
 ## 클랜 프로필 공유
 
-내가 만든 매크로 프로필(.d4cute)을 올리고 남의 프로필을 받아 쓰는 공간 → **[프로필/](./프로필/README.md)**. 올리기는 [프로필 공유 이슈](https://github.com/nimto/d4help/issues/new?template=profile-share.yml) 로, 모아 둔 목록은 [프로필 공유 이슈 목록](https://github.com/nimto/d4help/issues?q=label%3A%22프로필+공유%22) 과 `프로필/` 폴더에서.
+내가 만든 매크로 프로필(.d4cute)을 올리고 남의 프로필을 받아 쓰는 공간 → **[프로필/](https://github.com/kaljake70/d4helper/blob/main/%ED%94%84%EB%A1%9C%ED%95%84/README.md)**. 올리기는 [프로필 공유 이슈](https://github.com/kaljake70/d4helper/issues/new?template=profile-share.yml) 로, 모아 둔 목록은 [프로필 공유 이슈 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22프로필+공유%22) 과 `프로필/` 폴더에서.
 
 ## 전리품 필터 공유
 
-게임의 전리품 필터 코드를 올리고 받아 쓰는 공간 → **[전리품필터/](./전리품필터/README.md)**. 코드 한 줄이라 파일 없이 복사·붙여넣기로 주고받습니다. 올리기는 [전리품 필터 공유 이슈](https://github.com/nimto/d4help/issues/new?template=loot-filter-share.yml) 로, 모아 둔 목록은 [전리품 필터 이슈 목록](https://github.com/nimto/d4help/issues?q=label%3A%22전리품+필터%22) 과 `전리품필터/` 폴더에서. 바로 쓸 수 있는 필터는 맨 위 [전리품 필터](#-전리품-필터--바로-복사해서-쓰기) 절에 있습니다.
+게임의 전리품 필터 코드를 올리고 받아 쓰는 공간 → **[전리품필터/](https://github.com/kaljake70/d4helper/blob/main/%EC%A0%84%EB%A6%AC%ED%92%88%ED%95%84%ED%84%B0/README.md)**. 코드 한 줄이라 파일 없이 복사·붙여넣기로 주고받습니다. 올리기는 [전리품 필터 공유 이슈](https://github.com/kaljake70/d4helper/issues/new?template=loot-filter-share.yml) 로, 모아 둔 목록은 [전리품 필터 이슈 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22전리품+필터%22) 과 `전리품필터/` 폴더에서. 바로 쓸 수 있는 필터는 맨 위 [전리품 필터](#-전리품-필터--바로-복사해서-쓰기) 절에 있습니다.
 
 ## 디아블로 4 문서 & 영상 뷰어
 
 | 폴더 | 내용 |
 |---|---|
-| **[시즌15/](./시즌15/README.md)** | 지옥의 유산 시즌(2026-09-16 ~) — [기본 정보](./시즌15/시즌15-기본정보.md), [신규 아이템 & 제작 공식](./시즌15/시즌15-아이템-제작공식.md), [대악마 가시 파밍](./시즌15/대악마-가시-파밍.md), [파티 무한 횃불런](./시즌15/파티-무한-횃불런.md), [전쟁 계획(War Plans) 완벽 가이드](./시즌15/전쟁계획-완벽-가이드.md)<br>✨ **[선조 & 신화 고유 아이템 대도감 (MD)](./시즌15/선조-고유-아이템.md)** \| **[🌐 인터랙티브 웹 도감 (GitHub Pages)](https://nimto.github.io/d4help/시즌15/선조-고유-아이템.html)** |
+| **[시즌15/](https://github.com/kaljake70/d4helper/blob/main/%EC%8B%9C%EC%A6%8C15/README.md)** | 지옥의 유산 시즌(2026-09-16 ~) — [기본 정보](https://github.com/kaljake70/d4helper/blob/main/%EC%8B%9C%EC%A6%8C15/%EC%8B%9C%EC%A6%8C15-%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4.md), [신규 아이템 & 제작 공식](https://github.com/kaljake70/d4helper/blob/main/%EC%8B%9C%EC%A6%8C15/%EC%8B%9C%EC%A6%8C15-%EC%95%84%EC%9D%B4%ED%85%9C-%EC%A0%9C%EC%9E%91%EA%B3%B5%EC%8B%9D.md), [대악마 가시 파밍](https://github.com/kaljake70/d4helper/blob/main/%EC%8B%9C%EC%A6%8C15/%EB%8C%80%EC%95%85%EB%A7%88-%EA%B0%80%EC%8B%9C-%ED%8C%8C%EB%B0%8D.md), [파티 무한 횃불런](https://github.com/kaljake70/d4helper/blob/main/%EC%8B%9C%EC%A6%8C15/%ED%8C%8C%ED%8B%B0-%EB%AC%B4%ED%95%9C-%ED%9A%83%EB%B6%88%EB%9F%B0.md), [전쟁 계획(War Plans) 완벽 가이드](https://github.com/kaljake70/d4helper/blob/main/%EC%8B%9C%EC%A6%8C15/%EC%A0%84%EC%9F%81%EA%B3%84%ED%9A%8D-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C.md)<br>✨ **[선조 & 신화 고유 아이템 대도감 (MD)](https://github.com/kaljake70/d4helper/blob/main/%EC%8B%9C%EC%A6%8C15/%EC%84%A0%EC%A1%B0-%EA%B3%A0%EC%9C%A0-%EC%95%84%EC%9D%B4%ED%85%9C.md)** \| **[🌐 인터랙티브 웹 도감 (GitHub Pages)](https://kaljake70.github.io/d4helper/시즌15/선조-고유-아이템.html)** |
 
 - **앱 내 문서 & 유튜브 채널 뷰어(1.18.0~1.19.1)**: 앱 안에서 시즌 최신 공략 문서를 열람할 수 있으며, 삼촌안잔다잉 등 추천 유튜브 채널의 영상과 쇼츠를 헬퍼 창 안에서 끊김 없이 시청할 수 있습니다. (`+`로 내 채널 추가 가능, 전체화면 지원, 저장소 새 문서 5분 주기 자동 갱신)
 
-시즌이 바뀌면 새 폴더가 추가됩니다. 틀린 내용은 [질문하기](https://github.com/nimto/d4help/issues/new?template=question.yml) 또는 [사용 팁](https://github.com/nimto/d4help/issues/new?template=tip.yml) 으로 알려 주세요.
+시즌이 바뀌면 새 폴더가 추가됩니다. 틀린 내용은 [질문하기](https://github.com/kaljake70/d4helper/issues/new?template=question.yml) 또는 [사용 팁](https://github.com/kaljake70/d4helper/issues/new?template=tip.yml) 으로 알려 주세요.
 
 ## 🖥️ 원격 지원 (AnyDesk)
 
@@ -385,11 +387,11 @@ v2.0.0 에서 추가된 강력한 신규 자동화 도구입니다.
   1. [공식 다운로드(anydesk.com)](https://anydesk.com/ko/downloads/windows) 에서 다운로드 후 실행
   2. 메인 화면에 뜨는 **내 9자리 숫자**를 도와줄 분에게 전달
   3. 접속 요청 창이 뜨면 **[승인]** 클릭 (작업 완료 후 창을 닫으면 즉시 종료)
-- 👉 **초보자 가이드**: 더 자세한 화면별 설명과 보안 안내는 **[초보자를 위한 애니데스크 원격 지원 가이드](ANYDESK_GUIDE.md)** 문서를 확인해 주세요.
+- 👉 **초보자 가이드**: 더 자세한 화면별 설명과 보안 안내는 **[초보자를 위한 애니데스크 원격 지원 가이드](https://github.com/kaljake70/d4helper/blob/main/ANYDESK_GUIDE.md)** 문서를 확인해 주세요.
 
 ## 문의
 
-- 버그 신고 · 질문 · 사용 팁 · 프로필 공유: 맨 위 [🙋 버그 · 질문 · 사용 팁은 여기로](#-버그--질문--사용-팁은-여기로) 표의 링크(전체 목록 [Issues](https://github.com/nimto/d4help/issues))
+- 버그 신고 · 질문 · 사용 팁 · 프로필 공유: 맨 위 [🙋 버그 · 질문 · 사용 팁은 여기로](#-버그--질문--사용-팁은-여기로) 표의 링크(전체 목록 [Issues](https://github.com/kaljake70/d4helper/issues))
 - 텔레그램 공지 채널: [https://t.me/d4_notice](https://t.me/d4_notice)
 - 텔레그램 이용자 그룹: [https://t.me/+o207f2gV8lE2ODk1](https://t.me/+o207f2gV8lE2ODk1)
 - 클랜 사이트: [d4cute.com](https://d4cute.com)

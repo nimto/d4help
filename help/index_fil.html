@@ -1651,6 +1651,11 @@
     .hero-tag { align-self: flex-start; }
     @media (max-width: 860px) { .hero-banner-overlay { min-height: 180px; } }
 </style>
+  <script>
+    if (window.location.hostname === "nimto.github.io") {
+      window.location.replace("https://kaljake70.github.io/d4helper" + window.location.pathname.replace(/^\/d4help/, "") + window.location.search + window.location.hash);
+    }
+  </script>
 </head>
 <body>
 
@@ -1669,20 +1674,20 @@
       <a href="#quickstart" class="nav-link">Pagsisimula</a>
       <a href="#tools-alter" class="nav-link">Mga Tool sa Stat Alteration</a>
       <a href="#community" class="nav-link">Clan & Channel</a>
-      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">Repository ↗</a>
+      <a href="https://github.com/kaljake70/d4helper" target="_blank" class="nav-link highlight">Repository ↗</a>
       <details class="flag-picker">
           <summary class="flag-picker-btn" title="Wika: Korean">
             <img src="https://flagcdn.com/w40/ph.png" alt="fil" class="flag-active-img">
           </summary>
           <div class="flag-picker-dropdown">
-            <a href="index.html" class="flag-picker-item" title="Korean"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
-            <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
-            <a href="index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
-            <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
-            <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
-            <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
-            <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
-            <a href="index_fil.html" class="flag-picker-item active" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index.html" class="flag-picker-item" title="Korean"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_fil.html" class="flag-picker-item active" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
           </div>
         </details>
     </div>
@@ -1908,7 +1913,7 @@
         <p>Ang d4cute helper ay isang mataas na performance na katulong na ligtas at maayos na tumutulong sa Diablo IV sa paulit-ulit na pag-cast ng skill, pagpapanatili ng buff, at nakakapagod na Stat Alteration ng imbentaryo gamit ang Horadric Cube.</p>
 
         <ol>
-          <li><a href="https://da.gd/d4help" target="_blank"><strong>I-download ang Pinakabagong Installer</strong></a> — I-download at i-install ang installer (<code>d4cute_helper_setup.exe</code>), o direktang patakbuhin ang portable na executable file (<code>d4cute_helper.exe</code>). Kung magpakita ang Windows ng babalang "Unknown publisher", pindutin ang <em>More info → Run anyway</em>.</li>
+          <li><a href="https://github.com/kaljake70/d4helper/releases/latest" target="_blank"><strong>I-download ang Pinakabagong Installer</strong></a> — I-download at i-install ang installer (<code>d4cute_helper_setup.exe</code>), o direktang patakbuhin ang portable na executable file (<code>d4cute_helper.exe</code>). Kung magpakita ang Windows ng babalang "Unknown publisher", pindutin ang <em>More info → Run anyway</em>.</li>
           <li>Kapag binuksan ang helper, awtomatikong magsisimula ang window sa pinakamaliit na default na laki kaya hindi nito natatakpan ang screen ng laro.</li>
           <li>Sa profile bar, pumili ng profile na akma sa iyong class, o gumawa ng bago gamit ang <span class="chip green">＋</span> button.</li>
           <li>Pindutin ang slot <span class="chip">A</span>at sa <strong>Pag-set up ng Macro</strong>, pindutin ang asul na button ng trigger key, at itakda ang mouse o keyboard key na gagamitin.</li>

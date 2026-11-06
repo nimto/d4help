@@ -1,17 +1,19 @@
 # 클랜 프로필 공유
 
+> 📢 **공식 저장소 바로가기**: [https://github.com/kaljake70/d4helper](https://github.com/kaljake70/d4helper) · [최신 프로필 목록 보기](https://github.com/kaljake70/d4helper/blob/main/%ED%94%84%EB%A1%9C%ED%95%84/README.md)
+
 d4cute helper 의 매크로 프로필(`.d4cute` 파일)을 서로 올리고 받아 쓰는 공간입니다.
 
 ## 내 프로필 올리기
 
 1. 헬퍼 → 프로필 카드 → **내보내기 (.d4cute)** 로 파일을 저장합니다.
 2. 그 파일을 **zip 으로 압축**합니다(GitHub 가 `.d4cute` 확장자 첨부를 막기 때문).
-3. **[프로필 공유 이슈 만들기](https://github.com/nimto/d4help/issues/new?template=profile-share.yml)** 를 열어 직업 · 프로필 이름 · 설명을 적고, zip 파일을 본문에 **드래그해서 첨부**합니다(GitHub 로그인 필요).
-4. 올린 프로필은 [프로필 공유 이슈 목록](https://github.com/nimto/d4help/issues?q=label%3A%22프로필+공유%22) 에 바로 보입니다. 관리자가 확인한 것은 아래 폴더와 표에도 등록됩니다.
+3. **[프로필 공유 이슈 만들기](https://github.com/kaljake70/d4helper/issues/new?template=profile-share.yml)** 를 열어 직업 · 프로필 이름 · 설명을 적고, zip 파일을 본문에 **드래그해서 첨부**합니다(GitHub 로그인 필요).
+4. 올린 프로필은 [프로필 공유 이슈 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22프로필+공유%22) 에 바로 보입니다. 관리자가 확인한 것은 아래 폴더와 표에도 등록됩니다.
 
 ## 남의 프로필 받기
 
-1. [프로필 공유 이슈 목록](https://github.com/nimto/d4help/issues?q=label%3A%22프로필+공유%22) 또는 아래 표에서 zip 을 받아 압축을 풉니다.
+1. [프로필 공유 이슈 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22프로필+공유%22) 또는 아래 표에서 zip 을 받아 압축을 풉니다.
 2. 헬퍼 → 프로필 카드 → **가져오기 (.d4cute)** 로 파일을 고릅니다. 같은 이름의 프로필이 있으면 새 이름으로 들어옵니다.
 3. 가져온 뒤 **발동키 · 딜레이 · 시퀀스**를 꼭 확인하세요. 만든 사람의 키 배치가 내 것과 다를 수 있습니다.
 

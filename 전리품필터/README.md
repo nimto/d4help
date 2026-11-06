@@ -1,5 +1,7 @@
 # 전리품 필터 공유
 
+> 📢 **공식 저장소 바로가기**: [https://github.com/kaljake70/d4helper](https://github.com/kaljake70/d4helper) · [최신 전리품필터 목록 보기](https://github.com/kaljake70/d4helper/blob/main/%EC%A0%84%EB%A6%AC%ED%92%88%ED%95%84%ED%84%B0/README.md)
+
 디아블로 4 의 **전리품 필터 코드**를 서로 올리고 받아 쓰는 공간입니다. 필터는 긴 문자열 하나라서 파일 없이 복사·붙여넣기만으로 주고받습니다.
 
 ## 필터 적용하기 (받은 코드 쓰기)
@@ -14,8 +16,8 @@
 ## 내 필터 올리기
 
 1. 게임의 전리품 필터 창에서 **`⋯` → 내보내기** 로 코드를 복사합니다.
-2. **[전리품 필터 공유 이슈 만들기](https://github.com/nimto/d4help/issues/new?template=loot-filter-share.yml)** 를 열어 필터 이름 · 용도 · 코드를 적습니다(GitHub 로그인 필요).
-3. 올린 필터는 [전리품 필터 이슈 목록](https://github.com/nimto/d4help/issues?q=label%3A%22전리품+필터%22) 에 바로 보입니다. 관리자가 확인한 것은 아래 표에도 등록됩니다.
+2. **[전리품 필터 공유 이슈 만들기](https://github.com/kaljake70/d4helper/issues/new?template=loot-filter-share.yml)** 를 열어 필터 이름 · 용도 · 코드를 적습니다(GitHub 로그인 필요).
+3. 올린 필터는 [전리품 필터 이슈 목록](https://github.com/kaljake70/d4helper/issues?q=label%3A%22전리품+필터%22) 에 바로 보입니다. 관리자가 확인한 것은 아래 표에도 등록됩니다.
 
 ## 등록된 필터
 

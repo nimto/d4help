@@ -1651,6 +1651,11 @@
     .hero-tag { align-self: flex-start; }
     @media (max-width: 860px) { .hero-banner-overlay { min-height: 180px; } }
 </style>
+  <script>
+    if (window.location.hostname === "nimto.github.io") {
+      window.location.replace("https://kaljake70.github.io/d4helper" + window.location.pathname.replace(/^\/d4help/, "") + window.location.search + window.location.hash);
+    }
+  </script>
 </head>
 <body>
 
@@ -1669,20 +1674,20 @@
       <a href="#quickstart" class="nav-link">はじめに</a>
       <a href="#tools-alter" class="nav-link">線変性ツール</a>
       <a href="#community" class="nav-link">クラン & チャンネル</a>
-      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">リポジトリ ↗</a>
+      <a href="https://github.com/kaljake70/d4helper" target="_blank" class="nav-link highlight">リポジトリ ↗</a>
       <details class="flag-picker">
           <summary class="flag-picker-btn" title="Language: 日本語">
             <img src="https://flagcdn.com/w40/jp.png" alt="ja" class="flag-active-img">
           </summary>
           <div class="flag-picker-dropdown">
-            <a href="index.html" class="flag-picker-item" title="韓国語 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
-            <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
-            <a href="index_ja.html" class="flag-picker-item active" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
-            <a href="index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
-            <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
-            <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
-            <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
-            <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index.html" class="flag-picker-item" title="韓国語 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_ja.html" class="flag-picker-item active" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_zh-CN.html" class="flag-picker-item" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
           </div>
         </details>
     </div>
@@ -1908,7 +1913,7 @@
         <p>d4cute helperは、Diablo IVのプレイ中に繰り返し行うスキル発動、バフの維持、複雑なインベントリのホラドリックキューブでの線変性作業を、快適かつ安全にサポートする高性能ヘルパーです。</p>
 
         <ol>
-          <li><a href="https://da.gd/d4help" target="_blank"><strong>最新インストーラーをダウンロード</strong></a> — インストーラー(<code>d4cute_helper_setup.exe</code>)を入手してインストールするか、インストール不要の実行ファイル(<code>d4cute_helper.exe</code>)をそのまま実行します。Windowsが「不明な発行元」の警告を表示した場合は <em>詳細情報 → 実行</em>を押します。</li>
+          <li><a href="https://github.com/kaljake70/d4helper/releases/latest" target="_blank"><strong>最新インストーラーをダウンロード</strong></a> — インストーラー(<code>d4cute_helper_setup.exe</code>)を入手してインストールするか、インストール不要の実行ファイル(<code>d4cute_helper.exe</code>)をそのまま実行します。Windowsが「不明な発行元」の警告を表示した場合は <em>詳細情報 → 実行</em>を押します。</li>
           <li>ヘルパーを起動するとウィンドウサイズは自動的に最も小さい基本サイズで始まり、ゲーム画面を隠しません。</li>
           <li>プロファイル行で自分のクラスに合ったプロファイルを選ぶか、 <span class="chip green">＋</span> ボタンで新規作成します。</li>
           <li>スロット <span class="chip">A</span>を押して <strong>マクロ設定</strong>で青い発動キーのボタンを押し、使用するマウスまたはキーボードのキーを指定します。</li>

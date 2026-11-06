@@ -155,6 +155,11 @@
     body.en [data-l="en"] { display: revert; }
     @media (max-width: 560px) { .hero h1 { font-size: 21px; } .lang { position: static; margin-bottom: 10px; width: max-content; } }
   </style>
+  <script>
+    if (window.location.hostname === "nimto.github.io") {
+      window.location.replace("https://kaljake70.github.io/d4helper" + window.location.pathname.replace(/^\/d4help/, "") + window.location.search + window.location.hash);
+    }
+  </script>
 </head>
 <body>
 <div class="wrap">

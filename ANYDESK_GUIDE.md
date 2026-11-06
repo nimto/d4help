@@ -1,5 +1,7 @@
 # 🖥️ 초보자를 위한 애니데스크(AnyDesk) 원격 지원 안내
 
+> 📢 **d4cute helper 공식 저장소로 돌아가기**: [https://github.com/kaljake70/d4helper](https://github.com/kaljake70/d4helper)
+
 d4cute helper 설정이 어렵거나 작동이 잘 되지 않을 때, 클랜 운영진이나 지원자가 **원격으로 화면을 함께 보며 설정을 도와드리는 방법**입니다.
 
 애니데스크(AnyDesk)는 전 세계에서 널리 쓰이는 안전하고 빠른 무료 원격 지원 프로그램입니다. **복잡한 설치 과정 없이 파일 하나만 받아서 실행**하면 바로 도움을 받으실 수 있습니다.

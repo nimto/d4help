@@ -1651,6 +1651,11 @@
     .hero-tag { align-self: flex-start; }
     @media (max-width: 860px) { .hero-banner-overlay { min-height: 180px; } }
 </style>
+  <script>
+    if (window.location.hostname === "nimto.github.io") {
+      window.location.replace("https://kaljake70.github.io/d4helper" + window.location.pathname.replace(/^\/d4help/, "") + window.location.search + window.location.hash);
+    }
+  </script>
 </head>
 <body>
 
@@ -1669,20 +1674,20 @@
       <a href="#quickstart" class="nav-link">快速开始</a>
       <a href="#tools-alter" class="nav-link">预变性工具</a>
       <a href="#community" class="nav-link">氏族 & 频道</a>
-      <a href="https://github.com/nimto/d4help" target="_blank" class="nav-link highlight">仓库 ↗</a>
+      <a href="https://github.com/kaljake70/d4helper" target="_blank" class="nav-link highlight">仓库 ↗</a>
       <details class="flag-picker">
           <summary class="flag-picker-btn" title="Language: 简体中文">
             <img src="https://flagcdn.com/w40/cn.png" alt="zh-CN" class="flag-active-img">
           </summary>
           <div class="flag-picker-dropdown">
-            <a href="index.html" class="flag-picker-item" title="韩语 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
-            <a href="index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
-            <a href="index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
-            <a href="index_zh-CN.html" class="flag-picker-item active" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
-            <a href="index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
-            <a href="index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
-            <a href="index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
-            <a href="index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index.html" class="flag-picker-item" title="韩语 (Korean)"><img src="https://flagcdn.com/w40/kr.png" alt="ko"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_en.html" class="flag-picker-item" title="English"><img src="https://flagcdn.com/w40/us.png" alt="en"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_ja.html" class="flag-picker-item" title="日本語 (Japanese)"><img src="https://flagcdn.com/w40/jp.png" alt="ja"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_zh-CN.html" class="flag-picker-item active" title="简体中文 (Simplified Chinese)"><img src="https://flagcdn.com/w40/cn.png" alt="zh-CN"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_zh-TW.html" class="flag-picker-item" title="繁體中文 (Traditional Chinese)"><img src="https://flagcdn.com/w40/tw.png" alt="zh-TW"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_vi.html" class="flag-picker-item" title="Tiếng Việt (Vietnamese)"><img src="https://flagcdn.com/w40/vn.png" alt="vi"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_th.html" class="flag-picker-item" title="ไทย (Thai)"><img src="https://flagcdn.com/w40/th.png" alt="th"></a>
+            <a href="https://kaljake70.github.io/d4helper/help/index_fil.html" class="flag-picker-item" title="Filipino"><img src="https://flagcdn.com/w40/ph.png" alt="fil"></a>
           </div>
         </details>
     </div>
@@ -1908,7 +1913,7 @@
         <p>d4cute helper 是在玩暗黑破坏神4时，舒适而安全地辅助重复技能释放、增益维持以及复杂的背包赫拉迪克宝箱预变性作业的高性能助手。</p>
 
         <ol>
-          <li><a href="https://da.gd/d4help" target="_blank"><strong>下载最新安装包</strong></a> — 下载安装包 (<code>d4cute_helper_setup.exe</code>) 进行安装，或直接运行免安装可执行文件 (<code>d4cute_helper.exe</code>)。如果 Windows 弹出“未知发布者”警告，请点击 <em>更多信息 → 仍要运行</em>。</li>
+          <li><a href="https://github.com/kaljake70/d4helper/releases/latest" target="_blank"><strong>下载最新安装包</strong></a> — 下载安装包 (<code>d4cute_helper_setup.exe</code>) 进行安装，或直接运行免安装可执行文件 (<code>d4cute_helper.exe</code>)。如果 Windows 弹出“未知发布者”警告，请点击 <em>更多信息 → 仍要运行</em>。</li>
           <li>启动 helper 后，窗口大小会自动以最小的默认尺寸开始，不会遮挡游戏画面。</li>
           <li>在配置文件栏中选择适合自己职业的配置文件，或者用 <span class="chip green">＋</span> 按钮新建一个。</li>
           <li>槽位 <span class="chip">A</span>，然后在 <strong>宏设置</strong>中点击蓝色的触发键按钮，指定要使用的鼠标或键盘按键。</li>

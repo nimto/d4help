@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        먼저 [README 기능 설명](https://github.com/nimto/d4help#기능-설명) 과 [답변 완료된 질문](https://github.com/nimto/d4help/issues?q=label%3A%22답변+완료%22) 에 같은 내용이 있는지 한 번 봐 주세요.
+        먼저 [README 기능 설명](https://github.com/kaljake70/d4helper#기능-설명) 과 [답변 완료된 질문](https://github.com/kaljake70/d4helper/issues?q=label%3A%22답변+완료%22) 에 같은 내용이 있는지 한 번 봐 주세요.
   - type: dropdown
     id: topic
     attributes:

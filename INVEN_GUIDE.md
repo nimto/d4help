@@ -1,5 +1,6 @@
 # 디아블로 4 인벤 팁과 노하우 — d4cute helper 사용설명서 & 피드백
 
+> 📢 **공식 다운로드 및 최신 문서 저장소**: [https://github.com/kaljake70/d4helper](https://github.com/kaljake70/d4helper)
 > 디아블로4 인벤 커뮤니티 공유용 헬퍼(d4cute helper) 상세 매뉴얼 및 기능 가이드입니다.
 
 ---
@@ -265,14 +266,14 @@ ChkKCDMg7Ji165GQEAId/wBq/yIECAYgAygBCiEKBuyLoO2ZlBACHccS//8iBAgBICAiCAgAIKAGKIQH
 
 | 구분 | 링크 및 안내 |
 |---|---|
-| **설치 버전 (권장)** | [d4cute_helper_setup.exe](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper_setup.exe) (원클릭 자동 업데이트 지원) |
-| **무설치 포터블 버전** | [d4cute_helper.exe](https://github.com/nimto/d4help/releases/latest/download/d4cute_helper.exe) (다운로드 후 바로 실행) |
+| **설치 버전 (권장)** | [d4cute_helper_setup.exe](https://github.com/kaljake70/d4helper/releases/latest/download/d4cute_helper_setup.exe) (원클릭 자동 업데이트 지원) |
+| **무설치 포터블 버전** | [d4cute_helper.exe](https://github.com/kaljake70/d4helper/releases/latest/download/d4cute_helper.exe) (다운로드 후 바로 실행) |
 | **상세 사용법 영상** | [https://youtu.be/Ff7MBqD4WaI](https://youtu.be/Ff7MBqD4WaI) (유튜브 가이드 영상) |
 | **선변성 도구 사용법 영상** | [https://youtu.be/O2mSUAEX-xM](https://youtu.be/O2mSUAEX-xM) (호라드림 선변성 도구 사용법) |
 | **텔레그램 공지 채널** | [https://t.me/d4_notice](https://t.me/d4_notice) (업데이트 및 패치 공지) |
 | **텔레그램 이용자 그룹방** | [https://t.me/+o207f2gV8lE2ODk1](https://t.me/+o207f2gV8lE2ODk1) (실시간 Q&amp;A 및 오류 로그 제보) |
 | **삼촌안잔다잉 유튜브 채널** | [https://www.youtube.com/@삼촌안잔다잉](https://www.youtube.com/@삼촌안잔다잉) (디아4 라이브 &amp; 실전 공략 영상) |
-| **공식 문서 &amp; 깃허브** | [https://da.gd/d4help](https://da.gd/d4help) (전체 변경 내역, 클랜 프로필 공유 &amp; Q&amp;A) |
+| **공식 문서 &amp; 깃허브** | [https://github.com/kaljake70/d4helper](https://github.com/kaljake70/d4helper) (전체 변경 내역, 클랜 프로필 공유 &amp; Q&amp;A) |
 
 > ⚠️ **처음 실행 시 SmartScreen 안내**  
 > 개인 개발자가 무료 배포하는 파일이라 윈도우에서 '알 수 없는 게시자' 경고(SmartScreen)가 뜰 수 있습니다. **[추가 정보] → [실행]**을 누르시면 정상 실행됩니다. (요구 사양: Windows 10 / 11, 게임 화면은 창 모드 또는 테두리 없는 창 모드 권장)
